@@ -1,0 +1,3 @@
+redis-operator:
+  redisOperator:
+    watchNamespace: ""

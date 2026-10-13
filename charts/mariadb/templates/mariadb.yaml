@@ -1,0 +1,20 @@
+apiVersion: k8s.mariadb.com/v1alpha1
+kind: MariaDB
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  image:
+    repository: {{ .Values.global.imageRegistry }}/mariadb
+    tag: latest
+  rootPasswordSecretKeyRef:
+    name: {{ .Values.name }}-root
+    key: password
+  storage:
+    size: {{ .Values.storage.size }}
+    {{- if .Values.storage.storageClassName }}
+    storageClassName: {{ .Values.storage.storageClassName }}
+    {{- else if .Values.global.storageClass }}
+    storageClassName: {{ .Values.global.storageClass }}
+    {{- end }}
+  resources: {{- toYaml .Values.resources | nindent 4 }}

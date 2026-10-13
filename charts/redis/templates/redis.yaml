@@ -1,0 +1,19 @@
+apiVersion: redis.redis.opstreelabs.in/v1beta2
+kind: RedisReplication
+metadata:
+  name: {{ .Values.name }}
+spec:
+  clusterSize: {{ .Values.clusterSize }}
+  kubernetesConfig:
+    image: {{ .Values.global.imageRegistry }}/redis:latest
+    resources: {}
+  storage:
+    volumeClaimTemplate:
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: {{ .Values.storage.size }}
+        {{- if .Values.storage.storageClassName }}
+        storageClassName: {{ .Values.storage.storageClassName }}
+        {{- end }}

@@ -1,0 +1,9 @@
+apiVersion: v2
+name: rabbitmq
+description: RabbitmqCluster instance
+type: application
+version: 0.1.0
+appVersion: "4.0"
+annotations:
+  shturval.tech/category: messaging
+  artifacthub.io/license: Apache-2.0

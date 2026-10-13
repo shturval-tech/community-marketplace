@@ -1,0 +1,11 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalRepoConfig
+metadata:
+  name: community
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+  annotations:
+    shturval.tech/description: Community Helm charts (GitHub Pages)
+spec:
+  url: https://shturval-tech.github.io/community-marketplace
+  insecure: false

@@ -1,0 +1,10 @@
+{{- if .Values.placeholder.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nextcloud-aio-placeholder
+data:
+  readme: |
+    Run scripts/sync-upstream.sh to vendor the official AIO helm/kompose chart.
+    Disable placeholder.enabled after wiring real templates.
+{{- end }}

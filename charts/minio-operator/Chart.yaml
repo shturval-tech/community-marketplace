@@ -1,0 +1,13 @@
+apiVersion: v2
+name: minio-operator
+description: Shturval community marketplace wrapper for minio-operator
+type: application
+version: 0.1.0
+appVersion: "4.3.7"
+annotations:
+  shturval.tech/category: storage
+  artifacthub.io/license: Apache-2.0
+dependencies:
+  - name: minio-operator
+    version: 4.3.7
+    repository: https://operator.min.io/

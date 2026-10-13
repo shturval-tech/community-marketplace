@@ -1,0 +1,14 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalServiceConfig
+metadata:
+  name: minio-tenant
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+spec:
+  mode: auto
+  chart: minio-tenant
+  version: "0.1.0"
+  namespace: minio-tenant
+  reponame: community
+  dependency:
+    - minio-operator

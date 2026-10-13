@@ -1,0 +1,6 @@
+keycloakx:
+  replicas: 1
+  ingress:
+    enabled: false
+  postgresql:
+    enabled: false

@@ -1,0 +1,4 @@
+name: community-kafka
+kafkaVersion: "3.8.0"
+metadataVersion: 3.8-IV0
+replicas: 1

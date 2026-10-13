@@ -1,0 +1,9 @@
+global:
+  imageRegistry: ghcr.io/shturval-tech/community-marketplace
+  ingress:
+    className: ""
+
+# Placeholder until sync-upstream.sh populates upstream/ and templates are wired.
+placeholder:
+  enabled: true
+  image: nextcloud-aio:latest

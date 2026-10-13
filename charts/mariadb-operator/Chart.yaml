@@ -1,0 +1,13 @@
+apiVersion: v2
+name: mariadb-operator
+description: Shturval community marketplace wrapper for mariadb-operator
+type: application
+version: 0.1.0
+appVersion: "26.10.1"
+annotations:
+  shturval.tech/category: database
+  artifacthub.io/license: Apache-2.0
+dependencies:
+  - name: mariadb-operator
+    version: 26.10.1
+    repository: https://helm.mariadb.com/mariadb-operator

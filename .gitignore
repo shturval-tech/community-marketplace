@@ -1,0 +1,7 @@
+dist/
+.cr-release-packages/
+.helm/
+.DS_Store
+
+# Root-level accidental packages only (vendored deps live under charts/*/charts/)
+/*.tgz

@@ -1,0 +1,8 @@
+global:
+  imageRegistry: ghcr.io/shturval-tech/community-marketplace
+
+name: community-redis
+clusterSize: 1
+storage:
+  size: 1Gi
+  storageClassName: ""

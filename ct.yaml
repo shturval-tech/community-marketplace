@@ -1,0 +1,11 @@
+chart-dirs:
+  - charts
+chart-repos:
+  - cnpg=https://cloudnative-pg.github.io/charts
+  - mariadb=https://helm.mariadb.com/mariadb-operator
+  - minio-op=https://operator.min.io/
+  - keycloakx=https://codecentric.github.io/helm-charts
+  - authentik=https://charts.goauthentik.io
+  - proxmox-csi=https://sergelogvinov.github.io/proxmox-csi-plugin/
+  - ot-helm=https://ot-container-kit.github.io/helm-charts/
+helm-extra-args: --timeout 600s

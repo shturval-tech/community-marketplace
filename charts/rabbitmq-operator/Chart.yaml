@@ -1,0 +1,10 @@
+apiVersion: v2
+name: rabbitmq-operator
+description: RabbitMQ Cluster Operator (community packaging)
+type: application
+version: 0.1.0
+appVersion: "2.12.0"
+annotations:
+  shturval.tech/category: messaging
+  shturval.tech/serviceclass: rabbitmq-operator
+  artifacthub.io/license: Apache-2.0

@@ -1,0 +1,8 @@
+authentik:
+  server:
+    ingress:
+      enabled: false
+  postgresql:
+    enabled: false
+  redis:
+    enabled: false

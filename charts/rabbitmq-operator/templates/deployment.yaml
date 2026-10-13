@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-cluster-operator
+  labels:
+    app.kubernetes.io/name: rabbitmq-cluster-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: rabbitmq-cluster-operator
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: rabbitmq-cluster-operator
+    spec:
+      serviceAccountName: rabbitmq-cluster-operator
+      containers:
+        - name: operator
+          image: "{{ .Values.global.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          resources: {{- toYaml .Values.resources | nindent 12 }}

@@ -1,0 +1,10 @@
+apiVersion: v2
+name: nextcloud-aio
+description: Nextcloud All-in-One (vendored kompose chart — run scripts/sync-upstream.sh)
+type: application
+version: 0.1.0
+appVersion: "latest"
+annotations:
+  shturval.tech/category: infra
+  artifacthub.io/license: AGPL-3.0
+  shturval.tech/upstream: https://github.com/nextcloud/all-in-one

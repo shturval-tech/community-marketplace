@@ -1,0 +1,14 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalServiceConfig
+metadata:
+  name: kafka
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+spec:
+  mode: auto
+  chart: kafka
+  version: "0.1.0"
+  namespace: kafka
+  reponame: community
+  dependency:
+    - strimzi-operator

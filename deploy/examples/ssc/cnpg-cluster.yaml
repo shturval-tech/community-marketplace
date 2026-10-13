@@ -1,0 +1,14 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalServiceConfig
+metadata:
+  name: cnpg-cluster
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+spec:
+  mode: auto
+  chart: cnpg-cluster
+  version: "0.1.0"
+  namespace: cnpg-data
+  reponame: community
+  dependency:
+    - cnpg-operator

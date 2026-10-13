@@ -1,0 +1,13 @@
+apiVersion: v2
+name: authentik
+description: Shturval community marketplace wrapper for authentik
+type: application
+version: 0.1.0
+appVersion: "2026.8.3"
+annotations:
+  shturval.tech/category: identity
+  artifacthub.io/license: Apache-2.0
+dependencies:
+  - name: authentik
+    version: 2026.8.3
+    repository: https://charts.goauthentik.io

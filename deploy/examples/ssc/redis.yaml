@@ -1,0 +1,14 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalServiceConfig
+metadata:
+  name: redis
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+spec:
+  mode: auto
+  chart: redis
+  version: "0.1.0"
+  namespace: redis
+  reponame: community
+  dependency:
+    - redis-operator

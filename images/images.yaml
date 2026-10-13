@@ -1,0 +1,27 @@
+# Generated list of mirrored images (see images/*/Dockerfile)
+registry: ghcr.io/shturval-tech/community-marketplace
+images:
+  - name: authentik
+    tag: latest
+  - name: cloudnative-pg
+    tag: latest
+  - name: keycloak
+    tag: latest
+  - name: mariadb
+    tag: latest
+  - name: mariadb-operator
+    tag: latest
+  - name: minio
+    tag: latest
+  - name: nextcloud-aio
+    tag: latest
+  - name: proxmox-csi
+    tag: latest
+  - name: rabbitmq
+    tag: latest
+  - name: redis
+    tag: latest
+  - name: redis-operator
+    tag: latest
+  - name: strimzi-operator
+    tag: latest

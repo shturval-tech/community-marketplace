@@ -1,0 +1,7 @@
+global:
+  imageRegistry: ghcr.io/shturval-tech/community-marketplace
+  storageClass: ""
+  ingress:
+    className: ""
+
+tenant: {}

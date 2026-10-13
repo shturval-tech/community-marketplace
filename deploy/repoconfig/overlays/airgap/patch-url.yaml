@@ -1,0 +1,7 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalRepoConfig
+metadata:
+  name: community
+spec:
+  # Replace with your internal Helm repository base URL (index.yaml location).
+  url: https://nexus.example.com/repository/community-helm

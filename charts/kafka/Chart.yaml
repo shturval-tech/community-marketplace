@@ -1,0 +1,9 @@
+apiVersion: v2
+name: kafka
+description: Kafka cluster (Strimzi Kafka + KafkaNodePool, KRaft)
+type: application
+version: 0.1.0
+appVersion: "3.8.0"
+annotations:
+  shturval.tech/category: messaging
+  artifacthub.io/license: Apache-2.0

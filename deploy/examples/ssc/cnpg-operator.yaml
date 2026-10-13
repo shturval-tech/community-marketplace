@@ -1,0 +1,12 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalServiceConfig
+metadata:
+  name: cnpg-operator
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+spec:
+  mode: auto
+  chart: cnpg-operator
+  version: "0.1.0"
+  namespace: cnpg-system
+  reponame: community

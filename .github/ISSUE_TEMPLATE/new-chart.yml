@@ -1,0 +1,35 @@
+name: New chart
+description: Propose a new community marketplace chart
+title: "chart: "
+labels: ["chart"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Chart name
+      placeholder: my-service
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - database
+        - messaging
+        - storage
+        - identity
+        - infra
+        - other
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream URL (if any)
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why add this to the marketplace?
+    validations:
+      required: true

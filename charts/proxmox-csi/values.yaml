@@ -1,0 +1,7 @@
+global:
+  imageRegistry: ghcr.io/shturval-tech/community-marketplace
+  storageClass: ""
+
+proxmox-csi-plugin:
+  config:
+    clusters: []

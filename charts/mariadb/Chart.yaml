@@ -1,0 +1,10 @@
+apiVersion: v2
+name: mariadb
+description: MariaDB instance (MariaDB CR) for mariadb-operator
+type: application
+version: 0.1.0
+appVersion: "11.4"
+annotations:
+  shturval.tech/category: database
+  shturval.tech/dependencyclass: mariadb-operator
+  artifacthub.io/license: Apache-2.0

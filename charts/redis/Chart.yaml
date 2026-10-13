@@ -1,0 +1,9 @@
+apiVersion: v2
+name: redis
+description: Redis replication instance (redis-operator CR)
+type: application
+version: 0.1.0
+appVersion: "7.2"
+annotations:
+  shturval.tech/category: database
+  artifacthub.io/license: Apache-2.0

@@ -1,0 +1,13 @@
+apiVersion: v2
+name: cnpg-operator
+description: Shturval community marketplace wrapper for cloudnative-pg
+type: application
+version: 0.1.0
+appVersion: "0.29.1"
+annotations:
+  shturval.tech/category: database
+  artifacthub.io/license: Apache-2.0
+dependencies:
+  - name: cloudnative-pg
+    version: 0.29.1
+    repository: https://cloudnative-pg.github.io/charts

@@ -1,0 +1,47 @@
+SHELL := /usr/bin/env bash
+CHARTS_DIR := charts
+DIST_DIR := dist
+PACKAGES_DIR := $(DIST_DIR)/packages
+HELM_REPO_URL ?= https://shturval-tech.github.io/community-marketplace
+REGISTRY ?= ghcr.io/shturval-tech/community-marketplace
+CHART ?=
+
+.PHONY: lint lint-chart package index vendor-deps test bundle push images-list help
+
+help:
+	@echo "Targets: lint, lint-chart CHART=x, package, index, vendor-deps, test, bundle, push"
+
+vendor-deps:
+	@./scripts/vendor-chart-deps.sh
+
+lint:
+	@command -v ct >/dev/null || { echo "install chart-testing (ct)"; exit 1; }
+	ct lint --config ct.yaml
+
+lint-chart:
+	@test -n "$(CHART)" || { echo "usage: make lint-chart CHART=name"; exit 1; }
+	helm lint "$(CHARTS_DIR)/$(CHART)"
+	helm template test "$(CHARTS_DIR)/$(CHART)" -f "$(CHARTS_DIR)/$(CHART)/ci/test-values.yaml" >/dev/null
+
+package: vendor-deps
+	@mkdir -p "$(PACKAGES_DIR)"
+	@for d in $(CHARTS_DIR)/*/; do \
+		name=$$(basename "$$d"); \
+		helm package "$$d" -d "$(PACKAGES_DIR)"; \
+	done
+
+index: package
+	@helm repo index "$(PACKAGES_DIR)" --url "$(HELM_REPO_URL)"
+
+test: lint
+	@command -v kind >/dev/null || { echo "skip ct install: kind not found"; exit 0; }
+	ct install --config ct.yaml --target-branch main
+
+bundle: package index
+	@./scripts/airgap-bundle.sh
+
+push:
+	@HELM_REPO_URL="$(HELM_REPO_URL)" REGISTRY="$(REGISTRY)" ./scripts/airgap-push.sh
+
+images-list:
+	@./scripts/list-images.sh
