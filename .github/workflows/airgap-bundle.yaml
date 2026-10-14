@@ -1,10 +1,20 @@
 name: Air-gap Bundle Release
 
+# Один GitHub Release (airgap-latest) с полным offline-архивом.
+# Запускается после Release Charts / Mirror Images или вручную.
+
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'airgap-*'
+  workflow_run:
+    workflows:
+      - Release Charts
+      - Mirror Images
+    types:
+      - completed
+
+concurrency:
+  group: airgap-bundle
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -12,6 +22,9 @@ permissions:
 
 jobs:
   bundle:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +33,13 @@ jobs:
         uses: azure/setup-helm@v4
         with:
           version: v3.17.2
+
+      - name: Marketplace chart version
+        id: meta
+        run: |
+          ver=$(grep '^version:' charts/cnpg-operator/Chart.yaml | awk '{print $2}')
+          echo "version=${ver}" >> "$GITHUB_OUTPUT"
+          echo "Chart bundle version: ${ver}"
 
       - name: Package charts (offline)
         run: make package index
@@ -50,14 +70,28 @@ jobs:
           chmod +x scripts/*.sh scripts/scan/*.sh
           ./scripts/airgap-bundle.sh
 
-      - name: Publish GitHub Release
+      - name: Publish single GitHub Release (air-gap)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: airgap-latest
-          name: Air-gap bundle (latest)
+          name: Air-gap bundle (marketplace ${{ steps.meta.outputs.version }})
           body: |
-            Offline bundle: Helm charts, container images (OCI tar), optional scan DB.
-            Inside archive run: `./push-offline.sh` with `REGISTRY` and `HELM_REPO_URL`.
+            **Единый offline-архив** community-marketplace (Helm charts + `index.yaml` + образы OCI tar + `push-offline.sh` + опционально базы Trivy/БДУ).
+
+            Версия чартов в архиве: **${{ steps.meta.outputs.version }}**
+
+            ```bash
+            tar -xzf airgap-bundle.tar.gz
+            export REGISTRY=registry.internal/community-marketplace
+            export HELM_REPO_URL=https://nexus.internal/repository/helm-community
+            ./push-offline.sh
+            ```
+
+            Онлайн-потребление без этого архива:
+            - Helm index: https://shturval-tech.github.io/community-marketplace/index.yaml
+            - OCI charts/images: `ghcr.io/shturval-tech/community-marketplace` (отдельные packages в GHCR — нормально для pull по компонентам).
+
+            Триггер сборки: ${{ github.event_name == 'workflow_dispatch' && 'manual' || format('{0}', github.event.workflow_run.name) }}.
           files: |
             dist/airgap-bundle.tar.gz
             dist/airgap-bundle.sha256

@@ -33,4 +33,4 @@ make lint-chart CHART=my-chart
 
 ## Maintainer notes
 
-Релиз чартов на `main` при изменении `charts/**` выполняет [chart-releaser](https://github.com/helm/chart-releaser) (ветка `gh-pages` + GitHub Releases). Образы — workflow `images.yaml`.
+Релиз чартов на `main` при изменении `charts/**`: [chart-releaser](https://github.com/helm/chart-releaser) обновляет **gh-pages** (`index.yaml`), без отдельного GitHub Release на каждый чарт. Образы — `images.yaml`. Offline-архив — один release **`airgap-latest`** (workflow **Air-gap Bundle Release**).

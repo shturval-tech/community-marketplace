@@ -3,3 +3,5 @@ git-repo: community-marketplace
 charts-dir: charts
 package-path: .cr-release-packages
 package-args: --dependency-update=false
+# Только gh-pages (index.yaml); GitHub Release на каждый чарт не создаём — offline: airgap-bundle.
+upload: false
