@@ -19,6 +19,11 @@ make bundle
 - `index.yaml` — Helm index
 - `images/images.yaml` — список образов для зеркалирования
 - `images/oci-layout/` — при наличии crane/skopeo (образы)
+- `scan-db/` — при `WITH_SCAN_DB=1`: OCI-базы Trivy (`trivy-db:2`, `trivy-java-db:1`) и `vulxml.xml.gz` (БДУ ФСТЭК)
+
+```bash
+make bundle WITH_SCAN_DB=1
+```
 
 Архивируйте `dist/` и перенесите в контур.
 
@@ -56,3 +61,16 @@ spec:
 ## 5. Argo CD
 
 Application указывает на git mirror внутри контура; path `deploy/repoconfig/overlays/airgap`.
+
+## 6. Сканирование уязвимостей в контуре
+
+На build-хосте с Trivy и доступом к зеркалам образов:
+
+```bash
+export TRIVY_DB_REPOSITORY=registry.internal/trivy-db:2
+export TRIVY_JAVA_DB_REPOSITORY=registry.internal/trivy-java-db:1
+export BDU_LOCAL_FILE=/path/from/dist/scan-db/vulxml.xml
+make scan-all
+```
+
+См. [security-scanning.md](security-scanning.md).

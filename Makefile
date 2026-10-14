@@ -4,12 +4,18 @@ DIST_DIR := dist
 PACKAGES_DIR := $(DIST_DIR)/packages
 HELM_REPO_URL ?= https://shturval-tech.github.io/community-marketplace
 REGISTRY ?= ghcr.io/shturval-tech/community-marketplace
+TRIVY_DB_REPOSITORY ?= public.shturval.tech/trivy-db:2
+TRIVY_JAVA_DB_REPOSITORY ?= public.shturval.tech/trivy-java-db:1
+BDU_SOURCE_URL ?= https://github.com/velvetway/bdu-fstec-mirror/raw/main/data/vulxml.xml.gz
+SCAN_FAIL_SEVERITY ?= CRITICAL
+IMAGE ?=
 CHART ?=
 
-.PHONY: lint lint-chart package index vendor-deps test bundle push images-list help
+.PHONY: lint lint-chart package index vendor-deps test bundle push images-list bdu-fetch scan scan-all scan-test help
 
 help:
 	@echo "Targets: lint, lint-chart CHART=x, package, index, vendor-deps, test, bundle, push"
+	@echo "         bdu-fetch, scan IMAGE=ref, scan-all, scan-test"
 
 vendor-deps:
 	@./scripts/vendor-chart-deps.sh
@@ -45,3 +51,27 @@ push:
 
 images-list:
 	@./scripts/list-images.sh
+
+bdu-fetch:
+	@chmod +x scripts/scan/*.sh
+	@./scripts/scan/bdu-fetch.sh
+
+scan-test:
+	@python3 -m pytest tests/scan/ -q
+
+scan:
+	@test -n "$(IMAGE)" || { echo "usage: make scan IMAGE=ghcr.io/.../name:tag"; exit 1; }
+	@chmod +x scripts/scan/*.sh
+	@TRIVY_DB_REPOSITORY="$(TRIVY_DB_REPOSITORY)" \
+	 TRIVY_JAVA_DB_REPOSITORY="$(TRIVY_JAVA_DB_REPOSITORY)" \
+	 SCAN_FAIL_SEVERITY="$(SCAN_FAIL_SEVERITY)" \
+	 BDU_SOURCE_URL="$(BDU_SOURCE_URL)" \
+	 ./scripts/scan/trivy-scan.sh "$(IMAGE)"
+
+scan-all:
+	@chmod +x scripts/scan/*.sh
+	@TRIVY_DB_REPOSITORY="$(TRIVY_DB_REPOSITORY)" \
+	 TRIVY_JAVA_DB_REPOSITORY="$(TRIVY_JAVA_DB_REPOSITORY)" \
+	 SCAN_FAIL_SEVERITY="$(SCAN_FAIL_SEVERITY)" \
+	 BDU_SOURCE_URL="$(BDU_SOURCE_URL)" \
+	 ./scripts/scan/trivy-scan.sh all

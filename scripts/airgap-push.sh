@@ -26,4 +26,19 @@ if command -v crane >/dev/null 2>&1; then
   done < "${ROOT}/images/images.yaml"
 fi
 
+SCAN_DB="${ROOT}/dist/scan-db"
+if [[ -d "${SCAN_DB}" ]] && command -v oras >/dev/null 2>&1; then
+  for artifact in trivy-db trivy-java-db; do
+    if [[ -d "${SCAN_DB}/${artifact}" ]]; then
+      tag="2"
+      [[ "${artifact}" == "trivy-java-db" ]] && tag="1"
+      oras push "${REGISTRY}/${artifact}:${tag}" "${SCAN_DB}/${artifact}/:application/vnd.aquasec.trivy.config.v1+json" 2>/dev/null || \
+        echo "oras push ${artifact} manually to ${REGISTRY}/${artifact}:${tag}"
+    fi
+  done
+  if [[ -f "${SCAN_DB}/vulxml.xml.gz" ]]; then
+    echo "BDU vulxml at ${SCAN_DB}/vulxml.xml.gz — copy to build host for BDU_LOCAL_FILE"
+  fi
+fi
+
 echo "Done. Apply ShturvalRepoConfig with url=${HELM_REPO_URL}"

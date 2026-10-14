@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - 'images/**'
+      - 'scripts/scan/**'
+      - 'security/**'
+      - '.github/workflows/images.yaml'
   workflow_dispatch:
 
 jobs:
@@ -68,10 +71,87 @@ jobs:
             ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:latest
             ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ github.sha }}
 
-      - name: Trivy scan
-        uses: aquasecurity/trivy-action@0.28.0
+  scan:
+    runs-on: ubuntu-24.04
+    needs: mirror
+    permissions:
+      contents: read
+      packages: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        name:
+          - keycloak
+          - cloudnative-pg
+          - mariadb-operator
+          - mariadb
+          - strimzi-operator
+          - redis-operator
+          - rabbitmq
+          - minio
+          - authentik
+          - proxmox-csi
+          - nextcloud-aio
+          - redis
+    env:
+      SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
+      TRIVY_DB_REPOSITORY: public.shturval.tech/trivy-db:2
+      TRIVY_JAVA_DB_REPOSITORY: public.shturval.tech/trivy-java-db:1
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
         with:
-          image-ref: ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ github.sha }}
-          format: table
-          severity: CRITICAL,HIGH
-          exit-code: 0
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Trivy
+        uses: aquasecurity/setup-trivy@v0.2.1
+        with:
+          version: v0.76.0
+
+      - name: Cache BDU vulxml
+        uses: actions/cache@v4
+        with:
+          path: .cache/bdu
+          key: bdu-vulxml-${{ hashFiles('scripts/scan/bdu-fetch.sh') }}
+          restore-keys: |
+            bdu-vulxml-
+
+      - name: Fetch BDU database
+        run: ./scripts/scan/bdu-fetch.sh
+
+      - name: Scan image (Trivy + BDU)
+        run: |
+          chmod +x scripts/scan/*.sh
+          ./scripts/scan/trivy-scan.sh \
+            "ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ github.sha }}" \
+            "${{ matrix.name }}"
+
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: dist/scan/${{ matrix.name }}/report.sarif
+          category: trivy-${{ matrix.name }}
+
+      - name: Upload scan artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-${{ matrix.name }}
+          path: |
+            dist/scan/${{ matrix.name }}/report.json
+            dist/scan/${{ matrix.name }}/report.bdu.json
+            dist/scan/${{ matrix.name }}/report.bdu.md
+            dist/scan/${{ matrix.name }}/report.cyclonedx.json
+
+      - name: Scan summary
+        if: always()
+        run: |
+          if [[ -f "dist/scan/${{ matrix.name }}/report.bdu.md" ]]; then
+            cat "dist/scan/${{ matrix.name }}/report.bdu.md" >> "${GITHUB_STEP_SUMMARY}"
+          else
+            echo "Scan report missing for ${{ matrix.name }}" >> "${GITHUB_STEP_SUMMARY}"
+          fi

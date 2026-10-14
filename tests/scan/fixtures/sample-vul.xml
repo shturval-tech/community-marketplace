@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vulnerabilities>
+  <vul>
+    <identifier>BDU:2020-00099</identifier>
+    <severity>Критический уровень опасности</severity>
+    <cvss3><vector score="9.8">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</vector></cvss3>
+    <identifiers>
+      <identifier type="CVE">CVE-2020-TEST01</identifier>
+    </identifiers>
+  </vul>
+  <vul>
+    <identifier>BDU:2021-00100</identifier>
+    <severity>Высокий уровень опасности</severity>
+    <cvss><vector score="7.5">AV:N/AC:L/Au:N/C:P/I:P/A:P</vector></cvss>
+    <identifiers>
+      <identifier type="CVE">CVE-2021-TEST02</identifier>
+    </identifiers>
+  </vul>
+</vulnerabilities>

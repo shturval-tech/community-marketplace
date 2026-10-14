@@ -18,6 +18,8 @@
 | `deploy/argocd/` | Argo CD Application |
 | `deploy/examples/ssc/` | Примеры SSC |
 | `scripts/` | airgap, list-images, sync-upstream, vendor deps |
+| `scripts/scan/` | Trivy + обогащение БДУ ФСТЭК |
+| `security/` | `.trivyignore` для CI |
 | `docs/chart-conventions.md` | Обязательные соглашения |
 
 ## Команды
@@ -31,6 +33,10 @@ make bundle            # charts + images manifest для air-gap
 make push HELM_REPO_URL=... REGISTRY=...
 make test              # ct lint + ct install (kind)
 make vendor-deps       # helm dependency update во всех charts/
+make bdu-fetch         # выгрузка БДУ vulxml для локального scan
+make scan IMAGE=...    # Trivy + BDU для одного образа
+make scan-all          # все образы из images/images.yaml
+make scan-test         # pytest tests/scan/
 ```
 
 Перед PR: `make lint` и bump `Chart.yaml` version.
@@ -47,13 +53,16 @@ make vendor-deps       # helm dependency update во всех charts/
 
 - PR: `.github/workflows/lint-test.yaml` — ct lint, kubeconform, ct install.
 - main + `charts/**`: `release-charts.yaml` — chart-releaser → gh-pages, OCI push.
-- main + `images/**`: `images.yaml` — buildx + trivy.
+- main + `images/**`: `images.yaml` — buildx push, job `scan` (Trivy + БДУ, SARIF).
+- schedule / manual: `security-scan.yaml` — полный scan `:latest`.
+- PR/main: `lint-test.yaml` — trivy config (информационно), pytest `tests/scan/`.
 
 ## Ссылки
 
 - [README.md](README.md) — обзор и каталог
 - [docs/manual-setup.md](docs/manual-setup.md) — public repo, Pages, packages
 - [docs/airgap.md](docs/airgap.md) — закрытый контур
+- [docs/security-scanning.md](docs/security-scanning.md) — Trivy и БДУ в CI
 - Навык Shturval API (в монорепо Projects): `.cursor/skills/shturval-api/SKILL.md`
 
 ## Безопасность

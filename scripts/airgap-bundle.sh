@@ -21,4 +21,19 @@ else
   echo "crane not found; skipping image pull (charts only in dist/)"
 fi
 
+if [[ "${WITH_SCAN_DB:-0}" == "1" ]]; then
+  SCAN_DB="${DIST}/scan-db"
+  mkdir -p "${SCAN_DB}"
+  if command -v oras >/dev/null 2>&1; then
+    oras pull public.shturval.tech/trivy-db:2 -o "${SCAN_DB}/trivy-db" || echo "skip trivy-db pull"
+    oras pull public.shturval.tech/trivy-java-db:1 -o "${SCAN_DB}/trivy-java-db" || echo "skip trivy-java-db pull"
+  else
+    echo "oras not found; skip OCI trivy-db (install oras for WITH_SCAN_DB=1)"
+  fi
+  BDU_CACHE_DIR="${SCAN_DB}" BDU_FORCE_FETCH=1 "${ROOT}/scripts/scan/bdu-fetch.sh" 2>/dev/null || \
+    curl -fsSL "${BDU_SOURCE_URL:-https://github.com/velvetway/bdu-fstec-mirror/raw/main/data/vulxml.xml.gz}" \
+      -o "${SCAN_DB}/vulxml.xml.gz" || echo "skip BDU vulxml"
+  chmod +x "${ROOT}/scripts/scan/"*.sh 2>/dev/null || true
+fi
+
 echo "Bundle ready under ${DIST}/"

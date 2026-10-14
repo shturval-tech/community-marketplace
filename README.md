@@ -81,6 +81,17 @@ make push HELM_REPO_URL=https://nexus.example/helm REGISTRY=registry.example/com
 
 Подробнее: [docs/airgap.md](docs/airgap.md).
 
+## Безопасность
+
+После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Результаты — в Step Summary workflow, артефактах Actions и вкладке **Security** (SARIF). Еженедельный полный прогон — workflow **Security Scan**.
+
+```bash
+make scan IMAGE=ghcr.io/shturval-tech/community-marketplace/redis:latest
+make scan-all
+```
+
+Подробнее: [docs/security-scanning.md](docs/security-scanning.md).
+
 ## Разработка
 
 ```bash

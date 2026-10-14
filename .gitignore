@@ -1,4 +1,5 @@
 dist/
+.cache/
 .cr-release-packages/
 .helm/
 .DS_Store

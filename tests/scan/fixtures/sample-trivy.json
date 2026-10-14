@@ -1,0 +1,28 @@
+{
+  "ArtifactName": "ghcr.io/example/app:1",
+  "Results": [
+    {
+      "Target": "app (debian 12.0)",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2020-TEST01",
+          "PkgName": "openssl",
+          "Severity": "HIGH",
+          "FixedVersion": "3.0.14-1"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-TEST02",
+          "PkgName": "curl",
+          "Severity": "MEDIUM",
+          "FixedVersion": ""
+        },
+        {
+          "VulnerabilityID": "CVE-2099-NOBdu",
+          "PkgName": "libc",
+          "Severity": "CRITICAL",
+          "FixedVersion": "2.0"
+        }
+      ]
+    }
+  ]
+}

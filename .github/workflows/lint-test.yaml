@@ -5,6 +5,9 @@ on:
     paths:
       - 'charts/**'
       - 'ct.yaml'
+      - 'scripts/scan/**'
+      - 'tests/scan/**'
+      - 'security/**'
       - '.github/workflows/lint-test.yaml'
   push:
     branches:
@@ -12,6 +15,9 @@ on:
     paths:
       - 'charts/**'
       - 'ct.yaml'
+      - 'scripts/scan/**'
+      - 'tests/scan/**'
+      - 'security/**'
 
 concurrency:
   group: lint-test-${{ github.ref }}
@@ -59,6 +65,26 @@ jobs:
             if [[ ! -f "$chart/Chart.yaml" ]]; then continue; fi
             helm template "test-$name" "$chart" -f "$chart/ci/test-values.yaml" 2>/dev/null | kubeconform -summary -ignore-missing-schemas || true
           done
+
+      - name: Set up Trivy (config scan)
+        uses: aquasecurity/setup-trivy@v0.2.1
+        with:
+          version: v0.76.0
+
+      - name: Trivy config scan (informational)
+        run: |
+          trivy config charts/ --severity HIGH,CRITICAL --exit-code 0 --format table | tee /tmp/trivy-config.txt
+          {
+            echo "## Trivy config (charts/)"
+            echo '```'
+            head -200 /tmp/trivy-config.txt
+            echo '```'
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: BDU enrich unit tests
+        run: |
+          python3 -m pip install --quiet pytest
+          python3 -m pytest tests/scan/ -q
 
   install:
     if: github.event_name == 'pull_request'
