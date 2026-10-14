@@ -1,6 +1,6 @@
 apiVersion: v2
 name: strimzi-operator
-description: Strimzi Kafka operator (Shturval community wrapper)
+description: Strimzi Kafka operator (Shturval community wrapper, vendored subchart)
 type: application
 version: 0.1.0
 appVersion: "0.45.0"
@@ -8,7 +8,3 @@ annotations:
   shturval.tech/category: messaging
   shturval.tech/serviceclass: kafka-operator
   artifacthub.io/license: Apache-2.0
-dependencies:
-  - name: strimzi-kafka-operator
-    version: 0.1.1
-    repository: https://strimzi.io/charts/

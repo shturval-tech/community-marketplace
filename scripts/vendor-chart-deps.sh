@@ -5,16 +5,17 @@ cd "$ROOT"
 
 vendor_strimzi() {
   local chart="${ROOT}/charts/strimzi-operator"
-  local tgz="${chart}/charts/strimzi-kafka-operator-0.1.1.tgz"
-  if [[ -f "$tgz" ]]; then
+  local sub="${chart}/charts/strimzi-kafka-operator"
+  if [[ -d "$sub" ]]; then
     return 0
   fi
   echo "==> vendoring strimzi from GitHub (strimzi.io unreachable)"
-  local tmp
+  local tmp pkg
   tmp=$(mktemp -d)
   git clone --depth 1 --branch 0.45.0 https://github.com/strimzi/strimzi-kafka-operator.git "$tmp/s"
   mkdir -p "${chart}/charts"
-  helm package "$tmp/s/helm-charts/helm3/strimzi-kafka-operator" -d "${chart}/charts"
+  pkg=$(helm package "$tmp/s/helm-charts/helm3/strimzi-kafka-operator" -d "$tmp" | awk '{print $NF}')
+  tar -xzf "$pkg" -C "${chart}/charts"
   rm -rf "$tmp"
 }
 
