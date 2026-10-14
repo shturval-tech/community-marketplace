@@ -1,3 +1,21 @@
+<p align="center">
+  <a href="https://shturval.tech" title="Платформа Штурвал">
+    <img src="docs/assets/shturval-logo.svg" alt="Штурвал" width="220"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://shturval-tech.github.io/community-marketplace/security/">
+    <img src="https://img.shields.io/endpoint?url=https://shturval-tech.github.io/community-marketplace/security/badge.json" alt="Статус сканирования уязвимостей"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://shturval-tech.github.io/community-marketplace/security/"><strong>Отчёт последнего сканирования</strong></a>
+  ·
+  <a href="https://github.com/shturval-tech/community-marketplace/actions/workflows/security-scan.yaml">Security Scan</a>
+</p>
+
 # Shturval Community Marketplace
 
 Community Helm-репозиторий для платформы [Штурвал](https://shturval.tech): обёртки над upstream-чартами, инстансы для операторов, зеркала контейнерных образов и примеры **ShturvalServiceConfig (SSC)**.
@@ -83,7 +101,7 @@ make push HELM_REPO_URL=https://nexus.example/helm REGISTRY=registry.example/com
 
 ## Безопасность
 
-После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Результаты — в Step Summary workflow, артефактах Actions и вкладке **Security** (SARIF). Еженедельный полный прогон — workflow **Security Scan**.
+После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Актуальный отчёт — на [GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/); статус — плашка в шапке README. Дополнительно: Step Summary, артефакты Actions, вкладка **Security** (SARIF). Еженедельный полный прогон — workflow **Security Scan**.
 
 ```bash
 make scan IMAGE=ghcr.io/shturval-tech/community-marketplace/redis:latest

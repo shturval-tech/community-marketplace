@@ -55,11 +55,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: security-scan-report
-          path: |
-            dist/scan/REPORT.md
-            dist/scan/**/report.bdu.json
-            dist/scan/**/report.bdu.md
-            dist/scan/**/report.cyclonedx.json
+          path: dist/scan/
 
       - name: Summary
         if: always()

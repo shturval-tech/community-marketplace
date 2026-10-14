@@ -1,5 +1,7 @@
 dist/
 .cache/
+__pycache__/
+*.pyc
 .cr-release-packages/
 .helm/
 .DS_Store

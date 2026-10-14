@@ -55,6 +55,7 @@ make scan-test         # pytest tests/scan/
 - main + `charts/**`: `release-charts.yaml` — chart-releaser → gh-pages, OCI push.
 - main + `images/**`: `images.yaml` — buildx push, job `scan` (Trivy + БДУ, SARIF).
 - schedule / manual: `security-scan.yaml` — полный scan `:latest`.
+- after scan workflows: `publish-security-pages.yaml` — отчёт и `badge.json` на gh-pages (`/security/`).
 - PR/main: `lint-test.yaml` — trivy config (информационно), pytest `tests/scan/`.
 
 ## Ссылки

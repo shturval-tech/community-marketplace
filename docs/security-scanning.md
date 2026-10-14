@@ -20,10 +20,12 @@ CI маркетплейса проверяет **зеркалируемые об
 
 ## Где смотреть результаты
 
-1. **GitHub Actions → Step Summary** — таблица по каждому образу (`report.bdu.md`).
-2. **Security → Code scanning alerts** — SARIF после сборки образов (категория `trivy-<image>`).
-3. **Артефакты workflow** — `report.json`, `report.bdu.json`, `report.bdu.md`, `report.cyclonedx.json` (SBOM).
-4. **Еженедельный прогон** — артефакт `security-scan-report` и сводка `dist/scan/REPORT.md`.
+1. **[Отчёт на GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/)** — сводка последнего сканирования; плашка в README берёт статус из [`security/badge.json`](https://shturval-tech.github.io/community-marketplace/security/badge.json) (shields.io endpoint).
+2. **GitHub Actions → Step Summary** — таблица по каждому образу (`report.bdu.md`).
+3. **Security → Code scanning alerts** — SARIF после сборки образов (категория `trivy-<image>`).
+4. **Артефакты workflow** — `report.json`, `report.bdu.json`, `report.bdu.md`, `report.cyclonedx.json` (SBOM).
+
+Публикация на Pages выполняется workflow **Publish Security Pages** после **Security Scan** или **Mirror Images** (job `scan`).
 
 ## Политика блокировки
 
