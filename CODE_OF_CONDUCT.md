@@ -1,64 +1,63 @@
-# Contributor Covenant Code of Conduct
+# Кодекс поведения Contributor Covenant
 
-## Our Pledge
+## Наши обязательства
 
-We as members, contributors, and leaders pledge to make participation in our
-community a harassment-free experience for everyone, regardless of age, body
-size, visible or invisible disability, ethnicity, sex characteristics, gender
-identity and expression, level of experience, education, socio-economic status,
-nationality, personal appearance, race, religion, or sexual identity and
-orientation.
+Мы, участники, контрибьюторы и лидеры сообщества, обязуемся сделать участие в
+нашем сообществе свободным от притеснений для каждого человека — независимо
+от возраста, телосложения, видимых и невидимых особенностей здоровья,
+этнической принадлежности, половых признаков, гендерной идентичности и
+самовыражения, уровня опыта, образования, социально-экономического статуса,
+гражданства, внешности, расы, религии, сексуальной идентичности и ориентации.
 
-We pledge to act and interact in ways that contribute to an open, welcoming,
-diverse, inclusive, and healthy community.
+Мы обязуемся действовать и взаимодействовать так, чтобы способствовать
+открытому, гостеприимному, разнообразному, инклюзивному и здоровому
+сообществу.
 
-## Our Standards
+## Наши стандарты
 
-Examples of behavior that contributes to a positive environment for our
-community include:
+Примеры поведения, которое способствует благоприятной атмосфере в сообществе:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
-  overall community
+* проявление эмпатии и доброжелательности по отношению к другим;
+* уважение к иным мнениям, точкам зрения и жизненному опыту;
+* конструктивная обратная связь — как при её даче, так и при принятии;
+* признание ответственности за ошибки, извинения перед пострадавшими и
+  извлечение уроков из ситуации;
+* фокус на том, что лучше не только для нас лично, но и для сообщества в целом.
 
-Examples of unacceptable behavior include:
+Примеры недопустимого поведения:
 
-* The use of sexualized language or imagery, and sexual attention or
-  advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+* сексуализированные формулировки или образы, сексуальное внимание или
+  домогательства любого рода;
+* троллинг, оскорбительные или уничижительные комментарии, личные или
+  политические нападки;
+* преследование публичное или в личных каналах;
+* публикация чужой личной информации (например, физического или почтового
+  адреса) без явного разрешения;
+* иное поведение, которое в профессиональной среде можно обоснованно считать
+  неуместным.
 
-## Enforcement Responsibilities
+## Ответственность за соблюдение
 
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
+Лидеры сообщества отвечают за разъяснение и обеспечение соблюдения этих
+стандартов и применяют справедливые и соразмерные меры в ответ на поведение,
+которое они считают неуместным, угрожающим, оскорбительным или вредным.
 
-## Scope
+## Область действия
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
+Настоящий кодекс действует во всех пространствах сообщества, а также когда
+человек официально представляет сообщество в публичных местах.
 
-## Enforcement
+## Порядок обращений
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-community@shturval.tech. All complaints will be reviewed and investigated
-promptly and fairly.
+О случаях оскорбительного, притесняющего или иного недопустимого поведения
+можно сообщить ответственным за соблюдение кодекса лидерам сообщества:
+community@shturval.tech. Все обращения будут рассмотрены и проверены
+оперативно и беспристрастно.
 
-## Attribution
+## Атрибуция
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
+Настоящий кодекс поведения адаптирован из [Contributor Covenant][homepage],
+версия 2.0, текст доступен по адресу
 https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 
 [homepage]: https://www.contributor-covenant.org
