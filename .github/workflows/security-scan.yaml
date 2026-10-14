@@ -63,3 +63,39 @@ jobs:
           if [[ -f dist/scan/REPORT.md ]]; then
             cat dist/scan/REPORT.md >> "${GITHUB_STEP_SUMMARY}"
           fi
+
+  publish-pages:
+    needs: scan-all
+    if: always() && needs.scan-all.result != 'cancelled'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    env:
+      SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download scan report
+        uses: actions/download-artifact@v4
+        with:
+          name: security-scan-report
+          path: dist/scan
+
+      - name: Build GitHub Pages bundle
+        env:
+          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SCAN_SOURCE: Security Scan
+        run: |
+          chmod +x scripts/scan/*.sh
+          ./scripts/scan/publish-pages.sh
+
+      - name: Deploy to GitHub Pages (security/)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/scan/pages
+          destination_dir: security
+          keep_files: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_message: "chore(security): update scan report [skip ci]"

@@ -138,3 +138,44 @@ jobs:
           else
             echo "Scan report missing for ${{ matrix.name }}" >> "${GITHUB_STEP_SUMMARY}"
           fi
+
+  publish-pages:
+    needs: [mirror, scan, prepare]
+    if: always() && needs.mirror.result != 'cancelled' && needs.scan.result != 'cancelled'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    env:
+      SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download scan artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: scan-*
+          merge-multiple: true
+          path: artifact
+
+      - name: Prepare dist/scan
+        run: |
+          chmod +x scripts/scan/*.sh
+          ./scripts/scan/prepare-dist-scan-from-artifacts.sh artifact dist/scan
+          ./scripts/scan/aggregate-report.sh
+
+      - name: Build GitHub Pages bundle
+        env:
+          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SCAN_SOURCE: Mirror Images
+        run: ./scripts/scan/publish-pages.sh
+
+      - name: Deploy to GitHub Pages (security/)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist/scan/pages
+          destination_dir: security
+          keep_files: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_message: "chore(security): update scan report [skip ci]"

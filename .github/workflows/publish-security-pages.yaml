@@ -1,26 +1,18 @@
 name: Publish Security Pages
 
+# Ручной перезапуск публикации по одному артефакту security-scan-report
+# (основная публикация — job publish-pages в Security Scan / Mirror Images).
+
 on:
-  workflow_run:
-    workflows:
-      - Security Scan
-      - Mirror Images
-    types:
-      - completed
   workflow_dispatch:
     inputs:
       workflow_run_id:
-        description: ID run Security Scan или Mirror Images (для ручной публикации)
+        description: ID run workflow Security Scan (с артефактом security-scan-report)
         required: true
         type: string
 
 jobs:
   publish:
-    if: >
-      github.event_name == 'workflow_dispatch' ||
-      (github.event.workflow_run.conclusion != 'cancelled' &&
-       (github.event.workflow_run.conclusion == 'success' ||
-        github.event.workflow_run.conclusion == 'failure'))
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -30,37 +22,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download scan artifacts from triggering workflow
+      - name: Download security-scan-report artifact
         uses: actions/download-artifact@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          run-id: ${{ github.event_name == 'workflow_dispatch' && inputs.workflow_run_id || github.event.workflow_run.id }}
-          pattern: '*'
-          merge-multiple: true
-          path: artifact
-
-      - name: Prepare dist/scan layout
-        run: |
-          mkdir -p dist/scan
-          if [[ -d artifact/dist/scan ]]; then
-            cp -a artifact/dist/scan/. dist/scan/
-          fi
-          while IFS= read -r -d '' f; do
-            name=$(basename "$(dirname "$f")")
-            mkdir -p "dist/scan/${name}"
-            cp -f "$f" "dist/scan/${name}/"
-            base=$(dirname "$f")
-            for extra in report.bdu.md report.json; do
-              [[ -f "${base}/${extra}" ]] && cp -f "${base}/${extra}" "dist/scan/${name}/"
-            done
-          done < <(find artifact -name 'report.bdu.json' -print0)
-          find artifact -name 'REPORT.md' -exec cp -f {} dist/scan/REPORT.md \; 2>/dev/null || true
-          ls -la dist/scan || true
+          run-id: ${{ inputs.workflow_run_id }}
+          name: security-scan-report
+          path: dist/scan
 
       - name: Build GitHub Pages bundle
         env:
-          WORKFLOW_URL: ${{ github.event_name == 'workflow_dispatch' && format('https://github.com/{0}/actions/runs/{1}', github.repository, inputs.workflow_run_id) || github.event.workflow_run.html_url }}
-          SCAN_SOURCE: ${{ github.event_name == 'workflow_dispatch' && 'manual' || github.event.workflow_run.name }}
+          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ inputs.workflow_run_id }}
+          SCAN_SOURCE: manual
         run: |
           chmod +x scripts/scan/*.sh
           ./scripts/scan/publish-pages.sh

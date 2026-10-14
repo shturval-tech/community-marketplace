@@ -25,7 +25,7 @@ CI маркетплейса проверяет **зеркалируемые об
 3. **Security → Code scanning alerts** — SARIF после сборки образов (категория `trivy-<image>`).
 4. **Артефакты workflow** — `report.json`, `report.bdu.json`, `report.bdu.md`, `report.cyclonedx.json` (SBOM).
 
-Публикация на Pages выполняется workflow **Publish Security Pages** после **Security Scan** или **Mirror Images** (job `scan`).
+Публикация на Pages: job **`publish-pages`** в workflow **Security Scan** и **Mirror Images** (после job `scan`). Workflow **Publish Security Pages** — только ручной перезапуск по `workflow_run_id` Security Scan.
 
 ## Политика блокировки
 
