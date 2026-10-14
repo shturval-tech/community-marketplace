@@ -72,6 +72,11 @@ jobs:
           chmod +x scripts/*.sh scripts/scan/*.sh
           ./scripts/airgap-bundle.sh
 
+      - name: Prepare release assets (GitHub 2 GiB limit)
+        run: |
+          chmod +x scripts/prepare-airgap-release-assets.sh
+          ./scripts/prepare-airgap-release-assets.sh
+
       - name: Publish single GitHub Release (air-gap)
         uses: softprops/action-gh-release@v2
         with:
@@ -83,6 +88,9 @@ jobs:
             Версия чартов в архиве: **${{ steps.meta.outputs.version }}**
 
             ```bash
+            # Если в Release несколько part-файлов (лимит GitHub 2 GiB на asset):
+            cat airgap-bundle.tar.gz.part-* > airgap-bundle.tar.gz
+            sha256sum -c airgap-bundle.sha256
             tar -xzf airgap-bundle.tar.gz
             export REGISTRY=registry.internal/community-marketplace
             export HELM_REPO_URL=https://nexus.internal/repository/helm-community
@@ -96,5 +104,7 @@ jobs:
             Триггер сборки: ${{ github.event_name == 'workflow_dispatch' && 'manual' || format('{0}', github.event.workflow_run.name) }}.
           files: |
             dist/airgap-bundle.tar.gz
+            dist/airgap-bundle.tar.gz.part-*
             dist/airgap-bundle.sha256
+            dist/airgap-bundle.parts.txt
           overwrite_files: true
