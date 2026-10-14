@@ -1,0 +1,1 @@
+Nextcloud AIO развёрнут (placeholder). Синхронизируйте upstream-чарт при необходимости.

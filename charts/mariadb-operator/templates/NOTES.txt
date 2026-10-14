@@ -1,1 +1,1 @@
-Thank you for installing {{ .Chart.Name }} from the Shturval Community Marketplace.
+Оператор MariaDB установлен. Можно разворачивать инстансы MariaDB/MySQL.

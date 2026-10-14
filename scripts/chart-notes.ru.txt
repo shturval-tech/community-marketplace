@@ -1,0 +1,16 @@
+cnpg-operator|CloudNativePG установлен. Оператор управляет кластерами PostgreSQL в Kubernetes.
+cnpg-cluster|Кластер PostgreSQL создан. Проверьте секреты подключения и PVC.
+mariadb-operator|Оператор MariaDB установлен. Можно разворачивать инстансы MariaDB/MySQL.
+mariadb|Инстанс MariaDB создан. Укажите пароль root и параметры хранения в values.
+redis-operator|Оператор Redis установлен. Доступны CR для standalone и репликации.
+redis|Инстанс Redis создан. Используйте для кэша и сессий приложений.
+rabbitmq-operator|Оператор RabbitMQ установлен. Можно создавать кластеры очередей.
+rabbitmq|Кластер RabbitMQ создан. AMQP-эндпоинт появится после готовности подов.
+strimzi-operator|Оператор Strimzi установлен. Можно разворачивать кластеры Apache Kafka.
+kafka|Кластер Kafka (KRaft) создан. Дождитесь готовности брокеров Strimzi.
+minio-operator|MinIO Operator установлен. Далее можно создать tenant с S3 API.
+minio-tenant|Tenant MinIO создан. Используйте S3-совместимый API для объектов.
+keycloak|Keycloak установлен. Настройте realm, клиентов OIDC/SAML и ingress.
+authentik|authentik установлен. Первичная настройка — через веб-интерфейс outpost/flows.
+proxmox-csi|Proxmox CSI установлен. Укажите credentials Proxmox VE в values.
+nextcloud-aio|Nextcloud AIO развёрнут (placeholder). Синхронизируйте upstream-чарт при необходимости.

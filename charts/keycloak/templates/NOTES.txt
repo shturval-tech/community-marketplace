@@ -1,1 +1,1 @@
-Thank you for installing {{ .Chart.Name }} from the Shturval Community Marketplace.
+Keycloak установлен. Настройте realm, клиентов OIDC/SAML и ingress.

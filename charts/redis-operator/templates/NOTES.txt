@@ -1,1 +1,1 @@
-Thank you for installing {{ .Chart.Name }} from the Shturval Community Marketplace.
+Оператор Redis установлен. Доступны CR для standalone и репликации.

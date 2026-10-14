@@ -1,1 +1,1 @@
-Thank you for installing {{ .Chart.Name }} from the Shturval Community Marketplace.
+Proxmox CSI установлен. Укажите credentials Proxmox VE в values.

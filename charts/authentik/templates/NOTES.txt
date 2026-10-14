@@ -1,1 +1,1 @@
-Thank you for installing {{ .Chart.Name }} from the Shturval Community Marketplace.
+authentik установлен. Первичная настройка — через веб-интерфейс outpost/flows.

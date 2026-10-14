@@ -7,6 +7,6 @@ metadata:
 spec:
   mode: auto
   chart: authentik
-  version: "0.1.1"
+  version: "0.1.2"
   namespace: authentik
   reponame: community

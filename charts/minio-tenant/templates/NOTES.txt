@@ -1,1 +1,1 @@
-Thank you for installing {{ .Chart.Name }} from the Shturval Community Marketplace.
+Tenant MinIO создан. Используйте S3-совместимый API для объектов.
