@@ -1,9 +1,10 @@
 apiVersion: v2
 name: redis
-description: Redis replication instance (redis-operator CR)
+description: Экземпляр Redis — кэш и быстрое key-value хранилище (требует redis-operator)
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "7.2"
 annotations:
   shturval.tech/category: database
+  shturval.tech/description: Redis — in-memory СУБД для кэширования, сессий и очередей; развёртывание через CR оператора.
   artifacthub.io/license: Apache-2.0

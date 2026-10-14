@@ -1,5 +1,7 @@
 # strimzi-operator
 
-Wrapper chart. Upstream: `strimzi-kafka-operator` 0.45.0.
+**Strimzi** — оператор для **Apache Kafka** в Kubernetes: брокеры (KRaft), топики, пользователи, Kafka Connect и мониторинг.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Перед чартом `kafka` установите оператор.
+
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

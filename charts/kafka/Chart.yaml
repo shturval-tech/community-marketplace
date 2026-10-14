@@ -1,9 +1,10 @@
 apiVersion: v2
 name: kafka
-description: Kafka cluster (Strimzi Kafka + KafkaNodePool, KRaft)
+description: Кластер Apache Kafka — распределённый журнал событий и стриминг данных
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "3.8.0"
 annotations:
   shturval.tech/category: messaging
+  shturval.tech/description: Apache Kafka для потоковой передачи событий, интеграций и микросервисной шины (Strimzi, KRaft).
   artifacthub.io/license: Apache-2.0

@@ -1,10 +1,10 @@
 apiVersion: v2
 name: mariadb
-description: MariaDB instance (MariaDB CR) for mariadb-operator
+description: Экземпляр MariaDB — реляционная СУБД для приложений (требует mariadb-operator)
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "11.4"
 annotations:
   shturval.tech/category: database
-  shturval.tech/dependencyclass: mariadb-operator
+  shturval.tech/description: MariaDB — совместимая с MySQL СУБД; чарт создаёт инстанс через CR оператора MariaDB.
   artifacthub.io/license: Apache-2.0

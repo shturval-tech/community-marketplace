@@ -1,11 +1,12 @@
 apiVersion: v2
 name: minio-tenant
-description: Shturval community marketplace wrapper for tenant
+description: Tenant MinIO — изолированное S3-хранилище для приложений и бэкапов
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "7.1.1"
 annotations:
   shturval.tech/category: storage
+  shturval.tech/description: MinIO Tenant — выделенное объектное хранилище (файлы, артефакты, резервные копии) с API Amazon S3.
   artifacthub.io/license: Apache-2.0
 dependencies:
   - name: tenant

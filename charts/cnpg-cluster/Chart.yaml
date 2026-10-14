@@ -1,12 +1,13 @@
 apiVersion: v2
 name: cnpg-cluster
-description: Shturval community marketplace wrapper for CloudNativePG cluster
+description: Кластер PostgreSQL под CloudNativePG — база данных с HA и постоянными томами
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "0.9.0"
 annotations:
   shturval.tech/category: database
   shturval.tech/serviceclass: postgres
+  shturval.tech/description: Готовый кластер PostgreSQL (CloudNativePG) для приложений и сервисов платформы.
   artifacthub.io/license: Apache-2.0
 dependencies:
   - name: cluster

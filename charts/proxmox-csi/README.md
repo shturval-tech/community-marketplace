@@ -1,5 +1,5 @@
 # proxmox-csi
 
-Wrapper chart. Upstream: `proxmox-csi` 0.3.0.
+**Proxmox CSI Plugin** подключает к Kubernetes хранилище **Proxmox VE**: динамическое создание томов (PersistentVolume) из дисков гипервизора.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

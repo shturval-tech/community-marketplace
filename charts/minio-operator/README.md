@@ -1,5 +1,7 @@
 # minio-operator
 
-Wrapper chart. Upstream: `minio-operator` 4.3.7.
+**MinIO Operator** устанавливает S3-совместимое объектное хранилище в Kubernetes — основу для бакетов и tenant’ов MinIO.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Перед чартом `minio-tenant` установите оператор.
+
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

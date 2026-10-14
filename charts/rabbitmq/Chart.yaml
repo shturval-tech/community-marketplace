@@ -1,9 +1,10 @@
 apiVersion: v2
 name: rabbitmq
-description: RabbitmqCluster instance
+description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "4.0"
 annotations:
   shturval.tech/category: messaging
+  shturval.tech/description: RabbitMQ — брокер сообщений (AMQP); чарт создаёт кластер для асинхронного взаимодействия приложений.
   artifacthub.io/license: Apache-2.0

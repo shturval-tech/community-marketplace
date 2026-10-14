@@ -1,5 +1,7 @@
 # redis-operator
 
-Wrapper chart. Upstream: `redis-operator` 0.27.0.
+**Redis Operator** (Opstree) разворачивает Redis в Kubernetes: standalone, репликация и Sentinel для отказоустойчивого кэша.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Перед чартом `redis` установите оператор.
+
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

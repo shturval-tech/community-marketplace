@@ -1,11 +1,12 @@
 apiVersion: v2
 name: cnpg-operator
-description: Shturval community marketplace wrapper for cloudnative-pg
+description: Оператор CloudNativePG — управление PostgreSQL в Kubernetes (репликация, failover, бэкапы)
 type: application
-version: 0.1.0
-appVersion: "0.29.1"
+version: 0.1.1
+appVersion: "1.30.1"
 annotations:
   shturval.tech/category: database
+  shturval.tech/description: Оператор CloudNativePG для развёртывания и сопровождения PostgreSQL в кластере Kubernetes.
   artifacthub.io/license: Apache-2.0
 dependencies:
   - name: cloudnative-pg

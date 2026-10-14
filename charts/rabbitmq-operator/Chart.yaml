@@ -1,10 +1,11 @@
 apiVersion: v2
 name: rabbitmq-operator
-description: RabbitMQ Cluster Operator (community packaging)
+description: Оператор RabbitMQ — брокер сообщений AMQP в Kubernetes
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "2.12.0"
 annotations:
   shturval.tech/category: messaging
   shturval.tech/serviceclass: rabbitmq-operator
+  shturval.tech/description: Cluster Operator для RabbitMQ — управление кластерами очередей и обмена сообщениями между сервисами.
   artifacthub.io/license: Apache-2.0

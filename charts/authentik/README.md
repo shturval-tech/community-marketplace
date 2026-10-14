@@ -1,5 +1,5 @@
 # authentik
 
-Wrapper chart. Upstream: `authentik` 2026.8.3.
+**authentik** — open-source IdP с веб-консолью: SSO, OIDC, LDAP, прокси-аутентификация и гибкие потоки входа для пользователей и сервисов.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

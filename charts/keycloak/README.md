@@ -1,5 +1,5 @@
 # keycloak
 
-Wrapper chart. Upstream: `keycloakx` 7.3.2.
+**Keycloak** — сервер идентичности и доступа: единый вход (SSO), OAuth2, OpenID Connect и SAML для веб- и API-приложений.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

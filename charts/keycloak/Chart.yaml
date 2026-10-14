@@ -1,11 +1,12 @@
 apiVersion: v2
 name: keycloak
-description: Shturval community marketplace wrapper for keycloakx
+description: Keycloak — единый вход (SSO), OIDC и SAML для приложений
 type: application
-version: 0.1.0
-appVersion: "7.3.2"
+version: 0.1.1
+appVersion: "26.7.4"
 annotations:
   shturval.tech/category: identity
+  shturval.tech/description: Keycloak — IdP и IAM: аутентификация пользователей, федерация, OAuth2/OpenID Connect для сервисов.
   artifacthub.io/license: Apache-2.0
 dependencies:
   - name: keycloakx

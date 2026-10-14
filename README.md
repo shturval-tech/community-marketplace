@@ -51,17 +51,24 @@ kubectl apply -f deploy/examples/ssc/cnpg-cluster.yaml
 
 ## Каталог (первая волна)
 
-| Чарт | Назначение |
-|------|------------|
-| `cnpg-operator`, `cnpg-cluster` | PostgreSQL (CloudNativePG) |
-| `mariadb-operator`, `mariadb` | MariaDB operator + инстанс |
-| `redis-operator`, `redis` | Redis operator + репликация |
-| `rabbitmq-operator`, `rabbitmq` | RabbitMQ Cluster Operator + кластер |
-| `strimzi-operator`, `kafka` | Kafka (Strimzi, KRaft) |
-| `minio-operator`, `minio-tenant` | MinIO Operator + tenant |
-| `keycloak`, `authentik` | IdP |
-| `proxmox-csi` | Proxmox CSI |
-| `nextcloud-aio` | Nextcloud All-in-One (vendored) |
+| Чарт | Описание |
+|------|----------|
+| `cnpg-operator` | Оператор CloudNativePG для PostgreSQL в Kubernetes |
+| `cnpg-cluster` | Кластер PostgreSQL (HA, PVC) |
+| `mariadb-operator` | Оператор MariaDB/MySQL |
+| `mariadb` | Экземпляр MariaDB |
+| `redis-operator` | Оператор Redis (кэш, in-memory) |
+| `redis` | Экземпляр Redis с репликацией |
+| `rabbitmq-operator` | Оператор брокера RabbitMQ |
+| `rabbitmq` | Кластер RabbitMQ (AMQP) |
+| `strimzi-operator` | Оператор Strimzi для Apache Kafka |
+| `kafka` | Кластер Kafka (KRaft) |
+| `minio-operator` | MinIO Operator (S3 API) |
+| `minio-tenant` | Tenant MinIO — объектное хранилище |
+| `keycloak` | Keycloak — SSO, OIDC/SAML |
+| `authentik` | authentik — IdP и SSO |
+| `proxmox-csi` | CSI-тома из Proxmox VE |
+| `nextcloud-aio` | Nextcloud — файловое облако |
 
 ## Закрытый контур
 

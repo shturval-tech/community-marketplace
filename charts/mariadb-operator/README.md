@@ -1,5 +1,7 @@
 # mariadb-operator
 
-Wrapper chart. Upstream: `mariadb-operator` 26.10.1.
+**MariaDB Operator** автоматизирует развёртывание MariaDB/MySQL в Kubernetes: инстансы, репликация, обновления и резервные копии.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Перед чартом `mariadb` установите оператор.
+
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

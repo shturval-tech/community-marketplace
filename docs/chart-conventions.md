@@ -18,11 +18,18 @@
 
 Зависимости upstream **коммитятся** в `charts/<chart>/charts/*.tgz` и `Chart.lock`, чтобы `helm package` работал офлайн.
 
+## Описание продукта
+
+- Поле `description` в `Chart.yaml` — **на русском**, одна строка: что это за продукт и зачем он нужен (попадает в Helm index и UI Штурвала).
+- `README.md` чарта — 2–3 предложения на русском; без формулировок «wrapper chart».
+- Аннотация `shturval.tech/description` — при необходимости чуть подробнее, чем `description`.
+
 ## Annotations (`Chart.yaml`)
 
 ```yaml
 annotations:
   shturval.tech/category: database          # database | messaging | storage | identity | infra
+  shturval.tech/description: Краткое описание продукта на русском
   shturval.tech/serviceclass: postgres      # необязательно; для dependencyclass других SSC
   shturval.tech/dependencyclass: ""         # если чарт реализует класс
   artifacthub.io/license: Apache-2.0

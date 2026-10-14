@@ -1,11 +1,12 @@
 apiVersion: v2
 name: proxmox-csi
-description: Proxmox CSI plugin (Shturval community wrapper)
+description: Proxmox CSI — динамические тома из хранилища Proxmox VE
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "0.3.3"
 annotations:
   shturval.tech/category: infra
+  shturval.tech/description: CSI-плагин для Proxmox VE — provisioning PersistentVolume из дисков/хранилищ гипервизора.
   artifacthub.io/license: Apache-2.0
 dependencies:
   - name: proxmox-csi-plugin

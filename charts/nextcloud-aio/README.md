@@ -1,7 +1,7 @@
 # nextcloud-aio
 
-Vendored chart from [nextcloud/all-in-one](https://github.com/nextcloud/all-in-one).
+**Nextcloud All-in-One** — частное облако для файлов, календаря, контактов и совместного редактирования документов (офисный и домашний аналог облачных дисков).
 
-```bash
-UPSTREAM=https://github.com/nextcloud/all-in-one.git REF=main ./scripts/sync-upstream.sh
-```
+Для полного upstream-чарта выполните `scripts/sync-upstream.sh`.
+
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

@@ -1,11 +1,12 @@
 apiVersion: v2
 name: authentik
-description: Shturval community marketplace wrapper for authentik
+description: authentik — open-source провайдер идентичности и SSO
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "2026.8.3"
 annotations:
   shturval.tech/category: identity
+  shturval.tech/description: authentik — IdP с веб-интерфейсом: SSO, OIDC, LDAP, прокси-аутентификация и политики доступа.
   artifacthub.io/license: Apache-2.0
 dependencies:
   - name: authentik

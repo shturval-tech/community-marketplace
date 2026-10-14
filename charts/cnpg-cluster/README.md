@@ -1,5 +1,7 @@
 # cnpg-cluster
 
-Wrapper chart. Upstream: `cluster` 0.9.0.
+**PostgreSQL** под управлением CloudNativePG: кластер с постоянными томами, готовый для подключения приложений.
 
-See [chart conventions](../../docs/chart-conventions.md).
+Требует установленный `cnpg-operator`.
+
+Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

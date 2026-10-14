@@ -7,6 +7,6 @@ metadata:
 spec:
   mode: auto
   chart: minio-operator
-  version: "0.1.0"
+  version: "0.1.1"
   namespace: minio-operator
   reponame: community
