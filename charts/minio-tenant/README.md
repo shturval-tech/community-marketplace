@@ -1,7 +1,17 @@
 # minio-tenant
 
-**MinIO Tenant** — выделенное S3-хранилище для файлов, артефактов CI, бэкапов и статики приложений с API, совместимым с Amazon S3.
+MinIO Tenant — выделенное объектное хранилище с API Amazon S3.
 
-Требует `minio-operator`.
+**Требует:** SSC `minio-operator`.
+
+**Установка:**
+
+```bash
+kubectl apply -f deploy/examples/ssc/minio-tenant.yaml
+```
+
+**Основные параметры:** `global.imageRegistry`, `global.storageClass`, pools и `volumeClaimTemplate` в `values.yaml`.
+
+**Upstream:** [MinIO Operator](https://min.io/docs/minio/kubernetes/upstream/)
 
 Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

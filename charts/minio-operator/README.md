@@ -1,7 +1,17 @@
 # minio-operator
 
-**MinIO Operator** устанавливает S3-совместимое объектное хранилище в Kubernetes — основу для бакетов и tenant’ов MinIO.
+Оператор MinIO для S3-совместимых бакетов и политик хранения в кластере.
 
-Перед чартом `minio-tenant` установите оператор.
+**Требует:** нет.
+
+**Установка:**
+
+```bash
+kubectl apply -f deploy/examples/ssc/minio-operator.yaml
+```
+
+**Основные параметры:** `global.imageRegistry`, настройки operator subchart в `values.yaml`.
+
+**Upstream:** [MinIO Operator](https://min.io/docs/minio/kubernetes/upstream/)
 
 Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

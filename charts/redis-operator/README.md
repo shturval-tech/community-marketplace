@@ -1,7 +1,17 @@
 # redis-operator
 
-**Redis Operator** (Opstree) разворачивает Redis в Kubernetes: standalone, репликация и Sentinel для отказоустойчивого кэша.
+Оператор Redis (Opstree): standalone, replication и Sentinel в Kubernetes.
 
-Перед чартом `redis` установите оператор.
+**Требует:** нет.
+
+**Установка:**
+
+```bash
+kubectl apply -f deploy/examples/ssc/redis-operator.yaml
+```
+
+**Основные параметры:** `global.imageRegistry`, образы оператора в `values.yaml`.
+
+**Upstream:** [OT-CONTAINER-KIT Redis Operator](https://github.com/OT-CONTAINER-KIT/redis-operator)
 
 Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

@@ -1,5 +1,17 @@
 # authentik
 
-**authentik** — open-source IdP с веб-консолью: SSO, OIDC, LDAP, прокси-аутентификация и гибкие потоки входа для пользователей и сервисов.
+authentik — IdP с веб-интерфейсом: SSO, OIDC, LDAP и прокси-аутентификация.
+
+**Требует:** нет.
+
+**Установка:**
+
+```bash
+kubectl apply -f deploy/examples/ssc/authentik.yaml
+```
+
+**Основные параметры:** `global.imageRegistry`, `global.ingress.className`, server/worker в `values.yaml`.
+
+**Upstream:** [authentik](https://goauthentik.io)
 
 Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

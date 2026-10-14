@@ -1,7 +1,17 @@
 # rabbitmq-operator
 
-**RabbitMQ Cluster Operator** управляет кластерами RabbitMQ в Kubernetes — очереди, обменники и политики доставки сообщений.
+Cluster Operator для RabbitMQ — управление кластерами очередей и обмена сообщениями.
 
-Перед чартом `rabbitmq` установите оператор.
+**Требует:** нет.
+
+**Установка:**
+
+```bash
+kubectl apply -f deploy/examples/ssc/rabbitmq-operator.yaml
+```
+
+**Основные параметры:** `global.imageRegistry`, настройки cluster-operator в `values.yaml`.
+
+**Upstream:** [RabbitMQ Cluster Operator](https://www.rabbitmq.com/kubernetes/operator/operator-overview)
 
 Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).

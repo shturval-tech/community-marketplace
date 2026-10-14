@@ -1,5 +1,17 @@
 # proxmox-csi
 
-**Proxmox CSI Plugin** подключает к Kubernetes хранилище **Proxmox VE**: динамическое создание томов (PersistentVolume) из дисков гипервизора.
+CSI-плагин для Proxmox VE: provisioning PersistentVolume из хранилищ гипервизора.
+
+**Требует:** нет.
+
+**Установка:**
+
+```bash
+kubectl apply -f deploy/examples/ssc/proxmox-csi.yaml
+```
+
+**Основные параметры:** `global.imageRegistry`, `csiPlugin`, `storageClass` (Proxmox endpoint, credentials).
+
+**Upstream:** [proxmox-csi-plugin](https://github.com/sergelogvinov/proxmox-csi-plugin)
 
 Соглашения: [chart-conventions.md](../../docs/chart-conventions.md).
