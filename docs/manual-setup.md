@@ -12,10 +12,10 @@ Settings → General → Danger Zone → Change visibility → Public.
 
 Settings → Pages:
 
-- **Source**: Deploy from a branch
+- **Source**: Deploy from a branch (не «GitHub Actions» — index публикует chart-releaser в ветку `gh-pages`)
 - **Branch**: `gh-pages` / `/ (root)`
 
-Ветка `gh-pages` создаётся автоматически workflow **Release Charts** (chart-releaser).
+Ветка `gh-pages` создаётся workflow **Release Charts** при первом успешном релизе (шаг *Bootstrap gh-pages branch*).
 
 Проверка после первого релиза:
 

@@ -47,6 +47,21 @@ jobs:
       - name: Ensure Strimzi subchart is vendored
         run: ./scripts/vendor-chart-deps.sh
 
+      - name: Bootstrap gh-pages branch
+        run: |
+          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
+            echo "gh-pages branch already exists"
+          else
+            git checkout --orphan gh-pages
+            git reset --hard
+            echo "# Helm chart index (managed by chart-releaser)" > README.md
+            git add README.md
+            git commit -m "Initialize gh-pages for chart-releaser"
+            git push origin gh-pages
+            git checkout -
+            git fetch origin gh-pages
+          fi
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
         id: cr
