@@ -2,13 +2,23 @@
 # Push air-gap bundle to internal registries (no internet required).
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-BUNDLE_ROOT="${BUNDLE_ROOT:-${ROOT}}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -d "${SCRIPT_DIR}/packages" && -d "${SCRIPT_DIR}/images" ]]; then
+  BUNDLE_ROOT="${BUNDLE_ROOT:-${SCRIPT_DIR}}"
+elif [[ -d "${SCRIPT_DIR}/../dist/packages" ]]; then
+  BUNDLE_ROOT="${BUNDLE_ROOT:-${SCRIPT_DIR}/../dist}"
+else
+  BUNDLE_ROOT="${BUNDLE_ROOT:-${SCRIPT_DIR}/..}"
+fi
 
 REGISTRY="${REGISTRY:?set REGISTRY (e.g. registry.internal/community-marketplace)}"
 HELM_REPO_URL="${HELM_REPO_URL:?set HELM_REPO_URL (base URL for index.yaml)}"
 SOURCE_REGISTRY="${SOURCE_REGISTRY:-ghcr.io/shturval-tech/community-marketplace}"
 REPO_NAME="${REPO_NAME:-community}"
+HELM_PUSH_MODE="${HELM_PUSH_MODE:-auto}"
+SKIP_IMAGES="${SKIP_IMAGES:-0}"
+HELM_USERNAME="${HELM_USERNAME:-}"
+HELM_PASSWORD="${HELM_PASSWORD:-}"
 
 PACKAGES="${BUNDLE_ROOT}/packages"
 IMAGES="${BUNDLE_ROOT}/images"
@@ -18,6 +28,60 @@ STAGING="${BUNDLE_ROOT}/.push-staging"
 rm -rf "${STAGING}"
 mkdir -p "${STAGING}/packages"
 
+helm_http_upload_chart() {
+  local pkg="$1"
+  local base url host project api auth=()
+  base="${HELM_REPO_URL%/}"
+  if [[ -n "${HELM_USERNAME}" && -n "${HELM_PASSWORD}" ]]; then
+    auth=(-u "${HELM_USERNAME}:${HELM_PASSWORD}")
+  fi
+  if [[ "${base}" == *gitverse.ru* ]]; then
+    url="${base}/api/charts"
+    curl -sfS "${auth[@]}" -X POST --upload-file "${pkg}" "${url}"
+    return
+  fi
+  if [[ "${base}" == *"/chartrepo/"* ]]; then
+    host="${base#*://}"
+    host="${host%%/*}"
+    project="${base#*/chartrepo/}"
+    project="${project%%/*}"
+    api="https://${host}/api/chartrepo/${project}/charts"
+    curl -sfS "${auth[@]}" -X POST --form "chart=@${pkg}" "${api}"
+    return
+  fi
+  if [[ "${base}" == *"/repository/"* ]]; then
+    curl -sfS "${auth[@]}" --upload-file "${pkg}" "${base}/$(basename "${pkg}")"
+    return
+  fi
+  echo "unsupported HELM_REPO_URL for HTTP push: ${HELM_REPO_URL}" >&2
+  return 1
+}
+
+verify_helm_http_index() {
+  local base auth=()
+  base="${HELM_REPO_URL%/}/index.yaml"
+  if [[ -n "${HELM_USERNAME}" && -n "${HELM_PASSWORD}" ]]; then
+    auth=(-u "${HELM_USERNAME}:${HELM_PASSWORD}")
+  fi
+  if ! curl -sfS "${auth[@]}" "${base}" | head -1 | grep -q '^apiVersion:'; then
+    echo "error: ${base} is not a Helm index (enable ChartMuseum/Nexus hosted repo or use GitVerse HTTP helm)" >&2
+    return 1
+  fi
+  echo "Helm HTTP index OK: ${base}"
+}
+
+use_helm_http=0
+case "${HELM_PUSH_MODE}" in
+  http) use_helm_http=1 ;;
+  oci) use_helm_http=0 ;;
+  auto)
+    if [[ "${HELM_REPO_URL}" == *chartrepo* || "${HELM_REPO_URL}" == *gitverse.ru* || "${HELM_REPO_URL}" == */repository/* ]]; then
+      use_helm_http=1
+    fi
+    ;;
+esac
+
+if [[ "${SKIP_IMAGES}" != "1" ]]; then
 echo "==> Push container images from ${IMAGES}/*.tar to ${REGISTRY}"
 shopt -s nullglob
 for tarfile in "${IMAGES}"/*.tar; do
@@ -47,6 +111,7 @@ for tarfile in "${IMAGES}"/*.tar; do
     exit 1
   fi
 done
+fi
 
 echo "==> Rewrite chart default registry ${SOURCE_REGISTRY} -> ${REGISTRY}"
 for pkg in "${PACKAGES}"/*.tgz; do
@@ -65,9 +130,12 @@ done
 echo "==> helm repo index for ${HELM_REPO_URL}"
 helm repo index "${STAGING}/packages" --url "${HELM_REPO_URL}"
 
-echo "==> Upload charts"
+echo "==> Upload charts (mode=$([[ ${use_helm_http} -eq 1 ]] && echo http || echo oci))"
 for pkg in "${STAGING}/packages"/*.tgz; do
-  if helm push "${pkg}" "oci://${REGISTRY}/charts" 2>/dev/null; then
+  if [[ ${use_helm_http} -eq 1 ]]; then
+    echo "  HTTP $(basename "$pkg")"
+    helm_http_upload_chart "${pkg}"
+  elif helm push "${pkg}" "oci://${REGISTRY}/charts" 2>/dev/null; then
     echo "  OCI pushed $(basename "$pkg")"
   elif command -v helm-cm-push >/dev/null 2>&1; then
     helm cm-push "${pkg}" "${HELM_REPO_URL}"
@@ -75,9 +143,8 @@ for pkg in "${STAGING}/packages"/*.tgz; do
     echo "  upload manually: ${pkg} -> ${HELM_REPO_URL}"
   fi
 done
-if command -v curl >/dev/null 2>&1; then
-  curl -sfT "${STAGING}/packages/index.yaml" "${HELM_REPO_URL%/}/index.yaml" \
-    || echo "  upload index.yaml manually to ${HELM_REPO_URL}"
+if [[ ${use_helm_http} -eq 1 ]]; then
+  verify_helm_http_index
 fi
 
 if [[ -d "${SCAN_DB}" ]] && command -v oras >/dev/null 2>&1; then

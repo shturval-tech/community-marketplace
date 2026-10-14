@@ -29,6 +29,9 @@ make bundle WITH_SCAN_DB=1  # pull образов в dist/images/*.tar
 tar -xzf airgap-bundle.tar.gz
 export REGISTRY=registry.internal/community-marketplace
 export HELM_REPO_URL=https://nexus.internal/repository/helm-community
+# Harbor chartrepo / GitVerse / Nexus hosted — HTTP index (не OCI):
+# export HELM_PUSH_MODE=http
+# export HELM_USERNAME=... HELM_PASSWORD=...
 ./push-offline.sh
 ```
 
