@@ -8,6 +8,8 @@ on:
       - main
     paths:
       - 'charts/**'
+      - '.github/workflows/release-charts.yaml'
+  workflow_dispatch:
 
 jobs:
   release:
@@ -31,6 +33,16 @@ jobs:
         uses: azure/setup-helm@v4
         with:
           version: v3.17.2
+
+      - name: Add Helm chart repositories
+        run: |
+          helm repo add cnpg https://cloudnative-pg.github.io/charts
+          helm repo add mariadb https://helm.mariadb.com/mariadb-operator
+          helm repo add minio-op https://operator.min.io/
+          helm repo add keycloakx https://codecentric.github.io/helm-charts
+          helm repo add authentik https://charts.goauthentik.io
+          helm repo add ot-helm https://ot-container-kit.github.io/helm-charts/
+          helm repo update
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
