@@ -1,48 +1,65 @@
 # Сканирование уязвимостей (Trivy + БДУ ФСТЭК)
 
-CI маркетплейса проверяет **зеркалируемые образы** в ghcr.io и (информационно) Helm-манифесты чартов. В кластере Штурвала ничего дополнительно не ставится.
+Для администраторов и разработчиков: как CI проверяет **зеркалируемые образы** в GHCR и где смотреть результат. В кластере Штурвала дополнительные компоненты для сканирования не ставятся.
+
+См. также: [глоссарий](glossary.md), автоматизация — [ci.md](ci.md), закрытый контур — [airgap.md](airgap.md).
 
 ## Что сканируется
 
 | Объект | Инструмент | Когда |
 |--------|------------|--------|
-| Образы `ghcr.io/shturval-tech/community-marketplace/*` | Trivy (`vuln`) + обогащение БДУ | После каждой сборки образа ([`.github/workflows/images.yaml`](../.github/workflows/images.yaml)) |
-| Те же образы `:latest` | Полный прогон | Ежедневно 03:00 UTC (06:00 МСК), свежая БДУ на schedule + вручную ([`.github/workflows/security-scan.yaml`](../.github/workflows/security-scan.yaml)) |
-| Каталог `charts/` | Trivy `config` | PR/main lint (без падения job) |
+| Образы `ghcr.io/shturval-tech/community-marketplace/*` | Trivy (`vuln`) + обогащение БДУ | После каждой сборки образа (workflow **Mirror Images**) |
+| Те же образы `:latest` | Полный прогон | Ежедневно 03:00 UTC (06:00 МСК), свежая БДУ на расписании + вручную (**Security Scan**) |
+| Каталог `charts/` | Trivy `config` | PR/main lint (информационно, job не падает) |
 
 ## Базы данных
 
-- **Trivy DB:** `public.shturval.tech/trivy-db:2` — агрегированная база платформы Штурвал (CVE, errata ОС и др.). При недоступности используется фолбэк `ghcr.io/aquasecurity/trivy-db:2` ([`scripts/scan/verify-trivy-db.sh`](../scripts/scan/verify-trivy-db.sh)).
+- **Trivy DB:** `public.shturval.tech/trivy-db:2` — агрегированная база платформы Штурвал. Фолбэк: `ghcr.io/aquasecurity/trivy-db:2` ([`scripts/scan/verify-trivy-db.sh`](../scripts/scan/verify-trivy-db.sh)).
 - **Java DB:** `public.shturval.tech/trivy-java-db:1`
-- **БДУ ФСТЭК:** выгрузка `vulxml.xml.gz` — по умолчанию зеркало [velvetway/bdu-fstec-mirror](https://github.com/velvetway/bdu-fstec-mirror) (доступно из GitHub Actions). Свой URL: переменная `BDU_SOURCE_URL`. В air-gap: `BDU_LOCAL_FILE=/path/to/vulxml.xml`.
+- **БДУ ФСТЭК:** `vulxml.xml.gz` — зеркало [velvetway/bdu-fstec-mirror](https://github.com/velvetway/bdu-fstec-mirror). Переменная `BDU_SOURCE_URL`. В контуре: `BDU_LOCAL_FILE`.
 
-Сопоставление **CVE → BDU** выполняется скриптом [`scripts/scan/bdu-enrich.py`](../scripts/scan/bdu-enrich.py) и добавляет в JSON поле `BDU` (идентификаторы, уровень по формулировке ФСТЭК, CVSS).
+Сопоставление CVE → BDU: [`scripts/scan/bdu-enrich.py`](../scripts/scan/bdu-enrich.py) (поле `BDU` в JSON).
 
 ## Где смотреть результаты
 
-1. **[Отчёт на GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/)** — сводка последнего сканирования; плашка в README берёт статус из [`security/badge.json`](https://shturval-tech.github.io/community-marketplace/security/badge.json) (shields.io endpoint).
-2. **GitHub Actions → Step Summary** — таблица по каждому образу (`report.bdu.md`).
-3. **Security → Code scanning alerts** — SARIF после сборки образов (категория `trivy-<image>`).
-4. **Артефакты workflow** — `report.json`, `report.bdu.json`, `report.bdu.md`, `report.cyclonedx.json` (SBOM).
+1. **[Отчёт на GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/)** — сводка; плашка в README — [`security/badge.json`](https://shturval-tech.github.io/community-marketplace/security/badge.json).
+2. **GitHub Actions → Summary** — таблица по образу (`report.bdu.md`).
+3. **Security → Code scanning** — SARIF после Mirror Images (`trivy-<image>`).
+4. **Артефакты** — `report.json`, `report.bdu.json`, `report.bdu.md`, `report.cyclonedx.json`.
 
-Публикация на Pages: job **`publish-pages`** в workflow **Security Scan** и **Mirror Images** (после job `scan`). Workflow **Publish Security Pages** — только ручной перезапуск по `workflow_run_id` Security Scan.
+Публикация на Pages: job `publish-pages` в **Security Scan** и **Mirror Images**. Повторная выгрузка вручную — workflow **Publish Security Pages** ([ci.md](ci.md)).
+
+## Как читать отчёт
+
+**Плашка в README**
+
+| Сообщение | Смысл |
+|-----------|--------|
+| «нет данных» | Нет успешных отчётов (Pages ещё не обновлялись или все scan jobs упали). |
+| «частично (N без отч.)» | Часть образов без `report.bdu.json`; есть данные по остальным. |
+| «ошибки (N)» | Нет успешных отчётов, но N образов помечены как неудачное сканирование. |
+| Зелёный / красный по CVE | Есть отчёты; красный — есть блокирующие по политике находки с известным fix. |
+
+**Таблица «Сканирование не удалось»** на Pages — образы без отчёта со ссылкой на упавший job в Actions.
+
+**Колонки в сводке:** Trivy (уровень сканера), ФСТЭК (уровень по БДУ), Fixed (версия исправления, если известна).
 
 ## Политика блокировки
 
-- Сборка и push образа **не блокируются**.
-- Job `scan` падает, если найдена уязвимость уровня **`SCAN_FAIL_SEVERITY`** (по умолчанию `CRITICAL`) **с известной версией исправления** (`FixedVersion` не пустой). Уровень учитывает и Trivy, и БДУ (берётся более высокий).
-- Исключения — файл [`security/.trivyignore`](../security/.trivyignore) (CVE или `BDU:YYYY-NNNNN`).
-
-Порог можно изменить в настройках репозитория: variable `SCAN_FAIL_SEVERITY`.
+- **Сборка и загрузка образа не блокируются** — job `scan` с `continue-on-error: true`.
+- Отдельный job **`scan-gate`** проверяет агрегированный отчёт: уязвимость уровня **`SCAN_FAIL_SEVERITY`** (по умолчанию `CRITICAL`) **с непустым FixedVersion**. Учитывается более высокий уровень из Trivy и БДУ.
+- Workflow **Mirror Images** может завершиться с ошибкой из‑за `scan-gate`; отчёт на Pages всё равно публикуется.
+- При **Nightly Rebuild** этап `scan-gate` **пропускается** (пересборка не упирается в CVE).
+- Исключения: [`security/.trivyignore`](../security/.trivyignore) (CVE или `BDU:YYYY-NNNNN`).
+- Порог: variable репозитория `SCAN_FAIL_SEVERITY`.
 
 ## Локальный запуск
 
 ```bash
 make bdu-fetch
-# нужны: trivy, docker/login к ghcr при приватных образах
 make scan IMAGE=ghcr.io/shturval-tech/community-marketplace/redis:latest
 make scan-all
-make scan-test   # unit-тесты обогащения БДУ
+make scan-test
 ```
 
 Отчёты: `dist/scan/<image>/`.
@@ -50,11 +67,12 @@ make scan-test   # unit-тесты обогащения БДУ
 ## Закрытый контур
 
 ```bash
-make bundle WITH_SCAN_DB=1   # dist/scan-db/: trivy-db, trivy-java-db, vulxml.xml.gz
-make push REGISTRY=... HELM_REPO_URL=...
+make bundle WITH_SCAN_DB=1   # dist/scan-db/
+# распаковка бандла, затем:
+./push-offline.sh
 ```
 
-На build-хосте в контуре:
+На хосте в контуре:
 
 ```bash
 export TRIVY_DB_REPOSITORY=registry.internal/trivy-db:2
@@ -66,6 +84,6 @@ make scan-all
 
 ## Ограничения
 
-- Зеркало БДУ обновляется с лагом относительно `bdu.fstec.ru`; в отчёте указывается дата снимка.
-- Образы upstream — уязвимости устраняет поставщик; маркетплейс только фиксирует и сигнализирует.
-- SARIF в Security tab содержит в основном идентификаторы CVE; полные BDU — в `report.bdu.json` / Step Summary.
+- Зеркало БДУ отстаёт от `bdu.fstec.ru`; в отчёте — дата снимка.
+- Уязвимости upstream устраняет поставщик образа; маркетплейс фиксирует и сигнализирует.
+- SARIF в Security tab в основном с CVE; полные BDU — в `report.bdu.json` и Summary.
