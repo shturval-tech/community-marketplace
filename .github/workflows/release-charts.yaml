@@ -44,6 +44,9 @@ jobs:
           helm repo add ot-helm https://ot-container-kit.github.io/helm-charts/
           helm repo update
 
+      - name: Ensure Strimzi subchart is vendored
+        run: ./scripts/vendor-chart-deps.sh
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.7.0
         id: cr
