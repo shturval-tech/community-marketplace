@@ -1,0 +1,268 @@
+apiVersion: v1
+entries:
+  authentik:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: identity
+    apiVersion: v2
+    appVersion: 2026.8.3
+    created: "2026-10-14T10:16:17.971146157Z"
+    dependencies:
+    - name: authentik
+      repository: https://charts.goauthentik.io
+      version: 2026.8.3
+    description: Shturval community marketplace wrapper for authentik
+    digest: 3590eb2e7ebfcbbd4735bc4f92d0c490f6bc3d71b2ac22aeedd36838beeb7857
+    name: authentik
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/authentik-0.1.0/authentik-0.1.0.tgz
+    version: 0.1.0
+  cnpg-cluster:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/serviceclass: postgres
+    apiVersion: v2
+    appVersion: 0.9.0
+    created: "2026-10-14T10:16:18.227569439Z"
+    dependencies:
+    - name: cluster
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.9.0
+    description: Shturval community marketplace wrapper for CloudNativePG cluster
+    digest: 4ee40dbb8d8bada358678b56249d47e35bccc36378baa391b828869d11e4e759
+    name: cnpg-cluster
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/cnpg-cluster-0.1.0/cnpg-cluster-0.1.0.tgz
+    version: 0.1.0
+  cnpg-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+    apiVersion: v2
+    appVersion: 0.29.1
+    created: "2026-10-14T10:16:18.43022Z"
+    dependencies:
+    - name: cloudnative-pg
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.29.1
+    description: Shturval community marketplace wrapper for cloudnative-pg
+    digest: 7a70de5c829ca7639e2250706ba6d1063f7a8a781b44ffefadbabcefe009365d
+    name: cnpg-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/cnpg-operator-0.1.0/cnpg-operator-0.1.0.tgz
+    version: 0.1.0
+  kafka:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+    apiVersion: v2
+    appVersion: 3.8.0
+    created: "2026-10-14T10:16:18.554119551Z"
+    description: Kafka cluster (Strimzi Kafka + KafkaNodePool, KRaft)
+    digest: 0df80b456d690250d6a4529c796ce6fdec0ab95304a4ebdcee5634a4be3a45f9
+    name: kafka
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/kafka-0.1.0/kafka-0.1.0.tgz
+    version: 0.1.0
+  keycloak:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: identity
+    apiVersion: v2
+    appVersion: 7.3.2
+    created: "2026-10-14T10:16:18.807351439Z"
+    dependencies:
+    - name: keycloakx
+      repository: https://codecentric.github.io/helm-charts
+      version: 7.3.2
+    description: Shturval community marketplace wrapper for keycloakx
+    digest: 78e4f5fc674bdfd4616142c063711c05b97b25202885e8d298276d31e065124f
+    name: keycloak
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/keycloak-0.1.0/keycloak-0.1.0.tgz
+    version: 0.1.0
+  mariadb:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/dependencyclass: mariadb-operator
+    apiVersion: v2
+    appVersion: "11.4"
+    created: "2026-10-14T10:16:18.952553259Z"
+    description: MariaDB instance (MariaDB CR) for mariadb-operator
+    digest: 24362edffe2ae66b776d4353249ec08437790b82cd65c5afdca2183be8119db3
+    name: mariadb
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/mariadb-0.1.0/mariadb-0.1.0.tgz
+    version: 0.1.0
+  mariadb-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+    apiVersion: v2
+    appVersion: 26.10.1
+    created: "2026-10-14T10:16:19.439976898Z"
+    dependencies:
+    - name: mariadb-operator
+      repository: https://helm.mariadb.com/mariadb-operator
+      version: 26.10.1
+    description: Shturval community marketplace wrapper for mariadb-operator
+    digest: 08fc23fe2c80ffe02881e0ebe997a9bb3dbe6f5f6b9ae8f86927cbffe03742b0
+    name: mariadb-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/mariadb-operator-0.1.0/mariadb-operator-0.1.0.tgz
+    version: 0.1.0
+  minio-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: storage
+    apiVersion: v2
+    appVersion: 4.3.7
+    created: "2026-10-14T10:16:19.647834524Z"
+    dependencies:
+    - name: minio-operator
+      repository: https://operator.min.io/
+      version: 4.3.7
+    description: Shturval community marketplace wrapper for minio-operator
+    digest: 0b2d531366f12f35d2e5f0f75100f1fd1ac6103b8c3743ef233ff64e41d0a351
+    name: minio-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/minio-operator-0.1.0/minio-operator-0.1.0.tgz
+    version: 0.1.0
+  minio-tenant:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: storage
+    apiVersion: v2
+    appVersion: 7.1.1
+    created: "2026-10-14T10:16:19.935236471Z"
+    dependencies:
+    - name: tenant
+      repository: https://operator.min.io/
+      version: 7.1.1
+    description: Shturval community marketplace wrapper for tenant
+    digest: d52d7a25b5cf9e27fba7b7659173973b3a127eb6d561a8365122c1a8cfc1e1ba
+    name: minio-tenant
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/minio-tenant-0.1.0/minio-tenant-0.1.0.tgz
+    version: 0.1.0
+  nextcloud-aio:
+  - annotations:
+      artifacthub.io/license: AGPL-3.0
+      shturval.tech/category: infra
+      shturval.tech/upstream: https://github.com/nextcloud/all-in-one
+    apiVersion: v2
+    appVersion: latest
+    created: "2026-10-14T10:16:20.090047489Z"
+    description: Nextcloud All-in-One (vendored kompose chart — run scripts/sync-upstream.sh)
+    digest: 267851c2a6908b5e6f9f4005a10b8a7513b9cdf4d05635d876571c2c2c416e22
+    name: nextcloud-aio
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/nextcloud-aio-0.1.0/nextcloud-aio-0.1.0.tgz
+    version: 0.1.0
+  proxmox-csi:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: infra
+    apiVersion: v2
+    appVersion: 0.3.3
+    created: "2026-10-14T10:16:20.268415116Z"
+    dependencies:
+    - name: proxmox-csi-plugin
+      repository: oci://ghcr.io/sergelogvinov/charts
+      version: 0.3.3
+    description: Proxmox CSI plugin (Shturval community wrapper)
+    digest: fd9030c954c73eb050cbacc1063dd4eedaaff83509f998a50e75bd40534ace3e
+    name: proxmox-csi
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/proxmox-csi-0.1.0/proxmox-csi-0.1.0.tgz
+    version: 0.1.0
+  rabbitmq:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+    apiVersion: v2
+    appVersion: "4.0"
+    created: "2026-10-14T10:16:20.43905062Z"
+    description: RabbitmqCluster instance
+    digest: 55bf9704d5b2974ad6d2c79f9652aa49360b96a560ac433eb940c996d67b7be9
+    name: rabbitmq
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/rabbitmq-0.1.0/rabbitmq-0.1.0.tgz
+    version: 0.1.0
+  rabbitmq-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+      shturval.tech/serviceclass: rabbitmq-operator
+    apiVersion: v2
+    appVersion: 2.12.0
+    created: "2026-10-14T10:16:20.71641107Z"
+    description: RabbitMQ Cluster Operator (community packaging)
+    digest: c48f850de10746351263745fb2522db737d021d10c1424e39f0f839c27415e50
+    name: rabbitmq-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/rabbitmq-operator-0.1.0/rabbitmq-operator-0.1.0.tgz
+    version: 0.1.0
+  redis:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+    apiVersion: v2
+    appVersion: "7.2"
+    created: "2026-10-14T10:16:20.937869751Z"
+    description: Redis replication instance (redis-operator CR)
+    digest: a38b1dcca589de0fb5ac0f88b3db07f081e4eb6f13d9c15de1f8d353c40f6842
+    name: redis
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/redis-0.1.0/redis-0.1.0.tgz
+    version: 0.1.0
+  redis-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+    apiVersion: v2
+    appVersion: 0.27.0
+    created: "2026-10-14T10:16:21.220948673Z"
+    dependencies:
+    - name: redis-operator
+      repository: https://ot-container-kit.github.io/helm-charts/
+      version: 0.27.0
+    description: Shturval community marketplace wrapper for redis-operator
+    digest: 32bdb09f85c78d2e04abd71492e5d804bf2aaebc642e4f846d5d724aa250e0d7
+    name: redis-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/redis-operator-0.1.0/redis-operator-0.1.0.tgz
+    version: 0.1.0
+  strimzi-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+      shturval.tech/serviceclass: kafka-operator
+    apiVersion: v2
+    appVersion: 0.45.0
+    created: "2026-10-14T10:16:21.501240429Z"
+    description: Strimzi Kafka operator (Shturval community wrapper, vendored subchart)
+    digest: 6fe3e29dd81055aae1677da0e6f5804865b1ee96363a202a1ce7d4c30489caa2
+    name: strimzi-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/strimzi-operator-0.1.0/strimzi-operator-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-10-14T10:16:21.501251766Z"
