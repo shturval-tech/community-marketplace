@@ -49,11 +49,25 @@ if [[ "${WITH_SCAN_DB:-0}" == "1" ]]; then
 fi
 
 mkdir -p "${DIST}/packages"
-if [[ -d "${PACKAGES}" ]] && ls "${PACKAGES}"/*.tgz >/dev/null 2>&1; then
-  cp -a "${PACKAGES}/." "${DIST}/packages/"
+# `make package index` already fills dist/packages (including index.yaml).
+if [[ ! -f "${DIST}/packages/index.yaml" && -f "${DIST}/index.yaml" ]]; then
+  cp -f "${DIST}/index.yaml" "${DIST}/packages/index.yaml"
 fi
-if [[ -f "${DIST}/index.yaml" ]]; then
-  cp -f "${DIST}/index.yaml" "${DIST}/packages/index.yaml" 2>/dev/null || cp -f "${DIST}/index.yaml" "${DIST}/"
+
+missing=()
+while IFS= read -r line; do
+  [[ "$line" =~ name:\ (.+) ]] || continue
+  name="${BASH_REMATCH[1]}"
+  tag=$(awk -v n="$name" '
+    $1=="-" && $2=="name:" && $3==n {found=1; next}
+    found && $1=="tag:" {gsub(/"/,"",$2); print $2; exit}
+  ' "${DIST}/images/images.yaml")
+  [[ -f "${DIST}/images/${name}.tar" ]] || missing+=("${registry}/${name}:${tag}")
+done < "${DIST}/images/images.yaml"
+if ((${#missing[@]})); then
+  echo "error: missing image tars (mirror images or copy manually):" >&2
+  printf '  %s\n' "${missing[@]}" >&2
+  exit 1
 fi
 
 cp -f "${ROOT}/scripts/airgap-push-offline.sh" "${DIST}/push-offline.sh"

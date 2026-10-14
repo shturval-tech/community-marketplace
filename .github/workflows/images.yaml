@@ -141,7 +141,7 @@ jobs:
 
   publish-pages:
     needs: [mirror, scan, prepare]
-    if: always() && needs.mirror.result != 'cancelled' && needs.scan.result != 'cancelled'
+    if: needs.mirror.result == 'success' && needs.scan.result == 'success'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
