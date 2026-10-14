@@ -57,8 +57,9 @@ make scan-test         # pytest tests/scan/
 - main + `charts/**`: `release-charts.yaml` — chart-releaser → gh-pages, OCI push.
 - main + `images/**`: `images.yaml` — buildx push, job `scan` (Trivy + БДУ, SARIF).
 - daily 03:00 UTC + manual: `security-scan.yaml` — полный scan `:latest`, на schedule свежая БДУ (`BDU_FORCE_FETCH=1`).
+- after scheduled Security Scan: `nightly-rebuild.yaml` — fingerprint (`scripts/build-fingerprint.sh`); mirror + `airgap-bundle.yaml` если изменились git `charts/`/`images/` или upstream digest (не CVE).
 - after scan workflows: `publish-security-pages.yaml` — отчёт и `badge.json` на gh-pages (`/security/`).
-- tag `airgap-*` / manual: `airgap-bundle.yaml` — Release `airgap-bundle.tar.gz`.
+- Release Charts / Mirror Images / nightly / manual: `airgap-bundle.yaml` — `airgap-latest` + `airgap-<ver>-<date>`, prune 3 versioned releases.
 - PR/main: `lint-test.yaml` — trivy config (информационно), pytest `tests/scan/`.
 
 ## Ссылки

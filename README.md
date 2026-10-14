@@ -90,7 +90,7 @@ kubectl apply -f deploy/examples/ssc/cnpg-cluster.yaml
 
 ## Закрытый контур
 
-**Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases, распакуйте и выполните `./push-offline.sh` (внутренний Harbor/Nexus и т.п.).
+**Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases (alias последней сборки), распакуйте и выполните `./push-offline.sh` (внутренний Harbor/Nexus и т.п.). В Releases также лежат версионные теги `airgap-<версия чартов>-<YYYYMMDD>` — **хранятся 3 последних**; для фиксации сборки используйте их, для «всегда актуального» — `airgap-latest`.
 
 > **Harbor:** образы — в project registry; для HTTP `index.yaml` в Штурвале нужен **ChartMuseum** (или Nexus/GitVerse HTTP). В Harbor 2.8+ ChartMuseum не входит в состав по умолчанию — `/chartrepo/` сам по себе не заменяет hosted Helm repo. Без ChartMuseum чарты из бандла пушатся в Harbor как **OCI** (`oci://…/charts`). Подробнее: [docs/airgap.md](docs/airgap.md#harbor-и-http-indexyaml-chartmuseum).
 
@@ -111,7 +111,7 @@ kubectl apply -f shturvalrepoconfig.yaml
 
 ## Безопасность
 
-После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Актуальный отчёт — на [GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/); статус — плашка в шапке README. Дополнительно: Step Summary, артефакты Actions, вкладка **Security** (SARIF). После каждого push образов — scan в workflow **Mirror Images**; **полный** прогон всех `:latest` с публикацией Pages — **ежедневно ночью** (03:00 UTC / 06:00 МСК) и вручную в workflow [**Security Scan**](https://github.com/shturval-tech/community-marketplace/actions/workflows/security-scan.yaml). На scheduled-запуске **БДУ vulxml** заново скачивается с зеркала (дата снимка — в отчёте).
+После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Актуальный отчёт — на [GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/); статус — плашка в шапке README. Дополнительно: Step Summary, артефакты Actions, вкладка **Security** (SARIF). После каждого push образов — scan в workflow **Mirror Images**; **полный** прогон всех `:latest` с публикацией Pages — **ежедневно ночью** (03:00 UTC / 06:00 МСК) и вручную в workflow [**Security Scan**](https://github.com/shturval-tech/community-marketplace/actions/workflows/security-scan.yaml). На scheduled-запуске **БДУ vulxml** заново скачивается с зеркала (дата снимка — в отчёте). После ночного Security Scan workflow [**Nightly Rebuild**](https://github.com/shturval-tech/community-marketplace/actions/workflows/nightly-rebuild.yaml) **пересобирает образы и air-gap бандл**, только если изменились `charts/` / `images/` в git или digest upstream-образов — **смена состава CVE пересборку не запускает**.
 
 ```bash
 make scan IMAGE=ghcr.io/shturval-tech/community-marketplace/redis:latest

@@ -1,0 +1,105 @@
+name: Nightly Rebuild
+
+# После ночного Security Scan: пересборка образов и air-gap бандла, если изменились
+# charts/, images/ в git или digest upstream-образов (не CVE).
+
+on:
+  workflow_run:
+    workflows:
+      - Security Scan
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild mirror + bundle even if fingerprint unchanged
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  packages: write
+  security-events: write
+  actions: read
+
+jobs:
+  detect:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.event == 'schedule'
+    runs-on: ubuntu-24.04
+    outputs:
+      changed: ${{ steps.result.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install crane
+        run: |
+          curl -sSL https://github.com/google/go-containerregistry/releases/download/v0.20.3/go-containerregistry_Linux_x86_64.tar.gz \
+            | tar xz crane
+          sudo mv crane /usr/local/bin/
+
+      - name: Compute build fingerprint
+        id: fp
+        run: |
+          chmod +x scripts/build-fingerprint.sh scripts/compare-build-fingerprints.sh
+          mkdir -p dist
+          ./scripts/build-fingerprint.sh dist/build-fingerprint.txt
+          cp dist/build-fingerprint.txt dist/build-fingerprint.new.txt
+
+      - name: Download baseline fingerprint from airgap-latest
+        id: baseline
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p dist/baseline
+          if gh release download airgap-latest -R "${{ github.repository }}" \
+            -p build-fingerprint.txt -D dist/baseline 2>/dev/null; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No build-fingerprint.txt on airgap-latest (first nightly rebuild will run)."
+          fi
+
+      - name: Compare fingerprints
+        id: result
+        env:
+          FORCE: ${{ inputs.force == true && 'true' || 'false' }}
+        run: |
+          if [[ "${FORCE}" == "true" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "### Nightly rebuild: forced" >> "${GITHUB_STEP_SUMMARY}"
+            exit 0
+          fi
+          if [[ "${{ steps.baseline.outputs.found }}" != "true" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "### Nightly rebuild: no baseline fingerprint" >> "${GITHUB_STEP_SUMMARY}"
+            exit 0
+          fi
+          if ./scripts/compare-build-fingerprints.sh dist/build-fingerprint.new.txt dist/baseline/build-fingerprint.txt; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "### Nightly rebuild: skipped (sources/upstream unchanged)" >> "${GITHUB_STEP_SUMMARY}"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "### Nightly rebuild: sources or upstream images changed" >> "${GITHUB_STEP_SUMMARY}"
+            echo '```' >> "${GITHUB_STEP_SUMMARY}"
+            ./scripts/compare-build-fingerprints.sh dist/build-fingerprint.new.txt dist/baseline/build-fingerprint.txt >> "${GITHUB_STEP_SUMMARY}" 2>&1 || true
+            echo '```' >> "${GITHUB_STEP_SUMMARY}"
+          fi
+
+  mirror:
+    needs: detect
+    if: needs.detect.outputs.changed == 'true'
+    uses: ./.github/workflows/images.yaml
+    with:
+      skip_scan_gate: true
+    secrets: inherit
+
+  bundle:
+    needs: [detect, mirror]
+    if: needs.detect.outputs.changed == 'true' && needs.mirror.result == 'success'
+    uses: ./.github/workflows/airgap-bundle.yaml
+    with:
+      skip_trigger_check: true
+    secrets: inherit

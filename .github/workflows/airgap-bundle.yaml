@@ -1,20 +1,22 @@
 name: Air-gap Bundle Release
 
-# Один GitHub Release (airgap-latest) с полным offline-архивом.
-# Запускается после Release Charts / Mirror Images или вручную.
+# Offline-архив: airgap-latest (alias) + версионные airgap-<ver>-<YYYYMMDD> (хранятся 3 последних).
+# Триггеры: Release Charts / Mirror Images, workflow_call (nightly-rebuild), вручную.
 
 on:
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      skip_trigger_check:
+        description: Skip workflow_run success check (caller from nightly-rebuild)
+        type: boolean
+        default: false
   workflow_run:
     workflows:
       - Release Charts
       - Mirror Images
     types:
       - completed
-
-concurrency:
-  group: airgap-bundle
-  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -24,7 +26,11 @@ jobs:
   bundle:
     if: >
       github.event_name == 'workflow_dispatch' ||
-      (github.event.workflow_run.conclusion == 'success')
+      (github.event_name == 'workflow_call' && inputs.skip_trigger_check) ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    concurrency:
+      group: airgap-bundle
+      cancel-in-progress: true
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -40,6 +46,13 @@ jobs:
           ver=$(grep '^version:' charts/cnpg-operator/Chart.yaml | awk '{print $2}')
           echo "version=${ver}" >> "$GITHUB_OUTPUT"
           echo "Chart bundle version: ${ver}"
+
+      - name: Release tag (versioned)
+        id: reltag
+        run: |
+          tag="airgap-${{ steps.meta.outputs.version }}-$(date -u +%Y%m%d)"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          echo "Versioned release tag: ${tag}"
 
       - name: Package charts (offline)
         run: make package index
@@ -65,6 +78,11 @@ jobs:
             | tar xz oras
           sudo mv oras /usr/local/bin/
 
+      - name: Record build fingerprint
+        run: |
+          chmod +x scripts/build-fingerprint.sh
+          ./scripts/build-fingerprint.sh dist/build-fingerprint.txt
+
       - name: Build air-gap bundle
         env:
           WITH_SCAN_DB: "1"
@@ -77,7 +95,31 @@ jobs:
           chmod +x scripts/prepare-airgap-release-assets.sh
           ./scripts/prepare-airgap-release-assets.sh
 
-      - name: Publish single GitHub Release (air-gap)
+      - name: Publish versioned GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.reltag.outputs.tag }}
+          name: Air-gap bundle ${{ steps.reltag.outputs.tag }}
+          body: |
+            **Offline-архив** community-marketplace (версия чартов **${{ steps.meta.outputs.version }}**, сборка **${{ steps.reltag.outputs.tag }}**).
+
+            Alias последней сборки: [airgap-latest](https://github.com/${{ github.repository }}/releases/tag/airgap-latest).
+
+            ```bash
+            cat airgap-bundle.tar.gz.part-* > airgap-bundle.tar.gz 2>/dev/null || true
+            sha256sum -c airgap-bundle.sha256
+            tar -xzf airgap-bundle.tar.gz
+            ./push-offline.sh
+            ```
+          files: |
+            dist/airgap-bundle.tar.gz
+            dist/airgap-bundle.tar.gz.part-*
+            dist/airgap-bundle.sha256
+            dist/airgap-bundle.parts.txt
+            dist/build-fingerprint.txt
+          overwrite_files: true
+
+      - name: Publish GitHub Release (airgap-latest)
         uses: softprops/action-gh-release@v2
         with:
           tag_name: airgap-latest
@@ -86,9 +128,9 @@ jobs:
             **Единый offline-архив** community-marketplace (Helm charts + `index.yaml` + образы OCI tar + `push-offline.sh` + опционально базы Trivy/БДУ).
 
             Версия чартов в архиве: **${{ steps.meta.outputs.version }}**
+            Версионный тег этой сборки: **${{ steps.reltag.outputs.tag }}** (в Releases хранятся **3** последних `airgap-*`, кроме `airgap-latest`).
 
             ```bash
-            # Если в Release несколько part-файлов (лимит GitHub 2 GiB на asset):
             cat airgap-bundle.tar.gz.part-* > airgap-bundle.tar.gz
             sha256sum -c airgap-bundle.sha256
             tar -xzf airgap-bundle.tar.gz
@@ -99,12 +141,20 @@ jobs:
 
             Онлайн-потребление без этого архива:
             - Helm index: https://shturval-tech.github.io/community-marketplace/index.yaml
-            - OCI charts/images: `ghcr.io/shturval-tech/community-marketplace` (отдельные packages в GHCR — нормально для pull по компонентам).
+            - OCI charts/images: `ghcr.io/shturval-tech/community-marketplace`
 
-            Триггер сборки: ${{ github.event_name == 'workflow_dispatch' && 'manual' || format('{0}', github.event.workflow_run.name) }}.
+            Триггер сборки: ${{ github.event_name == 'workflow_dispatch' && 'manual' || github.event_name == 'workflow_call' && 'nightly-rebuild' || format('{0}', github.event.workflow_run.name) }}.
           files: |
             dist/airgap-bundle.tar.gz
             dist/airgap-bundle.tar.gz.part-*
             dist/airgap-bundle.sha256
             dist/airgap-bundle.parts.txt
+            dist/build-fingerprint.txt
           overwrite_files: true
+
+      - name: Prune old versioned air-gap releases
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          chmod +x scripts/prune-airgap-releases.sh
+          ./scripts/prune-airgap-releases.sh 3

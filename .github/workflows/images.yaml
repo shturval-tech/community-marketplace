@@ -11,6 +11,12 @@ on:
       - 'security/**'
       - '.github/workflows/images.yaml'
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      skip_scan_gate:
+        description: Skip enforce-gate job (nightly rebuild after Security Scan)
+        type: boolean
+        default: false
 
 jobs:
   prepare:
@@ -158,7 +164,10 @@ jobs:
   scan-gate:
     runs-on: ubuntu-24.04
     needs: [mirror, scan, prepare]
-    if: always() && needs.mirror.result == 'success' && needs.scan.result != 'cancelled' && needs.scan.result != 'skipped'
+    if: >
+      always() && needs.mirror.result == 'success' &&
+      needs.scan.result != 'cancelled' && needs.scan.result != 'skipped' &&
+      (github.event_name != 'workflow_call' || inputs.skip_scan_gate != true)
     steps:
       - uses: actions/checkout@v4
 

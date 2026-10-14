@@ -4,9 +4,9 @@
 
 ## 1. Получить бандл (вне контура или из mirror GitHub)
 
-Скачайте **один** архив из [GitHub Releases → Air-gap bundle](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest): `airgap-bundle.tar.gz` + `airgap-bundle.sha256`.
+Скачайте архив из [GitHub Releases](https://github.com/shturval-tech/community-marketplace/releases): **`airgap-latest`** (последняя сборка) или версионный **`airgap-<версия>-<YYYYMMDD>`** (в Releases хранятся **3** последних таких тега). Файлы: `airgap-bundle.tar.gz` + `airgap-bundle.sha256` (+ `build-fingerprint.txt` для CI).
 
-Сборка архива запускается автоматически после успешных **Release Charts** и **Mirror Images**, либо вручную (**Air-gap Bundle Release**).
+Сборка: после успешных **Release Charts** / **Mirror Images**, после **Nightly Rebuild** (если изменились исходники или upstream-образы), либо вручную (**Air-gap Bundle Release**).
 
 > **Не путать с GHCR Packages:** в реестре `ghcr.io/shturval-tech/community-marketplace` по-прежнему отдельный OCI-package на каждый образ/чарт — это для online pull. Для закрытого контура нужен только **`airgap-bundle.tar.gz`**, не перечисление releases по каждому чарту (per-chart GitHub Releases отключены; index — на gh-pages).
 
