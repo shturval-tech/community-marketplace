@@ -51,6 +51,9 @@ jobs:
         continue-on-error: true
         env:
           SCAN_ENFORCE_GATE: "0"
+          WORKFLOW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_JOB_NAME: scan-all
         run: |
           chmod +x scripts/scan/*.sh
           ./scripts/scan/trivy-scan.sh all
@@ -85,6 +88,7 @@ jobs:
     runs-on: ubuntu-24.04
     permissions:
       contents: write
+      actions: read
     env:
       SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
     steps:
@@ -100,19 +104,14 @@ jobs:
       - name: Prepare report for Pages
         run: |
           chmod +x scripts/scan/*.sh
-          if ! find dist/scan -name 'report.bdu.json' -print -quit | grep -q .; then
-            mkdir -p dist/scan
-            echo "# Сводный отчёт сканирования" > dist/scan/REPORT.md
-            echo "" >> dist/scan/REPORT.md
-            echo "Артефакт scan пуст или job scan не завершился." >> dist/scan/REPORT.md
-          else
-            ./scripts/scan/aggregate-report.sh
-          fi
+          ./scripts/scan/aggregate-report.sh
 
       - name: Build GitHub Pages bundle
         env:
           WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           SCAN_SOURCE: Security Scan
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
         run: |
           chmod +x scripts/scan/*.sh
           ./scripts/scan/publish-pages.sh

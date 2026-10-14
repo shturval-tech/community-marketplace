@@ -23,6 +23,11 @@ done < <(find "${ARTIFACT_DIR}" -name 'report.bdu.json' -print0)
 
 find "${ARTIFACT_DIR}" -name 'REPORT.md' -exec cp -f {} "${OUT}/REPORT.md" \; 2>/dev/null || true
 
+mkdir -p "${OUT}/scan-meta"
+while IFS= read -r -d '' f; do
+  cp -f "$f" "${OUT}/scan-meta/$(basename "$f")"
+done < <(find "${ARTIFACT_DIR}" -path '*/scan-meta/*.json' -print0 2>/dev/null)
+
 count=$(find "${OUT}" -name 'report.bdu.json' 2>/dev/null | wc -l)
 if [[ "${count}" -gt 0 ]]; then
   echo "prepare-dist-scan: OK (${count} reports)"

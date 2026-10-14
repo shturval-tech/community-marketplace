@@ -15,6 +15,10 @@ if [[ ! -f dist/scan/REPORT.md ]]; then
   ./scripts/scan/aggregate-report.sh
 fi
 
+if [[ -n "${GITHUB_REPOSITORY:-}" && -n "${GITHUB_RUN_ID:-}" ]]; then
+  ./scripts/scan/resolve-job-links.sh "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}" dist/scan
+fi
+
 python3 scripts/scan/write-pages.py \
   --scan-dir dist/scan \
   --out-dir dist/scan/pages \

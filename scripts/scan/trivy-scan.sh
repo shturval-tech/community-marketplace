@@ -77,14 +77,27 @@ scan_one() {
   python3 "${ROOT}/scripts/scan/bdu-enrich.py" "${enrich_args[@]}"
 }
 
+write_image_scan_meta() {
+  local img="$1"
+  local outcome="$2"
+  "${ROOT}/scripts/scan/write-scan-meta.sh" \
+    "${img}" "${outcome}" \
+    "${WORKFLOW_RUN_URL:-}" "${GITHUB_RUN_ID:-}" "${GITHUB_JOB_NAME:-scan-all}" \
+    "${SCAN_DIR}/scan-meta" 2>/dev/null || true
+}
+
 scan_all() {
   local registry
   registry="$(grep '^registry:' "${ROOT}/images/images.yaml" | awk '{print $2}')"
   local failed=0
+  mkdir -p "${SCAN_DIR}/scan-meta"
   while IFS= read -r line; do
     [[ "${line}" =~ name:\ (.+) ]] || continue
     local img="${BASH_REMATCH[1]}"
-    if ! scan_one "${registry}/${img}:latest" "${img}"; then
+    if scan_one "${registry}/${img}:latest" "${img}"; then
+      write_image_scan_meta "${img}" "success"
+    else
+      write_image_scan_meta "${img}" "failure"
       failed=1
     fi
   done < "${ROOT}/images/images.yaml"

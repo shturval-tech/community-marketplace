@@ -90,7 +90,9 @@ kubectl apply -f deploy/examples/ssc/cnpg-cluster.yaml
 
 ## Закрытый контур
 
-**Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases, распакуйте и выполните `./push-offline.sh` (только внутренний Harbor/Nexus).
+**Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases, распакуйте и выполните `./push-offline.sh` (внутренний Harbor/Nexus и т.п.).
+
+> **Harbor:** образы — в project registry; для HTTP `index.yaml` в Штурвале нужен **ChartMuseum** (или Nexus/GitVerse HTTP). В Harbor 2.8+ ChartMuseum не входит в состав по умолчанию — `/chartrepo/` сам по себе не заменяет hosted Helm repo. Без ChartMuseum чарты из бандла пушатся в Harbor как **OCI** (`oci://…/charts`). Подробнее: [docs/airgap.md](docs/airgap.md#harbor-и-http-indexyaml-chartmuseum).
 
 ```bash
 # CI может выложить несколько airgap-bundle.tar.gz.part-* (лимит GitHub 2 GiB):

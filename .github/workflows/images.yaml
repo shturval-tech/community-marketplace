@@ -124,6 +124,15 @@ jobs:
           sarif_file: dist/scan/${{ matrix.name }}/report.sarif
           category: trivy-${{ matrix.name }}
 
+      - name: Record scan job outcome
+        if: always()
+        run: |
+          chmod +x scripts/scan/write-scan-meta.sh
+          ./scripts/scan/write-scan-meta.sh \
+            "${{ matrix.name }}" "${{ steps.scan.outcome }}" \
+            "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            "${{ github.run_id }}" "${{ github.job }}"
+
       - name: Upload scan artifacts
         if: always() && steps.scan.outcome != 'cancelled'
         uses: actions/upload-artifact@v4
@@ -135,6 +144,7 @@ jobs:
             dist/scan/${{ matrix.name }}/report.bdu.json
             dist/scan/${{ matrix.name }}/report.bdu.md
             dist/scan/${{ matrix.name }}/report.cyclonedx.json
+            dist/scan/scan-meta/${{ matrix.name }}.json
 
       - name: Scan summary
         if: always()
@@ -172,10 +182,11 @@ jobs:
 
   publish-pages:
     needs: [mirror, scan, prepare]
-    if: always() && needs.mirror.result == 'success' && needs.scan.result != 'cancelled' && needs.scan.result != 'skipped'
+    if: always() && needs.mirror.result == 'success'
     runs-on: ubuntu-24.04
     permissions:
       contents: write
+      actions: read
     env:
       SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
     steps:
@@ -198,6 +209,8 @@ jobs:
         env:
           WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           SCAN_SOURCE: Mirror Images
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
         run: ./scripts/scan/publish-pages.sh
 
       - name: Deploy to GitHub Pages (security/)

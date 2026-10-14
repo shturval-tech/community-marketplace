@@ -4,7 +4,7 @@
 
 ## Контекст платформы
 
-- **ShturvalRepoConfig** (`ops.shturval.tech/v1beta2`, cluster-scoped): `spec.url` — http/https/oci; для OCI список чартов в UI Штурвала не подгружается → приоритет **HTTPS index.yaml** (GitHub Pages).
+- **ShturvalRepoConfig** (`ops.shturval.tech/v1beta2`, cluster-scoped): `spec.url` — http/https/oci; для OCI список чартов в UI Штурвала не подгружается → приоритет **HTTPS index.yaml** (GitHub Pages). **Harbor:** HTTP index требует ChartMuseum (или Nexus/GitVerse); Harbor 2.8+ без ChartMuseum — только OCI для чартов ([docs/airgap.md](docs/airgap.md#harbor-и-http-indexyaml-chartmuseum)).
 - **ShturvalServiceConfig (SSC)**: `spec.chart`, `spec.version`, `spec.namespace`, `spec.reponame`, `spec.dependency[]`, `spec.customvalues`.
 - Имена чартов: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$`.
 

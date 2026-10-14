@@ -48,6 +48,25 @@ export HELM_REPO_URL=https://nexus.internal/repository/helm-community
 make push-offline REGISTRY=registry.internal/community-marketplace HELM_REPO_URL=https://nexus.internal/repository/helm-community
 ```
 
+### Harbor и HTTP `index.yaml` (ChartMuseum)
+
+**Образы** после `push-offline.sh` можно пушить в Harbor как обычно (`REGISTRY=registry.example.com/project`).
+
+Для **Штурвала с HTTP** (`spec.url: …/index.yaml`, список чартов в UI) нужен **Helm chart repository с ChartMuseum** (или аналог: Nexus hosted, GitVerse Packages и т.п.), который отдаёт `index.yaml` и `.tgz` по URL из index.
+
+> **Важно:** в Harbor **2.8+** встроенный ChartMuseum **снят**; путь `/chartrepo/<project>/` в типовой установке **не** является рабочим Helm repo (часто отдаётся UI registry). `push-offline.sh` с `HELM_REPO_URL=https://…/chartrepo/…` сработает только если у вас **развёрнут ChartMuseum** (отдельный pod/ingress или legacy full Harbor chart с `chartmuseum.enabled`) и API `POST /api/chartrepo/<project>/charts` доступен.
+
+Без ChartMuseum для Harbor используйте один из вариантов:
+
+| Вариант | `HELM_REPO_URL` / ShturvalRepoConfig |
+|---------|----------------------------------------|
+| Harbor **OCI** (чарты уже в registry) | `oci://registry.example.com/project/charts` — без `index.yaml` |
+| **Nexus** hosted Helm | `https://nexus…/repository/helm-hosted` |
+| **GitVerse** и др. HTTP registry | например `https://gitverse.ru/api/packages/<owner>/helm` |
+| **Отдельный ChartMuseum** | свой URL с `index.yaml` |
+
+По умолчанию `push-offline.sh` при `HELM_PUSH_MODE=auto` для URL с `chartrepo` пытается **HTTP**-загрузку; иначе чарты уходят в **OCI** (`oci://${REGISTRY}/charts`), а `shturvalrepoconfig.yaml` генерируется под OCI.
+
 ## 3. ShturvalRepoConfig
 
 ```bash
@@ -55,6 +74,21 @@ kubectl apply -f shturvalrepoconfig.yaml
 # или overlay:
 kubectl apply -k deploy/repoconfig/overlays/airgap
 ```
+
+**Harbor / private OCI** (после `push-offline` без HTTP chartrepo):
+
+```yaml
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalRepoConfig
+metadata:
+  name: community
+spec:
+  url: oci://registry.example.com/project/charts
+  username: robot$project+pull
+  password: <secret>
+```
+
+В UI список чартов для OCI может не подгружаться — имя чарта задаётся в SSC вручную (`spec.chart`, как в [deploy/examples/ssc/](../deploy/examples/ssc/)). `reponame: community` должен совпадать с `metadata.name` репозитория.
 
 ## 4. Установка SSC
 

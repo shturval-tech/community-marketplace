@@ -22,6 +22,113 @@ is_ignored = _bdu.is_ignored
 load_ignore = _bdu.load_ignore
 
 
+def load_expected_images(images_yaml: Path | None) -> list[str]:
+    if not images_yaml or not images_yaml.is_file():
+        return []
+    names: list[str] = []
+    for line in images_yaml.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line.startswith("- name:"):
+            names.append(line.split(":", 1)[1].strip())
+    return names
+
+
+def load_scan_meta(meta_dir: Path) -> dict[str, dict]:
+    out: dict[str, dict] = {}
+    if not meta_dir.is_dir():
+        return out
+    for path in sorted(meta_dir.glob("*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        image = data.get("image") or path.stem
+        out[str(image)] = data
+    return out
+
+
+def collect_scan_failures(
+    scan_dir: Path,
+    meta_dir: Path,
+    images_yaml: Path | None,
+) -> list[dict]:
+    """Образы без report.bdu.json — с метаданными job (если scan упал)."""
+    expected = load_expected_images(images_yaml)
+    if not expected:
+        expected = [
+            p.name
+            for p in scan_dir.iterdir()
+            if p.is_dir() and p.name != "scan-meta"
+        ]
+    meta = load_scan_meta(meta_dir)
+    failures: list[dict] = []
+    for image in expected:
+        report = scan_dir / image / "report.bdu.json"
+        if report.is_file():
+            continue
+        m = meta.get(image, {})
+        outcome = m.get("scan_outcome") or "unknown"
+        if outcome == "success":
+            continue
+        job_url = m.get("job_url") or m.get("workflow_run_url") or ""
+        failures.append(
+            {
+                "image": image,
+                "scan_outcome": outcome,
+                "job_url": job_url,
+                "job_name": m.get("job_name") or "",
+            }
+        )
+    return failures
+
+
+def render_failures_html(failures: list[dict]) -> str:
+    if not failures:
+        return ""
+    rows = []
+    for f in failures:
+        link = f["job_url"]
+        if link:
+            cell = f'<a href="{html.escape(link)}">job GitHub Actions</a>'
+            if f.get("job_name"):
+                cell += f' <span class="meta">({html.escape(f["job_name"])})</span>'
+        else:
+            cell = "—"
+        rows.append(
+            "<tr>"
+            f"<td>{html.escape(f['image'])}</td>"
+            f"<td>{html.escape(f['scan_outcome'])}</td>"
+            f"<td>{cell}</td>"
+            "</tr>"
+        )
+    return (
+        '<section class="scan-failures">'
+        "<h2>Образы: сканирование не удалось</h2>"
+        "<p>Отчёт Trivy/БДУ для этих образов не собран. Перейдите по ссылке на упавший job.</p>"
+        "<table><thead><tr><th>Образ</th><th>Исход</th><th>CI job</th></tr></thead>"
+        f"<tbody>{''.join(rows)}</tbody></table></section>"
+    )
+
+
+def failures_markdown(failures: list[dict]) -> str:
+    if not failures:
+        return ""
+    lines = [
+        "## Образы: сканирование не удалось",
+        "",
+        "| Образ | Исход | CI job |",
+        "| --- | --- | --- |",
+    ]
+    for f in failures:
+        if f.get("job_url"):
+            link = f"[job]({f['job_url']})"
+        else:
+            link = "—"
+        lines.append(f"| {f['image']} | {f['scan_outcome']} | {link} |")
+    lines.append("")
+    return "\n".join(lines)
+
+
 def collect_rows(scan_dir: Path) -> list[dict]:
     rows: list[dict] = []
     for report_path in sorted(scan_dir.glob("*/report.bdu.json")):
@@ -108,6 +215,11 @@ def main() -> int:
     parser.add_argument("--workflow-url", default="")
     parser.add_argument("--source", default="ci")
     parser.add_argument(
+        "--images-yaml",
+        type=Path,
+        default=Path("images/images.yaml"),
+    )
+    parser.add_argument(
         "--enforce-gate-only",
         action="store_true",
         help="Exit 1 if gate failures > 0 (no HTML/badge output)",
@@ -129,16 +241,36 @@ def main() -> int:
         print(f"Scan gate OK ({total} records)")
         return 0
 
+    meta_dir = args.scan_dir / "scan-meta"
+    scan_failures = collect_scan_failures(
+        args.scan_dir, meta_dir, args.images_yaml
+    )
+    scan_fail_count = len(scan_failures)
+
     args.out_dir.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     has_blocking = failures > 0
-    if total == 0:
+    if scan_fail_count > 0 and total == 0:
+        badge = {
+            "schemaVersion": 1,
+            "label": "сканирование",
+            "message": f"ошибки ({scan_fail_count})",
+            "color": "orange",
+        }
+    elif total == 0:
         badge = {
             "schemaVersion": 1,
             "label": "сканирование",
             "message": "нет данных",
             "color": "lightgrey",
+        }
+    elif scan_fail_count > 0:
+        badge = {
+            "schemaVersion": 1,
+            "label": "сканирование",
+            "message": f"частично ({scan_fail_count} без отч.)",
+            "color": "yellow",
         }
     elif has_blocking:
         badge = {
@@ -169,6 +301,7 @@ def main() -> int:
         "fail_on": args.fail_on,
         "fixed_only": args.fixed_only,
         "has_blocking_vulnerabilities": has_blocking,
+        "scan_job_failures": scan_fail_count,
     }
     (args.out_dir / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -179,8 +312,13 @@ def main() -> int:
     else:
         report_md = f"# Отчёт сканирования\n\nЗаписей: {total}\n"
 
+    fail_md = failures_markdown(scan_failures)
+    if fail_md and fail_md not in report_md:
+        report_md = report_md.rstrip() + "\n\n" + fail_md
+
     (args.out_dir / "report.md").write_text(report_md, encoding="utf-8")
     body_html = md_to_simple_html(report_md)
+    failures_html = render_failures_html(scan_failures)
 
     workflow_link = ""
     if args.workflow_url:
@@ -208,9 +346,10 @@ def main() -> int:
   <div class="header">
     <a href="https://shturval.tech"><img src="https://raw.githubusercontent.com/shturval-tech/community-marketplace/main/docs/assets/shturval-logo.svg" alt="Штурвал" width="200"/></a>
     <h1>Отчёт сканирования образов</h1>
-    <p class="meta">Обновлено: {html.escape(now)} · записей: {total} · порог: {html.escape(args.fail_on)} с fix</p>
+    <p class="meta">Обновлено: {html.escape(now)} · записей: {total} · без отчёта: {scan_fail_count} · порог: {html.escape(args.fail_on)} с fix</p>
     {workflow_link}
   </div>
+  {failures_html}
   <article class="markdown-body">
     {body_html}
   </article>

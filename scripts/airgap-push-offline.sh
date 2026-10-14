@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Push air-gap bundle to internal registries (no internet required).
+# Harbor: container images via REGISTRY; HTTP Helm index.yaml needs ChartMuseum (see docs/airgap.md).
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -159,13 +160,21 @@ if [[ -d "${SCAN_DB}" ]] && command -v oras >/dev/null 2>&1; then
   done
 fi
 
-cat > "${BUNDLE_ROOT}/shturvalrepoconfig.yaml" <<EOF
-apiVersion: ops.shturval.tech/v1beta2
-kind: ShturvalRepoConfig
-metadata:
-  name: ${REPO_NAME}
-spec:
-  url: ${HELM_REPO_URL%/}/index.yaml
-EOF
+repo_url="${HELM_REPO_URL%/}/index.yaml"
+if [[ ${use_helm_http} -eq 0 ]]; then
+  repo_url="oci://${REGISTRY}/charts"
+fi
+{
+  echo "apiVersion: ops.shturval.tech/v1beta2"
+  echo "kind: ShturvalRepoConfig"
+  echo "metadata:"
+  echo "  name: ${REPO_NAME}"
+  echo "spec:"
+  echo "  url: ${repo_url}"
+  if [[ -n "${HELM_USERNAME}" && -n "${HELM_PASSWORD}" ]]; then
+    echo "  username: ${HELM_USERNAME}"
+    echo "  password: ${HELM_PASSWORD}"
+  fi
+} > "${BUNDLE_ROOT}/shturvalrepoconfig.yaml"
 
 echo "Done. Apply: kubectl apply -f ${BUNDLE_ROOT}/shturvalrepoconfig.yaml"
