@@ -8,6 +8,25 @@ entries:
         прокси-аутентификация и политики доступа.'
     apiVersion: v2
     appVersion: 2026.8.3
+    created: "2026-10-14T20:22:45.193511233Z"
+    dependencies:
+    - name: authentik
+      repository: https://charts.goauthentik.io
+      version: 2026.8.3
+    description: authentik — open-source провайдер идентичности и SSO
+    digest: 53d114596112372d3fd076d07baba59e5e5a9e2f5f206a1b94f0fe8339c54e8c
+    name: authentik
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/authentik-0.1.3/authentik-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: identity
+      shturval.tech/description: 'authentik — IdP с веб-интерфейсом: SSO, OIDC, LDAP,
+        прокси-аутентификация и политики доступа.'
+    apiVersion: v2
+    appVersion: 2026.8.3
     created: "2026-10-14T11:06:08.074942914Z"
     dependencies:
     - name: authentik
@@ -38,6 +57,27 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/authentik-0.1.0/authentik-0.1.0.tgz
     version: 0.1.0
   cnpg-cluster:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: Готовый кластер PostgreSQL (CloudNativePG) для приложений
+        и сервисов платформы.
+      shturval.tech/serviceclass: postgres
+    apiVersion: v2
+    appVersion: 0.9.0
+    created: "2026-10-14T20:22:45.552957591Z"
+    dependencies:
+    - name: cluster
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.9.0
+    description: Кластер PostgreSQL под CloudNativePG — база данных с HA и постоянными
+      томами
+    digest: b1a8843bbd164f58366f897a2636bec9e0b624b22f880d874894362a4263cb11
+    name: cnpg-cluster
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/cnpg-cluster-0.1.3/cnpg-cluster-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: database
@@ -85,6 +125,26 @@ entries:
         PostgreSQL в кластере Kubernetes.
     apiVersion: v2
     appVersion: 1.30.1
+    created: "2026-10-14T20:22:45.822620183Z"
+    dependencies:
+    - name: cloudnative-pg
+      repository: https://cloudnative-pg.github.io/charts
+      version: 0.29.1
+    description: Оператор CloudNativePG — управление PostgreSQL в Kubernetes (репликация,
+      failover, бэкапы)
+    digest: 560149e8c2766ab9d209c2085d3eab1914bb0d4f801704a57310fc862e6e5f9f
+    name: cnpg-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/cnpg-operator-0.1.3/cnpg-operator-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: Оператор CloudNativePG для развёртывания и сопровождения
+        PostgreSQL в кластере Kubernetes.
+    apiVersion: v2
+    appVersion: 1.30.1
     created: "2026-10-14T11:06:08.687842604Z"
     dependencies:
     - name: cloudnative-pg
@@ -123,6 +183,21 @@ entries:
         и микросервисной шины (Strimzi, KRaft).
     apiVersion: v2
     appVersion: 3.8.0
+    created: "2026-10-14T20:22:46.21740239Z"
+    description: Кластер Apache Kafka — распределённый журнал событий и стриминг данных
+    digest: 40bd5c1baac0be6de4e15d0a4b177266112e68898bb69cfbdab9cffdb2013bc0
+    name: kafka
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/kafka-0.1.3/kafka-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+      shturval.tech/description: Apache Kafka для потоковой передачи событий, интеграций
+        и микросервисной шины (Strimzi, KRaft).
+    apiVersion: v2
+    appVersion: 3.8.0
     created: "2026-10-14T11:06:08.898045315Z"
     description: Кластер Apache Kafka — распределённый журнал событий и стриминг данных
     digest: 56b2d6e7a64f7bfb334ba908f1260774f5ae1e2beaa6d2e28eba9fd4ec87bff2
@@ -145,6 +220,25 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/kafka-0.1.0/kafka-0.1.0.tgz
     version: 0.1.0
   keycloak:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: identity
+      shturval.tech/description: 'Keycloak — IdP и IAM: аутентификация пользователей,
+        федерация, OAuth2/OpenID Connect для сервисов.'
+    apiVersion: v2
+    appVersion: 26.7.4
+    created: "2026-10-14T20:22:46.501626098Z"
+    dependencies:
+    - name: keycloakx
+      repository: https://codecentric.github.io/helm-charts
+      version: 7.3.2
+    description: Keycloak — единый вход (SSO), OIDC и SAML для приложений
+    digest: 02f3995e149d40dfd17a4a68c80b1a67f9dded8ab8c29e466f8eb90f2f027bfb
+    name: keycloak
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/keycloak-0.1.3/keycloak-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: identity
@@ -189,6 +283,21 @@ entries:
         инстанс через CR оператора MariaDB.
     apiVersion: v2
     appVersion: "11.4"
+    created: "2026-10-14T20:22:46.812445674Z"
+    description: Экземпляр MariaDB — реляционная СУБД для приложений (требует mariadb-operator)
+    digest: 94677a2ba6ce75f39b7acd036d24ab68fb7d7f5380bf78109501718417e2a690
+    name: mariadb
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/mariadb-0.1.3/mariadb-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: MariaDB — совместимая с MySQL СУБД; чарт создаёт
+        инстанс через CR оператора MariaDB.
+    apiVersion: v2
+    appVersion: "11.4"
     created: "2026-10-14T11:06:09.46049851Z"
     description: Экземпляр MariaDB — реляционная СУБД для приложений (требует mariadb-operator)
     digest: 0860e6afb9d192dc63761727fa6f619407f444a31094bd76ea2e8b115d572eaa
@@ -212,6 +321,25 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/mariadb-0.1.0/mariadb-0.1.0.tgz
     version: 0.1.0
   mariadb-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: Kubernetes-оператор MariaDB для автоматизации развёртывания,
+        масштабирования и резервного копирования СУБД.
+    apiVersion: v2
+    appVersion: 26.10.1
+    created: "2026-10-14T20:22:47.113267932Z"
+    dependencies:
+    - name: mariadb-operator
+      repository: https://helm.mariadb.com/mariadb-operator
+      version: 26.10.1
+    description: Оператор MariaDB — жизненный цикл MariaDB/MySQL в Kubernetes
+    digest: bbdd59d86a2165ae8ee3c6135cfc6a6cd5eede2bf804d4359113f8d2dec16bd2
+    name: mariadb-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/mariadb-operator-0.1.3/mariadb-operator-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: database
@@ -256,6 +384,25 @@ entries:
         и политик хранения в кластере.
     apiVersion: v2
     appVersion: 4.3.7
+    created: "2026-10-14T20:22:47.343068941Z"
+    dependencies:
+    - name: minio-operator
+      repository: https://operator.min.io/
+      version: 4.3.7
+    description: MinIO Operator — S3-совместимое объектное хранилище в Kubernetes
+    digest: 4532a35872f7f9bc625be568bfb6df39fb3b74bc54428e731fe7a83add14c9d3
+    name: minio-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/minio-operator-0.1.3/minio-operator-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: storage
+      shturval.tech/description: Оператор MinIO для развёртывания S3-совместимых бакетов
+        и политик хранения в кластере.
+    apiVersion: v2
+    appVersion: 4.3.7
     created: "2026-10-14T11:06:09.926531558Z"
     dependencies:
     - name: minio-operator
@@ -286,6 +433,25 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/minio-operator-0.1.0/minio-operator-0.1.0.tgz
     version: 0.1.0
   minio-tenant:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: storage
+      shturval.tech/description: MinIO Tenant — выделенное объектное хранилище (файлы,
+        артефакты, резервные копии) с API Amazon S3.
+    apiVersion: v2
+    appVersion: 7.1.1
+    created: "2026-10-14T20:22:48.587227249Z"
+    dependencies:
+    - name: tenant
+      repository: https://operator.min.io/
+      version: 7.1.1
+    description: Tenant MinIO — изолированное S3-хранилище для приложений и бэкапов
+    digest: b4757b7265057a9125c1013c07cab33077342cd3779b93442902a96419003d9c
+    name: minio-tenant
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/minio-tenant-0.1.3/minio-tenant-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: storage
@@ -331,6 +497,22 @@ entries:
       shturval.tech/upstream: https://github.com/nextcloud/all-in-one
     apiVersion: v2
     appVersion: latest
+    created: "2026-10-14T20:22:48.82239329Z"
+    description: Nextcloud All-in-One — файловое облако и совместная работа
+    digest: c389d4ad5f66c3caf8b9e016a2104e2760f5f9563abe6ba477589a9ac3132298
+    name: nextcloud-aio
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/nextcloud-aio-0.1.3/nextcloud-aio-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: AGPL-3.0
+      shturval.tech/category: infra
+      shturval.tech/description: Nextcloud — частное облако для файлов, календаря,
+        контактов и офисных документов (набор контейнеров AIO).
+      shturval.tech/upstream: https://github.com/nextcloud/all-in-one
+    apiVersion: v2
+    appVersion: latest
     created: "2026-10-14T11:06:10.398387286Z"
     description: Nextcloud All-in-One — файловое облако и совместная работа
     digest: 3f510c2f34ad737b27a34917a3c260c27daaea88ede5fd0692cb86e21a58dde2
@@ -354,6 +536,25 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/nextcloud-aio-0.1.0/nextcloud-aio-0.1.0.tgz
     version: 0.1.0
   proxmox-csi:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: infra
+      shturval.tech/description: CSI-плагин для Proxmox VE — provisioning PersistentVolume
+        из дисков/хранилищ гипервизора.
+    apiVersion: v2
+    appVersion: 0.3.3
+    created: "2026-10-14T20:22:49.022213707Z"
+    dependencies:
+    - name: proxmox-csi-plugin
+      repository: oci://ghcr.io/sergelogvinov/charts
+      version: 0.3.3
+    description: Proxmox CSI — динамические тома из хранилища Proxmox VE
+    digest: 28e9b812e2c35d3f2a865d1c493ae36f2d4c2c4aea552032db19fc38ff5e5749
+    name: proxmox-csi
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/proxmox-csi-0.1.3/proxmox-csi-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: infra
@@ -398,6 +599,21 @@ entries:
         кластер для асинхронного взаимодействия приложений.
     apiVersion: v2
     appVersion: "4.0"
+    created: "2026-10-14T20:22:49.206032384Z"
+    description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
+    digest: 6e239214f079e6503a2267819765238339c54d3e828a67b8f7bcff0bff43ab28
+    name: rabbitmq
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/rabbitmq-0.1.3/rabbitmq-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+      shturval.tech/description: RabbitMQ — брокер сообщений (AMQP); чарт создаёт
+        кластер для асинхронного взаимодействия приложений.
+    apiVersion: v2
+    appVersion: "4.0"
     created: "2026-10-14T11:06:10.904739986Z"
     description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
     digest: bb2cb74942aaafda23a1aa0578d86b75e8d24772bfe0c9ce25bc8a96d75c30e9
@@ -420,6 +636,22 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/rabbitmq-0.1.0/rabbitmq-0.1.0.tgz
     version: 0.1.0
   rabbitmq-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+      shturval.tech/description: Cluster Operator для RabbitMQ — управление кластерами
+        очередей и обмена сообщениями между сервисами.
+      shturval.tech/serviceclass: rabbitmq-operator
+    apiVersion: v2
+    appVersion: 2.12.0
+    created: "2026-10-14T20:22:49.399708925Z"
+    description: Оператор RabbitMQ — брокер сообщений AMQP в Kubernetes
+    digest: cee3fc3bf683e0344bcecfb3d0c6d77c1168581892b9f4ad390e3a91450c6234
+    name: rabbitmq-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/rabbitmq-operator-0.1.3/rabbitmq-operator-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: messaging
@@ -458,6 +690,21 @@ entries:
         очередей; развёртывание через CR оператора.
     apiVersion: v2
     appVersion: "7.2"
+    created: "2026-10-14T20:22:49.6433083Z"
+    description: Экземпляр Redis — кэш и быстрое key-value хранилище (требует redis-operator)
+    digest: 648e8c40e167996dbf09760c6c8067831d8d2b715d172131cf03aa82b2c4e33d
+    name: redis
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/redis-0.1.3/redis-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: Redis — in-memory СУБД для кэширования, сессий и
+        очередей; развёртывание через CR оператора.
+    apiVersion: v2
+    appVersion: "7.2"
     created: "2026-10-14T11:06:11.415031497Z"
     description: Экземпляр Redis — кэш и быстрое key-value хранилище (требует redis-operator)
     digest: e86be5493a814a5ab8ad9cc048014c7bbf79e6c4357f9a802e3f4c42cb2eb1a8
@@ -480,6 +727,25 @@ entries:
     - https://github.com/shturval-tech/community-marketplace/releases/download/redis-0.1.0/redis-0.1.0.tgz
     version: 0.1.0
   redis-operator:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: Оператор Redis (Opstree) для развёртывания standalone,
+        replication и Sentinel в Kubernetes.
+    apiVersion: v2
+    appVersion: 0.27.0
+    created: "2026-10-14T20:22:49.861531203Z"
+    dependencies:
+    - name: redis-operator
+      repository: https://ot-container-kit.github.io/helm-charts/
+      version: 0.27.0
+    description: Оператор Redis — in-memory хранилище и кэш в Kubernetes
+    digest: 9fce19ef1fd88f619deb557b99384cf197d67ad0e3a24d65c5c51b9f82e17f4c
+    name: redis-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/redis-operator-0.1.3/redis-operator-0.1.3.tgz
+    version: 0.1.3
   - annotations:
       artifacthub.io/license: Apache-2.0
       shturval.tech/category: database
@@ -525,6 +791,23 @@ entries:
       shturval.tech/serviceclass: kafka-operator
     apiVersion: v2
     appVersion: 0.45.0
+    created: "2026-10-14T20:22:50.160966122Z"
+    description: Оператор Strimzi — Apache Kafka и экосистема потоковой обработки
+      в Kubernetes
+    digest: 8d37e758cdb46e58b62d0f383c51bd09417ed40aa98b8875a8da44814727f4b5
+    name: strimzi-operator
+    type: application
+    urls:
+    - https://github.com/shturval-tech/community-marketplace/releases/download/strimzi-operator-0.1.3/strimzi-operator-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: messaging
+      shturval.tech/description: Strimzi управляет Kafka, топиками, Connect и пользователями
+        в Kubernetes (режим KRaft).
+      shturval.tech/serviceclass: kafka-operator
+    apiVersion: v2
+    appVersion: 0.45.0
     created: "2026-10-14T11:06:11.894531267Z"
     description: Оператор Strimzi — Apache Kafka и экосистема потоковой обработки
       в Kubernetes
@@ -548,4 +831,4 @@ entries:
     urls:
     - https://github.com/shturval-tech/community-marketplace/releases/download/strimzi-operator-0.1.0/strimzi-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-14T11:06:11.894558548Z"
+generated: "2026-10-14T20:22:50.161265323Z"
