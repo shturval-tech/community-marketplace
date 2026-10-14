@@ -111,7 +111,7 @@ kubectl apply -f shturvalrepoconfig.yaml
 
 ## Безопасность
 
-После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Актуальный отчёт — на [GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/); статус — плашка в шапке README. Дополнительно: Step Summary, артефакты Actions, вкладка **Security** (SARIF). Еженедельный полный прогон — workflow **Security Scan**.
+После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Актуальный отчёт — на [GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/); статус — плашка в шапке README. Дополнительно: Step Summary, артефакты Actions, вкладка **Security** (SARIF). После каждого push образов — scan в workflow **Mirror Images**; **полный** прогон всех `:latest` с публикацией Pages — **ежедневно ночью** (03:00 UTC / 06:00 МСК) и вручную в workflow [**Security Scan**](https://github.com/shturval-tech/community-marketplace/actions/workflows/security-scan.yaml). На scheduled-запуске **БДУ vulxml** заново скачивается с зеркала (дата снимка — в отчёте).
 
 ```bash
 make scan IMAGE=ghcr.io/shturval-tech/community-marketplace/redis:latest

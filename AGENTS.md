@@ -56,7 +56,7 @@ make scan-test         # pytest tests/scan/
 - PR: `.github/workflows/lint-test.yaml` — ct lint, kubeconform, ct install.
 - main + `charts/**`: `release-charts.yaml` — chart-releaser → gh-pages, OCI push.
 - main + `images/**`: `images.yaml` — buildx push, job `scan` (Trivy + БДУ, SARIF).
-- schedule / manual: `security-scan.yaml` — полный scan `:latest`.
+- daily 03:00 UTC + manual: `security-scan.yaml` — полный scan `:latest`, на schedule свежая БДУ (`BDU_FORCE_FETCH=1`).
 - after scan workflows: `publish-security-pages.yaml` — отчёт и `badge.json` на gh-pages (`/security/`).
 - tag `airgap-*` / manual: `airgap-bundle.yaml` — Release `airgap-bundle.tar.gz`.
 - PR/main: `lint-test.yaml` — trivy config (информационно), pytest `tests/scan/`.

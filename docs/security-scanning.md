@@ -7,7 +7,7 @@ CI маркетплейса проверяет **зеркалируемые об
 | Объект | Инструмент | Когда |
 |--------|------------|--------|
 | Образы `ghcr.io/shturval-tech/community-marketplace/*` | Trivy (`vuln`) + обогащение БДУ | После каждой сборки образа ([`.github/workflows/images.yaml`](../.github/workflows/images.yaml)) |
-| Те же образы `:latest` | Полный прогон | Еженедельно + вручную ([`.github/workflows/security-scan.yaml`](../.github/workflows/security-scan.yaml)) |
+| Те же образы `:latest` | Полный прогон | Ежедневно 03:00 UTC (06:00 МСК), свежая БДУ на schedule + вручную ([`.github/workflows/security-scan.yaml`](../.github/workflows/security-scan.yaml)) |
 | Каталог `charts/` | Trivy `config` | PR/main lint (без падения job) |
 
 ## Базы данных
