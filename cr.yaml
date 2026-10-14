@@ -2,3 +2,4 @@ owner: shturval-tech
 git-repo: community-marketplace
 charts-dir: charts
 package-path: .cr-release-packages
+package-args: --dependency-update=false

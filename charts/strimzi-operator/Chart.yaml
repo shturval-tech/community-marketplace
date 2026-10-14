@@ -9,7 +9,3 @@ annotations:
   shturval.tech/serviceclass: kafka-operator
   shturval.tech/description: Strimzi управляет Kafka, топиками, Connect и пользователями в Kubernetes (режим KRaft).
   artifacthub.io/license: Apache-2.0
-dependencies:
-  - name: strimzi-kafka-operator
-    version: 0.1.1
-    repository: https://strimzi.io/charts/
