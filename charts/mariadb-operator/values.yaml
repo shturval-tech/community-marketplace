@@ -4,4 +4,15 @@ global:
   ingress:
     className: ""
 
-mariadb-operator: {}
+mariadb-operator:
+  image:
+    repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
+    tag: "26.10.1"
+  webhook:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
+      tag: "26.10.1"
+  certController:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
+      tag: "26.10.1"

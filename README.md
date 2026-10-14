@@ -90,12 +90,17 @@ kubectl apply -f deploy/examples/ssc/cnpg-cluster.yaml
 
 ## Закрытый контур
 
-Сборка офлайн-бандла и загрузка во внутренние реестры:
+**Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases, распакуйте и выполните `./push-offline.sh` (только внутренний Harbor/Nexus).
 
 ```bash
-make bundle                    # dist/: charts, index, images manifest
-make push HELM_REPO_URL=https://nexus.example/helm REGISTRY=registry.example/community
+tar -xzf airgap-bundle.tar.gz
+export REGISTRY=registry.internal/community-marketplace
+export HELM_REPO_URL=https://nexus.internal/repository/helm-community
+./push-offline.sh
+kubectl apply -f shturvalrepoconfig.yaml
 ```
+
+Сборка бандла (на машине с интернетом): `make bundle WITH_SCAN_DB=1` или workflow **Air-gap Bundle Release**. Legacy `make push` тянет образы с ghcr.io — для контура используйте **`push-offline.sh`**.
 
 Подробнее: [docs/airgap.md](docs/airgap.md).
 

@@ -4,4 +4,6 @@ global:
   ingress:
     className: ""
 
-redis-operator: {}
+redis-operator:
+  redisOperator:
+    imageName: ghcr.io/shturval-tech/community-marketplace/redis-operator:v0.27.0

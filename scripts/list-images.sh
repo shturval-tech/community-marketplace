@@ -11,8 +11,12 @@ mkdir -p "$(dirname "$OUT")"
   for d in "$ROOT"/images/*/; do
     [[ -f "${d}Dockerfile" ]] || continue
     name=$(basename "$d")
+    tag="latest"
+    if grep -qE '^ARG VERSION=' "${d}Dockerfile" 2>/dev/null; then
+      tag=$(grep -E '^ARG VERSION=' "${d}Dockerfile" | head -1 | sed 's/^ARG VERSION=//')
+    fi
     echo "  - name: ${name}"
-    echo "    tag: latest"
+    echo "    tag: \"${tag}\""
   done
 } > "$OUT"
 cat "$OUT"

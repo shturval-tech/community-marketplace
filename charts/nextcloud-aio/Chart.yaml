@@ -2,7 +2,7 @@ apiVersion: v2
 name: nextcloud-aio
 description: Nextcloud All-in-One — файловое облако и совместная работа
 type: application
-version: 0.1.2
+version: 0.1.3
 appVersion: "latest"
 annotations:
   shturval.tech/category: infra

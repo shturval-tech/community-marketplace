@@ -6,47 +6,42 @@ on:
       - main
     paths:
       - 'images/**'
+      - 'scripts/ci-images-matrix.sh'
       - 'scripts/scan/**'
       - 'security/**'
       - '.github/workflows/images.yaml'
   workflow_dispatch:
 
 jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image matrix
+        id: matrix
+        run: |
+          chmod +x scripts/ci-images-matrix.sh
+          echo "matrix=$(./scripts/ci-images-matrix.sh)" >> "$GITHUB_OUTPUT"
+
   mirror:
     runs-on: ubuntu-24.04
+    needs: prepare
     permissions:
       contents: read
       packages: write
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - name: keycloak
-            context: images/keycloak
-          - name: cloudnative-pg
-            context: images/cloudnative-pg
-          - name: mariadb-operator
-            context: images/mariadb-operator
-          - name: mariadb
-            context: images/mariadb
-          - name: strimzi-operator
-            context: images/strimzi-operator
-          - name: redis-operator
-            context: images/redis-operator
-          - name: rabbitmq
-            context: images/rabbitmq
-          - name: minio
-            context: images/minio
-          - name: authentik
-            context: images/authentik
-          - name: proxmox-csi
-            context: images/proxmox-csi
-          - name: nextcloud-aio
-            context: images/nextcloud-aio
-          - name: redis
-            context: images/redis
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Read image tag
+        id: tag
+        run: |
+          tag=$(grep -E '^ARG VERSION=' "${{ matrix.context }}/Dockerfile" | head -1 | sed 's/^ARG VERSION=//')
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -69,31 +64,19 @@ jobs:
           push: true
           tags: |
             ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:latest
+            ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ steps.tag.outputs.tag }}
             ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ github.sha }}
 
   scan:
     runs-on: ubuntu-24.04
-    needs: mirror
+    needs: [mirror, prepare]
     permissions:
       contents: read
       packages: read
       security-events: write
     strategy:
       fail-fast: false
-      matrix:
-        name:
-          - keycloak
-          - cloudnative-pg
-          - mariadb-operator
-          - mariadb
-          - strimzi-operator
-          - redis-operator
-          - rabbitmq
-          - minio
-          - authentik
-          - proxmox-csi
-          - nextcloud-aio
-          - redis
+      matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     env:
       SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
       TRIVY_DB_REPOSITORY: public.shturval.tech/trivy-db:2

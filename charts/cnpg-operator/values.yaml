@@ -4,4 +4,7 @@ global:
   ingress:
     className: ""
 
-cloudnative-pg: {}
+cloudnative-pg:
+  image:
+    repository: ghcr.io/shturval-tech/community-marketplace/cloudnative-pg
+    tag: "1.30.1"

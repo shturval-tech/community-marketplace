@@ -5,3 +5,33 @@ global:
 proxmox-csi-plugin:
   config:
     clusters: []
+  controller:
+    plugin:
+      image:
+        repository: ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller
+        tag: v0.10.0
+    attacher:
+      image:
+        repository: ghcr.io/shturval-tech/community-marketplace/csi-attacher
+        tag: v4.7.0
+    provisioner:
+      image:
+        repository: ghcr.io/shturval-tech/community-marketplace/csi-provisioner
+        tag: v5.1.0
+    resizer:
+      image:
+        repository: ghcr.io/shturval-tech/community-marketplace/csi-resizer
+        tag: v1.12.0
+  node:
+    plugin:
+      image:
+        repository: ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node
+        tag: v0.10.0
+    driverRegistrar:
+      image:
+        repository: ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar
+        tag: v2.12.0
+  livenessprobe:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe
+      tag: v2.14.0

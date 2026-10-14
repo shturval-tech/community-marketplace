@@ -9,16 +9,28 @@ PACKAGES="${DIST}/packages"
 mkdir -p "${DIST}/images"
 cp -f "${ROOT}/images/images.yaml" "${DIST}/images/images.yaml"
 
+registry=$(grep '^registry:' "${DIST}/images/images.yaml" | awk '{print $2}')
+
 if command -v crane >/dev/null 2>&1; then
-  mkdir -p "${DIST}/images/oci-layout"
   while IFS= read -r line; do
     [[ "$line" =~ name:\ (.+) ]] || continue
-    img="ghcr.io/shturval-tech/community-marketplace/${BASH_REMATCH[1]}:latest"
-    echo "pull $img (optional, may fail offline-build host without prior push)"
-    crane pull "$img" "${DIST}/images/oci-layout/${BASH_REMATCH[1]}.tar" 2>/dev/null || true
+    name="${BASH_REMATCH[1]}"
+    tag="latest"
+    # read next lines for tag - simplified: parse with awk
+    tag=$(awk -v n="$name" '
+      $1=="-" && $2=="name:" && $3==n {found=1; next}
+      found && $1=="tag:" {gsub(/"/,"",$2); print $2; exit}
+    ' "${DIST}/images/images.yaml")
+    ref="${registry}/${name}:${tag}"
+    echo "pull ${ref} -> ${DIST}/images/${name}.tar"
+    if crane pull "${ref}" "${DIST}/images/${name}.tar"; then
+      echo "tag: \"${tag}\"" > "${DIST}/images/${name}.meta.yaml"
+    else
+      echo "warn: failed to pull ${ref} (offline host: copy tars manually)"
+    fi
   done < "${DIST}/images/images.yaml"
 else
-  echo "crane not found; skipping image pull (charts only in dist/)"
+  echo "crane not found; skipping image pull (place *.tar under dist/images/ manually)"
 fi
 
 if [[ "${WITH_SCAN_DB:-0}" == "1" ]]; then
@@ -36,4 +48,28 @@ if [[ "${WITH_SCAN_DB:-0}" == "1" ]]; then
   chmod +x "${ROOT}/scripts/scan/"*.sh 2>/dev/null || true
 fi
 
-echo "Bundle ready under ${DIST}/"
+mkdir -p "${DIST}/packages"
+if [[ -d "${PACKAGES}" ]] && ls "${PACKAGES}"/*.tgz >/dev/null 2>&1; then
+  cp -a "${PACKAGES}/." "${DIST}/packages/"
+fi
+if [[ -f "${DIST}/index.yaml" ]]; then
+  cp -f "${DIST}/index.yaml" "${DIST}/packages/index.yaml" 2>/dev/null || cp -f "${DIST}/index.yaml" "${DIST}/"
+fi
+
+cp -f "${ROOT}/scripts/airgap-push-offline.sh" "${DIST}/push-offline.sh"
+chmod +x "${DIST}/push-offline.sh"
+
+ARCHIVE="${DIST}/airgap-bundle.tar.gz"
+tar -czf "${ARCHIVE}" -C "${DIST}" \
+  packages \
+  images \
+  push-offline.sh \
+  $([[ -d "${DIST}/scan-db" ]] && echo scan-db) \
+  $([[ -f "${DIST}/index.yaml" ]] && echo index.yaml) \
+  2>/dev/null || tar -czf "${ARCHIVE}" -C "${DIST}" packages images push-offline.sh
+
+if command -v sha256sum >/dev/null 2>&1; then
+  (cd "${DIST}" && sha256sum "$(basename "${ARCHIVE}")" > airgap-bundle.sha256)
+fi
+
+echo "Bundle ready: ${ARCHIVE}"

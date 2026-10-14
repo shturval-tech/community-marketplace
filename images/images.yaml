@@ -1,27 +1,53 @@
 # Generated list of mirrored images (see images/*/Dockerfile)
 registry: ghcr.io/shturval-tech/community-marketplace
 images:
+  - name: alpine
+    tag: "3.17"
   - name: authentik
-    tag: latest
+    tag: "2026.8.3"
+  - name: busybox
+    tag: "1.36"
   - name: cloudnative-pg
-    tag: latest
+    tag: "1.30.1"
+  - name: csi-attacher
+    tag: "v4.7.0"
+  - name: csi-livenessprobe
+    tag: "v2.14.0"
+  - name: csi-node-driver-registrar
+    tag: "v2.12.0"
+  - name: csi-provisioner
+    tag: "v5.1.0"
+  - name: csi-resizer
+    tag: "v1.12.0"
   - name: keycloak
-    tag: latest
+    tag: "26.7.4"
   - name: mariadb
-    tag: latest
+    tag: "11.4"
   - name: mariadb-operator
-    tag: latest
+    tag: "26.10.1"
   - name: minio
-    tag: latest
+    tag: "RELEASE.2025-04-08T15-41-24Z"
+  - name: minio-console
+    tag: "v0.12.3"
+  - name: minio-operator
+    tag: "v4.3.7"
   - name: nextcloud-aio
-    tag: latest
-  - name: proxmox-csi
-    tag: latest
-  - name: rabbitmq
-    tag: latest
+    tag: "latest"
+  - name: postgres
+    tag: "16.4"
+  - name: proxmox-csi-controller
+    tag: "v0.10.0"
+  - name: proxmox-csi-node
+    tag: "v0.10.0"
+  - name: rabbitmq-operator
+    tag: "2.12.0"
+  - name: rabbitmq-server
+    tag: "3.13-management"
   - name: redis
-    tag: latest
+    tag: "7.2.5"
   - name: redis-operator
-    tag: latest
+    tag: "v0.27.0"
+  - name: strimzi-kafka
+    tag: "0.45.0-kafka-3.8.0"
   - name: strimzi-operator
-    tag: latest
+    tag: "0.45.0"

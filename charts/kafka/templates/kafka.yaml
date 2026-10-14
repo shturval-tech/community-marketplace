@@ -23,6 +23,7 @@ spec:
   kafka:
     version: {{ .Values.kafkaVersion | quote }}
     metadataVersion: {{ .Values.metadataVersion | quote }}
+    image: {{ .Values.global.imageRegistry }}/strimzi-kafka:{{ .Values.kafkaImageTag }}
     listeners:
       - name: plain
         port: 9092

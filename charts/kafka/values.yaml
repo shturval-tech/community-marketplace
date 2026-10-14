@@ -1,4 +1,8 @@
+global:
+  imageRegistry: ghcr.io/shturval-tech/community-marketplace
+
 name: community-kafka
 kafkaVersion: "3.8.0"
 metadataVersion: 3.8-IV0
 replicas: 1
+kafkaImageTag: 0.45.0-kafka-3.8.0

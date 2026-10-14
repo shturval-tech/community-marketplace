@@ -4,4 +4,11 @@ global:
   ingress:
     className: ""
 
-keycloakx: {}
+keycloakx:
+  image:
+    repository: ghcr.io/shturval-tech/community-marketplace/keycloak
+    tag: "26.7.4"
+  dbchecker:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/busybox
+      tag: "1.36"

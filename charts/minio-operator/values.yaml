@@ -4,4 +4,13 @@ global:
   ingress:
     className: ""
 
-minio-operator: {}
+minio-operator:
+  tenants: []
+  operator:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/minio-operator
+      tag: v4.3.7
+  console:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/minio-console
+      tag: v0.12.3

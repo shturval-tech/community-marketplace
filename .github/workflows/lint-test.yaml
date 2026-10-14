@@ -86,6 +86,11 @@ jobs:
           python3 -m pip install --quiet pytest
           python3 -m pytest tests/scan/ -q
 
+      - name: Verify chart images (air-gap registry)
+        run: |
+          chmod +x scripts/verify-images.sh
+          ./scripts/verify-images.sh
+
   install:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-24.04

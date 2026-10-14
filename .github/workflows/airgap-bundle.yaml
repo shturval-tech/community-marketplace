@@ -1,0 +1,64 @@
+name: Air-gap Bundle Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'airgap-*'
+
+permissions:
+  contents: write
+  packages: read
+
+jobs:
+  bundle:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.17.2
+
+      - name: Package charts (offline)
+        run: make package index
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install crane
+        run: |
+          curl -sSL https://github.com/google/go-containerregistry/releases/download/v0.20.3/go-containerregistry_Linux_x86_64.tar.gz \
+            | tar xz crane
+          sudo mv crane /usr/local/bin/
+
+      - name: Install oras
+        run: |
+          curl -sSL https://github.com/oras-project/oras/releases/download/v1.2.2/oras_1.2.2_linux_amd64.tar.gz \
+            | tar xz oras
+          sudo mv oras /usr/local/bin/
+
+      - name: Build air-gap bundle
+        env:
+          WITH_SCAN_DB: "1"
+        run: |
+          chmod +x scripts/*.sh scripts/scan/*.sh
+          ./scripts/airgap-bundle.sh
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: airgap-latest
+          name: Air-gap bundle (latest)
+          body: |
+            Offline bundle: Helm charts, container images (OCI tar), optional scan DB.
+            Inside archive run: `./push-offline.sh` with `REGISTRY` and `HELM_REPO_URL`.
+          files: |
+            dist/airgap-bundle.tar.gz
+            dist/airgap-bundle.sha256
+          overwrite_files: true

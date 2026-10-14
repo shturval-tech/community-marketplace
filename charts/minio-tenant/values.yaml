@@ -4,4 +4,8 @@ global:
   ingress:
     className: ""
 
-tenant: {}
+tenant:
+  tenant:
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/minio
+      tag: RELEASE.2025-04-08T15-41-24Z

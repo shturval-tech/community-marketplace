@@ -4,4 +4,7 @@ global:
   ingress:
     className: ""
 
-cluster: {}
+cluster:
+  imageName: ghcr.io/shturval-tech/community-marketplace/postgres:16.4
+  version:
+    postgresql: "16"

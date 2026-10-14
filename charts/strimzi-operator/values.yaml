@@ -4,4 +4,18 @@ global:
   ingress:
     className: ""
 
-strimzi-kafka-operator: {}
+strimzi-kafka-operator:
+  defaultImageRegistry: ghcr.io/shturval-tech/community-marketplace
+  defaultImageRepository: ""
+  defaultImageTag: "0.45.0"
+  image:
+    registry: ghcr.io/shturval-tech/community-marketplace
+    repository: strimzi-operator
+    name: ""
+    tag: "0.45.0"
+  kafka:
+    image:
+      registry: ghcr.io/shturval-tech/community-marketplace
+      repository: strimzi-kafka
+      name: ""
+      tag: 0.45.0-kafka-3.8.0

@@ -29,8 +29,10 @@ make lint              # ct lint всех чартов
 make lint-chart CHART=x
 make package           # helm package → dist/packages/
 make index             # helm repo index → dist/index.yaml
-make bundle            # charts + images manifest для air-gap
-make push HELM_REPO_URL=... REGISTRY=...
+make bundle            # charts + images/*.tar + push-offline.sh + airgap-bundle.tar.gz
+make push-offline      # из dist/ без интернета (после распаковки бандла)
+make push HELM_REPO_URL=... REGISTRY=...  # legacy: crane copy с ghcr.io
+make verify-images     # все образы в render -> ghcr.io/.../community-marketplace
 make test              # ct lint + ct install (kind)
 make vendor-deps       # helm dependency update во всех charts/
 make bdu-fetch         # выгрузка БДУ vulxml для локального scan
@@ -56,6 +58,7 @@ make scan-test         # pytest tests/scan/
 - main + `images/**`: `images.yaml` — buildx push, job `scan` (Trivy + БДУ, SARIF).
 - schedule / manual: `security-scan.yaml` — полный scan `:latest`.
 - after scan workflows: `publish-security-pages.yaml` — отчёт и `badge.json` на gh-pages (`/security/`).
+- tag `airgap-*` / manual: `airgap-bundle.yaml` — Release `airgap-bundle.tar.gz`.
 - PR/main: `lint-test.yaml` — trivy config (информационно), pytest `tests/scan/`.
 
 ## Ссылки
