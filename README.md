@@ -93,6 +93,9 @@ kubectl apply -f deploy/examples/ssc/cnpg-cluster.yaml
 **Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases, распакуйте и выполните `./push-offline.sh` (только внутренний Harbor/Nexus).
 
 ```bash
+# CI может выложить несколько airgap-bundle.tar.gz.part-* (лимит GitHub 2 GiB):
+test -f airgap-bundle.tar.gz || cat airgap-bundle.tar.gz.part-* > airgap-bundle.tar.gz
+sha256sum -c airgap-bundle.sha256
 tar -xzf airgap-bundle.tar.gz
 export REGISTRY=registry.internal/community-marketplace
 export HELM_REPO_URL=https://nexus.internal/repository/helm-community
