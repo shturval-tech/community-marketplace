@@ -62,3 +62,14 @@ spec:
 ## 6. Renovate (опционально)
 
 Установите GitHub App [Renovate](https://github.com/apps/renovate) для org и включите репозиторий — конфиг: [renovate.json](../.github/renovate.json).
+
+## 7. Проверить, что всё работает
+
+После первого **Release Charts**:
+
+```bash
+curl -sS "https://shturval-tech.github.io/community-marketplace/index.yaml" | head
+curl -sS "https://shturval-tech.github.io/community-marketplace/security/badge.json"
+```
+
+Подключение репозитория в кластере — [README.md](../README.md#быстрый-старт). Автоматизация CI — [ci.md](ci.md).

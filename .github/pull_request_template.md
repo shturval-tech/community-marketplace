@@ -1,16 +1,17 @@
-## Summary
+## Кратко
 
-<!-- What chart(s) changed and why -->
+<!-- Какие чарты затронуты и зачем -->
 
-## Checklist
+## Чеклист
 
-- [ ] `Chart.yaml` version bumped (semver)
-- [ ] `make lint` / CI green
-- [ ] `ci/test-values.yaml` updated if needed
-- [ ] SSC example in `deploy/examples/ssc/` updated
-- [ ] No secrets in values or examples
-- [ ] [chart-conventions.md](../docs/chart-conventions.md) followed
+- [ ] В `Chart.yaml` увеличена версия (semver)
+- [ ] `make lint` / CI успешен
+- [ ] Обновлён `ci/test-values.yaml`, если нужно
+- [ ] Пример SSC в `deploy/examples/ssc/` добавлен или обновлён
+- [ ] README чарта на русском (см. [chart-conventions.md](../docs/chart-conventions.md#readme-чарта))
+- [ ] Нет секретов в values и примерах
+- [ ] Соблюдены [соглашения по чартам](../docs/chart-conventions.md)
 
-## Test plan
+## Как проверяли
 
-<!-- kind install, manual cluster, etc. -->
+<!-- kind install, ручной кластер и т.д. -->

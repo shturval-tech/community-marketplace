@@ -21,7 +21,7 @@
 ## Описание продукта
 
 - Поле `description` в `Chart.yaml` — **на русском**, одна строка: что это за продукт и зачем он нужен (попадает в Helm index и UI Штурвала).
-- `README.md` чарта — 2–3 предложения на русском; без формулировок «wrapper chart».
+- `README.md` чарта — по [шаблону](#readme-чарта), на русском; без формулировок «wrapper chart».
 - Аннотация `shturval.tech/description` — при необходимости чуть подробнее, чем `description`.
 
 ## Annotations (`Chart.yaml`)
@@ -57,11 +57,21 @@ charts/<name>/
   Chart.yaml
   values.yaml
   values.schema.json   # по возможности
-  README.md            # helm-docs
+  README.md            # вручную, см. шаблон ниже
   ci/test-values.yaml  # для ct install в kind
   templates/           # для custom; для pure wrapper может быть только NOTES.txt
   charts/*.tgz         # vendored dependencies
 ```
+
+## README чарта
+
+Единый шаблон (см. [charts/redis/README.md](../charts/redis/README.md)):
+
+- кратко — что за продукт;
+- **Требует** — SSC оператора или «нет»;
+- **Установка** — `kubectl apply -f deploy/examples/ssc/<chart>.yaml`;
+- **Основные параметры** — `global.imageRegistry`, `global.storageClass`, ключи чарта;
+- **Upstream** — ссылка из `artifacthub.io/links` или документация upstream.
 
 ## SSC
 
@@ -76,7 +86,6 @@ charts/<name>/
 ```bash
 make lint-chart CHART=cnpg-operator
 make test          # ct lint + install (kind)
-helm-docs --check  # если установлен helm-docs
 ```
 
 Bump `version` в `Chart.yaml` при любом изменении, попадающем в релиз.

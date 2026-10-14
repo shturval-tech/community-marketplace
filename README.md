@@ -11,20 +11,29 @@
 </p>
 
 <p align="center">
-  <a href="https://shturval-tech.github.io/community-marketplace/security/"><strong>Отчёт последнего сканирования</strong></a>
+  <a href="https://shturval-tech.github.io/community-marketplace/security/"><strong>Отчёт сканирования</strong></a>
   ·
   <a href="https://github.com/shturval-tech/community-marketplace/actions/workflows/security-scan.yaml">Security Scan</a>
 </p>
 
 # Shturval Community Marketplace
 
-Community Helm-репозиторий для платформы [Штурвал](https://shturval.tech): обёртки над upstream-чартами, инстансы для операторов, зеркала контейнерных образов и примеры **ShturvalServiceConfig (SSC)**.
+Community Helm-репозиторий для [Штурвала](https://shturval.tech): обёртки над upstream-чартами, зеркала образов и примеры **ShturvalServiceConfig (SSC)**. Термины — [docs/glossary.md](docs/glossary.md).
+
+## С чего начать
+
+| Задача | Куда идти |
+|--------|-----------|
+| Подключить каталог чартов в кластере | [Быстрый старт](#быстрый-старт) ниже |
+| Установить сервисы **без интернета** | [docs/airgap.md](docs/airgap.md) |
+| Посмотреть уязвимости образов | [Отчёт на Pages](https://shturval-tech.github.io/community-marketplace/security/), [docs/security-scanning.md](docs/security-scanning.md) |
+| Добавить или изменить чарт | [CONTRIBUTING.md](CONTRIBUTING.md) |
 
 ## Как это работает
 
-1. В кластере создаётся **ShturvalRepoConfig** с URL опубликованного index (GitHub Pages) или вашего внутреннего Nexus/Harbor.
+1. В кластере создаётся **ShturvalRepoConfig** с URL index (GitHub Pages) или вашего Nexus/Harbor.
 2. Чарты появляются в UI: **Сервисы и репозитории → Доступные чарты**.
-3. Установка — через SSC (`ops.shturval.tech/v1beta2`, `ShturvalServiceConfig`).
+3. Установка — через SSC (`ShturvalServiceConfig`).
 
 ```mermaid
 flowchart LR
@@ -36,82 +45,94 @@ flowchart LR
   SSC --> Cluster[Kubernetes]
 ```
 
-## Публикация
-
-| Канал | URL (после настройки) |
-|-------|------------------------|
-| Helm index (основной для UI) | `https://shturval-tech.github.io/community-marketplace/index.yaml` |
+| Канал | URL |
+|-------|-----|
+| Helm index (для UI) | `https://shturval-tech.github.io/community-marketplace/index.yaml` |
 | OCI charts | `oci://ghcr.io/shturval-tech/community-marketplace` |
-| Зеркала образов | `ghcr.io/shturval-tech/community-marketplace/<image>` |
+| Образы | `ghcr.io/shturval-tech/community-marketplace/<image>` |
 
-Первичная настройка GitHub (public repo, Pages, packages): [docs/manual-setup.md](docs/manual-setup.md).
+Первичная настройка GitHub: [docs/manual-setup.md](docs/manual-setup.md). CI: [docs/ci.md](docs/ci.md).
 
-## Быстрый старт в кластере
+## Быстрый старт
 
-**Вариант A — манифест:**
+**Нужно:** `kubectl` с доступом к кластеру Штурвала.
+
+1. Подключите репозиторий чартов:
 
 ```bash
 kubectl apply -k deploy/repoconfig/base
 ```
 
-**Вариант B — Argo CD:**
+2. Проверьте:
 
 ```bash
-kubectl apply -f deploy/argocd/application.yaml
+kubectl get shturvalrepoconfig community
 ```
 
-Пример установки CloudNativePG:
+В UI Штурвала должны появиться чарты в **Доступные чарты**.
+
+3. Пример — CloudNativePG (сначала оператор, затем кластер):
 
 ```bash
 kubectl apply -f deploy/examples/ssc/cnpg-operator.yaml
 kubectl apply -f deploy/examples/ssc/cnpg-cluster.yaml
 ```
 
-## Каталог (первая волна)
+Argo CD: `kubectl apply -f deploy/argocd/application.yaml`. Порядок установки SSC: [deploy/examples/ssc/README.md](deploy/examples/ssc/README.md).
 
-| Чарт | Описание |
-|------|----------|
-| `cnpg-operator` | Оператор CloudNativePG для PostgreSQL в Kubernetes |
-| `cnpg-cluster` | Кластер PostgreSQL (HA, PVC) |
-| `mariadb-operator` | Оператор MariaDB/MySQL |
-| `mariadb` | Экземпляр MariaDB |
-| `redis-operator` | Оператор Redis (кэш, in-memory) |
-| `redis` | Экземпляр Redis с репликацией |
-| `rabbitmq-operator` | Оператор брокера RabbitMQ |
-| `rabbitmq` | Кластер RabbitMQ (AMQP) |
-| `strimzi-operator` | Оператор Strimzi для Apache Kafka |
-| `kafka` | Кластер Kafka (KRaft) |
-| `minio-operator` | MinIO Operator (S3 API) |
-| `minio-tenant` | Tenant MinIO — объектное хранилище |
-| `keycloak` | Keycloak — SSO, OIDC/SAML |
-| `authentik` | authentik — IdP и SSO |
-| `proxmox-csi` | CSI-тома из Proxmox VE |
-| `nextcloud-aio` | Nextcloud — файловое облако |
+## Каталог
+
+### Базы данных
+
+| Чарт | Назначение | Зависимость SSC |
+|------|------------|-----------------|
+| [cnpg-operator](charts/cnpg-operator/README.md) | Оператор CloudNativePG | — |
+| [cnpg-cluster](charts/cnpg-cluster/README.md) | Кластер PostgreSQL | `cnpg-operator` |
+| [mariadb-operator](charts/mariadb-operator/README.md) | Оператор MariaDB | — |
+| [mariadb](charts/mariadb/README.md) | Экземпляр MariaDB | `mariadb-operator` |
+| [redis-operator](charts/redis-operator/README.md) | Оператор Redis | — |
+| [redis](charts/redis/README.md) | Экземпляр Redis | `redis-operator` |
+
+### Очереди сообщений
+
+| Чарт | Назначение | Зависимость SSC |
+|------|------------|-----------------|
+| [rabbitmq-operator](charts/rabbitmq-operator/README.md) | Оператор RabbitMQ | — |
+| [rabbitmq](charts/rabbitmq/README.md) | Кластер RabbitMQ | `rabbitmq-operator` |
+| [strimzi-operator](charts/strimzi-operator/README.md) | Оператор Strimzi (Kafka) | — |
+| [kafka](charts/kafka/README.md) | Кластер Kafka (KRaft) | `strimzi-operator` |
+
+### Хранилище
+
+| Чарт | Назначение | Зависимость SSC |
+|------|------------|-----------------|
+| [minio-operator](charts/minio-operator/README.md) | MinIO Operator | — |
+| [minio-tenant](charts/minio-tenant/README.md) | Tenant MinIO (S3) | `minio-operator` |
+
+### Идентификация
+
+| Чарт | Назначение | Зависимость SSC |
+|------|------------|-----------------|
+| [keycloak](charts/keycloak/README.md) | Keycloak (SSO, OIDC) | — |
+| [authentik](charts/authentik/README.md) | authentik (IdP) | — |
+
+### Инфраструктура
+
+| Чарт | Назначение | Зависимость SSC |
+|------|------------|-----------------|
+| [proxmox-csi](charts/proxmox-csi/README.md) | CSI для Proxmox VE | — |
+| [nextcloud-aio](charts/nextcloud-aio/README.md) | Nextcloud AIO | — |
 
 ## Закрытый контур
 
-**Рабочая станция без интернета:** скачайте [`airgap-bundle.tar.gz`](https://github.com/shturval-tech/community-marketplace/releases/tag/airgap-latest) из Releases (alias последней сборки), распакуйте и выполните `./push-offline.sh` (внутренний Harbor/Nexus и т.п.). В Releases также лежат версионные теги `airgap-<версия чартов>-<YYYYMMDD>` — **хранятся 3 последних**; для фиксации сборки используйте их, для «всегда актуального» — `airgap-latest`.
-
-> **Harbor:** образы — в project registry; для HTTP `index.yaml` в Штурвале нужен **ChartMuseum** (или Nexus/GitVerse HTTP). В Harbor 2.8+ ChartMuseum не входит в состав по умолчанию — `/chartrepo/` сам по себе не заменяет hosted Helm repo. Без ChartMuseum чарты из бандла пушатся в Harbor как **OCI** (`oci://…/charts`). Подробнее: [docs/airgap.md](docs/airgap.md#harbor-и-http-indexyaml-chartmuseum).
-
-```bash
-# CI может выложить несколько airgap-bundle.tar.gz.part-* (лимит GitHub 2 GiB):
-test -f airgap-bundle.tar.gz || cat airgap-bundle.tar.gz.part-* > airgap-bundle.tar.gz
-sha256sum -c airgap-bundle.sha256
-tar -xzf airgap-bundle.tar.gz
-export REGISTRY=registry.internal/community-marketplace
-export HELM_REPO_URL=https://nexus.internal/repository/helm-community
-./push-offline.sh
-kubectl apply -f shturvalrepoconfig.yaml
-```
-
-Сборка бандла (на машине с интернетом): `make bundle WITH_SCAN_DB=1` или workflow **Air-gap Bundle Release**. Legacy `make push` тянет образы с ghcr.io — для контура используйте **`push-offline.sh`**.
-
-Подробнее: [docs/airgap.md](docs/airgap.md).
+Скачайте offline-архив из [Releases](https://github.com/shturval-tech/community-marketplace/releases) (`airgap-latest` или фиксированный тег `airgap-<версия>-<дата>`), распакуйте и выполните `./push-offline.sh` во внутренние реестры. Пошагово, Harbor, типичные ошибки: [docs/airgap.md](docs/airgap.md).
 
 ## Безопасность
 
-После публикации зеркал образов CI запускает **Trivy** с базой `public.shturval.tech/trivy-db:2` и обогащает отчёты данными **БДУ ФСТЭК** (CVE → `BDU:YYYY-NNNNN`). Актуальный отчёт — на [GitHub Pages](https://shturval-tech.github.io/community-marketplace/security/); статус — плашка в шапке README. Дополнительно: Step Summary, артефакты Actions, вкладка **Security** (SARIF). После каждого push образов — scan в workflow **Mirror Images**; **полный** прогон всех `:latest` с публикацией Pages — **ежедневно ночью** (03:00 UTC / 06:00 МСК) и вручную в workflow [**Security Scan**](https://github.com/shturval-tech/community-marketplace/actions/workflows/security-scan.yaml). На scheduled-запуске **БДУ vulxml** заново скачивается с зеркала (дата снимка — в отчёте). После ночного Security Scan workflow [**Nightly Rebuild**](https://github.com/shturval-tech/community-marketplace/actions/workflows/nightly-rebuild.yaml) **пересобирает образы и air-gap бандл**, только если изменились `charts/` / `images/` в git или digest upstream-образов — **смена состава CVE пересборку не запускает**.
+- **Что:** зеркала образов в GHCR — Trivy + база БДУ ФСТЭК.
+- **Когда:** после каждой сборки образа; полный прогон — **ежедневно 03:00 UTC** (workflow **Security Scan**).
+- **Где:** [отчёт на Pages](https://shturval-tech.github.io/community-marketplace/security/), плашка выше.
+- **Пересборка бандла:** после ночного scan — workflow **Nightly Rebuild**, только если изменились исходники или upstream-образы; **новые CVE сами по себе пересборку не запускают** ([docs/ci.md](docs/ci.md)).
 
 ```bash
 make scan IMAGE=ghcr.io/shturval-tech/community-marketplace/redis:latest
@@ -123,15 +144,13 @@ make scan-all
 ## Разработка
 
 ```bash
-make lint          # chart-testing lint
-make package       # локальная упаковка всех чартов
-make test          # lint + kind install (требует docker/kind)
+make lint
+make package
+make test
 ```
 
-Соглашения по чартам: [docs/chart-conventions.md](docs/chart-conventions.md).  
-Участие: [CONTRIBUTING.md](CONTRIBUTING.md).  
-Агенты: [AGENTS.md](AGENTS.md).
+[docs/chart-conventions.md](docs/chart-conventions.md) · [CONTRIBUTING.md](CONTRIBUTING.md) · [AGENTS.md](AGENTS.md) (для AI-агентов)
 
 ## Лицензия
 
-Apache License 2.0 — см. [LICENSE](LICENSE). Upstream-чарты и образы подчиняются своим лицензиям.
+Apache License 2.0 — [LICENSE](LICENSE). Upstream-чарты и образы — по своим лицензиям.

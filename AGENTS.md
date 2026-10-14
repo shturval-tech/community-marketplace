@@ -1,10 +1,10 @@
 # AGENTS — community-marketplace
 
-Инструкции для AI-агентов и автomation в репозитории **shturval-tech/community-marketplace**.
+Инструкции для AI-агентов и automation в репозитории **shturval-tech/community-marketplace**.
 
 ## Контекст платформы
 
-- **ShturvalRepoConfig** (`ops.shturval.tech/v1beta2`, cluster-scoped): `spec.url` — http/https/oci; для OCI список чартов в UI Штурвала не подгружается → приоритет **HTTPS index.yaml** (GitHub Pages). **Harbor:** HTTP index требует ChartMuseum (или Nexus/GitVerse); Harbor 2.8+ без ChartMuseum — только OCI для чартов ([docs/airgap.md](docs/airgap.md#harbor-и-http-indexyaml-chartmuseum)).
+- **ShturvalRepoConfig** (`ops.shturval.tech/v1beta2`, cluster-scoped): `spec.url` — http/https/oci; для OCI список чартов в UI не подгружается → приоритет **HTTPS index.yaml** (GitHub Pages). Harbor без ChartMuseum — OCI ([docs/airgap.md](docs/airgap.md#если-у-вас-harbor)).
 - **ShturvalServiceConfig (SSC)**: `spec.chart`, `spec.version`, `spec.namespace`, `spec.reponame`, `spec.dependency[]`, `spec.customvalues`.
 - Имена чартов: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$`.
 
@@ -53,22 +53,23 @@ make scan-test         # pytest tests/scan/
 
 ## CI
 
-- PR: `.github/workflows/lint-test.yaml` — ct lint, kubeconform, ct install.
-- main + `charts/**`: `release-charts.yaml` — chart-releaser → gh-pages, OCI push.
-- main + `images/**`: `images.yaml` — buildx push, job `scan` (Trivy + БДУ, SARIF).
-- daily 03:00 UTC + manual: `security-scan.yaml` — полный scan `:latest`, на schedule свежая БДУ (`BDU_FORCE_FETCH=1`).
-- after scheduled Security Scan: `nightly-rebuild.yaml` — fingerprint (`scripts/build-fingerprint.sh`); mirror + `airgap-bundle.yaml` если изменились git `charts/`/`images/` или upstream digest (не CVE).
-- after scan workflows: `publish-security-pages.yaml` — отчёт и `badge.json` на gh-pages (`/security/`).
-- Release Charts / Mirror Images / nightly / manual: `airgap-bundle.yaml` — `airgap-latest` + `airgap-<ver>-<date>`, prune 3 versioned releases.
-- PR/main: `lint-test.yaml` — trivy config (информационно), pytest `tests/scan/`.
+Полное описание workflow, nightly, бандлы: **[docs/ci.md](docs/ci.md)**.
+
+Кратко:
+
+- scan не блокирует push образов; `scan-gate` — отдельный job; Nightly Rebuild пропускает gate.
+- **Publish Security Pages** — только ручной перезапуск отчёта.
+- Отпечаток исходников (`build-fingerprint.sh`) — не включает CVE.
 
 ## Ссылки
 
 - [README.md](README.md) — обзор и каталог
+- [docs/glossary.md](docs/glossary.md) — термины
+- [docs/ci.md](docs/ci.md) — GitHub Actions
 - [docs/manual-setup.md](docs/manual-setup.md) — public repo, Pages, packages
 - [docs/airgap.md](docs/airgap.md) — закрытый контур
 - [docs/security-scanning.md](docs/security-scanning.md) — Trivy и БДУ в CI
-- Навык Shturval API (в монорепо Projects): `.cursor/skills/shturval-api/SKILL.md`
+- Навык Shturval API (монорепо Projects): `.cursor/skills/shturval-api/SKILL.md`
 
 ## Безопасность
 
