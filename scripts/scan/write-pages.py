@@ -107,17 +107,40 @@ def main() -> int:
     parser.add_argument("--pages-url", required=True)
     parser.add_argument("--workflow-url", default="")
     parser.add_argument("--source", default="ci")
+    parser.add_argument(
+        "--enforce-gate-only",
+        action="store_true",
+        help="Exit 1 if gate failures > 0 (no HTML/badge output)",
+    )
     args = parser.parse_args()
 
-    args.out_dir.mkdir(parents=True, exist_ok=True)
     rows = collect_rows(args.scan_dir)
     ignored = load_ignore(args.trivyignore if args.trivyignore.is_file() else None)
     failures = gate_failures(rows, ignored, args.fail_on, args.fixed_only)
     total = len(rows)
+
+    if args.enforce_gate_only:
+        if failures > 0:
+            print(
+                f"Scan gate failed: {failures} finding(s) at {args.fail_on}+ with fix",
+                file=sys.stderr,
+            )
+            return 1
+        print(f"Scan gate OK ({total} records)")
+        return 0
+
+    args.out_dir.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     has_blocking = failures > 0
-    if has_blocking:
+    if total == 0:
+        badge = {
+            "schemaVersion": 1,
+            "label": "сканирование",
+            "message": "нет данных",
+            "color": "lightgrey",
+        }
+    elif has_blocking:
         badge = {
             "schemaVersion": 1,
             "label": "сканирование",

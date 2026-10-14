@@ -23,9 +23,13 @@ done < <(find "${ARTIFACT_DIR}" -name 'report.bdu.json' -print0)
 
 find "${ARTIFACT_DIR}" -name 'REPORT.md' -exec cp -f {} "${OUT}/REPORT.md" \; 2>/dev/null || true
 
-if find "${OUT}" -name 'report.bdu.json' | grep -q .; then
-  echo "prepare-dist-scan: OK ($(find "${OUT}" -name 'report.bdu.json' | wc -l) reports)"
+count=$(find "${OUT}" -name 'report.bdu.json' 2>/dev/null | wc -l)
+if [[ "${count}" -gt 0 ]]; then
+  echo "prepare-dist-scan: OK (${count} reports)"
 else
-  echo "prepare-dist-scan: no report.bdu.json found under ${ARTIFACT_DIR}" >&2
-  exit 1
+  echo "prepare-dist-scan: no report.bdu.json under ${ARTIFACT_DIR} (will publish empty placeholder)" >&2
+  mkdir -p "${OUT}"
+  echo "# Сводный отчёт сканирования" > "${OUT}/REPORT.md"
+  echo "" >> "${OUT}/REPORT.md"
+  echo "Нет данных сканирования (артефакты не собраны или job scan не выполнился)." >> "${OUT}/REPORT.md"
 fi

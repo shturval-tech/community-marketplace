@@ -47,15 +47,30 @@ jobs:
         run: ./scripts/scan/bdu-fetch.sh
 
       - name: Scan all mirrored images
+        id: scan
+        continue-on-error: true
+        env:
+          SCAN_ENFORCE_GATE: "0"
         run: |
           chmod +x scripts/scan/*.sh
           ./scripts/scan/trivy-scan.sh all
 
       - name: Upload aggregate report
+        if: always() && steps.scan.outcome != 'cancelled'
         uses: actions/upload-artifact@v4
         with:
           name: security-scan-report
+          if-no-files-found: warn
           path: dist/scan/
+
+      - name: Enforce scan policy gate
+        if: always() && steps.scan.outcome != 'cancelled'
+        env:
+          SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
+        run: |
+          chmod +x scripts/scan/*.sh
+          ./scripts/scan/aggregate-report.sh
+          ./scripts/scan/enforce-gate.sh dist/scan
 
       - name: Summary
         if: always()
@@ -80,6 +95,19 @@ jobs:
         with:
           name: security-scan-report
           path: dist/scan
+          if-no-artifacts-found: ignore
+
+      - name: Prepare report for Pages
+        run: |
+          chmod +x scripts/scan/*.sh
+          if ! find dist/scan -name 'report.bdu.json' -print -quit | grep -q .; then
+            mkdir -p dist/scan
+            echo "# Сводный отчёт сканирования" > dist/scan/REPORT.md
+            echo "" >> dist/scan/REPORT.md
+            echo "Артефакт scan пуст или job scan не завершился." >> dist/scan/REPORT.md
+          else
+            ./scripts/scan/aggregate-report.sh
+          fi
 
       - name: Build GitHub Pages bundle
         env:

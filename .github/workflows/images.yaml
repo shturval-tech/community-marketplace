@@ -79,6 +79,7 @@ jobs:
       matrix: ${{ fromJson(needs.prepare.outputs.matrix) }}
     env:
       SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
+      SCAN_ENFORCE_GATE: "0"
       TRIVY_DB_REPOSITORY: public.shturval.tech/trivy-db:2
       TRIVY_JAVA_DB_REPOSITORY: public.shturval.tech/trivy-java-db:1
     steps:
@@ -108,6 +109,8 @@ jobs:
         run: ./scripts/scan/bdu-fetch.sh
 
       - name: Scan image (Trivy + BDU)
+        id: scan
+        continue-on-error: true
         run: |
           chmod +x scripts/scan/*.sh
           ./scripts/scan/trivy-scan.sh \
@@ -115,15 +118,18 @@ jobs:
             "${{ matrix.name }}"
 
       - name: Upload SARIF
+        if: always() && steps.scan.outcome == 'success'
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: dist/scan/${{ matrix.name }}/report.sarif
           category: trivy-${{ matrix.name }}
 
       - name: Upload scan artifacts
+        if: always() && steps.scan.outcome != 'cancelled'
         uses: actions/upload-artifact@v4
         with:
           name: scan-${{ matrix.name }}
+          if-no-files-found: ignore
           path: |
             dist/scan/${{ matrix.name }}/report.json
             dist/scan/${{ matrix.name }}/report.bdu.json
@@ -139,9 +145,34 @@ jobs:
             echo "Scan report missing for ${{ matrix.name }}" >> "${GITHUB_STEP_SUMMARY}"
           fi
 
+  scan-gate:
+    runs-on: ubuntu-24.04
+    needs: [mirror, scan, prepare]
+    if: always() && needs.mirror.result == 'success' && needs.scan.result != 'cancelled' && needs.scan.result != 'skipped'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download scan artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: scan-*
+          merge-multiple: true
+          path: artifact
+
+      - name: Prepare dist/scan
+        run: |
+          chmod +x scripts/scan/*.sh
+          ./scripts/scan/prepare-dist-scan-from-artifacts.sh artifact dist/scan
+          ./scripts/scan/aggregate-report.sh
+
+      - name: Enforce scan policy gate
+        env:
+          SCAN_FAIL_SEVERITY: ${{ vars.SCAN_FAIL_SEVERITY || 'CRITICAL' }}
+        run: ./scripts/scan/enforce-gate.sh dist/scan
+
   publish-pages:
     needs: [mirror, scan, prepare]
-    if: needs.mirror.result == 'success' && needs.scan.result == 'success'
+    if: always() && needs.mirror.result == 'success' && needs.scan.result != 'cancelled' && needs.scan.result != 'skipped'
     runs-on: ubuntu-24.04
     permissions:
       contents: write

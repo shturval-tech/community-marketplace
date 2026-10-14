@@ -60,16 +60,21 @@ scan_one() {
     --format cyclonedx \
     --output "${out}/report.cyclonedx.json"
 
-  python3 "${ROOT}/scripts/scan/bdu-enrich.py" \
-    --trivy-json "${out}/report.json" \
-    --vulxml "${BDU_VULXML}" \
-    --out-json "${out}/report.bdu.json" \
-    --out-md "${out}/report.bdu.md" \
-    --image-label "${name} (${ref})" \
-    --bdu-snapshot "${BDU_SNAPSHOT:-unknown}" \
-    --trivyignore "${IGNORE_FILE}" \
-    --fail-on "${FAIL_ON}" \
+  local enrich_args=(
+    --trivy-json "${out}/report.json"
+    --vulxml "${BDU_VULXML}"
+    --out-json "${out}/report.bdu.json"
+    --out-md "${out}/report.bdu.md"
+    --image-label "${name} (${ref})"
+    --bdu-snapshot "${BDU_SNAPSHOT:-unknown}"
+    --trivyignore "${IGNORE_FILE}"
+    --fail-on "${FAIL_ON}"
     --fixed-only
+  )
+  if [[ "${SCAN_ENFORCE_GATE:-1}" == "0" ]]; then
+    enrich_args+=(--no-fail)
+  fi
+  python3 "${ROOT}/scripts/scan/bdu-enrich.py" "${enrich_args[@]}"
 }
 
 scan_all() {
