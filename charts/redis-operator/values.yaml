@@ -1,9 +1,79 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 redis-operator:
   redisOperator:
+    name: redis-operator
     imageName: ghcr.io/shturval-tech/community-marketplace/redis-operator:v0.27.0
+    imageTag: ''
+    initContainerImageTag: v0.27.0
+    imagePullPolicy: Always
+    imagePullSecrets: []
+    strategy: {}
+    podAnnotations: {}
+    podLabels: {}
+    extraArgs: []
+    watchNamespace: ''
+    serviceDNSDomain: cluster.local
+    env: []
+    webhook: false
+    automountServiceAccountToken: true
+    pprof:
+      enabled: false
+      bindAddress: :6060
+    metrics:
+      enabled: true
+      bindAddress: :8080
+  resources:
+    limits:
+      cpu: 500m
+      memory: 500Mi
+    requests:
+      cpu: 500m
+      memory: 500Mi
+  replicas: 1
+  rbac:
+    enabled: true
+    scope: cluster
+    aggregate: true
+  serviceAccountName: redis-operator
+  serviceAccount:
+    automountServiceAccountToken: true
+  service:
+    name: webhook-service
+    namespace: redis-operator
+  certificate:
+    name: serving-cert
+    secretName: webhook-server-cert
+  issuer:
+    create: true
+    kind: Issuer
+    type: selfSigned
+    name: redis-operator-issuer
+    email: shubham.gupta@opstree.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretName: letsencrypt-prod
+    solver:
+      enabled: true
+      ingressClass: nginx
+  certmanager:
+    enabled: false
+    apiVersion: cert-manager.io/v1
+  priorityClassName: ''
+  nodeSelector: {}
+  tolerateAllTaints: false
+  tolerations: []
+  affinity: {}
+  podSecurityContext: {}
+  securityContext: {}
+  featureGates: {}
+  manager:
+    config:
+      kubeClientTimeout: 60s
+      kubeClientQPS: 0.0
+      maxConcurrentReconciles: 3
+      execCommandTimeout: ''

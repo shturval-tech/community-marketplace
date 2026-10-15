@@ -1,14 +1,290 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 keycloakx:
+  fullnameOverride: ''
+  nameOverride: ''
+  namespaceOverride: ''
+  replicas: 1
+  commonLabels: {}
   image:
     repository: ghcr.io/shturval-tech/community-marketplace/keycloak
-    tag: "26.7.4"
+    tag: 26.7.4
+    digest: ''
+    pullPolicy: IfNotPresent
+  imagePullSecrets: []
+  hostAliases: []
+  enableServiceLinks: true
+  podManagementPolicy: OrderedReady
+  updateStrategy: RollingUpdate
+  revisionHistoryLimit: ''
+  restartPolicy: Always
+  serviceAccount:
+    create: true
+    allowReadPods: false
+    name: ''
+    annotations: {}
+    labels: {}
+    imagePullSecrets: []
+    automountServiceAccountToken: true
+  rbac:
+    create: false
+    rules: []
+  podSecurityContext:
+    fsGroup: 1000
+  securityContext:
+    runAsUser: 1000
+    runAsNonRoot: true
+  extraInitContainers: ''
+  skipInitContainers: false
+  extraContainers: ''
+  lifecycleHooks: ''
+  terminationGracePeriodSeconds: 60
+  clusterDomain: cluster.local
+  command: []
+  args: []
+  extraEnv: ''
+  extraEnvFrom: ''
+  priorityClassName: ''
+  affinity: "podAntiAffinity:\n  requiredDuringSchedulingIgnoredDuringExecution:\n\
+    \    - labelSelector:\n        matchLabels:\n          {{- include \"keycloak.selectorLabels\"\
+    \ . | nindent 10 }}\n        matchExpressions:\n          - key: app.kubernetes.io/component\n\
+    \            operator: NotIn\n            values:\n              - test\n    \
+    \  topologyKey: kubernetes.io/hostname\n  preferredDuringSchedulingIgnoredDuringExecution:\n\
+    \    - weight: 100\n      podAffinityTerm:\n        labelSelector:\n         \
+    \ matchLabels:\n            {{- include \"keycloak.selectorLabels\" . | nindent\
+    \ 12 }}\n          matchExpressions:\n            - key: app.kubernetes.io/component\n\
+    \              operator: NotIn\n              values:\n                - test\n\
+    \        topologyKey: topology.kubernetes.io/zone\n"
+  topologySpreadConstraints: null
+  nodeSelector: {}
+  tolerations: []
+  podLabels: {}
+  podAnnotations: {}
+  livenessProbe: "httpGet:\n  path: '{{ tpl (coalesce .Values.http.managementRelativePath\
+    \ .Values.http.relativePath) $ | trimSuffix \"/\" }}/health/live'\n  port: '{{\
+    \ .Values.http.internalPort }}'\n  scheme: '{{ .Values.http.internalScheme }}'\n\
+    initialDelaySeconds: 0\ntimeoutSeconds: 5\n"
+  readinessProbe: "httpGet:\n  path: '{{ tpl (coalesce .Values.http.managementRelativePath\
+    \ .Values.http.relativePath) $ | trimSuffix \"/\" }}/health/ready'\n  port: '{{\
+    \ .Values.http.internalPort }}'\n  scheme: '{{ .Values.http.internalScheme }}'\n\
+    initialDelaySeconds: 10\ntimeoutSeconds: 1\n"
+  startupProbe: "httpGet:\n  path: '{{ tpl (coalesce .Values.http.managementRelativePath\
+    \ .Values.http.relativePath) $ | trimSuffix \"/\" }}/health'\n  port: '{{ .Values.http.internalPort\
+    \ }}'\n  scheme: '{{ .Values.http.internalScheme }}'\ninitialDelaySeconds: 15\n\
+    timeoutSeconds: 1\nfailureThreshold: 60\nperiodSeconds: 5\n"
+  resources: {}
+  extraVolumes: ''
+  volumeClaimTemplates: ''
+  extraVolumeMounts: ''
+  extraPorts: []
+  podDisruptionBudget: {}
+  statefulsetAnnotations: {}
+  statefulsetLabels: {}
+  secrets: {}
+  service:
+    annotations: {}
+    labels: {}
+    type: ClusterIP
+    loadBalancerIP: ''
+    httpPort: 80
+    httpNodePort: null
+    httpsPort: 8443
+    httpsNodePort: null
+    extraPorts: []
+    loadBalancerSourceRanges: []
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: ''
+    sessionAffinity: ''
+    sessionAffinityConfig: {}
+  serviceHeadless:
+    annotations: {}
+    labels: {}
+    extraPorts: []
+  httpRoute:
+    enabled: false
+    labels: {}
+    annotations: {}
+    servicePort: 80
+    parentRefs:
+    - name: gateway
+      sectionName: http
+    hostnames:
+    - chart-example.local
+    rules:
+    - matches:
+      - path:
+          type: PathPrefix
+          value: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}/'
+    listenerSet:
+      enabled: false
+      labels: {}
+      annotations: {}
+      parentRef:
+        name: gateway
+      listeners: []
+    console:
+      enabled: false
+      labels: {}
+      annotations: {}
+      parentRefs:
+      - name: gateway
+        sectionName: http
+      hostnames:
+      - chart-example.local
+      rules:
+      - matches:
+        - path:
+            type: PathPrefix
+            value: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}/admin'
+  ingress:
+    enabled: false
+    ingressClassName: ''
+    servicePort: http
+    annotations: {}
+    labels: {}
+    rules:
+    - host: '{{ .Release.Name }}.keycloak.example.com'
+      paths:
+      - path: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}/'
+        pathType: Prefix
+    tls: []
+    console:
+      enabled: false
+      ingressClassName: ''
+      annotations: {}
+      labels: {}
+      rules:
+      - host: '{{ .Release.Name }}.keycloak.example.com'
+        paths:
+        - path: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}/admin'
+          pathType: Prefix
+      tls: []
+  networkPolicy:
+    enabled: false
+    labels: {}
+    extraFrom: []
+    egress: []
+  route:
+    enabled: false
+    path: /
+    annotations: {}
+    labels: {}
+    host: ''
+    tls:
+      enabled: true
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
   dbchecker:
+    enabled: false
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/busybox
-      tag: "1.36"
+      tag: '1.36'
+      pullPolicy: IfNotPresent
+    securityContext:
+      allowPrivilegeEscalation: false
+      runAsUser: 1000
+      runAsGroup: 1000
+      runAsNonRoot: true
+    resources:
+      requests:
+        cpu: 20m
+        memory: 32Mi
+      limits:
+        cpu: 20m
+        memory: 32Mi
+  database:
+    existingSecret: ''
+    existingSecretKey: ''
+    vendor: null
+    hostname: null
+    port: null
+    database: null
+    username: null
+    password: null
+  cache:
+    stack: default
+  proxy:
+    enabled: true
+    mode: forwarded
+    http:
+      enabled: true
+  metrics:
+    enabled: true
+  health:
+    enabled: true
+  http:
+    relativePath: /auth
+    managementRelativePath: ''
+    internalPort: http-internal
+    internalScheme: HTTP
+  serviceMonitor:
+    enabled: false
+    namespace: ''
+    namespaceSelector: {}
+    annotations: {}
+    labels: {}
+    interval: 10s
+    scrapeTimeout: 10s
+    relabelings: []
+    metricRelabelings: []
+    path: '{{ tpl (coalesce .Values.http.managementRelativePath .Values.http.relativePath)
+      $ | trimSuffix "/" }}/metrics'
+    port: '{{ .Values.http.internalPort }}'
+    scheme: ''
+  extraServiceMonitor:
+    enabled: false
+    namespace: ''
+    namespaceSelector: {}
+    annotations: {}
+    labels: {}
+    interval: 10s
+    scrapeTimeout: 10s
+    relabelings: []
+    metricRelabelings: []
+    path: '{{ tpl (coalesce .Values.http.managementRelativePath .Values.http.relativePath)
+      $ | trimSuffix "/" }}/metrics'
+    port: '{{ .Values.http.internalPort }}'
+    scheme: ''
+  prometheusRule:
+    enabled: false
+    namespace: ''
+    annotations: {}
+    labels: {}
+    rules: []
+  autoscaling:
+    enabled: false
+    labels: {}
+    minReplicas: 3
+    maxReplicas: 10
+    metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
+    behavior:
+      scaleDown:
+        stabilizationWindowSeconds: 300
+        policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 300
+  test:
+    enabled: false
+    image:
+      repository: docker.io/selenium/standalone-chromium
+      tag: '147.0'
+      pullPolicy: IfNotPresent
+    podSecurityContext:
+      fsGroup: 1200
+    securityContext:
+      runAsUser: 1200
+      runAsNonRoot: true
+    deletionPolicy: before-hook-creation
+  extraManifests: []

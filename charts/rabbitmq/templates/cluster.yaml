@@ -4,4 +4,12 @@ metadata:
   name: {{ .Values.name }}
 spec:
   replicas: {{ .Values.replicas }}
-  image: {{ .Values.global.imageRegistry }}/rabbitmq-server:{{ .Values.imageTag }}
+  image: {{ .Values.global.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+  {{- with .Values.resources }}
+  resources: {{- toYaml . | nindent 4 }}
+  {{- end }}
+  {{- with .Values.persistence }}
+  persistence:
+    storageClassName: {{ .storageClassName | quote }}
+    storage: {{ .storage | quote }}
+  {{- end }}

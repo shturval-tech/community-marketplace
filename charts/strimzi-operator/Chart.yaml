@@ -2,10 +2,14 @@ apiVersion: v2
 name: strimzi-operator
 description: Оператор Strimzi — Apache Kafka и экосистема потоковой обработки в Kubernetes
 type: application
-version: 0.1.3
+version: 0.1.5
 appVersion: "0.45.0"
 annotations:
   shturval.tech/category: messaging
   shturval.tech/serviceclass: kafka-operator
   shturval.tech/description: Strimzi управляет Kafka, топиками, Connect и пользователями в Kubernetes (режим KRaft).
   artifacthub.io/license: Apache-2.0
+dependencies:
+  - name: strimzi-kafka-operator
+    version: 0.1.1
+    repository: file://./charts/strimzi-kafka-operator

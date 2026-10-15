@@ -1,8 +1,35 @@
+# Community Kafka (Strimzi CR). Requires strimzi-operator in the cluster.
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
 
+# Kafka cluster name (Strimzi Kafka / KafkaNodePool label strimzi.io/cluster).
 name: community-kafka
+
+# Broker/controller pool size (KafkaNodePool replicas).
+replicas: 1
+
+# Kafka broker version and KRaft metadata version (must match Strimzi bundle).
 kafkaVersion: "3.8.0"
 metadataVersion: 3.8-IV0
-replicas: 1
+
+# Strimzi Kafka image tag suffix (image: {registry}/strimzi-kafka:{kafkaImageTag}).
 kafkaImageTag: 0.45.0-kafka-3.8.0
+
+# Optional listener overrides (appended if you extend templates).
+listeners:
+  - name: plain
+    port: 9092
+    type: internal
+    tls: false
+
+# Broker config defaults for single-replica dev/small clusters.
+kafkaConfig:
+  offsets.topic.replication.factor: 1
+  transaction.state.log.replication.factor: 1
+  transaction.state.log.min.isr: 1
+  default.replication.factor: 1
+  min.insync.replicas: 1
+
+entityOperator:
+  topicOperator: {}
+  userOperator: {}

@@ -20,9 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Fetch history
-        run: git fetch --prune --unshallow
+        with:
+          fetch-depth: 0
 
       - name: Configure Git
         run: |
@@ -47,6 +46,17 @@ jobs:
       - name: Ensure Strimzi subchart is vendored
         run: ./scripts/vendor-chart-deps.sh
 
+      - name: Package charts
+        id: package
+        run: |
+          mkdir -p .cr-release-packages
+          shopt -s nullglob
+          for d in charts/*/; do
+            helm package "$d" -d .cr-release-packages --dependency-update=false
+          done
+          ls -la .cr-release-packages/
+          echo "package_count=$(ls -1 .cr-release-packages/*.tgz 2>/dev/null | wc -l)" >> "$GITHUB_OUTPUT"
+
       - name: Bootstrap gh-pages branch
         run: |
           if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
@@ -54,25 +64,40 @@ jobs:
           else
             git checkout --orphan gh-pages
             git reset --hard
-            echo "# Helm chart index (managed by chart-releaser)" > README.md
+            echo "# Helm chart index (community-marketplace)" > README.md
             git add README.md
-            git commit -m "Initialize gh-pages for chart-releaser"
+            git commit -m "Initialize gh-pages for Helm repository"
             git push origin gh-pages
             git checkout -
-            git fetch origin gh-pages
           fi
 
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.7.0
-        id: cr
+      - name: Publish chart packages and index to gh-pages
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          CR_SKIP_EXISTING: true
-          # Публикуем index на gh-pages; per-chart GitHub Releases отключены (см. cr.yaml upload: false).
-          CR_UPLOAD: "false"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git fetch origin gh-pages
+          rm -rf gh-pages-work
+          git worktree add gh-pages-work origin/gh-pages
+          cp .cr-release-packages/*.tgz gh-pages-work/
+          cd gh-pages-work
+          if [[ -f index.yaml ]]; then
+            helm repo index . --merge index.yaml
+          else
+            helm repo index .
+          fi
+          git add index.yaml *.tgz
+          if git diff --staged --quiet; then
+            echo "No gh-pages changes"
+          else
+            git commit -m "Publish Helm charts from ${GITHUB_SHA}"
+            git push origin HEAD:gh-pages
+          fi
+          cd ..
+          git worktree remove gh-pages-work
 
       - name: Login to GitHub Container Registry
-        if: steps.cr.outputs.changed_charts != ''
+        if: steps.package.outputs.package_count != '0'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -80,7 +105,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push Charts to GHCR
-        if: steps.cr.outputs.changed_charts != ''
+        if: steps.package.outputs.package_count != '0'
         run: |
           shopt -s nullglob
           for pkg in .cr-release-packages/*; do

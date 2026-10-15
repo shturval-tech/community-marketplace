@@ -1,8 +1,23 @@
+# RedisReplication (Redis Operator). Requires redis-operator chart.
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
 
 name: community-redis
 clusterSize: 1
+
+image:
+  repository: redis
+  tag: "7.2.5"
+  pullPolicy: IfNotPresent
+
 storage:
   size: 1Gi
   storageClassName: ""
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

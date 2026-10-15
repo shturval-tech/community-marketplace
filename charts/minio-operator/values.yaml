@@ -1,16 +1,54 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 minio-operator:
-  tenants: []
   operator:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/minio-operator
       tag: v4.3.7
+      pullPolicy: IfNotPresent
+    imagePullSecrets: []
+    initcontainers: []
+    replicaCount: 1
+    securityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      runAsNonRoot: true
+      fsGroup: 1000
+    nodeSelector: {}
+    affinity: {}
+    tolerations: []
+    topologySpreadConstraints: []
+    resources:
+      requests:
+        cpu: 200m
+        memory: 256Mi
+        ephemeral-storage: 500Mi
   console:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/minio-console
       tag: v0.12.3
+      pullPolicy: IfNotPresent
+    imagePullSecrets: []
+    initcontainers: []
+    replicaCount: 1
+    nodeSelector: {}
+    affinity: {}
+    tolerations: []
+    topologySpreadConstraints: []
+    resources: {}
+    securityContext:
+      runAsUser: 1000
+      runAsNonRoot: true
+    ingress:
+      enabled: false
+      labels: {}
+      annotations: {}
+      tls: []
+      host: console.local
+      path: /
+  tenants: []

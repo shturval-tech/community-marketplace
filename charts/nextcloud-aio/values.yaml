@@ -6,4 +6,16 @@ global:
 # Placeholder until sync-upstream.sh populates upstream/ and templates are wired.
 placeholder:
   enabled: true
-  image: nextcloud-aio:latest
+  image:
+    repository: nextcloud-aio
+    tag: latest
+    pullPolicy: IfNotPresent
+
+# Future AIO settings (used after upstream sync).
+domain: ""
+admin:
+  user: admin
+  password: ""
+storage:
+  size: 50Gi
+  storageClassName: ""

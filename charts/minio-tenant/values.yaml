@@ -1,11 +1,104 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 tenant:
   tenant:
+    name: myminio
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/minio
       tag: RELEASE.2025-04-08T15-41-24Z
+      pullPolicy: IfNotPresent
+    imagePullSecret: {}
+    initContainers: []
+    scheduler: {}
+    configSecret:
+      name: myminio-env-configuration
+      accessKey: minio
+      secretKey: minio123
+    poolsMetadata:
+      annotations: {}
+      labels: {}
+    pools:
+    - servers: 4
+      name: pool-0
+      volumesPerServer: 4
+      size: 10Gi
+      storageAnnotations: {}
+      storageLabels: {}
+      annotations: {}
+      labels: {}
+      tolerations: []
+      nodeSelector: {}
+      affinity: {}
+      resources: {}
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        fsGroupChangePolicy: OnRootMismatch
+        runAsNonRoot: true
+      containerSecurityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        seccompProfile:
+          type: RuntimeDefault
+      topologySpreadConstraints: []
+    mountPath: /export
+    subPath: /data
+    metrics:
+      enabled: false
+      port: 9000
+      protocol: http
+    certificate:
+      externalCaCertSecret: []
+      externalCertSecret: []
+      requestAutoCert: true
+      certConfig: {}
+    features:
+      bucketDNS: false
+      domains: {}
+      enableSFTP: false
+    buckets: []
+    users: []
+    podManagementPolicy: Parallel
+    liveness: {}
+    readiness: {}
+    startup: {}
+    lifecycle: {}
+    exposeServices: {}
+    serviceAccountName: ''
+    prometheusOperator: false
+    logging: {}
+    serviceMetadata: {}
+    env: []
+    priorityClassName: ''
+    additionalVolumes: []
+    additionalVolumeMounts: []
+  ingress:
+    api:
+      enabled: false
+      ingressClassName: ''
+      labels: {}
+      annotations: {}
+      tls: []
+      host: minio.local
+      path: /
+      pathType: Prefix
+    console:
+      enabled: false
+      ingressClassName: ''
+      labels: {}
+      annotations: {}
+      tls: []
+      host: minio-console.local
+      path: /
+      pathType: Prefix

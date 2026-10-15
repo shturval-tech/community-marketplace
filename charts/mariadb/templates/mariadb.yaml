@@ -5,8 +5,11 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   image:
-    repository: {{ .Values.global.imageRegistry }}/mariadb
-    tag: latest
+    repository: {{ .Values.global.imageRegistry }}/{{ .Values.image.repository }}
+    tag: {{ .Values.image.tag | quote }}
+    {{- with .Values.image.pullPolicy }}
+    pullPolicy: {{ . }}
+    {{- end }}
   rootPasswordSecretKeyRef:
     name: {{ .Values.name }}-root
     key: password

@@ -1,10 +1,307 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 cluster:
-  imageName: ghcr.io/shturval-tech/community-marketplace/postgres:16.4
+  nameOverride: ''
+  fullnameOverride: ''
+  namespaceOverride: ''
+  type: postgresql
   version:
-    postgresql: "16"
+    postgresql: '16'
+    timescaledb: '2.15'
+    postgis: '3.4'
+  mode: standalone
+  recovery:
+    method: backup
+    pitrTarget:
+      time: ''
+    backupName: ''
+    clusterName: ''
+    database: app
+    owner: ''
+    pluginConfiguration: {}
+    objectStore:
+      create: true
+    endpointURL: ''
+    endpointCA:
+      create: false
+      name: ''
+      key: ''
+      value: ''
+    destinationPath: ''
+    provider: s3
+    s3:
+      region: ''
+      bucket: ''
+      path: /
+      accessKey: ''
+      secretKey: ''
+      inheritFromIAMRole: false
+    azure:
+      path: /
+      connectionString: ''
+      storageAccount: ''
+      storageKey: ''
+      storageSasToken: ''
+      containerName: ''
+      serviceName: blob
+      inheritFromAzureAD: false
+    google:
+      path: /
+      bucket: ''
+      gkeEnvironment: false
+      applicationCredentials: ''
+    secret:
+      create: true
+      name: ''
+    instanceSidecarConfiguration: {}
+    pgBaseBackup:
+      database: app
+      secretName: ''
+      owner: ''
+      source:
+        host: ''
+        port: 5432
+        username: ''
+        database: app
+        sslMode: verify-full
+        passwordSecret:
+          create: false
+          name: ''
+          key: password
+          value: ''
+        sslKeySecret:
+          name: ''
+          key: ''
+        sslCertSecret:
+          name: ''
+          key: ''
+        sslRootCertSecret:
+          name: ''
+          key: ''
+    import:
+      type: microservice
+      databases: []
+      roles: []
+      postImportApplicationSQL: []
+      schemaOnly: false
+      pgDumpExtraOptions: []
+      pgRestoreExtraOptions: []
+      source:
+        host: ''
+        port: 5432
+        username: ''
+        database: ''
+        sslMode: verify-full
+        passwordSecret:
+          create: false
+          name: ''
+          key: password
+          value: ''
+        sslKeySecret:
+          name: ''
+          key: ''
+        sslCertSecret:
+          name: ''
+          key: ''
+        sslRootCertSecret:
+          name: ''
+          key: ''
+  cluster:
+    instances: 3
+    imageName: ''
+    imageCatalogRef: {}
+    imagePullPolicy: IfNotPresent
+    imagePullSecrets: []
+    storage:
+      size: 8Gi
+      storageClass: ''
+    walStorage:
+      enabled: false
+      size: 1Gi
+      storageClass: ''
+    ephemeralVolumeSource: {}
+    postgresUID: -1
+    postgresGID: -1
+    services: {}
+    resources: {}
+    priorityClassName: ''
+    primaryUpdateMethod: switchover
+    primaryUpdateStrategy: unsupervised
+    stopDelay: 1800
+    logLevel: info
+    affinity:
+      topologyKey: topology.kubernetes.io/zone
+    env: []
+    envFrom: []
+    certificates: {}
+    enableSuperuserAccess: true
+    superuserSecret: ''
+    enablePDB: true
+    plugins: []
+    roles: []
+    monitoring:
+      enabled: false
+      podMonitor:
+        enabled: true
+        labels: {}
+        relabelings: []
+        metricRelabelings: []
+      prometheusRule:
+        enabled: true
+        excludeRules: []
+        additionalLabels: {}
+      instrumentation:
+        logicalReplication: true
+        pgStatStatements: false
+      disableDefaultQueries: false
+      customQueries: []
+      tls:
+        enabled: false
+      customQueriesSecret: []
+    postgresql:
+      parameters: {}
+      synchronous: {}
+      pg_hba: []
+      pg_ident: []
+      shared_preload_libraries: []
+      ldap: {}
+    replicationSlots: {}
+    initdb: {}
+    serviceAccountTemplate: {}
+    podSecurityContext: {}
+    securityContext: {}
+    additionalLabels: {}
+    annotations: {}
+    projectedVolumeTemplate: {}
+    console:
+      enabled: false
+  backups:
+    enabled: false
+    target: prefer-standby
+    method: barmanObjectStore
+    pluginConfiguration: {}
+    objectStore:
+      create: true
+      helmHook: true
+      annotations: {}
+    endpointURL: ''
+    endpointCA:
+      create: false
+      name: ''
+      key: ''
+      value: ''
+    destinationPath: ''
+    provider: s3
+    s3:
+      region: ''
+      bucket: ''
+      path: /
+      accessKey: ''
+      secretKey: ''
+      inheritFromIAMRole: false
+    azure:
+      path: /
+      connectionString: ''
+      storageAccount: ''
+      storageKey: ''
+      storageSasToken: ''
+      containerName: ''
+      serviceName: blob
+      inheritFromAzureAD: false
+    google:
+      path: /
+      bucket: ''
+      gkeEnvironment: false
+      applicationCredentials: ''
+    secret:
+      create: true
+      name: ''
+    instanceSidecarConfiguration: {}
+    wal:
+      compression: gzip
+      encryption: AES256
+      maxParallel: 1
+    data:
+      compression: gzip
+      encryption: AES256
+      jobs: 2
+    scheduledBackups:
+    - name: daily-backup
+      schedule: 0 0 0 * * *
+      backupOwnerReference: self
+      method: barmanObjectStore
+      pluginConfiguration: {}
+    retentionPolicy: 30d
+  replica:
+    self: ''
+    primary: ''
+    promotionToken: ''
+    minApplyDelay: ''
+    bootstrap:
+      source: ''
+      database: ''
+      secret: ''
+      owner: ''
+    origin:
+      objectStore:
+        clusterName: ''
+        destinationPath: ''
+        endpointCA:
+          create: false
+          name: ''
+          key: ''
+          value: ''
+        provider: ''
+        s3:
+          region: ''
+          bucket: ''
+          path: /
+          accessKey: ''
+          secretKey: ''
+          inheritFromIAMRole: false
+        azure:
+          path: /
+          connectionString: ''
+          storageAccount: ''
+          storageKey: ''
+          storageSasToken: ''
+          containerName: ''
+          serviceName: blob
+          inheritFromAzureAD: false
+        google:
+          path: /
+          bucket: ''
+          gkeEnvironment: false
+          applicationCredentials: ''
+        secret:
+          create: true
+          name: ''
+      pg_basebackup:
+        host: ''
+        port: 5432
+        username: ''
+        sslMode: verify-full
+        database: ''
+        sslKeySecret:
+          name: ''
+          key: ''
+        sslCertSecret:
+          name: ''
+          key: ''
+        sslRootCertSecret:
+          name: ''
+          key: ''
+        passwordSecret:
+          name: ''
+          key: ''
+  databases: []
+  imageCatalog:
+    create: true
+    images: []
+  poolers: []
+  imageName: ghcr.io/shturval-tech/community-marketplace/postgres:16.4

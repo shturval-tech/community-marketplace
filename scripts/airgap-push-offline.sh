@@ -128,8 +128,8 @@ for pkg in "${PACKAGES}"/*.tgz; do
   helm package "${chartdir}" -d "${STAGING}/packages" --dependency-update=false
 done
 
-echo "==> helm repo index for ${HELM_REPO_URL}"
-helm repo index "${STAGING}/packages" --url "${HELM_REPO_URL}"
+echo "==> helm repo index (relative chart URLs for Shturval sh-backend)"
+helm repo index "${STAGING}/packages"
 
 echo "==> Upload charts (mode=$([[ ${use_helm_http} -eq 1 ]] && echo http || echo oci))"
 for pkg in "${STAGING}/packages"/*.tgz; do
@@ -160,9 +160,10 @@ if [[ -d "${SCAN_DB}" ]] && command -v oras >/dev/null 2>&1; then
   done
 fi
 
-repo_url="${HELM_REPO_URL%/}/index.yaml"
 if [[ ${use_helm_http} -eq 0 ]]; then
   repo_url="oci://${REGISTRY}/charts"
+else
+  repo_url="${HELM_REPO_URL%/}"
 fi
 {
   echo "apiVersion: ops.shturval.tech/v1beta2"

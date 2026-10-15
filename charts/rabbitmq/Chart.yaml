@@ -2,7 +2,7 @@ apiVersion: v2
 name: rabbitmq
 description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
 type: application
-version: 0.1.3
+version: 0.1.5
 appVersion: "4.0"
 annotations:
   shturval.tech/category: messaging

@@ -48,6 +48,8 @@ annotations:
 
 Образы в values должны учитывать `global.imageRegistry` (через helper или явные поля `image.repository`).
 
+**UI Штурвала (параметры по умолчанию):** backend отдаёт только корневой `values.yaml` из `.tgz` репозитория ([GetChartValues](https://github.com/shturval-tech/community-marketplace)). Для wrapper-чартов полное дерево defaults под ключом dependency (`authentik:`, `cluster:`, …) должно лежать в корневом `values.yaml` — после обновления vendored subchart запускайте `make sync-values`. В `index.yaml` на gh-pages URLs чартов **относительные** (`authentik-0.1.5.tgz`), иначе sh-backend не скачает пакет.
+
 Не используем Bitnami-чарты для новых сервисов (лицензирование образов с 2025).
 
 ## Файлы каждого чарта

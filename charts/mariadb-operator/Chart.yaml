@@ -2,7 +2,7 @@ apiVersion: v2
 name: mariadb-operator
 description: Оператор MariaDB — жизненный цикл MariaDB/MySQL в Kubernetes
 type: application
-version: 0.1.3
+version: 0.1.5
 appVersion: "26.10.1"
 annotations:
   shturval.tech/category: database

@@ -1,5 +1,8 @@
+# RabbitMQ Cluster Operator deployment (standalone manifest chart).
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
+
+replicas: 1
 
 image:
   repository: rabbitmq-operator
@@ -13,3 +16,7 @@ resources:
   limits:
     cpu: 500m
     memory: 256Mi
+
+serviceAccount:
+  create: true
+  name: rabbitmq-cluster-operator

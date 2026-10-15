@@ -35,6 +35,7 @@ make push HELM_REPO_URL=... REGISTRY=...  # legacy: crane copy с ghcr.io
 make verify-images     # все образы в render -> ghcr.io/.../community-marketplace
 make test              # ct lint + ct install (kind)
 make vendor-deps       # helm dependency update во всех charts/
+make sync-values       # merge subchart values.yaml → wrapper (для UI Штурвала)
 make bdu-fetch         # выгрузка БДУ vulxml для локального scan
 make scan IMAGE=...    # Trivy + BDU для одного образа
 make scan-all          # все образы из images/images.yaml

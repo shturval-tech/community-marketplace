@@ -1,11 +1,444 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 authentik:
+  nameOverride: ''
+  fullnameOverride: ''
+  kubeVersionOverride: ''
   global:
+    security:
+      allowInsecureImages: true
+    nameOverride: ''
+    fullnameOverride: ''
+    namespaceOverride: ''
+    additionalLabels: {}
+    revisionHistoryLimit: 3
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/authentik
-      tag: "2026.8.3"
+      tag: 2026.8.3
+      digest: ''
+      pullPolicy: IfNotPresent
+    imagePullSecrets: []
+    deploymentAnnotations: {}
+    podAnnotations: {}
+    secretAnnotations: {}
+    podLabels: {}
+    addPrometheusAnnotations: false
+    securityContext: {}
+    hostAliases: []
+    priorityClassName: ''
+    nodeSelector: {}
+    tolerations: []
+    affinity:
+      podAntiAffinity: soft
+      nodeAffinity:
+        type: hard
+        matchExpressions: []
+    topologySpreadConstraints: []
+    deploymentStrategy: {}
+    env: []
+    envFrom: []
+    volumeMounts: []
+    volumes: []
+  authentik:
+    enabled: true
+    log_level: info
+    secret_key: ''
+    existingSecret:
+      secretName: ''
+    events:
+      context_processors:
+        geoip: /geoip/GeoLite2-City.mmdb
+        asn: /geoip/GeoLite2-ASN.mmdb
+    web:
+      path: /
+    email:
+      host: ''
+      port: 587
+      username: ''
+      password: ''
+      use_tls: false
+      use_ssl: false
+      timeout: 30
+      from: ''
+    outposts:
+      container_image_base: ghcr.io/goauthentik/%(type)s:%(version)s
+    error_reporting:
+      enabled: false
+      environment: k8s
+      send_pii: false
+    postgresql:
+      host: '{{ .Release.Name }}-postgresql'
+      name: authentik
+      user: authentik
+      password: ''
+      port: 5432
+  blueprints:
+    configMaps: []
+    secrets: []
+  server:
+    enabled: true
+    name: server
+    replicas: 1
+    autoscaling:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 5
+      targetCPUUtilizationPercentage: 50
+      targetMemoryUtilizationPercentage: null
+      behavior: {}
+      metrics: []
+    pdb:
+      enabled: false
+      labels: {}
+      annotations: {}
+      minAvailable: ''
+      maxUnavailable: ''
+    image:
+      repository: ''
+      tag: ''
+      digest: ''
+      pullPolicy: ''
+    imagePullSecrets: []
+    env: []
+    envFrom: []
+    lifecycle: {}
+    extraContainers: []
+    initContainers: []
+    volumeMounts: []
+    volumes: []
+    deploymentAnnotations: {}
+    podAnnotations: {}
+    podLabels: {}
+    resources: {}
+    containerPorts:
+      http: 9000
+      https: 9443
+      metrics: 9300
+    hostNetwork: false
+    dnsConfig: {}
+    dnsPolicy: ''
+    serviceAccountName: null
+    automountServiceAccountToken: null
+    securityContext: {}
+    containerSecurityContext: {}
+    livenessProbe:
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      httpGet:
+        path: '{{ .Values.authentik.web.path }}-/health/live/'
+        port: http
+    readinessProbe:
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      httpGet:
+        path: '{{ .Values.authentik.web.path }}-/health/ready/'
+        port: http
+    startupProbe:
+      failureThreshold: 60
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      httpGet:
+        path: '{{ .Values.authentik.web.path }}-/health/live/'
+        port: http
+    terminationGracePeriodSeconds: 30
+    priorityClassName: ''
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+    topologySpreadConstraints: []
+    deploymentStrategy: {}
+    service:
+      annotations: {}
+      labels: {}
+      type: ClusterIP
+      nodePortHttp: 30080
+      nodePortHttps: 30443
+      servicePortHttp: 80
+      servicePortHttps: 443
+      servicePortHttpName: http
+      servicePortHttpsName: https
+      loadBalancerIP: ''
+      loadBalancerSourceRanges: []
+      externalIPs: []
+      externalTrafficPolicy: ''
+      sessionAffinity: ''
+      sessionAffinityConfig: {}
+    metrics:
+      enabled: false
+      service:
+        type: ClusterIP
+        clusterIP: ''
+        annotations: {}
+        labels: {}
+        servicePort: 9300
+        portName: metrics
+      serviceMonitor:
+        enabled: false
+        interval: 30s
+        scrapeTimeout: 3s
+        relabelings: []
+        metricRelabelings: []
+        selector: {}
+        scheme: ''
+        tlsConfig: {}
+        namespace: ''
+        labels: {}
+        annotations: {}
+    ingress:
+      enabled: false
+      annotations: {}
+      labels: {}
+      ingressClassName: ''
+      hosts: []
+      paths:
+      - '{{ .Values.authentik.web.path }}'
+      pathType: Prefix
+      extraPaths: []
+      tls: []
+      https: false
+    route:
+      main:
+        enabled: false
+        apiVersion: gateway.networking.k8s.io/v1
+        kind: HTTPRoute
+        annotations: {}
+        labels: {}
+        hostnames: []
+        parentRefs: []
+        httpsRedirect: false
+        https: false
+        matches:
+        - path:
+            type: PathPrefix
+            value: '{{ .Values.authentik.web.path }}'
+        filters: []
+        additionalRules: []
+  worker:
+    enabled: true
+    name: worker
+    replicas: 1
+    autoscaling:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 5
+      targetCPUUtilizationPercentage: 50
+      targetMemoryUtilizationPercentage: null
+      behavior: {}
+      metrics: []
+    pdb:
+      enabled: false
+      labels: {}
+      annotations: {}
+      minAvailable: ''
+      maxUnavailable: ''
+    image:
+      repository: ''
+      tag: ''
+      digest: ''
+      pullPolicy: ''
+    imagePullSecrets: []
+    env: []
+    envFrom: []
+    lifecycle: {}
+    extraContainers: []
+    initContainers: []
+    volumeMounts: []
+    volumes: []
+    deploymentAnnotations: {}
+    podAnnotations: {}
+    podLabels: {}
+    resources: {}
+    containerPorts:
+      http: 9000
+      metrics: 9300
+    hostNetwork: false
+    dnsConfig: {}
+    dnsPolicy: ''
+    serviceAccountName: null
+    automountServiceAccountToken: null
+    securityContext: {}
+    containerSecurityContext: {}
+    livenessProbe:
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      exec:
+        command:
+        - ak
+        - healthcheck
+    readinessProbe:
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      exec:
+        command:
+        - ak
+        - healthcheck
+    startupProbe:
+      failureThreshold: 60
+      initialDelaySeconds: 30
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      exec:
+        command:
+        - ak
+        - healthcheck
+    terminationGracePeriodSeconds: 30
+    priorityClassName: ''
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+    topologySpreadConstraints: []
+    deploymentStrategy: {}
+    metrics:
+      enabled: false
+      service:
+        type: ClusterIP
+        clusterIP: ''
+        annotations: {}
+        labels: {}
+        servicePort: 9300
+        portName: metrics
+      serviceMonitor:
+        enabled: false
+        interval: 30s
+        scrapeTimeout: 3s
+        relabelings: []
+        metricRelabelings: []
+        selector: {}
+        scheme: ''
+        tlsConfig: {}
+        namespace: ''
+        labels: {}
+        annotations: {}
+  serviceAccount:
+    create: true
+    annotations: {}
+    serviceAccountSecret:
+      enabled: false
+    fullnameOverride: authentik
+  geoip:
+    enabled: false
+    editionIds: GeoLite2-City GeoLite2-ASN
+    updateInterval: 8
+    accountId: ''
+    licenseKey: ''
+    existingSecret:
+      secretName: ''
+      accountId: account_id
+      licenseKey: license_key
+    image:
+      repository: ghcr.io/maxmind/geoipupdate
+      tag: v7.1.1
+      digest: ''
+      pullPolicy: IfNotPresent
+    env: []
+    envFrom: []
+    volumeMounts: []
+    resources: {}
+    containerSecurityContext: {}
+  prometheus:
+    rules:
+      enabled: false
+      namespace: ''
+      selector: {}
+      labels: {}
+      annotations: {}
+      additionalRuleGroupAnnotations: {}
+  postgresql:
+    enabled: false
+    image:
+      registry: docker.io
+      repository: library/postgres
+      tag: 17.11-bookworm
+    auth:
+      username: authentik
+      database: authentik
+    primary:
+      args:
+      - -c
+      - config_file=/bitnami/postgresql/conf/postgresql.conf
+      - -c
+      - hba_file=/bitnami/postgresql/conf/pg_hba.conf
+      configuration: 'listen_addresses = ''*''
+
+        port = ''5432''
+
+        wal_level = ''replica''
+
+        fsync = ''on''
+
+        hot_standby = ''on''
+
+        log_connections = ''false''
+
+        log_disconnections = ''false''
+
+        log_hostname = ''false''
+
+        client_min_messages = ''error''
+
+        include_dir = ''conf.d''
+
+        '
+      pgHbaConfiguration: 'host     all             all             0.0.0.0/0               scram-sha-256
+
+        host     all             all             ::/0                    scram-sha-256
+
+        local    all             all                                     scram-sha-256
+
+        host     all             all        127.0.0.1/32                 scram-sha-256
+
+        host     all             all        ::1/128                      scram-sha-256
+
+        '
+      extendedConfiguration: 'max_connections = 500
+
+        '
+      extraEnvVars:
+      - name: POSTGRES_DB
+        value: '{{ (include "postgresql.v1.database" .) }}'
+      resourcesPreset: none
+      containerSecurityContext:
+        readOnlyRootFilesystem: true
+      extraVolumeMounts:
+      - name: postgresql-socket
+        mountPath: /var/run/postgresql
+      extraVolumes:
+      - name: postgresql-socket
+        emptyDir: {}
+    readReplicas:
+      resourcesPreset: none
+    backup:
+      resourcesPreset: none
+    passwordUpdateJob:
+      resourcesPreset: none
+    volumePermissions:
+      resourcesPreset: none
+      image:
+        repository: debian
+        tag: 13-slim
+    metrics:
+      resourcesPreset: none
+      image:
+        repository: prometheuscommunity/postgres-exporter
+        tag: v0.19.1
+  additionalObjects: []

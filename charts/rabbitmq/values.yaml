@@ -1,6 +1,26 @@
+# RabbitmqCluster (RabbitMQ Cluster Operator). Requires rabbitmq-operator chart.
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
 
 name: community-rabbitmq
 replicas: 1
-imageTag: 3.13-management
+
+image:
+  repository: rabbitmq-server
+  tag: 3.13-management
+  pullPolicy: IfNotPresent
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: "1"
+    memory: 512Mi
+
+persistence:
+  storageClassName: ""
+  storage: 5Gi
+
+service:
+  type: ClusterIP

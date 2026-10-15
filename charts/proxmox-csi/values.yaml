@@ -1,37 +1,134 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
-
+  storageClass: ''
 proxmox-csi-plugin:
+  replicaCount: 1
+  imagePullSecrets: []
+  nameOverride: ''
+  fullnameOverride: ''
+  createNamespace: false
+  priorityClassName: system-cluster-critical
+  serviceAccount:
+    create: true
+    annotations: {}
+    name: ''
+  provisionerName: csi.proxmox.sinextra.dev
+  clusterID: kubernetes
+  logVerbosityLevel: 5
+  timeout: 3m
+  existingConfigSecret: null
+  existingConfigSecretKey: config.yaml
+  configFile: /etc/proxmox/config.yaml
   config:
+    features:
+      provider: default
     clusters: []
+  storageClass: []
   controller:
+    podAnnotations: {}
     plugin:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller
+        pullPolicy: IfNotPresent
         tag: v0.10.0
+      resources:
+        requests:
+          cpu: 10m
+          memory: 16Mi
     attacher:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-attacher
+        pullPolicy: IfNotPresent
         tag: v4.7.0
+      resources:
+        requests:
+          cpu: 10m
+          memory: 16Mi
     provisioner:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-provisioner
+        pullPolicy: IfNotPresent
         tag: v5.1.0
+      resources:
+        requests:
+          cpu: 10m
+          memory: 16Mi
     resizer:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-resizer
+        pullPolicy: IfNotPresent
         tag: v1.12.0
+      resources:
+        requests:
+          cpu: 10m
+          memory: 16Mi
   node:
     plugin:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node
+        pullPolicy: IfNotPresent
         tag: v0.10.0
+      resources: {}
     driverRegistrar:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar
+        pullPolicy: IfNotPresent
         tag: v2.12.0
+      resources:
+        requests:
+          cpu: 10m
+          memory: 16Mi
+    kubeletDir: /var/lib/kubelet
+    nodeSelector: {}
+    tolerations:
+    - key: node.kubernetes.io/unschedulable
+      operator: Exists
+      effect: NoSchedule
+    - key: node.kubernetes.io/disk-pressure
+      operator: Exists
+      effect: NoSchedule
   livenessprobe:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe
+      pullPolicy: IfNotPresent
       tag: v2.14.0
+    failureThreshold: 5
+    initialDelaySeconds: 10
+    timeoutSeconds: 10
+    periodSeconds: 60
+    resources:
+      requests:
+        cpu: 10m
+        memory: 16Mi
+  initContainers: []
+  hostAliases: []
+  podAnnotations: {}
+  podSecurityContext:
+    runAsNonRoot: true
+    runAsUser: 65532
+    runAsGroup: 65532
+    fsGroup: 65532
+    fsGroupChangePolicy: OnRootMismatch
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    seccompProfile:
+      type: RuntimeDefault
+    readOnlyRootFilesystem: true
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+  metrics:
+    enabled: false
+    port: 8080
+    type: annotation
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  extraVolumes: []
+  extraVolumeMounts: []

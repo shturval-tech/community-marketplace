@@ -1,21 +1,146 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 strimzi-kafka-operator:
+  replicas: 1
+  watchNamespaces: []
+  watchAnyNamespace: false
   defaultImageRegistry: ghcr.io/shturval-tech/community-marketplace
-  defaultImageRepository: ""
-  defaultImageTag: "0.45.0"
+  defaultImageRepository: ''
+  defaultImageTag: 0.45.0
   image:
     registry: ghcr.io/shturval-tech/community-marketplace
     repository: strimzi-operator
-    name: ""
-    tag: "0.45.0"
+    name: ''
+    tag: 0.45.0
+  logVolume: co-config-volume
+  logConfigMap: strimzi-cluster-operator
+  logConfiguration: ''
+  logLevel: ${env:STRIMZI_LOG_LEVEL:-INFO}
+  fullReconciliationIntervalMs: 120000
+  operationTimeoutMs: 300000
+  kubernetesServiceDnsDomain: cluster.local
+  featureGates: ''
+  tmpDirSizeLimit: 1Mi
+  extraEnvs: []
+  tolerations: []
+  affinity: {}
+  annotations: {}
+  labels: {}
+  nodeSelector: {}
+  priorityClassName: ''
+  podSecurityContext: {}
+  securityContext: {}
+  rbac:
+    create: true
+  serviceAccountCreate: true
+  serviceAccount: strimzi-cluster-operator
+  leaderElection:
+    enable: true
+  podDisruptionBudget:
+    enabled: false
+    minAvailable: 1
+    maxUnavailable: null
+  dashboards:
+    enabled: false
+    namespace: null
+    label: grafana_dashboard
+    labelValue: '1'
+    annotations: {}
+    extraLabels: {}
   kafka:
     image:
       registry: ghcr.io/shturval-tech/community-marketplace
       repository: strimzi-kafka
-      name: ""
+      name: ''
+      tagPrefix: ''
       tag: 0.45.0-kafka-3.8.0
+  kafkaConnect:
+    image:
+      registry: ''
+      repository: ''
+      name: kafka
+      tagPrefix: ''
+  topicOperator:
+    image:
+      registry: ''
+      repository: ''
+      name: operator
+      tag: ''
+  userOperator:
+    image:
+      registry: null
+      repository: null
+      name: operator
+      tag: ''
+  kafkaInit:
+    image:
+      registry: ''
+      repository: ''
+      name: operator
+      tag: ''
+  kafkaMirrorMaker:
+    image:
+      registry: ''
+      repository: ''
+      name: kafka
+      tagPrefix: ''
+  kafkaBridge:
+    image:
+      registry: ''
+      repository: null
+      name: kafka-bridge
+      tag: 0.31.1
+  kafkaExporter:
+    image:
+      registry: ''
+      repository: ''
+      name: kafka
+      tagPrefix: ''
+  kafkaMirrorMaker2:
+    image:
+      registry: ''
+      repository: ''
+      name: kafka
+      tagPrefix: ''
+  cruiseControl:
+    image:
+      registry: ''
+      repository: ''
+      name: kafka
+      tagPrefix: ''
+  kanikoExecutor:
+    image:
+      registry: ''
+      repository: ''
+      name: kaniko-executor
+      tag: ''
+  mavenBuilder:
+    image:
+      registry: ''
+      repository: ''
+      name: maven-builder
+      tag: ''
+  resources:
+    limits:
+      memory: 384Mi
+      cpu: 1000m
+    requests:
+      memory: 384Mi
+      cpu: 200m
+  livenessProbe:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  readinessProbe:
+    initialDelaySeconds: 10
+    periodSeconds: 30
+  createGlobalResources: true
+  createAggregateRoles: false
+  labelsExclusionPattern: ''
+  generateNetworkPolicy: true
+  connectBuildTimeoutMs: 300000
+  generatePodDisruptionBudget: true

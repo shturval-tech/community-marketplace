@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: rabbitmq-cluster-operator
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app.kubernetes.io/name: rabbitmq-cluster-operator
@@ -14,7 +14,7 @@ spec:
       labels:
         app.kubernetes.io/name: rabbitmq-cluster-operator
     spec:
-      serviceAccountName: rabbitmq-cluster-operator
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       containers:
         - name: operator
           image: "{{ .Values.global.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}"

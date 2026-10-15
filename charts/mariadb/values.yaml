@@ -1,11 +1,19 @@
+# MariaDB instance (MariaDB operator CR). Requires mariadb-operator chart.
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
   storageClass: ""
 
 name: community-mariadb
+
+image:
+  repository: mariadb
+  tag: "11.4"
+  pullPolicy: IfNotPresent
+
 storage:
   size: 5Gi
   storageClassName: ""
+
 resources:
   requests:
     cpu: 100m
@@ -13,3 +21,6 @@ resources:
   limits:
     cpu: "1"
     memory: 512Mi
+
+# Root password for bootstrap Secret (change before production).
+rootPassword: changeme

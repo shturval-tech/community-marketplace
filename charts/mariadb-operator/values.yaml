@@ -1,18 +1,180 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
 global:
   imageRegistry: ghcr.io/shturval-tech/community-marketplace
-  storageClass: ""
+  storageClass: ''
   ingress:
-    className: ""
-
+    className: ''
 mariadb-operator:
+  nameOverride: ''
+  fullnameOverride: ''
+  crds:
+    enabled: false
   image:
     repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
-    tag: "26.10.1"
+    pullPolicy: IfNotPresent
+    tag: 26.10.1
+  imagePullSecrets: []
+  logLevel: INFO
+  clusterName: cluster.local
+  currentNamespaceOnly: false
+  ha:
+    enabled: false
+    replicas: 3
+  revisionHistoryLimit: 10
+  strategy: {}
+  metrics:
+    enabled: false
+    serviceMonitor:
+      enabled: true
+      additionalLabels: {}
+      interval: 30s
+      scrapeTimeout: 25s
+      metricRelabelings: []
+      relabelings: []
+  serviceAccount:
+    enabled: true
+    automount: true
+    annotations: {}
+    extraLabels: {}
+    name: ''
+  rbac:
+    enabled: true
+    aggregation:
+      enabled: true
+  extraArgs: []
+  extraEnv: []
+  extraEnvFrom: []
+  extraVolumes: []
+  extraVolumeMounts: []
+  podAnnotations: {}
+  podSecurityContext: {}
+  securityContext: {}
+  resources: {}
+  nodeSelector: {}
+  tolerations: []
+  topologySpreadConstraints: []
+  priorityClassName: ''
+  affinity: {}
+  pdb:
+    enabled: false
+    maxUnavailable: 1
+  pprof:
+    enabled: false
+    port: 6060
   webhook:
+    enabled: true
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
-      tag: "26.10.1"
+      pullPolicy: IfNotPresent
+      tag: 26.10.1
+    imagePullSecrets: []
+    ha:
+      enabled: false
+      replicas: 3
+    revisionHistoryLimit: 10
+    strategy: {}
+    cert:
+      certManager:
+        enabled: false
+        issuerRef: {}
+        duration: ''
+        renewBefore: ''
+        revisionHistoryLimit: 3
+      secretAnnotations: {}
+      secretLabels: {}
+      ca:
+        path: ''
+        key: ''
+      path: /tmp/k8s-webhook-server/serving-certs
+    port: 9443
+    hostNetwork: false
+    serviceMonitor:
+      enabled: true
+      additionalLabels: {}
+      interval: 30s
+      scrapeTimeout: 25s
+      metricRelabelings: []
+      relabelings: []
+    serviceAccount:
+      enabled: true
+      automount: true
+      annotations: {}
+      extraLabels: {}
+      name: ''
+    annotations: {}
+    extraArgs: []
+    extraVolumes: []
+    extraVolumeMounts: []
+    podAnnotations: {}
+    podSecurityContext: {}
+    securityContext: {}
+    resources: {}
+    nodeSelector: {}
+    tolerations: []
+    topologySpreadConstraints: []
+    priorityClassName: ''
+    affinity: {}
+    pdb:
+      enabled: false
+      maxUnavailable: 1
   certController:
+    enabled: true
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
-      tag: "26.10.1"
+      pullPolicy: IfNotPresent
+      tag: 26.10.1
+    imagePullSecrets: []
+    ha:
+      enabled: false
+      replicas: 3
+    revisionHistoryLimit: 10
+    strategy: {}
+    caLifetime: 26280h
+    certLifetime: 2160h
+    renewBeforePercentage: 33
+    requeueDuration: 5m
+    serviceMonitor:
+      enabled: true
+      additionalLabels: {}
+      interval: 30s
+      scrapeTimeout: 25s
+      metricRelabelings: []
+      relabelings: []
+    serviceAccount:
+      enabled: true
+      automount: true
+      annotations: {}
+      extraLabels: {}
+      name: ''
+    extraArgs: []
+    extraVolumes: []
+    extraVolumeMounts: []
+    podAnnotations: {}
+    podSecurityContext: {}
+    securityContext: {}
+    resources: {}
+    nodeSelector: {}
+    tolerations: []
+    topologySpreadConstraints: []
+    priorityClassName: ''
+    affinity: {}
+    pdb:
+      enabled: false
+      maxUnavailable: 1
+  config:
+    galeraLibPath: /usr/lib/galera/libgalera_smm.so
+    mariadbDefaultVersion: '12.3'
+    mariadbImage:
+      repository: mariadb
+      tag: 12.3.3
+    mariadbImageName: mariadb
+    maxscaleImage:
+      repository: mariadb/maxscale
+      tag: 23.08.13-2
+    exporterImage:
+      repository: prom/mysqld-exporter
+      tag: v0.15.1
+    exporterMaxscaleImage:
+      repository: mariadb/maxscale-prometheus-exporter-ubi
+      tag: v0.0.1

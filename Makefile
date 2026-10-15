@@ -11,14 +11,17 @@ SCAN_FAIL_SEVERITY ?= CRITICAL
 IMAGE ?=
 CHART ?=
 
-.PHONY: lint lint-chart package index vendor-deps test bundle push push-offline images-list verify-images bdu-fetch scan scan-all scan-test help
+.PHONY: lint lint-chart package index vendor-deps sync-values test bundle push push-offline images-list verify-images bdu-fetch scan scan-all scan-test help
 
 help:
-	@echo "Targets: lint, lint-chart CHART=x, package, index, vendor-deps, test, bundle, push, push-offline"
+	@echo "Targets: lint, lint-chart CHART=x, package, index, vendor-deps, sync-values, test, bundle, push, push-offline"
 	@echo "         verify-images, bdu-fetch, scan IMAGE=ref, scan-all, scan-test"
 
 vendor-deps:
 	@./scripts/vendor-chart-deps.sh
+
+sync-values:
+	@python3 ./scripts/sync-chart-values.py
 
 lint:
 	@command -v ct >/dev/null || { echo "install chart-testing (ct)"; exit 1; }
@@ -41,7 +44,7 @@ verify-images:
 	@./scripts/verify-images.sh
 
 index: package
-	@helm repo index "$(PACKAGES_DIR)" --url "$(HELM_REPO_URL)"
+	@helm repo index "$(PACKAGES_DIR)"
 
 test: lint
 	@command -v kind >/dev/null || { echo "skip ct install: kind not found"; exit 0; }

@@ -5,8 +5,8 @@ metadata:
 spec:
   clusterSize: {{ .Values.clusterSize }}
   kubernetesConfig:
-    image: {{ .Values.global.imageRegistry }}/redis:latest
-    resources: {}
+    image: {{ .Values.global.imageRegistry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+    resources: {{- toYaml .Values.resources | nindent 4 }}
   storage:
     volumeClaimTemplate:
       spec:

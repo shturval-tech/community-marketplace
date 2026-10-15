@@ -2,7 +2,7 @@ apiVersion: v2
 name: cnpg-operator
 description: Оператор CloudNativePG — управление PostgreSQL в Kubernetes (репликация, failover, бэкапы)
 type: application
-version: 0.1.3
+version: 0.1.5
 appVersion: "1.30.1"
 annotations:
   shturval.tech/category: database
