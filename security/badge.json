@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "сканирование",
-  "message": "есть (296 крит.)",
-  "color": "red"
+  "message": "частично (1 без отч.)",
+  "color": "yellow"
 }
