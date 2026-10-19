@@ -18,16 +18,16 @@
   <div class="header">
     <a href="https://shturval.tech"><img src="https://raw.githubusercontent.com/shturval-tech/community-marketplace/main/docs/assets/shturval-logo.svg" alt="Штурвал" width="200"/></a>
     <h1>Отчёт сканирования образов</h1>
-    <p class="meta">Обновлено: 2026-10-18 08:05 UTC · записей: 6808 · без отчёта: 1 · порог: CRITICAL с fix</p>
-    <p><a href="https://github.com/shturval-tech/community-marketplace/actions/runs/39109490310">Запуск workflow в GitHub Actions</a></p>
+    <p class="meta">Обновлено: 2026-10-19 08:37 UTC · записей: 7616 · без отчёта: 0 · порог: CRITICAL с fix</p>
+    <p><a href="https://github.com/shturval-tech/community-marketplace/actions/runs/39222805372">Запуск workflow в GitHub Actions</a></p>
   </div>
-  <section class="scan-failures"><h2>Образы: сканирование не удалось</h2><p>Отчёт Trivy/БДУ для этих образов не собран. Перейдите по ссылке на упавший job.</p><table><thead><tr><th>Образ</th><th>Исход</th><th>CI job</th></tr></thead><tbody><tr><td>strimzi-operator</td><td>failure</td><td><a href="https://github.com/shturval-tech/community-marketplace/actions/runs/39109490310">job GitHub Actions</a> <span class="meta">(scan)</span></td></tr></tbody></table></section>
+  
   <article class="markdown-body">
     <h1>Сводный отчёт сканирования</h1>
 <br/>
-<p>Дата сборки отчёта: 2026-10-18 08:05 UTC</p>
+<p>Дата сборки отчёта: 2026-10-19 08:37 UTC</p>
 <br/>
-<h2>alpine (ghcr.io/shturval-tech/community-marketplace/alpine:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>alpine (ghcr.io/shturval-tech/community-marketplace/alpine:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -61,7 +61,7 @@
 <tr><td>libssl3</td><td>CVE-2026-22796</td><td>BDU:2026-01220</td><td>MEDIUM</td><td>MEDIUM</td><td>3.0.19-r0</td></tr>
 </table>
 <br/>
-<h2>authentik (ghcr.io/shturval-tech/community-marketplace/authentik:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>authentik (ghcr.io/shturval-tech/community-marketplace/authentik:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -391,7 +391,7 @@
 <tr><td>liblzma5</td><td>TEMP-1147318-639065</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>5.8.1-1+deb13u2</td></tr>
 </table>
 <br/>
-<h2>busybox (ghcr.io/shturval-tech/community-marketplace/busybox:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>busybox (ghcr.io/shturval-tech/community-marketplace/busybox:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -400,7 +400,7 @@
 <tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
 </table>
 <br/>
-<h2>cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -434,272 +434,7 @@
 <tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
 </table>
 <br/>
-<h2>csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
-<br/>
-<p>Снимок БДУ: **2026-04-17**</p>
-<br/>
-<table>
-<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
-<tr><td>stdlib</td><td>CVE-2025-22871</td><td>BDU:2025-04014</td><td>MEDIUM</td><td>CRITICAL</td><td>1.23.8, 1.24.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-33186</td><td>BDU:2026-04598</td><td>CRITICAL</td><td>CRITICAL</td><td>1.79.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34155</td><td>BDU:2024-07020</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34156</td><td>BDU:2024-07025</td><td>HIGH</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34158</td><td>BDU:2024-07026</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>golang.org/x/oauth2</td><td>CVE-2025-22868</td><td>BDU:2025-03638</td><td>HIGH</td><td>HIGH</td><td>0.27.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47907</td><td>BDU:2025-10834</td><td>HIGH</td><td>HIGH</td><td>1.23.12, 1.24.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32280</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32283</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33811</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33814</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33818</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39820</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39821</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39836</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42499</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42504</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56853</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56858</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56859</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56862</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84304</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.83.1</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>GHSA-HRXH-6V49-42GF</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-45336</td><td>BDU:2025-02667</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-45341</td><td>BDU:2025-03335</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-0913</td><td>BDU:2025-08600</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22866</td><td>BDU:2025-03456</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.12, 1.23.6, 1.24.0-rc.3</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>0.36.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.7, 1.24.1</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2025-22872</td><td>BDU:2025-08473</td><td>MEDIUM</td><td>MEDIUM</td><td>0.38.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22873</td><td>BDU:2025-07316</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.9, 1.24.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-4673</td><td>BDU:2025-08599</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47906</td><td>BDU:2025-11595</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.12, 1.24.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61727</td><td>BDU:2026-00268</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.11, 1.25.5</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61730</td><td>BDU:2026-03603</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2026-25680</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.55.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27142</td><td>BDU:2026-04129</td><td>MEDIUM</td><td>MEDIUM</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32282</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32288</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32289</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39823</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39825</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39826</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42505</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42507</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56866</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78659</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78660</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78663</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84303</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.83.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94439</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94440</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94448</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97030</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27139</td><td>BDU:2026-04122</td><td>LOW</td><td>LOW</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
-</table>
-<br/>
-<h2>csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
-<br/>
-<p>Снимок БДУ: **2026-04-17**</p>
-<br/>
-<table>
-<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
-<tr><td>stdlib</td><td>CVE-2025-22871</td><td>BDU:2025-04014</td><td>MEDIUM</td><td>CRITICAL</td><td>1.23.8, 1.24.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-33186</td><td>BDU:2026-04598</td><td>CRITICAL</td><td>CRITICAL</td><td>1.79.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34155</td><td>BDU:2024-07020</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34156</td><td>BDU:2024-07025</td><td>HIGH</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34158</td><td>BDU:2024-07026</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47907</td><td>BDU:2025-10834</td><td>HIGH</td><td>HIGH</td><td>1.23.12, 1.24.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32280</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32283</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33811</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33814</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33818</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39820</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39821</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39836</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42499</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42504</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56853</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56858</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56859</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56862</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84304</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.83.1</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>GHSA-HRXH-6V49-42GF</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-45336</td><td>BDU:2025-02667</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-45341</td><td>BDU:2025-03335</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-0913</td><td>BDU:2025-08600</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22866</td><td>BDU:2025-03456</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.12, 1.23.6, 1.24.0-rc.3</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>0.36.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.7, 1.24.1</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2025-22872</td><td>BDU:2025-08473</td><td>MEDIUM</td><td>MEDIUM</td><td>0.38.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22873</td><td>BDU:2025-07316</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.9, 1.24.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-4673</td><td>BDU:2025-08599</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47906</td><td>BDU:2025-11595</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.12, 1.24.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61727</td><td>BDU:2026-00268</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.11, 1.25.5</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61730</td><td>BDU:2026-03603</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2026-25680</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.55.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27142</td><td>BDU:2026-04129</td><td>MEDIUM</td><td>MEDIUM</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32282</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32288</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32289</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39823</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39825</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39826</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42505</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42507</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56866</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78659</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78660</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78663</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84303</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.83.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94439</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94440</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94448</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97030</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27139</td><td>BDU:2026-04122</td><td>LOW</td><td>LOW</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
-</table>
-<br/>
-<h2>csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
-<br/>
-<p>Снимок БДУ: **2026-04-17**</p>
-<br/>
-<table>
-<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
-<tr><td>stdlib</td><td>CVE-2025-22871</td><td>BDU:2025-04014</td><td>MEDIUM</td><td>CRITICAL</td><td>1.23.8, 1.24.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-33186</td><td>BDU:2026-04598</td><td>CRITICAL</td><td>CRITICAL</td><td>1.79.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34155</td><td>BDU:2024-07020</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34156</td><td>BDU:2024-07025</td><td>HIGH</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-34158</td><td>BDU:2024-07026</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47907</td><td>BDU:2025-10834</td><td>HIGH</td><td>HIGH</td><td>1.23.12, 1.24.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32280</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32283</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33811</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33814</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-33818</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39820</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39821</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39836</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42499</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42504</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56853</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56858</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56859</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56862</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84304</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.83.1</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>GHSA-HRXH-6V49-42GF</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-45336</td><td>BDU:2025-02667</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2024-45341</td><td>BDU:2025-03335</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-0913</td><td>BDU:2025-08600</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22866</td><td>BDU:2025-03456</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.12, 1.23.6, 1.24.0-rc.3</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>0.36.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.7, 1.24.1</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2025-22872</td><td>BDU:2025-08473</td><td>MEDIUM</td><td>MEDIUM</td><td>0.38.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-22873</td><td>BDU:2025-07316</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.9, 1.24.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-4673</td><td>BDU:2025-08599</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-47906</td><td>BDU:2025-11595</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.12, 1.24.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61727</td><td>BDU:2026-00268</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.11, 1.25.5</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61730</td><td>BDU:2026-03603</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>golang.org/x/net</td><td>CVE-2026-25680</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.55.0</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27142</td><td>BDU:2026-04129</td><td>MEDIUM</td><td>MEDIUM</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32282</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32288</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-32289</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39823</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39825</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-39826</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42505</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-42507</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56866</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78659</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78660</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-78663</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>google.golang.org/grpc</td><td>CVE-2026-84303</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.83.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94439</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94440</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-94448</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97030</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-97032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-27139</td><td>BDU:2026-04122</td><td>LOW</td><td>LOW</td><td>1.25.8, 1.26.1</td></tr>
-<tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
-</table>
-<br/>
-<h2>csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -788,7 +523,183 @@
 <tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
 </table>
 <br/>
-<h2>csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:latest)</h2>
+<br/>
+<p>Снимок БДУ: **2026-04-17**</p>
+<br/>
+<table>
+<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
+<tr><td>stdlib</td><td>CVE-2025-22871</td><td>BDU:2025-04014</td><td>MEDIUM</td><td>CRITICAL</td><td>1.23.8, 1.24.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-33186</td><td>BDU:2026-04598</td><td>CRITICAL</td><td>CRITICAL</td><td>1.79.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34155</td><td>BDU:2024-07020</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34156</td><td>BDU:2024-07025</td><td>HIGH</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34158</td><td>BDU:2024-07026</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47907</td><td>BDU:2025-10834</td><td>HIGH</td><td>HIGH</td><td>1.23.12, 1.24.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32280</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32283</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33811</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33814</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33818</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39820</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39821</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39836</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42499</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42504</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56853</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56858</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56859</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56862</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84304</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.83.1</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>GHSA-HRXH-6V49-42GF</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-45336</td><td>BDU:2025-02667</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-45341</td><td>BDU:2025-03335</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-0913</td><td>BDU:2025-08600</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22866</td><td>BDU:2025-03456</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.12, 1.23.6, 1.24.0-rc.3</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>0.36.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.7, 1.24.1</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2025-22872</td><td>BDU:2025-08473</td><td>MEDIUM</td><td>MEDIUM</td><td>0.38.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22873</td><td>BDU:2025-07316</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.9, 1.24.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-4673</td><td>BDU:2025-08599</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47906</td><td>BDU:2025-11595</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.12, 1.24.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61727</td><td>BDU:2026-00268</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.11, 1.25.5</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61730</td><td>BDU:2026-03603</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2026-25680</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.55.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27142</td><td>BDU:2026-04129</td><td>MEDIUM</td><td>MEDIUM</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32282</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32288</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32289</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39823</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39825</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39826</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42505</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42507</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56866</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78659</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78660</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78663</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84303</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.83.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94439</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94440</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94448</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97030</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27139</td><td>BDU:2026-04122</td><td>LOW</td><td>LOW</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
+</table>
+<br/>
+<h2>csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:latest)</h2>
+<br/>
+<p>Снимок БДУ: **2026-04-17**</p>
+<br/>
+<table>
+<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
+<tr><td>stdlib</td><td>CVE-2025-22871</td><td>BDU:2025-04014</td><td>MEDIUM</td><td>CRITICAL</td><td>1.23.8, 1.24.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-33186</td><td>BDU:2026-04598</td><td>CRITICAL</td><td>CRITICAL</td><td>1.79.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34155</td><td>BDU:2024-07020</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34156</td><td>BDU:2024-07025</td><td>HIGH</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34158</td><td>BDU:2024-07026</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47907</td><td>BDU:2025-10834</td><td>HIGH</td><td>HIGH</td><td>1.23.12, 1.24.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32280</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32283</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33811</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33814</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33818</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39820</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39821</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39836</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42499</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42504</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56853</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56858</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56859</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56862</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84304</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.83.1</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>GHSA-HRXH-6V49-42GF</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-45336</td><td>BDU:2025-02667</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-45341</td><td>BDU:2025-03335</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-0913</td><td>BDU:2025-08600</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22866</td><td>BDU:2025-03456</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.12, 1.23.6, 1.24.0-rc.3</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>0.36.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.7, 1.24.1</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2025-22872</td><td>BDU:2025-08473</td><td>MEDIUM</td><td>MEDIUM</td><td>0.38.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22873</td><td>BDU:2025-07316</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.9, 1.24.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-4673</td><td>BDU:2025-08599</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47906</td><td>BDU:2025-11595</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.12, 1.24.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61727</td><td>BDU:2026-00268</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.11, 1.25.5</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61730</td><td>BDU:2026-03603</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2026-25680</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.55.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27142</td><td>BDU:2026-04129</td><td>MEDIUM</td><td>MEDIUM</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32282</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32288</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32289</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39823</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39825</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39826</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42505</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42507</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56866</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78659</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78660</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78663</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84303</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.83.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94439</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94440</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94448</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97030</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27139</td><td>BDU:2026-04122</td><td>LOW</td><td>LOW</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
+</table>
+<br/>
+<h2>csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -877,7 +788,96 @@
 <tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
 </table>
 <br/>
-<h2>keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:latest)</h2>
+<br/>
+<p>Снимок БДУ: **2026-04-17**</p>
+<br/>
+<table>
+<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
+<tr><td>stdlib</td><td>CVE-2025-22871</td><td>BDU:2025-04014</td><td>MEDIUM</td><td>CRITICAL</td><td>1.23.8, 1.24.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-33186</td><td>BDU:2026-04598</td><td>CRITICAL</td><td>CRITICAL</td><td>1.79.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34155</td><td>BDU:2024-07020</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34156</td><td>BDU:2024-07025</td><td>HIGH</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-34158</td><td>BDU:2024-07026</td><td>MEDIUM</td><td>HIGH</td><td>1.22.7, 1.23.1</td></tr>
+<tr><td>golang.org/x/oauth2</td><td>CVE-2025-22868</td><td>BDU:2025-03638</td><td>HIGH</td><td>HIGH</td><td>0.27.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47907</td><td>BDU:2025-10834</td><td>HIGH</td><td>HIGH</td><td>1.23.12, 1.24.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32280</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32283</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33811</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33814</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-33818</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39820</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39821</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39836</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42499</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42504</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56853</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56858</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56859</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56862</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.13, 1.26.6, 1.27.0-rc.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84304</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.83.1</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>GHSA-HRXH-6V49-42GF</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.82.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-45336</td><td>BDU:2025-02667</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2024-45341</td><td>BDU:2025-03335</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.11, 1.23.5, 1.24.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-0913</td><td>BDU:2025-08600</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22866</td><td>BDU:2025-03456</td><td>MEDIUM</td><td>MEDIUM</td><td>1.22.12, 1.23.6, 1.24.0-rc.3</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>0.36.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22870</td><td>BDU:2025-02476</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.7, 1.24.1</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2025-22872</td><td>BDU:2025-08473</td><td>MEDIUM</td><td>MEDIUM</td><td>0.38.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-22873</td><td>BDU:2025-07316</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.9, 1.24.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-4673</td><td>BDU:2025-08599</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.10, 1.24.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-47906</td><td>BDU:2025-11595</td><td>MEDIUM</td><td>MEDIUM</td><td>1.23.12, 1.24.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61727</td><td>BDU:2026-00268</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.11, 1.25.5</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61730</td><td>BDU:2026-03603</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>golang.org/x/net</td><td>CVE-2026-25680</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.55.0</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27142</td><td>BDU:2026-04129</td><td>MEDIUM</td><td>MEDIUM</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32282</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32288</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-32289</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.9, 1.26.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39823</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39825</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-39826</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.10, 1.26.3</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42505</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.12, 1.26.5, 1.27.0-rc.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-42507</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56866</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78659</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78660</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-78663</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>google.golang.org/grpc</td><td>CVE-2026-84303</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.83.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94439</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94440</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-94448</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97030</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-97032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-27139</td><td>BDU:2026-04122</td><td>LOW</td><td>LOW</td><td>1.25.8, 1.26.1</td></tr>
+<tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
+<tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
+</table>
+<br/>
+<h2>keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -985,7 +985,7 @@
 <tr><td>glibc-langpack-en</td><td>CVE-2026-97399</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
 </table>
 <br/>
-<h2>mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -1020,7 +1020,7 @@
 <tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
 </table>
 <br/>
-<h2>mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -1028,11 +1028,12 @@
 <tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
 <tr><td>stdlib</td><td>CVE-2025-68121</td><td>BDU:2026-03408</td><td>CRITICAL</td><td>CRITICAL</td><td>1.24.13, 1.25.7, 1.26.0-rc.3</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-47912</td><td>BDU:2025-14527</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>HIGH</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-58188</td><td>BDU:2025-14525</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-61723</td><td>BDU:2025-13937</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-61725</td><td>BDU:2025-13936</td><td>MEDIUM</td><td>HIGH</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-61726</td><td>BDU:2026-03409</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>MEDIUM</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-61728</td><td>BDU:2026-03410</td><td>HIGH</td><td>HIGH</td><td>1.24.12, 1.25.6</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-61729</td><td>BDU:2025-16242</td><td>HIGH</td><td>HIGH</td><td>1.24.11, 1.25.5</td></tr>
 <tr><td>stdlib</td><td>CVE-2026-25679</td><td>BDU:2026-04127</td><td>HIGH</td><td>HIGH</td><td>1.25.8, 1.26.1</td></tr>
 <tr><td>stdlib</td><td>CVE-2026-27145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.25.11, 1.26.4</td></tr>
@@ -1056,9 +1057,8 @@
 <tr><td>stdlib</td><td>CVE-2026-78667</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2026-78669</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2026-97031</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-58185</td><td>BDU:2025-14530</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
-<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>LOW</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
+<tr><td>stdlib</td><td>CVE-2025-58186</td><td>BDU:2025-14529</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-58187</td><td>BDU:2025-13562</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.9, 1.25.3</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-58189</td><td>BDU:2025-14526</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
 <tr><td>stdlib</td><td>CVE-2025-61724</td><td>BDU:2025-13938</td><td>MEDIUM</td><td>MEDIUM</td><td>1.24.8, 1.25.2</td></tr>
@@ -1113,10 +1113,9 @@
 <tr><td>libsystemd0</td><td>CVE-2026-40228</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
 <tr><td>libudev1</td><td>CVE-2026-40228</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
 <tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
-<tr><td>golang.org/x/sys</td><td>CVE-2026-39824</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>0.44.0</td></tr>
 </table>
 <br/>
-<h2>minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -2250,7 +2249,7 @@
 <tr><td>glibc-minimal-langpack</td><td>CVE-2026-97399</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
 </table>
 <br/>
-<h2>minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -3392,7 +3391,7 @@
 <tr><td>github.com/docker/docker</td><td>GHSA-VP35-85Q5-9F25</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>20.10.20</td></tr>
 </table>
 <br/>
-<h2>minio (ghcr.io/shturval-tech/community-marketplace/minio:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>minio (ghcr.io/shturval-tech/community-marketplace/minio:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -3529,7 +3528,7 @@
 <tr><td>go.opentelemetry.io/otel/sdk</td><td>CVE-2026-81870</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.45.0</td></tr>
 </table>
 <br/>
-<h2>nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -3565,7 +3564,7 @@
 <tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
 </table>
 <br/>
-<h2>postgres (ghcr.io/shturval-tech/community-marketplace/postgres:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>postgres (ghcr.io/shturval-tech/community-marketplace/postgres:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -4748,7 +4747,7 @@
 <tr><td>xz-utils</td><td>TEMP-1147318-639065</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>—</td></tr>
 </table>
 <br/>
-<h2>proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -4834,7 +4833,7 @@
 <tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
 </table>
 <br/>
-<h2>proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -4991,7 +4990,7 @@
 <tr><td>tzdata</td><td>DLA-4792-1</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>2026c-0+deb12u1</td></tr>
 </table>
 <br/>
-<h2>rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -5072,7 +5071,7 @@
 <tr><td>stdlib</td><td>CVE-2026-56857</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.26.9, 1.27.2</td></tr>
 </table>
 <br/>
-<h2>rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -5447,7 +5446,7 @@
 <tr><td>openssl</td><td>CVE-2026-9076</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>3.0.13-0ubuntu3.11</td></tr>
 </table>
 <br/>
-<h2>redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -5475,7 +5474,7 @@
 <tr><td>go.opentelemetry.io/otel/sdk</td><td>CVE-2026-81870</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1.45.0</td></tr>
 </table>
 <br/>
-<h2>redis (ghcr.io/shturval-tech/community-marketplace/redis:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>redis (ghcr.io/shturval-tech/community-marketplace/redis:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -5974,7 +5973,7 @@
 <tr><td>liblzma5</td><td>TEMP-1147318-639065</td><td>—</td><td>UNKNOWN</td><td>UNKNOWN</td><td>5.4.1-1+deb12u2</td></tr>
 </table>
 <br/>
-<h2>strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:ce881b8ef93a1408c03445f24a6921de010d4a73)</h2>
+<h2>strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:latest)</h2>
 <br/>
 <p>Снимок БДУ: **2026-04-17**</p>
 <br/>
@@ -7028,12 +7027,823 @@
 <tr><td>glibc-minimal-langpack</td><td>CVE-2026-97399</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
 </table>
 <br/>
-<h2>Образы: сканирование не удалось</h2>
+<h2>strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:latest)</h2>
+<br/>
+<p>Снимок БДУ: **2026-04-17**</p>
 <br/>
 <table>
-<tr><th>Образ</th><th>Исход</th><th>CI job</th></tr>
-<tr><td>strimzi-operator</td><td>failure</td><td>[job](https://github.com/shturval-tech/community-marketplace/actions/runs/39109490310)</td></tr>
+<tr><th>Пакет</th><th>CVE</th><th>BDU</th><th>Trivy</th><th>ФСТЭК</th><th>Fixed</th></tr>
+<tr><td>avahi-libs</td><td>CVE-2017-6519</td><td>BDU:2019-00693</td><td>LOW</td><td>CRITICAL</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2024-11053</td><td>BDU:2024-11106</td><td>LOW</td><td>CRITICAL</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2024-11053</td><td>BDU:2024-11106</td><td>LOW</td><td>CRITICAL</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2024-52533</td><td>BDU:2024-10796</td><td>MEDIUM</td><td>CRITICAL</td><td>2.68.4-16.el9_6.2</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2025-12183</td><td>BDU:2025-15118</td><td>HIGH</td><td>CRITICAL</td><td>1.8.1</td></tr>
+<tr><td>openssl</td><td>CVE-2025-15467</td><td>BDU:2026-00890</td><td>HIGH</td><td>CRITICAL</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-15467</td><td>BDU:2026-00890</td><td>HIGH</td><td>CRITICAL</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>python3</td><td>CVE-2025-4517</td><td>BDU:2025-06494</td><td>HIGH</td><td>CRITICAL</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-4517</td><td>BDU:2025-06494</td><td>HIGH</td><td>CRITICAL</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-49794</td><td>BDU:2025-08979</td><td>HIGH</td><td>CRITICAL</td><td>2.9.13-10.el9_6</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-49796</td><td>BDU:2025-08978</td><td>HIGH</td><td>CRITICAL</td><td>2.9.13-10.el9_6</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-5914</td><td>BDU:2025-10932</td><td>HIGH</td><td>CRITICAL</td><td>3.5.3-6.el9_6</td></tr>
+<tr><td>gnupg2</td><td>CVE-2025-68973</td><td>BDU:2025-16426</td><td>HIGH</td><td>CRITICAL</td><td>2.3.3-5.el9_7</td></tr>
+<tr><td>io.netty:netty-handler</td><td>CVE-2026-75595</td><td>—</td><td>CRITICAL</td><td>UNKNOWN</td><td>4.2.17.Final, 4.1.137.Final</td></tr>
+<tr><td>ncurses-base</td><td>CVE-2022-29458</td><td>BDU:2023-00296</td><td>LOW</td><td>HIGH</td><td>6.2-10.20210508.el9_6.2</td></tr>
+<tr><td>ncurses-libs</td><td>CVE-2022-29458</td><td>BDU:2023-00296</td><td>LOW</td><td>HIGH</td><td>6.2-10.20210508.el9_6.2</td></tr>
+<tr><td>pcre2</td><td>CVE-2022-41409</td><td>BDU:2023-05302</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2022-41409</td><td>BDU:2023-05302</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2022-49043</td><td>BDU:2025-11749</td><td>MEDIUM</td><td>HIGH</td><td>2.9.13-6.el9_5.1</td></tr>
+<tr><td>glib2</td><td>CVE-2023-32636</td><td>BDU:2024-03776</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2023-4504</td><td>BDU:2023-06408</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2023-45322</td><td>BDU:2023-06827</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>ncurses-base</td><td>CVE-2023-50495</td><td>BDU:2024-07256</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>ncurses-libs</td><td>CVE-2023-50495</td><td>BDU:2024-07256</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2024-12718</td><td>BDU:2025-12377</td><td>HIGH</td><td>MEDIUM</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2024-12718</td><td>BDU:2025-12377</td><td>HIGH</td><td>MEDIUM</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>openssl</td><td>CVE-2024-12797</td><td>BDU:2025-01602</td><td>HIGH</td><td>HIGH</td><td>1:3.2.2-6.el9_5.1</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2024-12797</td><td>BDU:2025-01602</td><td>HIGH</td><td>HIGH</td><td>1:3.2.2-6.el9_5.1</td></tr>
+<tr><td>org.eclipse.jetty:jetty-server</td><td>CVE-2024-13009</td><td>BDU:2025-08601</td><td>HIGH</td><td>HIGH</td><td>9.4.57.v20241219</td></tr>
+<tr><td>openssl</td><td>CVE-2024-41996</td><td>BDU:2025-11398</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2024-41996</td><td>BDU:2025-11398</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>commons-io:commons-io</td><td>CVE-2024-47554</td><td>BDU:2025-03306</td><td>HIGH</td><td>MEDIUM</td><td>2.14.0</td></tr>
+<tr><td>libxml2</td><td>CVE-2024-56171</td><td>BDU:2025-06438</td><td>HIGH</td><td>HIGH</td><td>2.9.13-6.el9_5.2</td></tr>
+<tr><td>net.minidev:json-smart</td><td>CVE-2024-57699</td><td>BDU:2026-01707</td><td>HIGH</td><td>HIGH</td><td>2.5.2</td></tr>
+<tr><td>nspr</td><td>CVE-2024-7531</td><td>BDU:2024-06469</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>nss</td><td>CVE-2024-7531</td><td>BDU:2024-06469</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>nss-softokn</td><td>CVE-2024-7531</td><td>BDU:2024-06469</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>nss-softokn-freebl</td><td>CVE-2024-7531</td><td>BDU:2024-06469</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>nss-sysinit</td><td>CVE-2024-7531</td><td>BDU:2024-06469</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>nss-util</td><td>CVE-2024-7531</td><td>BDU:2024-06469</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2024-8176</td><td>BDU:2025-04573</td><td>MEDIUM</td><td>HIGH</td><td>2.5.0-5.el9_6</td></tr>
+<tr><td>glibc</td><td>CVE-2025-0395</td><td>BDU:2025-01120</td><td>MEDIUM</td><td>HIGH</td><td>2.34-125.el9_5.8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2025-0395</td><td>BDU:2025-01120</td><td>MEDIUM</td><td>HIGH</td><td>2.34-125.el9_5.8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2025-0395</td><td>BDU:2025-01120</td><td>MEDIUM</td><td>HIGH</td><td>2.34-125.el9_5.8</td></tr>
+<tr><td>libtasn1</td><td>CVE-2025-13151</td><td>BDU:2026-05140</td><td>LOW</td><td>HIGH</td><td>4.16.0-10.el9_8</td></tr>
+<tr><td>glib2</td><td>CVE-2025-13601</td><td>BDU:2026-02745</td><td>MEDIUM</td><td>HIGH</td><td>2.68.4-18.el9_7.1</td></tr>
+<tr><td>glib2</td><td>CVE-2025-14512</td><td>BDU:2026-02750</td><td>MEDIUM</td><td>HIGH</td><td>2.68.4-19.el9_8.1</td></tr>
+<tr><td>glibc</td><td>CVE-2025-15281</td><td>BDU:2026-05135</td><td>LOW</td><td>HIGH</td><td>2.34-231.el9_7.10</td></tr>
+<tr><td>python3</td><td>CVE-2025-15282</td><td>BDU:2026-05133</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-15282</td><td>BDU:2026-05133</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2025-15366</td><td>BDU:2026-05128</td><td>MEDIUM</td><td>HIGH</td><td>3.9.25-3.el9_7.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-15366</td><td>BDU:2026-05128</td><td>MEDIUM</td><td>HIGH</td><td>3.9.25-3.el9_7.1</td></tr>
+<tr><td>python3</td><td>CVE-2025-15367</td><td>BDU:2026-05131</td><td>MEDIUM</td><td>HIGH</td><td>3.9.25-3.el9_7.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-15367</td><td>BDU:2026-05131</td><td>MEDIUM</td><td>HIGH</td><td>3.9.25-3.el9_7.1</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-21587</td><td>BDU:2025-05070</td><td>MEDIUM</td><td>HIGH</td><td>1:17.0.15.0.6-2.el9</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-24928</td><td>BDU:2025-05193</td><td>HIGH</td><td>HIGH</td><td>2.9.13-6.el9_5.2</td></tr>
+<tr><td>io.netty:netty-handler</td><td>CVE-2025-24970</td><td>BDU:2025-03389</td><td>HIGH</td><td>HIGH</td><td>4.1.118.Final</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-27113</td><td>BDU:2025-03138</td><td>LOW</td><td>HIGH</td><td>—</td></tr>
+<tr><td>org.apache.kafka:kafka-clients</td><td>CVE-2025-27817</td><td>BDU:2025-06880</td><td>MEDIUM</td><td>HIGH</td><td>3.9.1</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-30749</td><td>BDU:2025-09721</td><td>HIGH</td><td>HIGH</td><td>1:17.0.16.0.8-2.el9</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-32414</td><td>BDU:2025-05199</td><td>MEDIUM</td><td>HIGH</td><td>2.9.13-12.el9_6</td></tr>
+<tr><td>gnutls</td><td>CVE-2025-32988</td><td>BDU:2025-11076</td><td>MEDIUM</td><td>HIGH</td><td>3.8.3-6.el9_6.2</td></tr>
+<tr><td>gnutls</td><td>CVE-2025-32990</td><td>BDU:2025-11074</td><td>MEDIUM</td><td>HIGH</td><td>3.8.3-6.el9_6.2</td></tr>
+<tr><td>python3</td><td>CVE-2025-4138</td><td>BDU:2025-09992</td><td>HIGH</td><td>HIGH</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-4138</td><td>BDU:2025-09992</td><td>HIGH</td><td>HIGH</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3</td><td>CVE-2025-4330</td><td>BDU:2025-09993</td><td>MEDIUM</td><td>HIGH</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-4330</td><td>BDU:2025-09993</td><td>MEDIUM</td><td>HIGH</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3</td><td>CVE-2025-4435</td><td>BDU:2025-09994</td><td>MEDIUM</td><td>HIGH</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-4435</td><td>BDU:2025-09994</td><td>MEDIUM</td><td>HIGH</td><td>3.9.21-2.el9_6.1</td></tr>
+<tr><td>python3-setuptools-wheel</td><td>CVE-2025-47273</td><td>BDU:2025-08604</td><td>MEDIUM</td><td>HIGH</td><td>53.0.0-13.el9_6.1</td></tr>
+<tr><td>glibc</td><td>CVE-2025-4802</td><td>BDU:2025-05682</td><td>MEDIUM</td><td>HIGH</td><td>2.34-168.el9_6.19</td></tr>
+<tr><td>glibc-common</td><td>CVE-2025-4802</td><td>BDU:2025-05682</td><td>MEDIUM</td><td>HIGH</td><td>2.34-168.el9_6.19</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2025-4802</td><td>BDU:2025-05682</td><td>MEDIUM</td><td>HIGH</td><td>2.34-168.el9_6.19</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-50059</td><td>BDU:2025-08906</td><td>HIGH</td><td>HIGH</td><td>1:17.0.16.0.8-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-50106</td><td>BDU:2025-08709</td><td>HIGH</td><td>HIGH</td><td>1:17.0.16.0.8-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-53066</td><td>BDU:2025-13795</td><td>MEDIUM</td><td>HIGH</td><td>1:17.0.17.0.10-1.el9</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2025-55163</td><td>BDU:2025-10993</td><td>HIGH</td><td>HIGH</td><td>4.2.4.Final, 4.1.124.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2025-58056</td><td>BDU:2025-12593</td><td>LOW</td><td>HIGH</td><td>4.1.125.Final, 4.2.5.Final</td></tr>
+<tr><td>io.netty:netty-codec</td><td>CVE-2025-58057</td><td>BDU:2025-12594</td><td>MEDIUM</td><td>HIGH</td><td>4.1.125.Final</td></tr>
+<tr><td>cups-libs</td><td>CVE-2025-58060</td><td>BDU:2025-11019</td><td>HIGH</td><td>HIGH</td><td>1:2.3.3op2-33.el9_6.1</td></tr>
+<tr><td>expat</td><td>CVE-2025-59375</td><td>BDU:2025-12925</td><td>HIGH</td><td>HIGH</td><td>2.5.0-5.el9_7.1</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-6021</td><td>BDU:2025-07144</td><td>MEDIUM</td><td>HIGH</td><td>2.9.13-10.el9_6</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-64720</td><td>BDU:2026-02925</td><td>HIGH</td><td>HIGH</td><td>1:17.0.18.0.8-1.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-65018</td><td>BDU:2025-14613</td><td>HIGH</td><td>HIGH</td><td>1:17.0.18.0.8-1.el9</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2025-66566</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2025-68468</td><td>BDU:2026-03598</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2025-68471</td><td>BDU:2026-03599</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2025-69419</td><td>BDU:2026-01217</td><td>MEDIUM</td><td>HIGH</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-69419</td><td>BDU:2026-01217</td><td>MEDIUM</td><td>HIGH</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl</td><td>CVE-2025-69420</td><td>BDU:2026-01219</td><td>LOW</td><td>HIGH</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-69420</td><td>BDU:2026-01219</td><td>LOW</td><td>HIGH</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl</td><td>CVE-2025-69421</td><td>BDU:2026-01218</td><td>LOW</td><td>HIGH</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-69421</td><td>BDU:2026-01218</td><td>LOW</td><td>HIGH</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>sqlite-libs</td><td>CVE-2025-6965</td><td>BDU:2025-08786</td><td>HIGH</td><td>HIGH</td><td>3.34.1-9.el9_7</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-7425</td><td>BDU:2026-04327</td><td>HIGH</td><td>HIGH</td><td>2.9.13-11.el9_6</td></tr>
+<tr><td>python3</td><td>CVE-2025-8194</td><td>BDU:2025-09687</td><td>MEDIUM</td><td>HIGH</td><td>3.9.21-2.el9_6.2</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-8194</td><td>BDU:2025-09687</td><td>MEDIUM</td><td>HIGH</td><td>3.9.21-2.el9_6.2</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2025-9086</td><td>BDU:2025-12599</td><td>MEDIUM</td><td>HIGH</td><td>7.76.1-35.el9_7.3</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2025-9086</td><td>BDU:2025-12599</td><td>MEDIUM</td><td>HIGH</td><td>7.76.1-35.el9_7.3</td></tr>
+<tr><td>openssl</td><td>CVE-2025-9230</td><td>BDU:2025-12885</td><td>MEDIUM</td><td>HIGH</td><td>1:3.5.1-4.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-9230</td><td>BDU:2025-12885</td><td>MEDIUM</td><td>HIGH</td><td>1:3.5.1-4.el9_7</td></tr>
+<tr><td>gnutls</td><td>CVE-2025-9820</td><td>BDU:2025-15388</td><td>LOW</td><td>HIGH</td><td>3.8.3-10.el9_7</td></tr>
+<tr><td>python3</td><td>CVE-2026-0672</td><td>BDU:2026-05125</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-0672</td><td>BDU:2026-05125</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-0861</td><td>BDU:2026-00915</td><td>LOW</td><td>HIGH</td><td>2.34-231.el9_7.10</td></tr>
+<tr><td>glibc</td><td>CVE-2026-0915</td><td>BDU:2026-02104</td><td>MEDIUM</td><td>HIGH</td><td>2.34-231.el9_7.10</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-103111</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-103111</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2026-106451</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>sqlite-libs</td><td>CVE-2026-11822</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.34.1-11.el9_8</td></tr>
+<tr><td>sqlite-libs</td><td>CVE-2026-11824</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.34.1-11.el9_8</td></tr>
+<tr><td>python3</td><td>CVE-2026-11940</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8.3</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-11940</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8.3</td></tr>
+<tr><td>python3</td><td>CVE-2026-1299</td><td>BDU:2026-05130</td><td>MEDIUM</td><td>HIGH</td><td>3.9.25-3.el9_7.1</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-1299</td><td>BDU:2026-05130</td><td>MEDIUM</td><td>HIGH</td><td>3.9.25-3.el9_7.1</td></tr>
+<tr><td>openssl</td><td>CVE-2026-14456</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-14456</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>python3</td><td>CVE-2026-15308</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8.2</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-15308</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8.2</td></tr>
+<tr><td>python3</td><td>CVE-2026-19445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-19445</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-19553</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-19553</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-21945</td><td>BDU:2026-00680</td><td>HIGH</td><td>HIGH</td><td>1:17.0.18.0.8-1.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22016</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22695</td><td>BDU:2026-01048</td><td>MEDIUM</td><td>HIGH</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>org.eclipse.jetty:jetty-http</td><td>CVE-2026-2332</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>12.1.7, 12.0.33, 11.0.29, 10.0.28, 9.4.60</td></tr>
+<tr><td>org.apache.zookeeper:zookeeper</td><td>CVE-2026-24281</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.8.6, 3.9.5</td></tr>
+<tr><td>org.apache.zookeeper:zookeeper</td><td>CVE-2026-24308</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.5, 3.8.6</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2026-24401</td><td>BDU:2026-05066</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-26740</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>libnghttp2</td><td>CVE-2026-27135</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.43.0-6.el9_7.1</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-33845</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-33846</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-33870</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.1.132.Final, 4.2.10.Final</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-33871</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.1.132.Final, 4.2.11.Final</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-34282</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-34990</td><td>BDU:2026-04786</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>org.apache.kafka:kafka-clients</td><td>CVE-2026-35554</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.2, 4.0.2, 4.1.2</td></tr>
+<tr><td>python3</td><td>CVE-2026-3644</td><td>BDU:2026-04601</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-3644</td><td>BDU:2026-04601</td><td>MEDIUM</td><td>HIGH</td><td>—</td></tr>
+<tr><td>io.micrometer:micrometer-core</td><td>CVE-2026-40984</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1.16.6, 1.15.12</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-4111</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.5.3-7.el9_7</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42009</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42010</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>io.netty:netty-codec-dns</td><td>CVE-2026-42579</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>io.netty:netty-codec</td><td>CVE-2026-42583</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.1.133.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-42584</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-42587</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-42587</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-4424</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.5.3-9.el9_7</td></tr>
+<tr><td>io.netty:netty-handler</td><td>CVE-2026-44249</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>expat</td><td>CVE-2026-45186</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.5.0-6.el9_8.1</td></tr>
+<tr><td>python3</td><td>CVE-2026-4519</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-4519</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8</td></tr>
+<tr><td>io.netty:netty-handler</td><td>CVE-2026-45416</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>openssl</td><td>CVE-2026-45447</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-45447</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>io.netty:netty-resolver-dns</td><td>CVE-2026-45674</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-47063</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>io.netty:netty-resolver-dns</td><td>CVE-2026-47691</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>python3</td><td>CVE-2026-4786</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-4786</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8</td></tr>
+<tr><td>libcap</td><td>CVE-2026-4878</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.48-10.el9_8.1</td></tr>
+<tr><td>io.netty:netty-handler</td><td>CVE-2026-50010</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>libblkid</td><td>CVE-2026-53613</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libmount</td><td>CVE-2026-53613</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsmartcols</td><td>CVE-2026-53613</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libuuid</td><td>CVE-2026-53613</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libblkid</td><td>CVE-2026-53615</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libmount</td><td>CVE-2026-53615</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsmartcols</td><td>CVE-2026-53615</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libuuid</td><td>CVE-2026-53615</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libacl</td><td>CVE-2026-54369</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.4.0-1.el9_8</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-54512</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.18.8, 3.1.4, 2.21.4</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-54513</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.18.8, 2.21.4, 3.1.4</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-55831</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-55833</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-56745</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-56819</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2026-57585</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58016</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.2</td></tr>
+<tr><td>io.netty:netty-codec</td><td>CVE-2026-59901</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>4.1.136.Final</td></tr>
+<tr><td>python3</td><td>CVE-2026-6100</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-6100</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>3.9.25-7.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63382</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63383</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63384</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63385</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63387</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63388</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>expat</td><td>CVE-2026-66046</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.5.0-6.el9_8.5</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-core</td><td>CVE-2026-68494</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.18.8, 2.21.4</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-68497</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.18.10, 2.21.6, 2.22.2</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-74860</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.5</td></tr>
+<tr><td>expat</td><td>CVE-2026-76641</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-77214</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-79824</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-79824</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-8286</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-8286</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-8458</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.7</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-8458</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.7</td></tr>
+<tr><td>openssl</td><td>CVE-2026-84782</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:3.5.8-2.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-84782</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>1:3.5.8-2.el9_8</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-86140</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.5</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-86145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-86145</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-88647</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-89161</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-89161</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-8927</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.7</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-8927</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.7</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-core</td><td>CVE-2026-89425</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.21.7, 2.22.3, 2.18.11</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-91776</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.18.11, 2.21.7, 2.22.3</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-91777</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.21.7, 2.18.11, 2.22.3</td></tr>
+<tr><td>expat</td><td>CVE-2026-93990</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>2.5.0-6.el9_8.5</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-9547</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-9547</td><td>—</td><td>HIGH</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>libgcc</td><td>CVE-2020-11023</td><td>BDU:2020-04949</td><td>MEDIUM</td><td>MEDIUM</td><td>11.5.0-5.el9_5</td></tr>
+<tr><td>libstdc++</td><td>CVE-2020-11023</td><td>BDU:2020-04949</td><td>MEDIUM</td><td>MEDIUM</td><td>11.5.0-5.el9_5</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2021-3572</td><td>BDU:2023-03310</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libgcc</td><td>CVE-2022-27943</td><td>BDU:2025-12274</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libstdc++</td><td>CVE-2022-27943</td><td>BDU:2025-12274</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2023-30571</td><td>BDU:2023-05007</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2023-45803</td><td>BDU:2023-06977</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libtasn1</td><td>CVE-2024-12133</td><td>BDU:2025-12052</td><td>MEDIUM</td><td>MEDIUM</td><td>4.16.0-9.el9</td></tr>
+<tr><td>gnutls</td><td>CVE-2024-12243</td><td>BDU:2025-12051</td><td>MEDIUM</td><td>MEDIUM</td><td>3.8.3-6.el9</td></tr>
+<tr><td>openssl</td><td>CVE-2024-13176</td><td>BDU:2025-03280</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2024-13176</td><td>BDU:2025-03280</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2024-47081</td><td>BDU:2025-08576</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2024-52615</td><td>BDU:2025-16178</td><td>MEDIUM</td><td>MEDIUM</td><td>0.8-22.el9_6.1</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2024-52616</td><td>BDU:2026-03600</td><td>MEDIUM</td><td>MEDIUM</td><td>0.8-22.el9_6</td></tr>
+<tr><td>python3</td><td>CVE-2024-5642</td><td>BDU:2025-11592</td><td>LOW</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>python3-libs</td><td>CVE-2024-5642</td><td>BDU:2025-11592</td><td>LOW</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>org.eclipse.jetty:jetty-http</td><td>CVE-2024-6763</td><td>BDU:2024-10117</td><td>MEDIUM</td><td>MEDIUM</td><td>12.0.12</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2024-7264</td><td>BDU:2024-05923</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2024-7264</td><td>BDU:2024-05923</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2024-9681</td><td>BDU:2024-09106</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2024-9681</td><td>BDU:2024-09106</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2025-0938</td><td>BDU:2025-04572</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.21-2.el9</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-0938</td><td>BDU:2025-04572</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.21-2.el9</td></tr>
+<tr><td>openssl</td><td>CVE-2025-11187</td><td>BDU:2026-01223</td><td>MEDIUM</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-11187</td><td>BDU:2026-01223</td><td>MEDIUM</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>python3</td><td>CVE-2025-11468</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-11468</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2025-12084</td><td>BDU:2026-01344</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.25-3.el9_7</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-12084</td><td>BDU:2026-01344</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.25-3.el9_7</td></tr>
+<tr><td>python3</td><td>CVE-2025-12781</td><td>BDU:2026-05132</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-12781</td><td>BDU:2026-05132</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2025-13034</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2025-13034</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2025-13837</td><td>BDU:2026-05126</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-13837</td><td>BDU:2026-05126</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2025-14017</td><td>BDU:2026-05122</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2025-14017</td><td>BDU:2026-05122</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2025-14087</td><td>BDU:2026-05069</td><td>MEDIUM</td><td>MEDIUM</td><td>2.68.4-19.el9_8.1</td></tr>
+<tr><td>libblkid</td><td>CVE-2025-14104</td><td>BDU:2026-02747</td><td>MEDIUM</td><td>MEDIUM</td><td>2.37.4-21.el9_7</td></tr>
+<tr><td>libmount</td><td>CVE-2025-14104</td><td>BDU:2026-02747</td><td>MEDIUM</td><td>MEDIUM</td><td>2.37.4-21.el9_7</td></tr>
+<tr><td>libsmartcols</td><td>CVE-2025-14104</td><td>BDU:2026-02747</td><td>MEDIUM</td><td>MEDIUM</td><td>2.37.4-21.el9_7</td></tr>
+<tr><td>libuuid</td><td>CVE-2025-14104</td><td>BDU:2026-02747</td><td>MEDIUM</td><td>MEDIUM</td><td>2.37.4-21.el9_7</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2025-14524</td><td>BDU:2026-02955</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2025-14524</td><td>BDU:2026-02955</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>gnutls</td><td>CVE-2025-14831</td><td>BDU:2026-05048</td><td>MEDIUM</td><td>MEDIUM</td><td>3.8.3-10.el9_7</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2025-15079</td><td>BDU:2026-03453</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2025-15079</td><td>BDU:2026-03453</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2025-15224</td><td>BDU:2026-03387</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2025-15224</td><td>BDU:2026-03387</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2025-15468</td><td>BDU:2026-01215</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-15468</td><td>BDU:2026-01215</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl</td><td>CVE-2025-15469</td><td>BDU:2026-01222</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-15469</td><td>BDU:2026-01222</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2025-24528</td><td>BDU:2025-12302</td><td>MEDIUM</td><td>MEDIUM</td><td>1.21.1-6.el9</td></tr>
+<tr><td>io.netty:netty-common</td><td>CVE-2025-25193</td><td>BDU:2025-02529</td><td>MEDIUM</td><td>MEDIUM</td><td>4.1.118.Final</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-25724</td><td>BDU:2025-05210</td><td>MEDIUM</td><td>MEDIUM</td><td>3.5.3-5.el9_6</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-28164</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-30691</td><td>BDU:2025-11079</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.15.0.6-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-30698</td><td>BDU:2025-11078</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.15.0.6-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-30754</td><td>BDU:2025-09723</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.16.0.8-2.el9</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-32415</td><td>BDU:2025-06564</td><td>MEDIUM</td><td>LOW</td><td>2.9.13-12.el9_6</td></tr>
+<tr><td>gnutls</td><td>CVE-2025-32989</td><td>BDU:2025-11075</td><td>MEDIUM</td><td>MEDIUM</td><td>3.8.3-6.el9_6.2</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2025-3576</td><td>BDU:2025-10927</td><td>MEDIUM</td><td>MEDIUM</td><td>1.21.1-8.el9_6</td></tr>
+<tr><td>glib2</td><td>CVE-2025-4373</td><td>BDU:2025-07137</td><td>MEDIUM</td><td>MEDIUM</td><td>2.68.4-16.el9_6.2</td></tr>
+<tr><td>python3</td><td>CVE-2025-4516</td><td>BDU:2025-10930</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-4516</td><td>BDU:2025-10930</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>systemd-libs</td><td>CVE-2025-4598</td><td>BDU:2025-06694</td><td>MEDIUM</td><td>MEDIUM</td><td>252-55.el9_7.7</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2025-50181</td><td>BDU:2025-09791</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2025-50182</td><td>BDU:2025-09780</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>coreutils-single</td><td>CVE-2025-5278</td><td>BDU:2025-10950</td><td>MEDIUM</td><td>MEDIUM</td><td>8.32-41.el9_8</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-53057</td><td>BDU:2025-14035</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.17.0.10-1.el9</td></tr>
+<tr><td>com.nimbusds:nimbus-jose-jwt</td><td>CVE-2025-53864</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>10.0.2, 9.37.4</td></tr>
+<tr><td>glibc</td><td>CVE-2025-5702</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-168.el9_6.20</td></tr>
+<tr><td>glibc-common</td><td>CVE-2025-5702</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-168.el9_6.20</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2025-5702</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-168.el9_6.20</td></tr>
+<tr><td>cups-libs</td><td>CVE-2025-58183</td><td>BDU:2025-14528</td><td>MEDIUM</td><td>MEDIUM</td><td>1:2.3.3op2-34.el9_7.2</td></tr>
+<tr><td>cups-libs</td><td>CVE-2025-58364</td><td>BDU:2025-12439</td><td>MEDIUM</td><td>MEDIUM</td><td>1:2.3.3op2-33.el9_6.1</td></tr>
+<tr><td>cups-libs</td><td>CVE-2025-58436</td><td>BDU:2026-02912</td><td>MEDIUM</td><td>MEDIUM</td><td>1:2.3.3op2-34.el9_7.2</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-5916</td><td>BDU:2025-11085</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-5917</td><td>BDU:2025-11084</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-5918</td><td>BDU:2025-11083</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2025-59529</td><td>BDU:2026-03596</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2025-6069</td><td>BDU:2025-11082</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-6069</td><td>BDU:2025-11082</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>python3</td><td>CVE-2025-6075</td><td>BDU:2026-05129</td><td>LOW</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-6075</td><td>BDU:2026-05129</td><td>LOW</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-60753</td><td>BDU:2026-00318</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2025-61915</td><td>BDU:2026-02916</td><td>MEDIUM</td><td>MEDIUM</td><td>1:2.3.3op2-34.el9_7.2</td></tr>
+<tr><td>gnutls</td><td>CVE-2025-6395</td><td>BDU:2025-08694</td><td>MEDIUM</td><td>MEDIUM</td><td>3.8.3-6.el9_6.2</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-64505</td><td>BDU:2026-02923</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2025-64506</td><td>BDU:2026-02924</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2025-66199</td><td>BDU:2026-01212</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-66199</td><td>BDU:2026-01212</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>expat</td><td>CVE-2025-66382</td><td>BDU:2026-03628</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2025-67735</td><td>BDU:2026-01632</td><td>MEDIUM</td><td>MEDIUM</td><td>4.2.8.Final, 4.1.129.Final</td></tr>
+<tr><td>openssl</td><td>CVE-2025-68160</td><td>BDU:2026-01216</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-68160</td><td>BDU:2026-01216</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>org.apache.logging.log4j:log4j-core</td><td>CVE-2025-68161</td><td>BDU:2026-00009</td><td>MEDIUM</td><td>MEDIUM</td><td>2.25.3</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2025-68276</td><td>BDU:2026-03597</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>gnupg2</td><td>CVE-2025-68972</td><td>BDU:2026-05146</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2025-69418</td><td>BDU:2026-02935</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-69418</td><td>BDU:2026-02935</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>glibc</td><td>CVE-2025-8058</td><td>BDU:2025-16181</td><td>MEDIUM</td><td>MEDIUM</td><td>2.34-168.el9_6.23</td></tr>
+<tr><td>glibc-common</td><td>CVE-2025-8058</td><td>BDU:2025-16181</td><td>MEDIUM</td><td>MEDIUM</td><td>2.34-168.el9_6.23</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2025-8058</td><td>BDU:2025-16181</td><td>MEDIUM</td><td>MEDIUM</td><td>2.34-168.el9_6.23</td></tr>
+<tr><td>python3</td><td>CVE-2025-8291</td><td>BDU:2026-00313</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-8291</td><td>BDU:2026-00313</td><td>MEDIUM</td><td>MEDIUM</td><td>3.9.25-2.el9_7</td></tr>
+<tr><td>openssl</td><td>CVE-2025-9232</td><td>BDU:2025-12887</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2025-9232</td><td>BDU:2025-12887</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-9714</td><td>BDU:2026-02937</td><td>MEDIUM</td><td>MEDIUM</td><td>2.9.13-14.el9_7</td></tr>
+<tr><td>python3</td><td>CVE-2026-0864</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-0864</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-0865</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.9.25-5.el9_8</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-0865</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.9.25-5.el9_8</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-0990</td><td>BDU:2026-03631</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>io.vertx:vertx-core</td><td>CVE-2026-1002</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.5.24, 5.0.7</td></tr>
+<tr><td>libgcc</td><td>CVE-2026-102010</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libstdc++</td><td>CVE-2026-102010</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-102633</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm</td><td>CVE-2026-103242</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-103242</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2026-106450</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2026-106452</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2026-106453</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cyrus-sasl-lib</td><td>CVE-2026-107161</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-107655</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2026-107708</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2026-107778</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-107888</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2026-11850</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-11856</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.8</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-11856</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.8</td></tr>
+<tr><td>python3</td><td>CVE-2026-11972</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-11972</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-11979</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.4</td></tr>
+<tr><td>python3</td><td>CVE-2026-12345</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-12345</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2026-13346</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libblkid</td><td>CVE-2026-13595</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libmount</td><td>CVE-2026-13595</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsmartcols</td><td>CVE-2026-13595</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libuuid</td><td>CVE-2026-13595</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>p11-kit</td><td>CVE-2026-13757</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.26.4-1.el9_8</td></tr>
+<tr><td>p11-kit-trust</td><td>CVE-2026-13757</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.26.4-1.el9_8</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-14164</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.5.3-11.el9_8</td></tr>
+<tr><td>glib2</td><td>CVE-2026-1484</td><td>BDU:2026-05065</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2026-1489</td><td>BDU:2026-05067</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-1502</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-1502</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-15028</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>systemd-libs</td><td>CVE-2026-15059</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2026-15588</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>glib2</td><td>CVE-2026-16118</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.10</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-1757</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-18374</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-18374</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-18374</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-core</td><td>CVE-2026-18401</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.21.1, 2.18.6</td></tr>
+<tr><td>openssl</td><td>CVE-2026-18798</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-18798</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-19032</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.18.10, 2.21.6, 2.22.2</td></tr>
+<tr><td>glibc</td><td>CVE-2026-19542</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-19542</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-19542</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-1965</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-1965</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>python3</td><td>CVE-2026-19672</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-19672</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-19931</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-19931</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>p11-kit</td><td>CVE-2026-2100</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.26.2-1.el9</td></tr>
+<tr><td>p11-kit-trust</td><td>CVE-2026-2100</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.26.2-1.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-21925</td><td>BDU:2026-00695</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.18.0.8-1.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-21933</td><td>BDU:2026-00694</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.18.0.8-1.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22013</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22021</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>openldap</td><td>CVE-2026-22185</td><td>BDU:2026-03592</td><td>MEDIUM</td><td>LOW</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22693</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-22795</td><td>BDU:2026-01214</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-22795</td><td>BDU:2026-01214</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl</td><td>CVE-2026-22796</td><td>BDU:2026-01220</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-22796</td><td>BDU:2026-01220</td><td>LOW</td><td>MEDIUM</td><td>1:3.5.1-7.el9_7</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22801</td><td>BDU:2026-04960</td><td>MEDIUM</td><td>MEDIUM</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>python3</td><td>CVE-2026-2297</td><td>BDU:2026-04596</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-2297</td><td>BDU:2026-04596</td><td>LOW</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-23865</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>alsa-lib</td><td>CVE-2026-25068</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2026-25645</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-2673</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-3.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-2673</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-3.el9_8</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-27447</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libblkid</td><td>CVE-2026-27456</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libmount</td><td>CVE-2026-27456</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsmartcols</td><td>CVE-2026-27456</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libuuid</td><td>CVE-2026-27456</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-28390</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-3.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-28390</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-3.el9_8</td></tr>
+<tr><td>systemd-libs</td><td>CVE-2026-29111</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>252-67.el9_8.2</td></tr>
+<tr><td>openssl</td><td>CVE-2026-31790</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-2.el9_8</td></tr>
+<tr><td>openssl-fips-provider</td><td>CVE-2026-31790</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.0.7-11.el9_8</td></tr>
+<tr><td>openssl-fips-provider-so</td><td>CVE-2026-31790</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.0.7-11.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-31790</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-2.el9_8</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2026-32284</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-3276</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-3276</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-32776</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-32777</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-32778</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-33416</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>org.apache.kafka:kafka-clients</td><td>CVE-2026-33558</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.9.2, 4.0.1</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-33636</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>openssl</td><td>CVE-2026-34182</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-34182</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-34183</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-34183</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>org.apache.logging.log4j:log4j-core</td><td>CVE-2026-34477</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.25.4</td></tr>
+<tr><td>org.apache.logging.log4j:log4j-core</td><td>CVE-2026-34480</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.25.4</td></tr>
+<tr><td>xz-libs</td><td>CVE-2026-34743</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-34757</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>avahi-libs</td><td>CVE-2026-34933</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-34978</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-34979</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-3783</td><td>BDU:2026-04361</td><td>MEDIUM</td><td>MEDIUM</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-3783</td><td>BDU:2026-04361</td><td>MEDIUM</td><td>MEDIUM</td><td>7.76.1-40.el9_8.5</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-3784</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-3784</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-3833</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-39314</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-39316</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2026-40355</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.21.1-10.el9_8</td></tr>
+<tr><td>krb5-libs</td><td>CVE-2026-40356</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.21.1-10.el9_8</td></tr>
+<tr><td>glibc</td><td>CVE-2026-4046</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-4046</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-4046</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>gawk</td><td>CVE-2026-40467</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>5.1.0-6.el9_8.1</td></tr>
+<tr><td>gawk</td><td>CVE-2026-40468</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>5.1.0-6.el9_8.1</td></tr>
+<tr><td>gawk</td><td>CVE-2026-40553</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>5.1.0-6.el9_8.1</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-40930</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>systemd-libs</td><td>CVE-2026-4105</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-41254</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-41417</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.1.133.Final, 4.2.13.Final</td></tr>
+<tr><td>libgcrypt</td><td>CVE-2026-41989</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.10.0-13.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42011</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42012</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42013</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42014</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-42015</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>python3</td><td>CVE-2026-4224</td><td>BDU:2026-04602</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-4224</td><td>BDU:2026-04602</td><td>MEDIUM</td><td>MEDIUM</td><td>—</td></tr>
+<tr><td>bzip2-libs</td><td>CVE-2026-42250</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-42308</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-42308</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-42580</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-42581</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-42585</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.13.Final, 4.1.133.Final</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42764</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42764</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42772</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42772</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-4360</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-4360</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-4426</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-4437</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-4437</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-4437</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>python3-pip-wheel</td><td>CVE-2026-45409</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-45445</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-45445</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>io.netty:netty-transport-native-epoll</td><td>CVE-2026-45536</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>io.netty:netty-transport-native-epoll</td><td>CVE-2026-45536</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>io.netty:netty-resolver-dns</td><td>CVE-2026-45673</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-46675</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-46917</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-46968</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-47021</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-47027</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-47244</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-48043</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.1.135.Final, 4.2.15.Final</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-4873</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-4873</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsolv</td><td>CVE-2026-48864</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>0.7.24-6.el9_8</td></tr>
+<tr><td>org.apache.logging.log4j:log4j-api</td><td>CVE-2026-49844</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.25.5, 2.26.1</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-49919</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-50020</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>expat</td><td>CVE-2026-50219</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.5.0-6.el9_8.3</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-50560</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.15.Final, 4.1.135.Final</td></tr>
+<tr><td>sqlite-libs</td><td>CVE-2026-50812</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-5121</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.5.3-9.el9_7</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-5260</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>glibc</td><td>CVE-2026-5435</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-5435</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-5435</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>libacl</td><td>CVE-2026-54370</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.4.0-1.el9_8</td></tr>
+<tr><td>libattr</td><td>CVE-2026-54371</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.6.0-1.el9_8</td></tr>
+<tr><td>glibc</td><td>CVE-2026-5450</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-272.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-5450</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-272.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-5450</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-272.el9_8</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-54514</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.18.8, 2.21.4, 3.1.4</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-54515</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>3.1.4, 2.18.9, 2.21.5, 2.22.1</td></tr>
+<tr><td>openssl</td><td>CVE-2026-54872</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-54872</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-54873</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-54873</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-54875</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-54875</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-5545</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-5545</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>alsa-lib</td><td>CVE-2026-56109</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56131</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56132</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.5.0-6.el9_8.3</td></tr>
+<tr><td>coreutils-single</td><td>CVE-2026-56391</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>coreutils-single</td><td>CVE-2026-56392</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>8.32-41.el9_8.1</td></tr>
+<tr><td>expat</td><td>CVE-2026-56403</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56404</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56405</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56406</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56407</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-56412</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-56746</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>python3</td><td>CVE-2026-5713</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-5713</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-5745</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-5773</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-5773</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58010</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58011</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58012</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58013</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58014</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>glib2</td><td>CVE-2026-58015</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.68.4-19.el9_8.9</td></tr>
+<tr><td>libnghttp2</td><td>CVE-2026-58055</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1.43.0-6.el9_8.2</td></tr>
+<tr><td>glibc</td><td>CVE-2026-5928</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-5928</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-5928</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>sed</td><td>CVE-2026-5958</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-59888</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.18.8, 2.21.4</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-59898</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-59899</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-codec-http2</td><td>CVE-2026-59900</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-59903</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.17.Final, 4.1.137.Final</td></tr>
+<tr><td>io.netty:netty-codec-http</td><td>CVE-2026-59921</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2026-59949</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-60147</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>python3</td><td>CVE-2026-6019</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-6019</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-60589</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.1.1-1.2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-61308</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.1.1-1.2.el9</td></tr>
+<tr><td>glibc</td><td>CVE-2026-6238</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-6238</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-6238</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-274.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-6253</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-6253</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-63072</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-63072</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-63076</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-63076</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63379</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>libevent</td><td>CVE-2026-63381</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.1.13-1.el9_8</td></tr>
+<tr><td>glibc</td><td>CVE-2026-6368</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-6368</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-6368</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-6429</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-6429</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-6653</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.4</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-67693</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>org.eclipse.jetty:jetty-server</td><td>CVE-2026-6790</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>12.0.35, 12.1.9</td></tr>
+<tr><td>glibc</td><td>CVE-2026-6791</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-6791</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-6791</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>io.vertx:vertx-core</td><td>CVE-2026-6860</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.5.27, 5.0.12</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-70907</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>1:17.0.20.1.1-1.2.el9</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-7168</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-7168</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-7210</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-7210</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-72897</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-72897</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>io.netty:netty-codec-dns</td><td>CVE-2026-73508</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.16.Final, 4.1.136.Final</td></tr>
+<tr><td>io.netty:netty-handler</td><td>CVE-2026-75596</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>4.2.17.Final, 4.1.137.Final</td></tr>
+<tr><td>openssl</td><td>CVE-2026-75804</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-75804</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-75805</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-75805</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-75806</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-75806</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-76957</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-77117</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-77117</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-77117</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-77310</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.18.9, 2.21.5, 2.22.1</td></tr>
+<tr><td>openssl</td><td>CVE-2026-77696</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-77696</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-7774</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-7774</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm</td><td>CVE-2026-78367</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-78367</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-80489</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-80489</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-80489</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.34-283.el9_8</td></tr>
+<tr><td>libsolv</td><td>CVE-2026-82327</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>com.fasterxml.jackson.core:jackson-databind</td><td>CVE-2026-83557</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.18.10, 2.21.6, 2.22.2</td></tr>
+<tr><td>openssl</td><td>CVE-2026-84784</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-84784</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm</td><td>CVE-2026-84837</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-84837</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-86138</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.5</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-86142</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.5</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-86143</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.5</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-86144</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.5</td></tr>
+<tr><td>glib2</td><td>CVE-2026-86469</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-8674</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-8674</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-8674</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-86805</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-86805</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-86805</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-87875</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-88648</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-89092</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-89092</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-89092</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-89157</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-89157</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-89158</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-89158</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-8924</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.8</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-8924</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>7.76.1-40.el9_8.8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-8932</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-8932</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>alsa-lib</td><td>CVE-2026-90781</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-9080</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-9080</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsolv</td><td>CVE-2026-9149</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libsolv</td><td>CVE-2026-9150</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-92388</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-92388</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-9545</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-9545</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-9546</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-9546</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-95512</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm</td><td>CVE-2026-95519</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-95519</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm</td><td>CVE-2026-95520</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-95520</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm</td><td>CVE-2026-95521</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-95521</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libgcc</td><td>CVE-2026-95619</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libstdc++</td><td>CVE-2026-95619</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-95818</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-95818</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-95818</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>alsa-lib</td><td>CVE-2026-96674</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>alsa-lib</td><td>CVE-2026-96675</td><td>—</td><td>MEDIUM</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>nspr</td><td>CVE-2020-12413</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>nss</td><td>CVE-2020-12413</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>nss-softokn</td><td>CVE-2020-12413</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>nss-softokn-freebl</td><td>CVE-2020-12413</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>nss-sysinit</td><td>CVE-2020-12413</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>nss-util</td><td>CVE-2020-12413</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2021-25317</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libgcc</td><td>CVE-2021-46195</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libstdc++</td><td>CVE-2021-46195</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>gnupg2</td><td>CVE-2022-3219</td><td>BDU:2026-01798</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>gawk</td><td>CVE-2023-4156</td><td>BDU:2023-05957</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>sqlite-libs</td><td>CVE-2024-0232</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2024-34459</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>2.9.13-14.el9_8.1</td></tr>
+<tr><td>shadow-utils</td><td>CVE-2024-56433</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>2:4.9-15.el9</td></tr>
+<tr><td>org.eclipse.jetty:jetty-http</td><td>CVE-2025-11143</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>12.0.31, 12.1.5</td></tr>
+<tr><td>python3</td><td>CVE-2025-13462</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-13462</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-1632</td><td>BDU:2025-05203</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2025-1795</td><td>BDU:2025-11593</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2025-1795</td><td>BDU:2025-11593</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>gnupg2</td><td>CVE-2025-30258</td><td>BDU:2025-11080</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2025-3360</td><td>BDU:2025-10907</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2025-5915</td><td>BDU:2025-11855</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2025-6170</td><td>BDU:2025-11756</td><td>LOW</td><td>LOW</td><td>2.9.13-14.el9_8.2</td></tr>
+<tr><td>glib2</td><td>CVE-2025-7039</td><td>BDU:2026-05134</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>glib2</td><td>CVE-2026-0988</td><td>BDU:2026-05068</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-0989</td><td>BDU:2026-03633</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>libxml2</td><td>CVE-2026-0992</td><td>BDU:2026-03632</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-105326</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>gnupg2</td><td>CVE-2026-105712</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>org.lz4:lz4-java</td><td>CVE-2026-106449</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-107885</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-107886</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-107890</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-14457</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-14457</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>glib2</td><td>CVE-2026-1485</td><td>BDU:2026-05070</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>libarchive</td><td>CVE-2026-17591</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3</td><td>CVE-2026-18503</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-18503</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>popt</td><td>CVE-2026-18739</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>popt</td><td>CVE-2026-18743</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>popt</td><td>CVE-2026-18839</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-18924</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-18924</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22007</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-22018</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>expat</td><td>CVE-2026-24515</td><td>BDU:2026-03634</td><td>LOW</td><td>LOW</td><td>—</td></tr>
+<tr><td>gnupg2</td><td>CVE-2026-24883</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-28387</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-28387</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-28388</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-28388</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-28389</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-28389</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-31789</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-31789</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-34180</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-34180</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-34181</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-34181</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-34268</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:17.0.19.0.10-2.el9</td></tr>
+<tr><td>python3</td><td>CVE-2026-3479</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>python3-libs</td><td>CVE-2026-3479</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-35189</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-35189</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-35191</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-35191</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-3832</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-41079</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>expat</td><td>CVE-2026-41080</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libgcrypt</td><td>CVE-2026-41990</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>io.netty:netty-handler-proxy</td><td>CVE-2026-42578</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>4.1.133.Final, 4.2.13.Final</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42765</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42765</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42766</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42766</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42767</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42767</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42768</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42768</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42769</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42769</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-42770</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-42770</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>glibc</td><td>CVE-2026-4438</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-4438</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-4438</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>2.34-270.el9_8</td></tr>
+<tr><td>rpm</td><td>CVE-2026-44605</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>rpm-libs</td><td>CVE-2026-44605</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-45446</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-45446</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-47010</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>java-17-openjdk-headless</td><td>CVE-2026-47059</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:17.0.20.0.8-1.2.el9</td></tr>
+<tr><td>gnutls</td><td>CVE-2026-5419</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>3.8.10-4.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-54874</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-54874</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>gnupg2</td><td>CVE-2026-57062</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-6276</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-6276</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>openssl</td><td>CVE-2026-63073</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-63073</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-63074</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-63074</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-63075</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-63075</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.8-1.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-7383</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-7383</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-80230</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-80230</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-82209</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-82209</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-86409</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-86409</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-86414</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-86414</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-87864</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-87864</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>cups-libs</td><td>CVE-2026-87876</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-89156</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-89156</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2</td><td>CVE-2026-89160</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>pcre2-syntax</td><td>CVE-2026-89160</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>10.40-7.el9_8</td></tr>
+<tr><td>openssl</td><td>CVE-2026-9076</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>openssl-libs</td><td>CVE-2026-9076</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>1:3.5.5-4.el9_8</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-92389</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-92389</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-92390</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-92390</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-92391</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-92391</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>curl-minimal</td><td>CVE-2026-94266</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>libcurl-minimal</td><td>CVE-2026-94266</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc</td><td>CVE-2026-97399</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-common</td><td>CVE-2026-97399</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
+<tr><td>glibc-minimal-langpack</td><td>CVE-2026-97399</td><td>—</td><td>LOW</td><td>UNKNOWN</td><td>—</td></tr>
 </table>
+<br/>
   </article>
 </body>
 </html>
