@@ -7,7 +7,7 @@ metadata:
 spec:
   mode: auto
   chart: kafka
-  version: "0.1.3"
+  version: "0.1.7"
   namespace: kafka
   reponame: community
   dependency:

@@ -11,12 +11,12 @@ strimzi-kafka-operator:
   watchAnyNamespace: false
   defaultImageRegistry: ghcr.io/shturval-tech/community-marketplace
   defaultImageRepository: ''
-  defaultImageTag: 0.45.0
+  defaultImageTag: 1.3.0
   image:
     registry: ghcr.io/shturval-tech/community-marketplace
     repository: strimzi-operator
     name: ''
-    tag: 0.45.0
+    tag: 1.3.0
   logVolume: co-config-volume
   logConfigMap: strimzi-cluster-operator
   logConfiguration: ''
@@ -28,13 +28,27 @@ strimzi-kafka-operator:
   tmpDirSizeLimit: 1Mi
   extraEnvs: []
   tolerations: []
+  topologySpreadConstraints: []
   affinity: {}
   annotations: {}
   labels: {}
   nodeSelector: {}
+  deploymentAnnotations: {}
+  deploymentLabels: {}
+  deploymentStrategy: {}
   priorityClassName: ''
+  hostUsers: null
+  enableServiceLinks: null
   podSecurityContext: {}
-  securityContext: {}
+  securityContext:
+    allowPrivilegeEscalation: false
+    runAsNonRoot: true
+    readOnlyRootFilesystem: true
+    capabilities:
+      drop:
+      - ALL
+    seccompProfile:
+      type: RuntimeDefault
   rbac:
     create: true
   serviceAccountCreate: true
@@ -45,6 +59,15 @@ strimzi-kafka-operator:
     enabled: false
     minAvailable: 1
     maxUnavailable: null
+    unhealthyPodEvictionPolicy: IfHealthyBudget
+  operatorNetworkPolicy:
+    enabled: false
+    ingress:
+    - ports:
+      - protocol: TCP
+        port: http
+    egress:
+    - {}
   dashboards:
     enabled: false
     namespace: null
@@ -58,7 +81,7 @@ strimzi-kafka-operator:
       repository: strimzi-kafka
       name: ''
       tagPrefix: ''
-      tag: 0.45.0-kafka-3.8.0
+      tag: 1.3.0-kafka-4.2.2
   kafkaConnect:
     image:
       registry: ''
@@ -83,12 +106,6 @@ strimzi-kafka-operator:
       repository: ''
       name: operator
       tag: ''
-  kafkaMirrorMaker:
-    image:
-      registry: ''
-      repository: ''
-      name: kafka
-      tagPrefix: ''
   kafkaBridge:
     image:
       registry: ''
@@ -113,11 +130,11 @@ strimzi-kafka-operator:
       repository: ''
       name: kafka
       tagPrefix: ''
-  kanikoExecutor:
+  buildah:
     image:
       registry: ''
       repository: ''
-      name: kaniko-executor
+      name: buildah
       tag: ''
   mavenBuilder:
     image:
@@ -144,3 +161,15 @@ strimzi-kafka-operator:
   generateNetworkPolicy: true
   connectBuildTimeoutMs: 300000
   generatePodDisruptionBudget: true
+  kafkaMirrorMaker:
+    image:
+      registry: ''
+      repository: ''
+      name: kafka
+      tagPrefix: ''
+  kanikoExecutor:
+    image:
+      registry: ''
+      repository: ''
+      name: kaniko-executor
+      tag: ''

@@ -5,22 +5,51 @@ global:
   storageClass: ''
   ingress:
     className: ''
-minio-operator:
+operator:
   operator:
+    env:
+    - name: OPERATOR_STS_ENABLED
+      value: 'on'
+    serviceAccountAnnotations: []
+    additionalLabels: {}
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/minio-operator
-      tag: v4.3.7
+      tag: v7.1.1
       pullPolicy: IfNotPresent
+    sidecarImage: {}
     imagePullSecrets: []
-    initcontainers: []
-    replicaCount: 1
+    runtimeClassName: null
+    initContainers: []
+    replicaCount: 2
     securityContext:
       runAsUser: 1000
       runAsGroup: 1000
       runAsNonRoot: true
       fsGroup: 1000
+    containerSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      runAsNonRoot: true
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      seccompProfile:
+        type: RuntimeDefault
+    volumes: []
+    volumeMounts: []
     nodeSelector: {}
-    affinity: {}
+    priorityClassName: ''
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
+            - key: name
+              operator: In
+              values:
+              - minio-operator
+          topologyKey: kubernetes.io/hostname
     tolerations: []
     topologySpreadConstraints: []
     resources:
@@ -28,27 +57,3 @@ minio-operator:
         cpu: 200m
         memory: 256Mi
         ephemeral-storage: 500Mi
-  console:
-    image:
-      repository: ghcr.io/shturval-tech/community-marketplace/minio-console
-      tag: v0.12.3
-      pullPolicy: IfNotPresent
-    imagePullSecrets: []
-    initcontainers: []
-    replicaCount: 1
-    nodeSelector: {}
-    affinity: {}
-    tolerations: []
-    topologySpreadConstraints: []
-    resources: {}
-    securityContext:
-      runAsUser: 1000
-      runAsNonRoot: true
-    ingress:
-      enabled: false
-      labels: {}
-      annotations: {}
-      tls: []
-      host: console.local
-      path: /
-  tenants: []

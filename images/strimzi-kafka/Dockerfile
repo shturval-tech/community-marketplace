@@ -1,2 +1,2 @@
-ARG VERSION=0.45.0-kafka-3.8.0
+ARG VERSION=1.3.0-kafka-4.2.2
 FROM quay.io/strimzi/kafka:${VERSION}

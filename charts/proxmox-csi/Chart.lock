@@ -1,6 +1,6 @@
 dependencies:
 - name: proxmox-csi-plugin
   repository: oci://ghcr.io/sergelogvinov/charts
-  version: 0.3.3
-digest: sha256:d78f840e0fe9ab5b5e5ecda75f6098807d51e98843adf92cf699df9308b8e7c2
-generated: "2026-10-13T12:25:05.802827281+03:00"
+  version: 0.5.0
+digest: sha256:dab02f57f84404c811770a27b2c8482e129f1e34bf1801662499b14549877358
+generated: "2026-10-23T12:50:40.109403707+03:00"

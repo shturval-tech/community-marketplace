@@ -29,7 +29,7 @@ WRAPPERS: dict[str, tuple[str, str]] = {
     "cnpg-operator": ("cloudnative-pg", "tgz"),
     "keycloak": ("keycloakx", "tgz"),
     "mariadb-operator": ("mariadb-operator", "tgz"),
-    "minio-operator": ("minio-operator", "tgz"),
+    "minio-operator": ("operator", "tgz"),
     "minio-tenant": ("tenant", "tgz"),
     "proxmox-csi": ("proxmox-csi-plugin", "tgz"),
     "redis-operator": ("redis-operator", "tgz"),
@@ -95,15 +95,17 @@ def sync_chart(chart_name: str, sub_key: str, source_kind: str) -> None:
     overrides = wrapper.get(sub_key, {})
     if not isinstance(overrides, dict):
         overrides = {}
-
     base = subchart_defaults(chart_dir, source_kind)
     merged_sub = deep_merge(base, overrides if isinstance(overrides, dict) else {})
 
     # Preserve any extra top-level keys from wrapper (e.g. future extensions)
     out: dict[str, Any] = {"global": global_block, sub_key: merged_sub}
     for k, v in wrapper.items():
-        if k not in ("global", sub_key):
-            out[k] = v
+        if k in ("global", sub_key):
+            continue
+        if chart_name == "minio-operator" and k == "minio-operator":
+            continue
+        out[k] = v
 
     values_path.write_text(
         HEADER + yaml.dump(out, default_flow_style=False, sort_keys=False, allow_unicode=True),

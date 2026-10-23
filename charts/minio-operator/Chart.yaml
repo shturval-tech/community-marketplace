@@ -2,13 +2,13 @@ apiVersion: v2
 name: minio-operator
 description: MinIO Operator — S3-совместимое объектное хранилище в Kubernetes
 type: application
-version: 0.1.5
-appVersion: "4.3.7"
+version: 0.1.7
+appVersion: "7.1.1"
 annotations:
   shturval.tech/category: storage
   shturval.tech/description: Оператор MinIO для развёртывания S3-совместимых бакетов и политик хранения в кластере.
   artifacthub.io/license: Apache-2.0
 dependencies:
-  - name: minio-operator
-    version: 4.3.7
-    repository: https://operator.min.io/
+  - name: operator
+    version: 7.1.1
+    repository: file://./charts/operator

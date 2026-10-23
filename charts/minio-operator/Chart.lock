@@ -1,6 +1,6 @@
 dependencies:
-- name: minio-operator
-  repository: https://operator.min.io/
-  version: 4.3.7
-digest: sha256:d8442db496c4b20d1029478fe01c172ac0fe48695574f54e2f41065c1228fff4
-generated: "2026-10-13T12:25:01.346048754+03:00"
+- name: operator
+  repository: file://./charts/operator
+  version: 7.1.1
+digest: sha256:a13bccfd3fdf4bd7b17817dafa544dbd87b221ec67a40dd05f4190b2d05e6888
+generated: "2026-10-23T12:49:47.318913168+03:00"

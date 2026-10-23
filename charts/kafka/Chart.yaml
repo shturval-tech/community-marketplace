@@ -2,8 +2,8 @@ apiVersion: v2
 name: kafka
 description: Кластер Apache Kafka — распределённый журнал событий и стриминг данных
 type: application
-version: 0.1.5
-appVersion: "3.8.0"
+version: 0.1.7
+appVersion: "4.2.2"
 annotations:
   shturval.tech/category: messaging
   shturval.tech/description: Apache Kafka для потоковой передачи событий, интеграций и микросервисной шины (Strimzi, KRaft).

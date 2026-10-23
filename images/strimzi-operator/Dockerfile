@@ -1,2 +1,2 @@
-ARG VERSION=0.45.0
+ARG VERSION=1.3.0
 FROM quay.io/strimzi/operator:${VERSION}

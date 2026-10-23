@@ -9,11 +9,11 @@ name: community-kafka
 replicas: 1
 
 # Kafka broker version and KRaft metadata version (must match Strimzi bundle).
-kafkaVersion: "3.8.0"
-metadataVersion: 3.8-IV0
+kafkaVersion: "4.2.2"
+metadataVersion: 4.2-IV0
 
 # Strimzi Kafka image tag suffix (image: {registry}/strimzi-kafka:{kafkaImageTag}).
-kafkaImageTag: 0.45.0-kafka-3.8.0
+kafkaImageTag: 1.3.0-kafka-4.2.2
 
 # Optional listener overrides (appended if you extend templates).
 listeners:

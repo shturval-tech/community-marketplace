@@ -1,2 +1,2 @@
-ARG VERSION=v4.3.7
+ARG VERSION=v7.1.1
 FROM quay.io/minio/operator:${VERSION}
