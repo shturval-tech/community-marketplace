@@ -1,8 +1,8 @@
 # Сводный отчёт сканирования
 
-Дата сборки отчёта: 2026-10-23 14:01 UTC
+Дата сборки отчёта: 2026-10-23 14:35 UTC
 
-## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:latest)
+## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
 
-## authentik (ghcr.io/shturval-tech/community-marketplace/authentik:latest)
+## authentik (ghcr.io/shturval-tech/community-marketplace/authentik:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -312,7 +312,7 @@
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
 
-## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:latest)
+## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -320,7 +320,7 @@
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
 
-## cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:latest)
+## cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -356,7 +356,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:latest)
+## csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -378,7 +378,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:latest)
+## csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -400,7 +400,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:latest)
+## csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -422,7 +422,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:latest)
+## csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -444,7 +444,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:latest)
+## csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -523,7 +523,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## csi-snapshotter (ghcr.io/shturval-tech/community-marketplace/csi-snapshotter:latest)
+## csi-snapshotter (ghcr.io/shturval-tech/community-marketplace/csi-snapshotter:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -532,7 +532,7 @@
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:latest)
+## keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -587,7 +587,7 @@
 | glibc-common | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:latest)
+## mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -623,7 +623,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:latest)
+## mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -718,7 +718,7 @@
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:latest)
+## minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -991,7 +991,7 @@
 | glibc-common | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:latest)
+## minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1036,7 +1036,7 @@
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## minio (ghcr.io/shturval-tech/community-marketplace/minio:latest)
+## minio (ghcr.io/shturval-tech/community-marketplace/minio:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1111,7 +1111,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | go.opentelemetry.io/otel/sdk | CVE-2026-81870 | — | LOW | UNKNOWN | 1.45.0 |
 
-## nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:latest)
+## nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1133,7 +1133,7 @@
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## postgres (ghcr.io/shturval-tech/community-marketplace/postgres:latest)
+## postgres (ghcr.io/shturval-tech/community-marketplace/postgres:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1833,7 +1833,7 @@
 | perl-modules-5.32 | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
 | liblzma5 | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | — |
 
-## proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:latest)
+## proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1842,7 +1842,7 @@
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:latest)
+## proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1874,7 +1874,7 @@
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:latest)
+## rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1923,7 +1923,7 @@
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:latest)
+## rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1944,7 +1944,7 @@
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:latest)
+## redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1973,7 +1973,7 @@
 | go.opentelemetry.io/otel/sdk | CVE-2026-81870 | — | LOW | UNKNOWN | 1.45.0 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## redis (ghcr.io/shturval-tech/community-marketplace/redis:latest)
+## redis (ghcr.io/shturval-tech/community-marketplace/redis:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -2215,7 +2215,7 @@
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
 
-## strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:latest)
+## strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
@@ -2728,7 +2728,7 @@
 | glibc-langpack-en | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:latest)
+## strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:f696a37948928206c6362f2ea711b529c32322ca)
 
 Снимок БДУ: **2026-04-17**
 
