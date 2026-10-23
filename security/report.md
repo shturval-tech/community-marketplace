@@ -1,41 +1,16 @@
 # Сводный отчёт сканирования
 
-Дата сборки отчёта: 2026-10-23 08:27 UTC
+Дата сборки отчёта: 2026-10-23 09:35 UTC
 
-## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
-| libcrypto3 | CVE-2025-15467 | BDU:2026-00890 | CRITICAL | CRITICAL | 3.0.19-r0 |
-| libssl3 | CVE-2025-15467 | BDU:2026-00890 | CRITICAL | CRITICAL | 3.0.19-r0 |
-| libcrypto3 | CVE-2024-9143 | BDU:2024-08755 | LOW | HIGH | 3.0.15-r1 |
-| libssl3 | CVE-2024-9143 | BDU:2024-08755 | LOW | HIGH | 3.0.15-r1 |
-| musl | CVE-2025-26519 | BDU:2025-01869 | HIGH | HIGH | 1.2.3-r6 |
-| musl-utils | CVE-2025-26519 | BDU:2025-01869 | HIGH | HIGH | 1.2.3-r6 |
-| libcrypto3 | CVE-2025-69419 | BDU:2026-01217 | HIGH | HIGH | 3.0.19-r0 |
-| libssl3 | CVE-2025-69419 | BDU:2026-01217 | HIGH | HIGH | 3.0.19-r0 |
-| libcrypto3 | CVE-2025-69420 | BDU:2026-01219 | MEDIUM | HIGH | 3.0.19-r0 |
-| libssl3 | CVE-2025-69420 | BDU:2026-01219 | MEDIUM | HIGH | 3.0.19-r0 |
-| libcrypto3 | CVE-2025-69421 | BDU:2026-01218 | HIGH | HIGH | 3.0.19-r0 |
-| libssl3 | CVE-2025-69421 | BDU:2026-01218 | HIGH | HIGH | 3.0.19-r0 |
-| libcrypto3 | CVE-2025-9230 | BDU:2025-12885 | MEDIUM | HIGH | 3.0.19-r0 |
-| libssl3 | CVE-2025-9230 | BDU:2025-12885 | MEDIUM | HIGH | 3.0.19-r0 |
-| libcrypto3 | CVE-2024-13176 | BDU:2025-03280 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libssl3 | CVE-2024-13176 | BDU:2025-03280 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libcrypto3 | CVE-2025-68160 | BDU:2026-01216 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libssl3 | CVE-2025-68160 | BDU:2026-01216 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libcrypto3 | CVE-2025-69418 | BDU:2026-02935 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libssl3 | CVE-2025-69418 | BDU:2026-02935 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libcrypto3 | CVE-2025-9232 | BDU:2025-12887 | LOW | MEDIUM | 3.0.19-r0 |
-| libssl3 | CVE-2025-9232 | BDU:2025-12887 | LOW | MEDIUM | 3.0.19-r0 |
-| libcrypto3 | CVE-2026-22795 | BDU:2026-01214 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libssl3 | CVE-2026-22795 | BDU:2026-01214 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libcrypto3 | CVE-2026-22796 | BDU:2026-01220 | MEDIUM | MEDIUM | 3.0.19-r0 |
-| libssl3 | CVE-2026-22796 | BDU:2026-01220 | MEDIUM | MEDIUM | 3.0.19-r0 |
+| — | — | — | — | — | — |
 
-## authentik (ghcr.io/shturval-tech/community-marketplace/authentik:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## authentik (ghcr.io/shturval-tech/community-marketplace/authentik:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -43,11 +18,7 @@
 | --- | --- | --- | --- | --- | --- |
 | libc-bin | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc6 | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
-| PyJWT | CVE-2026-102268 | — | CRITICAL | UNKNOWN | 2.14.0 |
-| anyio | CVE-2026-63374 | — | CRITICAL | UNKNOWN | 4.14.2 |
 | libxml2 | CVE-2026-6653 | — | CRITICAL | UNKNOWN | — |
-| certifi | GHSA-6Q48-6C7W-9GW2 | — | CRITICAL | UNKNOWN | 2026.10.19 |
-| certifi | GHSA-6Q48-6C7W-9GW2 | — | CRITICAL | UNKNOWN | 2026.10.19 |
 | libgnutls30t64 | CVE-2011-3389 | BDU:2015-09428 | LOW | HIGH | — |
 | perl-base | CVE-2011-4116 | BDU:2023-01642 | LOW | HIGH | — |
 | libc-bin | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
@@ -73,12 +44,6 @@
 | gcc-14-base | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libgcc-s1 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libstdc++6 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
-| PyJWT | CVE-2026-102266 | — | HIGH | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102267 | — | HIGH | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102271 | — | HIGH | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102272 | — | HIGH | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102273 | — | HIGH | UNKNOWN | 2.14.0 |
-| libpcre2-8-0 | CVE-2026-103111 | — | HIGH | UNKNOWN | 10.46-1~deb13u3 |
 | libsasl2-2 | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | libsasl2-modules-db | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | aiohttp | CVE-2026-111064 | — | HIGH | UNKNOWN | 3.14.4 |
@@ -86,7 +51,6 @@
 | libsystemd0 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | libudev1 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | libacl1 | CVE-2026-54369 | — | HIGH | UNKNOWN | — |
-| anyio | CVE-2026-63349 | — | HIGH | UNKNOWN | 4.14.2 |
 | libxml2 | CVE-2026-74860 | — | HIGH | UNKNOWN | — |
 | bsdutils | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
@@ -127,7 +91,6 @@
 | libssl-dev | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
 | libxml2 | CVE-2026-86138 | — | HIGH | UNKNOWN | — |
 | libxml2 | CVE-2026-86139 | — | HIGH | UNKNOWN | — |
 | libxml2 | CVE-2026-86140 | — | HIGH | UNKNOWN | — |
@@ -151,14 +114,6 @@
 | libgcrypt20 | CVE-2024-2236 | BDU:2024-02088 | LOW | MEDIUM | — |
 | libxslt1.1 | CVE-2025-10911 | BDU:2026-00311 | MEDIUM | MEDIUM | — |
 | coreutils | CVE-2025-5278 | BDU:2025-10950 | LOW | MEDIUM | — |
-| PyJWT | CVE-2026-101917 | — | MEDIUM | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-101918 | — | MEDIUM | UNKNOWN | 2.15.0 |
-| PyJWT | CVE-2026-102265 | — | MEDIUM | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102269 | — | MEDIUM | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102270 | — | MEDIUM | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102274 | — | MEDIUM | UNKNOWN | 2.14.0 |
-| PyJWT | CVE-2026-102275 | — | MEDIUM | UNKNOWN | 2.15.0 |
-| PyJWT | CVE-2026-103001 | — | MEDIUM | UNKNOWN | — |
 | multidict | CVE-2026-104874 | — | MEDIUM | UNKNOWN | 6.9.1 |
 | libgssapi-krb5-2 | CVE-2026-107708 | — | MEDIUM | UNKNOWN | — |
 | libgssrpc4t64 | CVE-2026-107708 | — | MEDIUM | UNKNOWN | — |
@@ -202,7 +157,6 @@
 | libssl-dev | CVE-2026-42772 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-42772 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-42772 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-42772 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | oauthlib | CVE-2026-49264 | — | MEDIUM | UNKNOWN | 4.0.0 |
 | oauthlib | CVE-2026-49265 | — | MEDIUM | UNKNOWN | 4.0.0 |
 | libsqlite3-0 | CVE-2026-50812 | — | MEDIUM | UNKNOWN | — |
@@ -218,15 +172,12 @@
 | libssl-dev | CVE-2026-54872 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-54872 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-54872 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-54872 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl-dev | CVE-2026-54873 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-54873 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-54873 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-54873 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl-dev | CVE-2026-54875 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-54875 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-54875 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-54875 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | tar | CVE-2026-5704 | — | MEDIUM | UNKNOWN | — |
 | libnghttp2-14 | CVE-2026-58055 | — | MEDIUM | UNKNOWN | — |
 | setuptools | CVE-2026-59890 | — | MEDIUM | UNKNOWN | 83.0.0 |
@@ -234,40 +185,33 @@
 | libc6 | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
-| anyio | CVE-2026-64847 | — | MEDIUM | UNKNOWN | 4.14.2 |
 | libc-bin | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | libssl-dev | CVE-2026-72897 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-72897 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-72897 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-72897 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | djangorestframework | CVE-2026-73228 | — | MEDIUM | UNKNOWN | 3.17.2 |
 | djangorestframework | CVE-2026-73229 | — | MEDIUM | UNKNOWN | 3.17.2 |
 | libssl-dev | CVE-2026-75804 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-75804 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-75804 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-75804 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl-dev | CVE-2026-75805 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-75805 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-75805 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-75805 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl-dev | CVE-2026-75806 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-75806 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-75806 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-75806 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libxml2 | CVE-2026-76781 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | libssl-dev | CVE-2026-77696 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-77696 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-77696 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-77696 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libc-bin | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libssl-dev | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | zlib1g | CVE-2026-85091 | — | MEDIUM | UNKNOWN | — |
 | libxml2 | CVE-2026-86137 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
@@ -276,8 +220,6 @@
 | libc6 | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | urllib3 | CVE-2026-97688 | — | MEDIUM | UNKNOWN | 2.8.0 |
 | urllib3 | CVE-2026-97688 | — | MEDIUM | UNKNOWN | 2.8.0 |
-| rustls | GHSA-2MJX-QC3C-RQVC | — | MEDIUM | UNKNOWN | 0.23.45 |
-| rustls | GHSA-2MJX-QC3C-RQVC | — | MEDIUM | UNKNOWN | 0.23.45 |
 | tar | CVE-2005-2541 | — | LOW | UNKNOWN | — |
 | login.defs | CVE-2007-5686 | — | LOW | UNKNOWN | — |
 | passwd | CVE-2007-5686 | — | LOW | UNKNOWN | — |
@@ -346,11 +288,9 @@
 | libssl-dev | CVE-2026-35189 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-35189 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-35189 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-35189 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl-dev | CVE-2026-35191 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-35191 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-35191 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
-| openssl-provider-legacy | CVE-2026-35191 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
 | libsystemd0 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | diffutils | CVE-2026-53910 | — | LOW | UNKNOWN | — |
@@ -371,11 +311,8 @@
 | passwd | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
-| liblzma5 | DSA-6549-1 | — | UNKNOWN | UNKNOWN | 5.8.1-1+deb13u2 |
-| ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
-| liblzma5 | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | 5.8.1-1+deb13u2 |
 
-## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -383,7 +320,7 @@
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
 
-## cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -419,7 +356,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -428,9 +365,6 @@
 | stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
 | stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
 | google.golang.org/grpc | CVE-2026-33186 | BDU:2026-04598 | CRITICAL | CRITICAL | 1.79.3 |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
 | golang.org/x/oauth2 | CVE-2025-22868 | BDU:2025-03638 | HIGH | HIGH | 0.27.0 |
 | stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
 | stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
@@ -509,7 +443,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -518,9 +452,6 @@
 | stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
 | stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
 | google.golang.org/grpc | CVE-2026-33186 | BDU:2026-04598 | CRITICAL | CRITICAL | 1.79.3 |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
 | stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
 | stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
 | stdlib | CVE-2025-58183 | BDU:2025-14528 | HIGH | MEDIUM | 1.24.8, 1.25.2 |
@@ -598,7 +529,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -607,9 +538,6 @@
 | stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
 | stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
 | google.golang.org/grpc | CVE-2026-33186 | BDU:2026-04598 | CRITICAL | CRITICAL | 1.79.3 |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
 | stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
 | stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
 | stdlib | CVE-2025-58183 | BDU:2025-14528 | HIGH | MEDIUM | 1.24.8, 1.25.2 |
@@ -687,7 +615,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -696,9 +624,6 @@
 | stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
 | stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
 | google.golang.org/grpc | CVE-2026-33186 | BDU:2026-04598 | CRITICAL | CRITICAL | 1.79.3 |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
 | golang.org/x/oauth2 | CVE-2025-22868 | BDU:2025-03638 | HIGH | HIGH | 0.27.0 |
 | stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
 | stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
@@ -728,6 +653,7 @@
 | stdlib | CVE-2026-56859 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | stdlib | CVE-2026-56860 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | stdlib | CVE-2026-56862 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
+| github.com/klauspost/compress | CVE-2026-63209 | — | HIGH | UNKNOWN | 1.18.7 |
 | stdlib | CVE-2026-78667 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78669 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | google.golang.org/grpc | CVE-2026-84304 | — | HIGH | UNKNOWN | 1.83.1 |
@@ -776,7 +702,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -785,9 +711,6 @@
 | stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
 | stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
 | google.golang.org/grpc | CVE-2026-33186 | BDU:2026-04598 | CRITICAL | CRITICAL | 1.79.3 |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
 | golang.org/x/oauth2 | CVE-2025-22868 | BDU:2025-03638 | HIGH | HIGH | 0.27.0 |
 | stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
 | stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
@@ -817,6 +740,7 @@
 | stdlib | CVE-2026-56859 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | stdlib | CVE-2026-56860 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | stdlib | CVE-2026-56862 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
+| github.com/klauspost/compress | CVE-2026-63209 | — | HIGH | UNKNOWN | 1.18.7 |
 | stdlib | CVE-2026-78667 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78669 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | google.golang.org/grpc | CVE-2026-84304 | — | HIGH | UNKNOWN | 1.83.1 |
@@ -865,14 +789,12 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
-| io.netty:netty-handler | CVE-2026-75595 | — | CRITICAL | UNKNOWN | 4.2.17.Final, 4.1.137.Final |
-| org.freemarker:freemarker | CVE-2026-84939 | — | CRITICAL | UNKNOWN | 2.3.35 |
 | pcre2 | CVE-2022-41409 | BDU:2023-05302 | LOW | HIGH | — |
 | pcre2-syntax | CVE-2022-41409 | BDU:2023-05302 | LOW | HIGH | — |
 | ncurses-base | CVE-2023-50495 | BDU:2024-07256 | LOW | HIGH | — |
@@ -883,61 +805,19 @@
 | nss-softokn-freebl | CVE-2024-7531 | BDU:2024-06469 | LOW | HIGH | — |
 | nss-sysinit | CVE-2024-7531 | BDU:2024-06469 | LOW | HIGH | — |
 | nss-util | CVE-2024-7531 | BDU:2024-06469 | LOW | HIGH | — |
-| com.microsoft.sqlserver:mssql-jdbc | CVE-2025-59250 | BDU:2025-13077 | HIGH | HIGH | 10.2.4.jre11, 11.2.4.jre11, 12.2.1.jre11, 12.6.5.jre11, 12.8.2.jre11, 12.10.2.jre11, 13.2.1.jre11 |
-| pcre2 | CVE-2026-103111 | — | HIGH | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-103111 | — | HIGH | UNKNOWN | 10.40-7.el9_8 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-68497 | — | HIGH | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-68497 | — | HIGH | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
-| pcre2 | CVE-2026-86145 | — | HIGH | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-86145 | — | HIGH | UNKNOWN | 10.40-7.el9_8 |
-| pcre2 | CVE-2026-89161 | — | HIGH | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-89161 | — | HIGH | UNKNOWN | 10.40-7.el9_8 |
-| com.fasterxml.jackson.core:jackson-core | CVE-2026-89407 | — | HIGH | UNKNOWN | 2.18.11, 2.21.7, 2.22.3 |
-| com.fasterxml.jackson.core:jackson-core | CVE-2026-89407 | — | HIGH | UNKNOWN | 2.18.11, 2.21.7, 2.22.3 |
-| com.fasterxml.jackson.core:jackson-core | CVE-2026-89425 | — | HIGH | UNKNOWN | 2.21.7, 2.22.3, 2.18.11 |
-| com.fasterxml.jackson.core:jackson-core | CVE-2026-89425 | — | HIGH | UNKNOWN | 2.21.7, 2.22.3, 2.18.11 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-91776 | — | HIGH | UNKNOWN | 2.18.11, 2.21.7, 2.22.3 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-91776 | — | HIGH | UNKNOWN | 2.18.11, 2.21.7, 2.22.3 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-91777 | — | HIGH | UNKNOWN | 2.21.7, 2.18.11, 2.22.3 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-91777 | — | HIGH | UNKNOWN | 2.21.7, 2.18.11, 2.22.3 |
 | libgcc | CVE-2022-27943 | BDU:2025-12274 | LOW | MEDIUM | — |
 | java-21-openjdk-headless | CVE-2025-28164 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2025-64505 | BDU:2026-02923 | MEDIUM | MEDIUM | — |
 | java-21-openjdk-headless | CVE-2025-64506 | BDU:2026-02924 | MEDIUM | MEDIUM | — |
 | libgcc | CVE-2026-102010 | — | MEDIUM | UNKNOWN | — |
-| glibc | CVE-2026-18374 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-common | CVE-2026-18374 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-langpack-en | CVE-2026-18374 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-19032 | — | MEDIUM | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-19032 | — | MEDIUM | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
-| glibc | CVE-2026-19542 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-common | CVE-2026-19542 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-langpack-en | CVE-2026-19542 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
 | java-21-openjdk-headless | CVE-2026-22693 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-34757 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-40930 | — | MEDIUM | UNKNOWN | — |
-| io.opentelemetry:opentelemetry-api | CVE-2026-45292 | — | MEDIUM | UNKNOWN | 1.62.0 |
 | java-21-openjdk-headless | CVE-2026-46675 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-49919 | — | MEDIUM | UNKNOWN | — |
 | sqlite-libs | CVE-2026-50812 | — | MEDIUM | UNKNOWN | — |
 | coreutils-single | CVE-2026-56391 | — | MEDIUM | UNKNOWN | — |
 | sed | CVE-2026-5958 | — | MEDIUM | UNKNOWN | — |
-| io.netty:netty-codec-http | CVE-2026-59903 | — | MEDIUM | UNKNOWN | 4.2.17.Final, 4.1.137.Final |
-| glibc | CVE-2026-6368 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-common | CVE-2026-6368 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-langpack-en | CVE-2026-6368 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc | CVE-2026-6791 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-common | CVE-2026-6791 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-langpack-en | CVE-2026-6791 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| io.netty:netty-handler | CVE-2026-75596 | — | MEDIUM | UNKNOWN | 4.2.17.Final, 4.1.137.Final |
-| glibc | CVE-2026-77117 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-common | CVE-2026-77117 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-langpack-en | CVE-2026-77117 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc | CVE-2026-80489 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-common | CVE-2026-80489 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| glibc-langpack-en | CVE-2026-80489 | — | MEDIUM | UNKNOWN | 2.34-283.el9_8 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-83557 | — | MEDIUM | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
-| com.fasterxml.jackson.core:jackson-databind | CVE-2026-83557 | — | MEDIUM | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
 | glibc | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | glibc-common | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
@@ -947,10 +827,6 @@
 | glibc | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-common | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
-| pcre2 | CVE-2026-89157 | — | MEDIUM | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-89157 | — | MEDIUM | UNKNOWN | 10.40-7.el9_8 |
-| pcre2 | CVE-2026-89158 | — | MEDIUM | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-89158 | — | MEDIUM | UNKNOWN | 10.40-7.el9_8 |
 | java-21-openjdk-headless | CVE-2026-95512 | — | MEDIUM | UNKNOWN | — |
 | libgcc | CVE-2026-95619 | — | MEDIUM | UNKNOWN | — |
 | glibc | CVE-2026-95818 | — | MEDIUM | UNKNOWN | — |
@@ -964,15 +840,11 @@
 | nss-util | CVE-2020-12413 | — | LOW | UNKNOWN | — |
 | libgcc | CVE-2021-46195 | — | LOW | UNKNOWN | — |
 | sqlite-libs | CVE-2024-0232 | — | LOW | UNKNOWN | — |
-| pcre2 | CVE-2026-89156 | — | LOW | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-89156 | — | LOW | UNKNOWN | 10.40-7.el9_8 |
-| pcre2 | CVE-2026-89160 | — | LOW | UNKNOWN | 10.40-7.el9_8 |
-| pcre2-syntax | CVE-2026-89160 | — | LOW | UNKNOWN | 10.40-7.el9_8 |
 | glibc | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-common | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1008,7 +880,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1103,7 +975,7 @@
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -2244,7 +2116,7 @@
 | glibc-langpack-en | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -3392,13 +3264,12 @@
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | github.com/docker/docker | GHSA-VP35-85Q5-9F25 | — | LOW | UNKNOWN | 20.10.20 |
 
-## minio (ghcr.io/shturval-tech/community-marketplace/minio:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## minio (ghcr.io/shturval-tech/community-marketplace/minio:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
-| stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
 | google.golang.org/grpc | CVE-2026-33186 | BDU:2026-04598 | CRITICAL | CRITICAL | 1.79.3 |
 | github.com/minio/minio | CVE-2026-33322 | — | CRITICAL | UNKNOWN | — |
 | github.com/minio/minio | CVE-2026-33419 | — | CRITICAL | UNKNOWN | — |
@@ -3412,17 +3283,6 @@
 | github.com/rabbitmq/amqp091-go | CVE-2026-77405 | — | CRITICAL | UNKNOWN | 1.13.0 |
 | github.com/rabbitmq/amqp091-go | CVE-2026-77408 | — | CRITICAL | UNKNOWN | 1.13.0 |
 | github.com/rabbitmq/amqp091-go | CVE-2026-77411 | — | CRITICAL | UNKNOWN | 1.13.0 |
-| stdlib | CVE-2025-22874 | BDU:2025-08556 | HIGH | HIGH | 1.24.4 |
-| stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
-| stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58183 | BDU:2025-14528 | HIGH | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58188 | BDU:2025-14525 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61723 | BDU:2025-13937 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61725 | BDU:2025-13936 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61726 | BDU:2026-03409 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61728 | BDU:2026-03410 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61729 | BDU:2025-16242 | HIGH | HIGH | 1.24.11, 1.25.5 |
-| github.com/minio/minio | CVE-2025-62506 | BDU:2025-13411 | HIGH | HIGH | 0.0.0-20251015170045-c1a49490c78e |
 | go.opentelemetry.io/otel/sdk | CVE-2026-24051 | — | HIGH | UNKNOWN | 1.40.0 |
 | stdlib | CVE-2026-25679 | BDU:2026-04127 | HIGH | HIGH | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-27145 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
@@ -3442,8 +3302,6 @@
 | golang.org/x/crypto | CVE-2026-39829 | — | HIGH | UNKNOWN | 0.52.0 |
 | stdlib | CVE-2026-39836 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
 | go.opentelemetry.io/otel/sdk | CVE-2026-39883 | — | HIGH | UNKNOWN | 1.43.0 |
-| musl | CVE-2026-40200 | — | HIGH | UNKNOWN | 1.2.4_git20230717-r6 |
-| musl-utils | CVE-2026-40200 | — | HIGH | UNKNOWN | 1.2.4_git20230717-r6 |
 | github.com/minio/minio | CVE-2026-40344 | — | HIGH | UNKNOWN | — |
 | github.com/minio/minio | CVE-2026-41145 | — | HIGH | UNKNOWN | — |
 | github.com/apache/thrift | CVE-2026-41602 | — | HIGH | UNKNOWN | 0.23.0 |
@@ -3472,24 +3330,9 @@
 | google.golang.org/grpc | CVE-2026-84445 | — | HIGH | UNKNOWN | 1.82.2, 1.83.2, 1.84.0-dev.0.20260825144003-d5a41119e0e3, 1.85.0-dev.0.20260825072537-93e31b48545e |
 | stdlib | CVE-2026-97031 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | google.golang.org/grpc | GHSA-HRXH-6V49-42GF | — | HIGH | UNKNOWN | 1.82.1 |
-| busybox | CVE-2024-58251 | — | MEDIUM | UNKNOWN | 1.36.1-r21 |
-| busybox-binsh | CVE-2024-58251 | — | MEDIUM | UNKNOWN | 1.36.1-r21 |
-| ssl_client | CVE-2024-58251 | — | MEDIUM | UNKNOWN | 1.36.1-r21 |
-| stdlib | CVE-2025-0913 | BDU:2025-08600 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
 | github.com/eclipse/paho.mqtt.golang | CVE-2025-10543 | — | MEDIUM | UNKNOWN | 1.5.1 |
-| golang.org/x/net | CVE-2025-22872 | BDU:2025-08473 | MEDIUM | MEDIUM | 0.38.0 |
-| stdlib | CVE-2025-22873 | BDU:2025-07316 | MEDIUM | MEDIUM | 1.23.9, 1.24.3 |
-| stdlib | CVE-2025-4673 | BDU:2025-08599 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| stdlib | CVE-2025-47906 | BDU:2025-11595 | MEDIUM | MEDIUM | 1.23.12, 1.24.6 |
 | golang.org/x/crypto | CVE-2025-47914 | BDU:2025-14682 | MEDIUM | MEDIUM | 0.45.0 |
 | golang.org/x/crypto | CVE-2025-58181 | BDU:2025-14688 | MEDIUM | MEDIUM | 0.45.0 |
-| stdlib | CVE-2025-58185 | BDU:2025-14530 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58186 | BDU:2025-14529 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58187 | BDU:2025-13562 | MEDIUM | MEDIUM | 1.24.9, 1.25.3 |
-| stdlib | CVE-2025-58189 | BDU:2025-14526 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61724 | BDU:2025-13938 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61727 | BDU:2026-00268 | MEDIUM | MEDIUM | 1.24.11, 1.25.5 |
-| stdlib | CVE-2025-61730 | BDU:2026-03603 | MEDIUM | MEDIUM | 1.24.12, 1.25.6 |
 | github.com/rabbitmq/amqp091-go | CVE-2026-107386 | — | MEDIUM | UNKNOWN | 1.14.0 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | go.mongodb.org/mongo-driver | CVE-2026-2303 | BDU:2026-01861 | MEDIUM | MEDIUM | 1.17.7 |
@@ -3511,8 +3354,6 @@
 | github.com/prometheus/prometheus | CVE-2026-44903 | — | MEDIUM | UNKNOWN | 0.311.3 |
 | golang.org/x/crypto | CVE-2026-46598 | — | MEDIUM | UNKNOWN | 0.52.0 |
 | stdlib | CVE-2026-56866 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| musl | CVE-2026-6042 | — | MEDIUM | UNKNOWN | 1.2.4_git20230717-r6 |
-| musl-utils | CVE-2026-6042 | — | MEDIUM | UNKNOWN | 1.2.4_git20230717-r6 |
 | stdlib | CVE-2026-78659 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78660 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78663 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
@@ -3522,15 +3363,12 @@
 | stdlib | CVE-2026-94448 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97030 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| busybox | CVE-2025-46394 | — | LOW | UNKNOWN | 1.36.1-r21 |
-| busybox-binsh | CVE-2025-46394 | — | LOW | UNKNOWN | 1.36.1-r21 |
-| ssl_client | CVE-2025-46394 | — | LOW | UNKNOWN | 1.36.1-r21 |
 | filippo.io/edwards25519 | CVE-2026-26958 | — | LOW | UNKNOWN | 1.1.1 |
 | stdlib | CVE-2026-27139 | BDU:2026-04122 | LOW | LOW | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | go.opentelemetry.io/otel/sdk | CVE-2026-81870 | — | LOW | UNKNOWN | 1.45.0 |
 
-## nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -3552,62 +3390,25 @@
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## postgres (ghcr.io/shturval-tech/community-marketplace/postgres:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## postgres (ghcr.io/shturval-tech/community-marketplace/postgres:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
-| libpython3.9-minimal | CVE-2015-20107 | BDU:2022-03962 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2015-20107 | BDU:2022-03962 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2015-20107 | BDU:2022-03962 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2015-20107 | BDU:2022-03962 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
 | libc-bin | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc-l10n | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc6 | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | locales | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
+| locales-all | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libdb5.3 | CVE-2019-8457 | BDU:2019-03785 | CRITICAL | CRITICAL | — |
-| libpython3.9-minimal | CVE-2021-29921 | BDU:2021-04696 | CRITICAL | CRITICAL | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2021-29921 | BDU:2021-04696 | CRITICAL | CRITICAL | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2021-29921 | BDU:2021-04696 | CRITICAL | CRITICAL | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2021-29921 | BDU:2021-04696 | CRITICAL | CRITICAL | 3.9.2-1+deb11u2 |
-| stdlib | CVE-2022-27664 | BDU:2022-05544 | HIGH | CRITICAL | 1.18.6, 1.19.1 |
 | libsqlite3-0 | CVE-2022-35737 | BDU:2022-06495 | LOW | CRITICAL | — |
-| libpython3.9-minimal | CVE-2022-37454 | BDU:2022-06445 | CRITICAL | CRITICAL | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2022-37454 | BDU:2022-06445 | CRITICAL | CRITICAL | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2022-37454 | BDU:2022-06445 | CRITICAL | CRITICAL | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2022-37454 | BDU:2022-06445 | CRITICAL | CRITICAL | 3.9.2-1+deb11u4 |
-| libpython3.9-minimal | CVE-2022-42919 | BDU:2022-06576 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2022-42919 | BDU:2022-06576 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2022-42919 | BDU:2022-06576 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2022-42919 | BDU:2022-06576 | HIGH | CRITICAL | 3.9.2-1+deb11u2 |
-| stdlib | CVE-2023-24538 | BDU:2024-01979 | CRITICAL | CRITICAL | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24540 | BDU:2023-03471 | CRITICAL | CRITICAL | 1.19.9, 1.20.4 |
 | zlib1g | CVE-2023-45853 | BDU:2023-07116 | CRITICAL | CRITICAL | — |
-| stdlib | CVE-2024-24790 | BDU:2024-04486 | CRITICAL | MEDIUM | 1.21.11, 1.22.4 |
-| libxml2 | CVE-2024-56171 | BDU:2025-06438 | CRITICAL | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
-| stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
-| libxml2 | CVE-2025-49794 | BDU:2025-08979 | CRITICAL | CRITICAL | 2.9.10+dfsg-6.7+deb11u8 |
-| libxml2 | CVE-2025-49796 | BDU:2025-08978 | CRITICAL | CRITICAL | 2.9.10+dfsg-6.7+deb11u8 |
-| stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
-| dirmngr | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gnupg | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gnupg-l10n | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gnupg-utils | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpg | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpg-agent | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpg-wks-client | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpg-wks-server | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpgconf | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpgsm | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
-| gpgv | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.27-2+deb11u3 |
 | PyJWT | CVE-2026-102268 | — | CRITICAL | UNKNOWN | 2.14.0 |
 | libperl5.32 | CVE-2026-13221 | — | CRITICAL | UNKNOWN | — |
 | perl | CVE-2026-13221 | — | CRITICAL | UNKNOWN | — |
 | perl-base | CVE-2026-13221 | — | CRITICAL | UNKNOWN | — |
 | perl-modules-5.32 | CVE-2026-13221 | — | CRITICAL | UNKNOWN | — |
-| libgnutls30 | CVE-2026-33845 | — | CRITICAL | UNKNOWN | 3.7.1-5+deb11u10 |
-| libgnutls30 | CVE-2026-42010 | — | CRITICAL | UNKNOWN | 3.7.1-5+deb11u10 |
 | libperl5.32 | CVE-2026-42496 | — | CRITICAL | UNKNOWN | — |
 | perl | CVE-2026-42496 | — | CRITICAL | UNKNOWN | — |
 | perl-base | CVE-2026-42496 | — | CRITICAL | UNKNOWN | — |
@@ -3627,102 +3428,28 @@
 | libc-l10n | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
 | libc6 | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
 | locales | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
+| locales-all | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
 | libgcrypt20 | CVE-2018-6829 | BDU:2020-01023 | LOW | HIGH | — |
-| libpython3.9-minimal | CVE-2020-10735 | BDU:2022-05599 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2020-10735 | BDU:2022-05599 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2020-10735 | BDU:2022-05599 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2020-10735 | BDU:2022-05599 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2021-28861 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2021-28861 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2021-28861 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2021-28861 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u2 |
 | libgcrypt20 | CVE-2021-33560 | BDU:2022-03136 | HIGH | HIGH | — |
-| libpython3.9-minimal | CVE-2021-3737 | BDU:2022-05830 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2021-3737 | BDU:2022-05830 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2021-3737 | BDU:2022-05830 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2021-3737 | BDU:2022-05830 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2022-0391 | BDU:2022-02302 | HIGH | HIGH | 3.9.2-1+deb11u3 |
-| libpython3.9-stdlib | CVE-2022-0391 | BDU:2022-02302 | HIGH | HIGH | 3.9.2-1+deb11u3 |
-| python3.9 | CVE-2022-0391 | BDU:2022-02302 | HIGH | HIGH | 3.9.2-1+deb11u3 |
-| python3.9-minimal | CVE-2022-0391 | BDU:2022-02302 | HIGH | HIGH | 3.9.2-1+deb11u3 |
-| stdlib | CVE-2022-28131 | BDU:2022-06492 | HIGH | HIGH | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-2879 | — | HIGH | UNKNOWN | 1.18.7, 1.19.2 |
-| stdlib | CVE-2022-2880 | — | HIGH | UNKNOWN | 1.18.7, 1.19.2 |
-| stdlib | CVE-2022-29804 | — | HIGH | UNKNOWN | 1.17.11, 1.18.3 |
-| stdlib | CVE-2022-30580 | — | HIGH | UNKNOWN | 1.17.11, 1.18.3 |
-| stdlib | CVE-2022-30630 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30631 | BDU:2022-05522 | HIGH | HIGH | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30632 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30633 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30634 | — | HIGH | UNKNOWN | 1.17.11, 1.18.3 |
-| stdlib | CVE-2022-30635 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-32189 | — | HIGH | UNKNOWN | 1.17.13, 1.18.5 |
 | bash | CVE-2022-3715 | BDU:2022-06703 | HIGH | MEDIUM | — |
 | python3-wheel | CVE-2022-40898 | BDU:2023-08101 | LOW | HIGH | — |
 | libpcre2-8-0 | CVE-2022-41409 | BDU:2023-05302 | LOW | HIGH | — |
-| stdlib | CVE-2022-41715 | — | HIGH | UNKNOWN | 1.18.7, 1.19.2 |
-| stdlib | CVE-2022-41716 | BDU:2023-00266 | HIGH | HIGH | 1.18.8, 1.19.3 |
-| stdlib | CVE-2022-41720 | — | HIGH | UNKNOWN | 1.18.9, 1.19.4 |
-| stdlib | CVE-2022-41722 | — | HIGH | UNKNOWN | 1.19.6, 1.20.1 |
-| stdlib | CVE-2022-41723 | BDU:2023-07322 | HIGH | HIGH | 1.19.6, 1.20.1 |
-| stdlib | CVE-2022-41724 | BDU:2024-03152 | HIGH | HIGH | 1.19.6, 1.20.1 |
-| stdlib | CVE-2022-41725 | BDU:2023-01943 | HIGH | HIGH | 1.19.6, 1.20.1 |
-| libpython3.9-minimal | CVE-2022-45061 | BDU:2023-03855 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2022-45061 | BDU:2023-03855 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2022-45061 | BDU:2023-03855 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2022-45061 | BDU:2023-03855 | HIGH | HIGH | 3.9.2-1+deb11u2 |
 | libzstd1 | CVE-2022-4899 | BDU:2025-03964 | HIGH | HIGH | — |
-| zstd | CVE-2022-4899 | BDU:2025-03964 | HIGH | HIGH | — |
-| libxml2 | CVE-2022-49043 | BDU:2025-11749 | HIGH | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
-| libpython3.9-minimal | CVE-2023-24329 | BDU:2023-04978 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2023-24329 | BDU:2023-04978 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2023-24329 | BDU:2023-04978 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2023-24329 | BDU:2023-04978 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| stdlib | CVE-2023-24534 | BDU:2024-03154 | HIGH | HIGH | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24536 | BDU:2024-03153 | HIGH | HIGH | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24537 | BDU:2024-10794 | HIGH | HIGH | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24539 | BDU:2023-03470 | HIGH | HIGH | 1.19.9, 1.20.4 |
-| stdlib | CVE-2023-29400 | BDU:2023-03472 | HIGH | HIGH | 1.19.9, 1.20.4 |
-| stdlib | CVE-2023-29403 | BDU:2023-03200 | HIGH | MEDIUM | 1.19.10, 1.20.5 |
-| stdlib | CVE-2023-29406 | BDU:2024-03155 | MEDIUM | HIGH | 1.19.11, 1.20.6 |
 | libldap-2.4-2 | CVE-2023-2953 | BDU:2023-04057 | HIGH | HIGH | — |
+| libldap-common | CVE-2023-2953 | BDU:2023-04057 | HIGH | HIGH | — |
 | libperl5.32 | CVE-2023-31486 | BDU:2023-03872 | LOW | HIGH | — |
 | perl | CVE-2023-31486 | BDU:2023-03872 | LOW | HIGH | — |
 | perl-base | CVE-2023-31486 | BDU:2023-03872 | LOW | HIGH | — |
 | perl-modules-5.32 | CVE-2023-31486 | BDU:2023-03872 | LOW | HIGH | — |
-| stdlib | CVE-2023-39325 | BDU:2023-07013 | HIGH | HIGH | 1.20.10, 1.21.3 |
-| libxml2 | CVE-2023-39615 | BDU:2023-05968 | MEDIUM | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
-| libpython3.9-minimal | CVE-2023-40217 | BDU:2023-05002 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2023-40217 | BDU:2023-05002 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2023-40217 | BDU:2023-05002 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2023-40217 | BDU:2023-05002 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| libxslt1.1 | CVE-2023-40403 | BDU:2023-06319 | MEDIUM | HIGH | 1.1.34-4+deb11u3 |
-| stdlib | CVE-2023-45283 | BDU:2023-09013 | HIGH | HIGH | 1.20.11, 1.21.4, 1.20.12, 1.21.5 |
-| stdlib | CVE-2023-45287 | — | HIGH | UNKNOWN | 1.20.0 |
-| stdlib | CVE-2023-45288 | BDU:2024-02688 | HIGH | MEDIUM | 1.21.9, 1.22.2 |
-| stdlib | CVE-2023-45290 | BDU:2024-02047 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| libxml2 | CVE-2023-45322 | BDU:2023-06827 | MEDIUM | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
 | libc-bin | CVE-2023-4813 | BDU:2023-05969 | MEDIUM | HIGH | — |
 | libc-l10n | CVE-2023-4813 | BDU:2023-05969 | MEDIUM | HIGH | — |
 | libc6 | CVE-2023-4813 | BDU:2023-05969 | MEDIUM | HIGH | — |
 | locales | CVE-2023-4813 | BDU:2023-05969 | MEDIUM | HIGH | — |
+| locales-all | CVE-2023-4813 | BDU:2023-05969 | MEDIUM | HIGH | — |
 | libncursesw6 | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
 | libtinfo6 | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
 | ncurses-base | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
 | ncurses-bin | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
-| libpython3.9-minimal | CVE-2023-6597 | BDU:2024-02120 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2023-6597 | BDU:2024-02120 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2023-6597 | BDU:2024-02120 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2023-6597 | BDU:2024-02120 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2024-0397 | BDU:2024-05177 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-0397 | BDU:2024-05177 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-0397 | BDU:2024-05177 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-0397 | BDU:2024-05177 | MEDIUM | HIGH | 3.9.2-1+deb11u2 |
-| cryptography | CVE-2024-12797 | BDU:2025-01602 | LOW | HIGH | 44.0.1 |
-| stdlib | CVE-2024-24783 | BDU:2024-02048 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| stdlib | CVE-2024-24784 | BDU:2024-04962 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| stdlib | CVE-2024-24785 | BDU:2024-03248 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| libxml2 | CVE-2024-25062 | BDU:2024-01415 | HIGH | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
 | libgssapi-krb5-2 | CVE-2024-26458 | BDU:2024-02699 | LOW | HIGH | — |
 | libk5crypto3 | CVE-2024-26458 | BDU:2024-02699 | LOW | HIGH | — |
 | libkrb5-3 | CVE-2024-26458 | BDU:2024-02699 | LOW | HIGH | — |
@@ -3732,40 +3459,8 @@
 | libkrb5-3 | CVE-2024-26461 | BDU:2024-02520 | LOW | HIGH | — |
 | libkrb5support0 | CVE-2024-26461 | BDU:2024-02520 | LOW | HIGH | — |
 | libexpat1 | CVE-2024-28757 | BDU:2024-01976 | LOW | HIGH | — |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| libxslt1.1 | CVE-2024-55549 | BDU:2025-03641 | HIGH | HIGH | 1.1.34-4+deb11u2 |
-| libpython3.9-minimal | CVE-2024-6232 | BDU:2024-08943 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-6232 | BDU:2024-08943 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-6232 | BDU:2024-08943 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-6232 | BDU:2024-08943 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2024-7592 | BDU:2024-08618 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-7592 | BDU:2024-08618 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-7592 | BDU:2024-08618 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-7592 | BDU:2024-08618 | HIGH | HIGH | 3.9.2-1+deb11u2 |
 | libexpat1 | CVE-2024-8176 | BDU:2025-04573 | HIGH | HIGH | — |
-| libpython3.9-minimal | CVE-2024-9287 | BDU:2025-03332 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-9287 | BDU:2025-03332 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-9287 | BDU:2025-03332 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-9287 | BDU:2025-03332 | HIGH | HIGH | 3.9.2-1+deb11u2 |
-| libc-bin | CVE-2025-0395 | BDU:2025-01120 | MEDIUM | HIGH | 2.31-13+deb11u12 |
-| libc-l10n | CVE-2025-0395 | BDU:2025-01120 | MEDIUM | HIGH | 2.31-13+deb11u12 |
-| libc6 | CVE-2025-0395 | BDU:2025-01120 | MEDIUM | HIGH | 2.31-13+deb11u12 |
-| locales | CVE-2025-0395 | BDU:2025-01120 | MEDIUM | HIGH | 2.31-13+deb11u12 |
 | libtasn1-6 | CVE-2025-13151 | BDU:2026-05140 | MEDIUM | HIGH | — |
-| libpython3.9-minimal | CVE-2025-13836 | BDU:2026-05127 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-13836 | BDU:2026-05127 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-13836 | BDU:2026-05127 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-13836 | BDU:2026-05127 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| libc-bin | CVE-2025-15281 | BDU:2026-05135 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| libc-l10n | CVE-2025-15281 | BDU:2026-05135 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| libc6 | CVE-2025-15281 | BDU:2026-05135 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| locales | CVE-2025-15281 | BDU:2026-05135 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| libpython3.9-minimal | CVE-2025-15282 | BDU:2026-05133 | MEDIUM | HIGH | 3.9.2-1+deb11u5 |
-| libpython3.9-stdlib | CVE-2025-15282 | BDU:2026-05133 | MEDIUM | HIGH | 3.9.2-1+deb11u5 |
-| python3.9 | CVE-2025-15282 | BDU:2026-05133 | MEDIUM | HIGH | 3.9.2-1+deb11u5 |
-| python3.9-minimal | CVE-2025-15282 | BDU:2026-05133 | MEDIUM | HIGH | 3.9.2-1+deb11u5 |
 | libpython3.9-minimal | CVE-2025-15366 | BDU:2026-05128 | HIGH | HIGH | — |
 | libpython3.9-stdlib | CVE-2025-15366 | BDU:2026-05128 | HIGH | HIGH | — |
 | python3.9 | CVE-2025-15366 | BDU:2026-05128 | HIGH | HIGH | — |
@@ -3774,46 +3469,10 @@
 | libpython3.9-stdlib | CVE-2025-15367 | BDU:2026-05131 | HIGH | HIGH | — |
 | python3.9 | CVE-2025-15367 | BDU:2026-05131 | HIGH | HIGH | — |
 | python3.9-minimal | CVE-2025-15367 | BDU:2026-05131 | HIGH | HIGH | — |
-| libxslt1.1 | CVE-2025-24855 | BDU:2025-03640 | HIGH | HIGH | 1.1.34-4+deb11u2 |
-| libxml2 | CVE-2025-24928 | BDU:2025-05193 | HIGH | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
-| libxml2 | CVE-2025-27113 | BDU:2025-03138 | HIGH | HIGH | 2.9.10+dfsg-6.7+deb11u6 |
 | libsqlite3-0 | CVE-2025-29088 | BDU:2025-06411 | LOW | HIGH | — |
-| libxml2 | CVE-2025-32414 | BDU:2025-05199 | HIGH | HIGH | 2.9.10+dfsg-6.7+deb11u7 |
-| libxml2 | CVE-2025-32415 | BDU:2025-06564 | HIGH | LOW | 2.9.10+dfsg-6.7+deb11u7 |
-| libgnutls30 | CVE-2025-32988 | BDU:2025-11076 | HIGH | HIGH | 3.7.1-5+deb11u8 |
-| libgnutls30 | CVE-2025-32990 | BDU:2025-11074 | HIGH | HIGH | 3.7.1-5+deb11u8 |
-| protobuf | CVE-2025-4565 | BDU:2025-10926 | HIGH | HIGH | 4.25.8, 5.29.5, 6.31.1 |
-| python3-pkg-resources | CVE-2025-47273 | BDU:2025-08604 | HIGH | HIGH | 52.0.0-4+deb11u2 |
-| python3-setuptools | CVE-2025-47273 | BDU:2025-08604 | HIGH | HIGH | 52.0.0-4+deb11u2 |
-| stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
-| stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| libc-bin | CVE-2025-4802 | BDU:2025-05682 | HIGH | HIGH | 2.31-13+deb11u13 |
-| libc-l10n | CVE-2025-4802 | BDU:2025-05682 | HIGH | HIGH | 2.31-13+deb11u13 |
-| libc6 | CVE-2025-4802 | BDU:2025-05682 | HIGH | HIGH | 2.31-13+deb11u13 |
-| locales | CVE-2025-4802 | BDU:2025-05682 | HIGH | HIGH | 2.31-13+deb11u13 |
-| libicu67 | CVE-2025-5222 | BDU:2025-10931 | HIGH | HIGH | 67.1-7+deb11u1 |
-| stdlib | CVE-2025-58183 | BDU:2025-14528 | HIGH | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58188 | BDU:2025-14525 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
 | libexpat1 | CVE-2025-59375 | BDU:2025-12925 | MEDIUM | HIGH | — |
-| libpam-modules | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.4.0-9+deb11u2 |
-| libpam-modules-bin | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.4.0-9+deb11u2 |
-| libpam-runtime | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.4.0-9+deb11u2 |
-| libpam0g | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.4.0-9+deb11u2 |
-| libxml2 | CVE-2025-6021 | BDU:2025-07144 | HIGH | HIGH | 2.9.10+dfsg-6.7+deb11u8 |
-| stdlib | CVE-2025-61723 | BDU:2025-13937 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61725 | BDU:2025-13936 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61726 | BDU:2026-03409 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61728 | BDU:2026-03410 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61729 | BDU:2025-16242 | HIGH | HIGH | 1.24.11, 1.25.5 |
-| dpkg | CVE-2025-6297 | BDU:2025-11256 | LOW | HIGH | 1.20.14 |
 | urllib3 | CVE-2025-66418 | BDU:2026-02927 | HIGH | HIGH | 2.6.0 |
 | urllib3 | CVE-2025-66471 | BDU:2026-03452 | HIGH | HIGH | 2.6.0 |
-| libssl1.1 | CVE-2025-69419 | BDU:2026-01217 | HIGH | HIGH | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2025-69419 | BDU:2026-01217 | HIGH | HIGH | 1.1.1w-0+deb11u5 |
-| libssl1.1 | CVE-2025-69420 | BDU:2026-01219 | MEDIUM | HIGH | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2025-69420 | BDU:2026-01219 | MEDIUM | HIGH | 1.1.1w-0+deb11u5 |
-| libssl1.1 | CVE-2025-69421 | BDU:2026-01218 | HIGH | HIGH | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2025-69421 | BDU:2026-01218 | HIGH | HIGH | 1.1.1w-0+deb11u5 |
 | libpython3.9-minimal | CVE-2025-69534 | — | HIGH | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2025-69534 | — | HIGH | UNKNOWN | — |
 | python3.9 | CVE-2025-69534 | — | HIGH | UNKNOWN | — |
@@ -3823,31 +3482,14 @@
 | libtinfo6 | CVE-2025-69720 | — | HIGH | UNKNOWN | — |
 | ncurses-base | CVE-2025-69720 | — | HIGH | UNKNOWN | — |
 | ncurses-bin | CVE-2025-69720 | — | HIGH | UNKNOWN | — |
-| libxslt1.1 | CVE-2025-7424 | BDU:2025-11248 | HIGH | HIGH | 1.1.34-4+deb11u3 |
-| libpython3.9-minimal | CVE-2025-8194 | BDU:2025-09687 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-8194 | BDU:2025-09687 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-8194 | BDU:2025-09687 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-8194 | BDU:2025-09687 | HIGH | HIGH | 3.9.2-1+deb11u4 |
-| libssl1.1 | CVE-2025-9230 | BDU:2025-12885 | MEDIUM | HIGH | 1.1.1w-0+deb11u4 |
-| openssl | CVE-2025-9230 | BDU:2025-12885 | MEDIUM | HIGH | 1.1.1w-0+deb11u4 |
-| libgnutls30 | CVE-2025-9820 | BDU:2025-15388 | MEDIUM | HIGH | 3.7.1-5+deb11u9 |
-| libpython3.9-minimal | CVE-2026-0672 | BDU:2026-05125 | MEDIUM | HIGH | 3.9.2-1+deb11u7 |
-| libpython3.9-stdlib | CVE-2026-0672 | BDU:2026-05125 | MEDIUM | HIGH | 3.9.2-1+deb11u7 |
-| python3.9 | CVE-2026-0672 | BDU:2026-05125 | MEDIUM | HIGH | 3.9.2-1+deb11u7 |
-| python3.9-minimal | CVE-2026-0672 | BDU:2026-05125 | MEDIUM | HIGH | 3.9.2-1+deb11u7 |
-| libc-bin | CVE-2026-0861 | BDU:2026-00915 | HIGH | HIGH | 2.31-13+deb11u14 |
-| libc-l10n | CVE-2026-0861 | BDU:2026-00915 | HIGH | HIGH | 2.31-13+deb11u14 |
-| libc6 | CVE-2026-0861 | BDU:2026-00915 | HIGH | HIGH | 2.31-13+deb11u14 |
-| locales | CVE-2026-0861 | BDU:2026-00915 | HIGH | HIGH | 2.31-13+deb11u14 |
-| libc-bin | CVE-2026-0915 | BDU:2026-02104 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| libc-l10n | CVE-2026-0915 | BDU:2026-02104 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| libc6 | CVE-2026-0915 | BDU:2026-02104 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| locales | CVE-2026-0915 | BDU:2026-02104 | MEDIUM | HIGH | 2.31-13+deb11u14 |
-| protobuf | CVE-2026-0994 | BDU:2026-05124 | HIGH | HIGH | 6.33.5, 5.29.6 |
+| PyJWT | CVE-2026-102266 | — | HIGH | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-102267 | — | HIGH | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-102271 | — | HIGH | UNKNOWN | 2.14.0 |
+| PyJWT | CVE-2026-102272 | — | HIGH | UNKNOWN | 2.14.0 |
+| PyJWT | CVE-2026-102273 | — | HIGH | UNKNOWN | 2.14.0 |
 | libpcre2-8-0 | CVE-2026-103111 | — | HIGH | UNKNOWN | — |
 | libsasl2-2 | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
+| libsasl2-modules | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | libsasl2-modules-db | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | libsqlite3-0 | CVE-2026-11822 | — | HIGH | UNKNOWN | — |
 | libsqlite3-0 | CVE-2026-11824 | — | HIGH | UNKNOWN | — |
@@ -3855,84 +3497,25 @@
 | libpython3.9-stdlib | CVE-2026-11940 | — | HIGH | UNKNOWN | — |
 | python3.9 | CVE-2026-11940 | — | HIGH | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-11940 | — | HIGH | UNKNOWN | — |
-| libpython3.9-minimal | CVE-2026-1299 | BDU:2026-05130 | HIGH | HIGH | 3.9.2-1+deb11u5 |
-| libpython3.9-stdlib | CVE-2026-1299 | BDU:2026-05130 | HIGH | HIGH | 3.9.2-1+deb11u5 |
-| python3.9 | CVE-2026-1299 | BDU:2026-05130 | HIGH | HIGH | 3.9.2-1+deb11u5 |
-| python3.9-minimal | CVE-2026-1299 | BDU:2026-05130 | HIGH | HIGH | 3.9.2-1+deb11u5 |
 | libpython3.9-minimal | CVE-2026-15308 | — | HIGH | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-15308 | — | HIGH | UNKNOWN | — |
 | python3.9 | CVE-2026-15308 | — | HIGH | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-15308 | — | HIGH | UNKNOWN | — |
 | libsystemd0 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | libudev1 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
-| azure-core | CVE-2026-21226 | BDU:2026-00805 | HIGH | HIGH | 1.38.0 |
 | urllib3 | CVE-2026-21441 | BDU:2026-03625 | HIGH | HIGH | 2.6.3 |
-| pyasn1 | CVE-2026-23490 | BDU:2026-05145 | HIGH | HIGH | 0.6.2 |
 | libexpat1 | CVE-2026-25210 | BDU:2026-03635 | HIGH | HIGH | — |
-| stdlib | CVE-2026-25679 | BDU:2026-04127 | HIGH | HIGH | 1.25.8, 1.26.1 |
-| cryptography | CVE-2026-26007 | — | HIGH | UNKNOWN | 46.0.5 |
-| stdlib | CVE-2026-27145 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
-| libssl1.1 | CVE-2026-28387 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| openssl | CVE-2026-28387 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| libssl1.1 | CVE-2026-28388 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| openssl | CVE-2026-28388 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| libssl1.1 | CVE-2026-28389 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| openssl | CVE-2026-28389 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| libssl1.1 | CVE-2026-28390 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| openssl | CVE-2026-28390 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u7 |
-| libsystemd0 | CVE-2026-29111 | — | HIGH | UNKNOWN | 247.3-7+deb11u8 |
-| libudev1 | CVE-2026-29111 | — | HIGH | UNKNOWN | 247.3-7+deb11u8 |
-| pyasn1 | CVE-2026-30922 | — | HIGH | UNKNOWN | 0.6.3 |
-| stdlib | CVE-2026-32280 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32281 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32283 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
-| PyJWT | CVE-2026-32597 | BDU:2026-04360 | HIGH | HIGH | 2.12.0 |
-| stdlib | CVE-2026-33811 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-33814 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-33818 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| libgnutls30 | CVE-2026-33846 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
-| libpython3.9-minimal | CVE-2026-3644 | BDU:2026-04601 | HIGH | HIGH | 3.9.2-1+deb11u7 |
-| libpython3.9-stdlib | CVE-2026-3644 | BDU:2026-04601 | HIGH | HIGH | 3.9.2-1+deb11u7 |
-| python3.9 | CVE-2026-3644 | BDU:2026-04601 | HIGH | HIGH | 3.9.2-1+deb11u7 |
-| python3.9-minimal | CVE-2026-3644 | BDU:2026-04601 | HIGH | HIGH | 3.9.2-1+deb11u7 |
-| libgnutls30 | CVE-2026-3833 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
-| stdlib | CVE-2026-39820 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-39821 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-39822 | — | HIGH | UNKNOWN | 1.25.12, 1.26.5, 1.27.0-rc.2 |
-| stdlib | CVE-2026-39836 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| libgssapi-krb5-2 | CVE-2026-40355 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libk5crypto3 | CVE-2026-40355 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libkrb5-3 | CVE-2026-40355 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libkrb5support0 | CVE-2026-40355 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libgssapi-krb5-2 | CVE-2026-40356 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libk5crypto3 | CVE-2026-40356 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libkrb5-3 | CVE-2026-40356 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
-| libkrb5support0 | CVE-2026-40356 | — | HIGH | UNKNOWN | 1.18.3-6+deb11u8 |
 | gzip | CVE-2026-41992 | — | HIGH | UNKNOWN | — |
-| libgnutls30 | CVE-2026-42009 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
-| libgnutls30 | CVE-2026-42011 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
-| libgnutls30 | CVE-2026-42012 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
-| libgnutls30 | CVE-2026-42013 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
-| libpython3.9-minimal | CVE-2026-4224 | BDU:2026-04602 | HIGH | MEDIUM | 3.9.2-1+deb11u7 |
-| libpython3.9-stdlib | CVE-2026-4224 | BDU:2026-04602 | HIGH | MEDIUM | 3.9.2-1+deb11u7 |
-| python3.9 | CVE-2026-4224 | BDU:2026-04602 | HIGH | MEDIUM | 3.9.2-1+deb11u7 |
-| python3.9-minimal | CVE-2026-4224 | BDU:2026-04602 | HIGH | MEDIUM | 3.9.2-1+deb11u7 |
 | libperl5.32 | CVE-2026-42497 | — | HIGH | UNKNOWN | — |
 | perl | CVE-2026-42497 | — | HIGH | UNKNOWN | — |
 | perl-base | CVE-2026-42497 | — | HIGH | UNKNOWN | — |
 | perl-modules-5.32 | CVE-2026-42497 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-42499 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-42504 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
 | urllib3 | CVE-2026-44431 | — | HIGH | UNKNOWN | 2.7.0 |
 | libexpat1 | CVE-2026-45186 | — | HIGH | UNKNOWN | — |
-| libssl1.1 | CVE-2026-45447 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u8 |
-| openssl | CVE-2026-45447 | — | HIGH | UNKNOWN | 1.1.1w-0+deb11u8 |
-| PyJWT | CVE-2026-48526 | — | HIGH | UNKNOWN | 2.13.0 |
 | libperl5.32 | CVE-2026-48962 | — | HIGH | UNKNOWN | — |
 | perl | CVE-2026-48962 | — | HIGH | UNKNOWN | — |
 | perl-base | CVE-2026-48962 | — | HIGH | UNKNOWN | — |
 | perl-modules-5.32 | CVE-2026-48962 | — | HIGH | UNKNOWN | — |
-| libgnutls30 | CVE-2026-5260 | — | HIGH | UNKNOWN | 3.7.1-5+deb11u10 |
 | bsdutils | CVE-2026-53613 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-53613 | — | HIGH | UNKNOWN | — |
 | libmount1 | CVE-2026-53613 | — | HIGH | UNKNOWN | — |
@@ -3950,11 +3533,6 @@
 | libacl1 | CVE-2026-54369 | — | HIGH | UNKNOWN | — |
 | libssl1.1 | CVE-2026-54874 | — | HIGH | UNKNOWN | — |
 | openssl | CVE-2026-54874 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-56853 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56858 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56859 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56860 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56862 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | libperl5.32 | CVE-2026-57432 | — | HIGH | UNKNOWN | — |
 | perl | CVE-2026-57432 | — | HIGH | UNKNOWN | — |
 | perl-base | CVE-2026-57432 | — | HIGH | UNKNOWN | — |
@@ -3963,13 +3541,6 @@
 | perl | CVE-2026-57433 | — | HIGH | UNKNOWN | — |
 | perl-base | CVE-2026-57433 | — | HIGH | UNKNOWN | — |
 | perl-modules-5.32 | CVE-2026-57433 | — | HIGH | UNKNOWN | — |
-| pyasn1 | CVE-2026-59884 | — | HIGH | UNKNOWN | 0.6.4 |
-| pyasn1 | CVE-2026-59885 | — | HIGH | UNKNOWN | 0.6.4 |
-| pyasn1 | CVE-2026-59886 | — | HIGH | UNKNOWN | 0.6.4 |
-| libpython3.9-minimal | CVE-2026-6100 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u6 |
-| libpython3.9-stdlib | CVE-2026-6100 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u6 |
-| python3.9 | CVE-2026-6100 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u6 |
-| python3.9-minimal | CVE-2026-6100 | — | HIGH | UNKNOWN | 3.9.2-1+deb11u6 |
 | libssl1.1 | CVE-2026-63072 | — | HIGH | UNKNOWN | — |
 | openssl | CVE-2026-63072 | — | HIGH | UNKNOWN | — |
 | libssl1.1 | CVE-2026-63074 | — | HIGH | UNKNOWN | — |
@@ -3977,7 +3548,6 @@
 | libssl1.1 | CVE-2026-63076 | — | HIGH | UNKNOWN | — |
 | openssl | CVE-2026-63076 | — | HIGH | UNKNOWN | — |
 | libexpat1 | CVE-2026-66046 | — | HIGH | UNKNOWN | — |
-| cryptography | CVE-2026-69249 | — | HIGH | UNKNOWN | 49.0.0 |
 | libpython3.9-minimal | CVE-2026-7210 | — | HIGH | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-7210 | — | HIGH | UNKNOWN | — |
 | python3.9 | CVE-2026-7210 | — | HIGH | UNKNOWN | — |
@@ -4013,8 +3583,6 @@
 | libuuid1 | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | mount | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-78667 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-78669 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | libssl1.1 | CVE-2026-84782 | — | HIGH | UNKNOWN | — |
 | openssl | CVE-2026-84782 | — | HIGH | UNKNOWN | — |
 | libxml2 | CVE-2026-86138 | — | HIGH | UNKNOWN | — |
@@ -4028,6 +3596,7 @@
 | libc-l10n | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
 | locales | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
+| locales-all | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
 | libpcre2-8-0 | CVE-2026-89157 | — | HIGH | UNKNOWN | — |
 | libpcre2-8-0 | CVE-2026-89161 | — | HIGH | UNKNOWN | — |
 | libexpat1 | CVE-2026-93990 | — | HIGH | UNKNOWN | — |
@@ -4039,117 +3608,39 @@
 | libc-l10n | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
 | locales | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-97031 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
+| locales-all | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
 | urllib3 | CVE-2026-97687 | — | HIGH | UNKNOWN | 2.8.0 |
 | urllib3 | CVE-2026-97689 | — | HIGH | UNKNOWN | 2.8.0 |
-| cryptography | GHSA-537C-GMF6-5CCF | — | HIGH | UNKNOWN | 48.0.1 |
 | libexpat1 | CVE-2013-0340 | BDU:2023-09069 | LOW | MEDIUM | — |
 | login | CVE-2013-4235 | BDU:2023-07601 | LOW | MEDIUM | — |
 | passwd | CVE-2013-4235 | BDU:2023-07601 | LOW | MEDIUM | — |
 | libsystemd0 | CVE-2020-13529 | BDU:2022-06889 | LOW | MEDIUM | — |
 | libudev1 | CVE-2020-13529 | BDU:2022-06889 | LOW | MEDIUM | — |
-| libpython3.9-minimal | CVE-2021-3426 | BDU:2021-03708 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2021-3426 | BDU:2021-03708 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2021-3426 | BDU:2021-03708 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2021-3426 | BDU:2021-03708 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2021-3733 | BDU:2022-05838 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2021-3733 | BDU:2022-05838 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2021-3733 | BDU:2022-05838 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2021-3733 | BDU:2022-05838 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2021-4189 | BDU:2022-02303 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2021-4189 | BDU:2022-02303 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2021-4189 | BDU:2022-02303 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2021-4189 | BDU:2022-02303 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| stdlib | CVE-2022-1705 | — | MEDIUM | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-1962 | — | MEDIUM | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-32148 | — | MEDIUM | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-41717 | BDU:2024-02376 | MEDIUM | MEDIUM | 1.18.9, 1.19.4 |
-| stdlib | CVE-2023-24532 | BDU:2023-02657 | MEDIUM | MEDIUM | 1.19.7, 1.20.2 |
-| libpython3.9-minimal | CVE-2023-27043 | BDU:2023-04980 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2023-27043 | BDU:2023-04980 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2023-27043 | BDU:2023-04980 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2023-27043 | BDU:2023-04980 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| stdlib | CVE-2023-29409 | BDU:2023-06242 | MEDIUM | MEDIUM | 1.19.12, 1.20.7, 1.21.0-rc.4 |
-| libllvm13 | CVE-2023-29932 | BDU:2025-07703 | LOW | MEDIUM | — |
-| libllvm13 | CVE-2023-29933 | BDU:2025-07704 | LOW | MEDIUM | — |
-| libllvm13 | CVE-2023-29934 | BDU:2025-07706 | LOW | MEDIUM | — |
-| libllvm13 | CVE-2023-29939 | BDU:2025-07707 | LOW | MEDIUM | — |
-| stdlib | CVE-2023-39318 | BDU:2024-07762 | MEDIUM | MEDIUM | 1.20.8, 1.21.1 |
-| stdlib | CVE-2023-39319 | BDU:2024-07763 | MEDIUM | MEDIUM | 1.20.8, 1.21.1 |
-| stdlib | CVE-2023-39326 | BDU:2024-00175 | MEDIUM | MEDIUM | 1.20.12, 1.21.5 |
 | gcc-10-base | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | — |
 | gcc-9-base | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | — |
 | libgcc-s1 | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | — |
 | libstdc++6 | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | — |
-| stdlib | CVE-2023-45284 | BDU:2023-09012 | MEDIUM | MEDIUM | 1.20.11, 1.21.4 |
-| stdlib | CVE-2023-45289 | BDU:2024-02034 | MEDIUM | LOW | 1.21.8, 1.22.1 |
-| login | CVE-2023-4641 | BDU:2024-02776 | MEDIUM | MEDIUM | 1:4.8.1-1+deb11u1 |
-| passwd | CVE-2023-4641 | BDU:2024-02776 | MEDIUM | MEDIUM | 1:4.8.1-1+deb11u1 |
 | libc-bin | CVE-2023-4806 | BDU:2024-00852 | MEDIUM | MEDIUM | — |
 | libc-l10n | CVE-2023-4806 | BDU:2024-00852 | MEDIUM | MEDIUM | — |
 | libc6 | CVE-2023-4806 | BDU:2024-00852 | MEDIUM | MEDIUM | — |
 | locales | CVE-2023-4806 | BDU:2024-00852 | MEDIUM | MEDIUM | — |
+| locales-all | CVE-2023-4806 | BDU:2024-00852 | MEDIUM | MEDIUM | — |
 | libexpat1 | CVE-2023-52426 | BDU:2024-04334 | LOW | MEDIUM | — |
-| python-pip-whl | CVE-2023-5752 | BDU:2023-08026 | LOW | MEDIUM | 20.3.4-4+deb11u2 |
-| python3-pip | CVE-2023-5752 | BDU:2023-08026 | LOW | MEDIUM | 20.3.4-4+deb11u2 |
-| libpython3.9-minimal | CVE-2024-0450 | BDU:2024-04927 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-0450 | BDU:2024-04927 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-0450 | BDU:2024-04927 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-0450 | BDU:2024-04927 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
 | libpam-modules | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
 | libpam-modules-bin | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
 | libpam-runtime | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
 | libpam0g | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
-| libtasn1-6 | CVE-2024-12133 | BDU:2025-12052 | MEDIUM | MEDIUM | 4.16.0-2+deb11u2 |
-| libgnutls30 | CVE-2024-12243 | BDU:2025-12051 | MEDIUM | MEDIUM | 3.7.1-5+deb11u7 |
-| libssl1.1 | CVE-2024-13176 | BDU:2025-03280 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u3 |
-| openssl | CVE-2024-13176 | BDU:2025-03280 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u3 |
 | libgcrypt20 | CVE-2024-2236 | BDU:2024-02088 | LOW | MEDIUM | — |
-| libpam-modules | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.4.0-9+deb11u2 |
-| libpam-modules-bin | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.4.0-9+deb11u2 |
-| libpam-runtime | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.4.0-9+deb11u2 |
-| libpam0g | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.4.0-9+deb11u2 |
-| stdlib | CVE-2024-24789 | BDU:2024-04485 | MEDIUM | MEDIUM | 1.21.11, 1.22.4 |
-| stdlib | CVE-2024-24791 | BDU:2024-06680 | MEDIUM | MEDIUM | 1.21.12, 1.22.5 |
-| libxml2 | CVE-2024-34459 | — | MEDIUM | UNKNOWN | 2.9.10+dfsg-6.7+deb11u8 |
-| stdlib | CVE-2024-45336 | BDU:2025-02667 | MEDIUM | MEDIUM | 1.22.11, 1.23.5, 1.24.0-rc.2 |
-| stdlib | CVE-2024-45341 | BDU:2025-03335 | MEDIUM | MEDIUM | 1.22.11, 1.23.5, 1.24.0-rc.2 |
-| requests | CVE-2024-47081 | BDU:2025-08576 | MEDIUM | MEDIUM | 2.32.4 |
-| libexpat1 | CVE-2024-50602 | BDU:2025-00344 | MEDIUM | MEDIUM | 2.2.10-2+deb11u7 |
+| libllvm16 | CVE-2024-31852 | BDU:2024-04917 | LOW | MEDIUM | — |
 | libpython3.9-minimal | CVE-2024-5642 | BDU:2025-11592 | LOW | MEDIUM | — |
 | libpython3.9-stdlib | CVE-2024-5642 | BDU:2025-11592 | LOW | MEDIUM | — |
 | python3.9 | CVE-2024-5642 | BDU:2025-11592 | LOW | MEDIUM | — |
 | python3.9-minimal | CVE-2024-5642 | BDU:2025-11592 | LOW | MEDIUM | — |
-| libpython3.9-minimal | CVE-2024-6923 | BDU:2025-12325 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-6923 | BDU:2025-12325 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-6923 | BDU:2025-12325 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-6923 | BDU:2025-12325 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2024-8088 | BDU:2024-06863 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-8088 | BDU:2024-06863 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-8088 | BDU:2024-06863 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-8088 | BDU:2024-06863 | MEDIUM | MEDIUM | 3.9.2-1+deb11u2 |
-| stdlib | CVE-2025-0913 | BDU:2025-08600 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| libpython3.9-minimal | CVE-2025-0938 | BDU:2025-04572 | MEDIUM | MEDIUM | 3.9.2-1+deb11u3 |
-| libpython3.9-stdlib | CVE-2025-0938 | BDU:2025-04572 | MEDIUM | MEDIUM | 3.9.2-1+deb11u3 |
-| python3.9 | CVE-2025-0938 | BDU:2025-04572 | MEDIUM | MEDIUM | 3.9.2-1+deb11u3 |
-| python3.9-minimal | CVE-2025-0938 | BDU:2025-04572 | MEDIUM | MEDIUM | 3.9.2-1+deb11u3 |
 | libxslt1.1 | CVE-2025-10911 | BDU:2026-00311 | MEDIUM | MEDIUM | — |
-| libpython3.9-minimal | CVE-2025-11468 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| libpython3.9-stdlib | CVE-2025-11468 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| python3.9 | CVE-2025-11468 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| python3.9-minimal | CVE-2025-11468 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| libpython3.9-minimal | CVE-2025-12084 | BDU:2026-01344 | MEDIUM | MEDIUM | 3.9.2-1+deb11u5 |
-| libpython3.9-stdlib | CVE-2025-12084 | BDU:2026-01344 | MEDIUM | MEDIUM | 3.9.2-1+deb11u5 |
-| python3.9 | CVE-2025-12084 | BDU:2026-01344 | MEDIUM | MEDIUM | 3.9.2-1+deb11u5 |
-| python3.9-minimal | CVE-2025-12084 | BDU:2026-01344 | MEDIUM | MEDIUM | 3.9.2-1+deb11u5 |
 | libpython3.9-minimal | CVE-2025-12781 | BDU:2026-05132 | MEDIUM | MEDIUM | — |
 | libpython3.9-stdlib | CVE-2025-12781 | BDU:2026-05132 | MEDIUM | MEDIUM | — |
 | python3.9 | CVE-2025-12781 | BDU:2026-05132 | MEDIUM | MEDIUM | — |
 | python3.9-minimal | CVE-2025-12781 | BDU:2026-05132 | MEDIUM | MEDIUM | — |
-| libpython3.9-minimal | CVE-2025-13837 | BDU:2026-05126 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-13837 | BDU:2026-05126 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-13837 | BDU:2026-05126 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-13837 | BDU:2026-05126 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
 | bsdutils | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | libblkid1 | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | libmount1 | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
@@ -4157,18 +3648,10 @@
 | libuuid1 | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | mount | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | util-linux | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
-| libgnutls30 | CVE-2025-14831 | BDU:2026-05048 | MEDIUM | MEDIUM | 3.7.1-5+deb11u9 |
 | libperl5.32 | CVE-2025-15649 | — | MEDIUM | UNKNOWN | — |
 | perl | CVE-2025-15649 | — | MEDIUM | UNKNOWN | — |
 | perl-base | CVE-2025-15649 | — | MEDIUM | UNKNOWN | — |
 | perl-modules-5.32 | CVE-2025-15649 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2025-22866 | BDU:2025-03456 | MEDIUM | MEDIUM | 1.22.12, 1.23.6, 1.24.0-rc.3 |
-| stdlib | CVE-2025-22870 | BDU:2025-02476 | MEDIUM | MEDIUM | 1.23.7, 1.24.1 |
-| stdlib | CVE-2025-22873 | BDU:2025-07316 | MEDIUM | MEDIUM | 1.23.9, 1.24.3 |
-| libgssapi-krb5-2 | CVE-2025-24528 | BDU:2025-12302 | MEDIUM | MEDIUM | 1.18.3-6+deb11u6 |
-| libk5crypto3 | CVE-2025-24528 | BDU:2025-12302 | MEDIUM | MEDIUM | 1.18.3-6+deb11u6 |
-| libkrb5-3 | CVE-2025-24528 | BDU:2025-12302 | MEDIUM | MEDIUM | 1.18.3-6+deb11u6 |
-| libkrb5support0 | CVE-2025-24528 | BDU:2025-12302 | MEDIUM | MEDIUM | 1.18.3-6+deb11u6 |
 | dirmngr | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
 | gnupg | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
 | gnupg-l10n | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
@@ -4180,43 +3663,9 @@
 | gpgconf | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
 | gpgsm | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
 | gpgv | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
-| libgssapi-krb5-2 | CVE-2025-3576 | BDU:2025-10927 | MEDIUM | MEDIUM | 1.18.3-6+deb11u7 |
-| libk5crypto3 | CVE-2025-3576 | BDU:2025-10927 | MEDIUM | MEDIUM | 1.18.3-6+deb11u7 |
-| libkrb5-3 | CVE-2025-3576 | BDU:2025-10927 | MEDIUM | MEDIUM | 1.18.3-6+deb11u7 |
-| libkrb5support0 | CVE-2025-3576 | BDU:2025-10927 | MEDIUM | MEDIUM | 1.18.3-6+deb11u7 |
-| libperl5.32 | CVE-2025-40909 | BDU:2025-10307 | MEDIUM | MEDIUM | 5.32.1-4+deb11u5 |
-| perl | CVE-2025-40909 | BDU:2025-10307 | MEDIUM | MEDIUM | 5.32.1-4+deb11u5 |
-| perl-base | CVE-2025-40909 | BDU:2025-10307 | MEDIUM | MEDIUM | 5.32.1-4+deb11u5 |
-| perl-modules-5.32 | CVE-2025-40909 | BDU:2025-10307 | MEDIUM | MEDIUM | 5.32.1-4+deb11u5 |
-| libpython3.9-minimal | CVE-2025-4516 | BDU:2025-10930 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-4516 | BDU:2025-10930 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-4516 | BDU:2025-10930 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-4516 | BDU:2025-10930 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libsystemd0 | CVE-2025-4598 | BDU:2025-06694 | MEDIUM | MEDIUM | 247.3-7+deb11u7 |
-| libudev1 | CVE-2025-4598 | BDU:2025-06694 | MEDIUM | MEDIUM | 247.3-7+deb11u7 |
-| stdlib | CVE-2025-4673 | BDU:2025-08599 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| stdlib | CVE-2025-47906 | BDU:2025-11595 | MEDIUM | MEDIUM | 1.23.12, 1.24.6 |
 | urllib3 | CVE-2025-50181 | BDU:2025-09791 | MEDIUM | MEDIUM | 2.5.0 |
 | coreutils | CVE-2025-5278 | BDU:2025-10950 | LOW | MEDIUM | — |
-| stdlib | CVE-2025-58185 | BDU:2025-14530 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58186 | BDU:2025-14529 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58187 | BDU:2025-13562 | MEDIUM | MEDIUM | 1.24.9, 1.25.3 |
-| stdlib | CVE-2025-58189 | BDU:2025-14526 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| libpython3.9-minimal | CVE-2025-6069 | BDU:2025-11082 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-6069 | BDU:2025-11082 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-6069 | BDU:2025-11082 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-6069 | BDU:2025-11082 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libpython3.9-minimal | CVE-2025-6075 | BDU:2026-05129 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-6075 | BDU:2026-05129 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-6075 | BDU:2026-05129 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-6075 | BDU:2026-05129 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| stdlib | CVE-2025-61724 | BDU:2025-13938 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61727 | BDU:2026-00268 | MEDIUM | MEDIUM | 1.24.11, 1.25.5 |
-| stdlib | CVE-2025-61730 | BDU:2026-03603 | MEDIUM | MEDIUM | 1.24.12, 1.25.6 |
-| libgnutls30 | CVE-2025-6395 | BDU:2025-08694 | MEDIUM | MEDIUM | 3.7.1-5+deb11u8 |
 | libexpat1 | CVE-2025-66382 | BDU:2026-03628 | MEDIUM | MEDIUM | — |
-| libssl1.1 | CVE-2025-68160 | BDU:2026-01216 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2025-68160 | BDU:2026-01216 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
 | dirmngr | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
 | gnupg | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
 | gnupg-l10n | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
@@ -4228,36 +3677,19 @@
 | gpgconf | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
 | gpgsm | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
 | gpgv | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
-| libssl1.1 | CVE-2025-69418 | BDU:2026-02935 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2025-69418 | BDU:2026-02935 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| libc-bin | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.31-13+deb11u14 |
-| libc-l10n | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.31-13+deb11u14 |
-| libc6 | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.31-13+deb11u14 |
-| locales | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.31-13+deb11u14 |
-| libpython3.9-minimal | CVE-2025-8291 | BDU:2026-00313 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| libpython3.9-stdlib | CVE-2025-8291 | BDU:2026-00313 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9 | CVE-2025-8291 | BDU:2026-00313 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python3.9-minimal | CVE-2025-8291 | BDU:2026-00313 | MEDIUM | MEDIUM | 3.9.2-1+deb11u4 |
-| python-pip-whl | CVE-2025-8869 | BDU:2025-13251 | MEDIUM | MEDIUM | 20.3.4-4+deb11u2 |
-| python3-pip | CVE-2025-8869 | BDU:2025-13251 | MEDIUM | MEDIUM | 20.3.4-4+deb11u2 |
-| pip | CVE-2025-8869 | BDU:2025-13251 | MEDIUM | MEDIUM | 25.3 |
-| libxml2 | CVE-2025-9714 | BDU:2026-02937 | MEDIUM | MEDIUM | 2.9.10+dfsg-6.7+deb11u9 |
 | libpython3.9-minimal | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
-| libpython3.9-minimal | CVE-2026-0865 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| libpython3.9-stdlib | CVE-2026-0865 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| python3.9 | CVE-2026-0865 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| python3.9-minimal | CVE-2026-0865 | — | MEDIUM | UNKNOWN | 3.9.2-1+deb11u5 |
-| libxml2 | CVE-2026-0990 | BDU:2026-03631 | MEDIUM | MEDIUM | 2.9.10+dfsg-6.7+deb11u10 |
 | PyJWT | CVE-2026-101917 | — | MEDIUM | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-101918 | — | MEDIUM | UNKNOWN | 2.15.0 |
+| PyJWT | CVE-2026-102265 | — | MEDIUM | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-102269 | — | MEDIUM | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-102270 | — | MEDIUM | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-102274 | — | MEDIUM | UNKNOWN | 2.14.0 |
 | PyJWT | CVE-2026-102275 | — | MEDIUM | UNKNOWN | 2.15.0 |
 | libexpat1 | CVE-2026-102633 | — | MEDIUM | UNKNOWN | — |
+| PyJWT | CVE-2026-103001 | — | MEDIUM | UNKNOWN | — |
 | libgssapi-krb5-2 | CVE-2026-107708 | — | MEDIUM | UNKNOWN | — |
 | libk5crypto3 | CVE-2026-107708 | — | MEDIUM | UNKNOWN | — |
 | libkrb5-3 | CVE-2026-107708 | — | MEDIUM | UNKNOWN | — |
@@ -4266,7 +3698,6 @@
 | libk5crypto3 | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
 | libkrb5-3 | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
 | libkrb5support0 | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | libpython3.9-minimal | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
@@ -4277,7 +3708,6 @@
 | perl-modules-5.32 | CVE-2026-12087 | — | MEDIUM | UNKNOWN | — |
 | python-pip-whl | CVE-2026-13346 | — | MEDIUM | UNKNOWN | — |
 | python3-pip | CVE-2026-13346 | — | MEDIUM | UNKNOWN | — |
-| pip | CVE-2026-13346 | — | MEDIUM | UNKNOWN | 26.2.0 |
 | bsdutils | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
 | libblkid1 | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
 | libmount1 | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
@@ -4306,16 +3736,15 @@
 | python3.9-minimal | CVE-2026-15806 | — | MEDIUM | UNKNOWN | — |
 | python-pip-whl | CVE-2026-1703 | BDU:2026-01708 | LOW | MEDIUM | — |
 | python3-pip | CVE-2026-1703 | BDU:2026-01708 | LOW | MEDIUM | — |
-| pip | CVE-2026-1703 | BDU:2026-01708 | LOW | MEDIUM | 26.0 |
 | libpython3.9-minimal | CVE-2026-17084 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-17084 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-17084 | — | MEDIUM | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-17084 | — | MEDIUM | UNKNOWN | — |
-| libxml2 | CVE-2026-1757 | — | MEDIUM | UNKNOWN | 2.9.10+dfsg-6.7+deb11u10 |
 | libc-bin | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
 | tar | CVE-2026-18477 | — | MEDIUM | UNKNOWN | — |
 | tar | CVE-2026-18508 | — | MEDIUM | UNKNOWN | — |
 | libp11-kit0 | CVE-2026-18938 | — | MEDIUM | UNKNOWN | — |
@@ -4327,20 +3756,13 @@
 | libc-l10n | CVE-2026-19499 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-19499 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-19499 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-19499 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
-| libssl1.1 | CVE-2026-22795 | BDU:2026-01214 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2026-22795 | BDU:2026-01214 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| libssl1.1 | CVE-2026-22796 | BDU:2026-01220 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| openssl | CVE-2026-22796 | BDU:2026-01220 | MEDIUM | MEDIUM | 1.1.1w-0+deb11u5 |
-| libpython3.9-minimal | CVE-2026-2297 | BDU:2026-04596 | LOW | MEDIUM | 3.9.2-1+deb11u7 |
-| libpython3.9-stdlib | CVE-2026-2297 | BDU:2026-04596 | LOW | MEDIUM | 3.9.2-1+deb11u7 |
-| python3.9 | CVE-2026-2297 | BDU:2026-04596 | LOW | MEDIUM | 3.9.2-1+deb11u7 |
-| python3.9-minimal | CVE-2026-2297 | BDU:2026-04596 | LOW | MEDIUM | 3.9.2-1+deb11u7 |
+| locales-all | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
 | requests | CVE-2026-25645 | — | MEDIUM | UNKNOWN | 2.33.0 |
-| stdlib | CVE-2026-27142 | BDU:2026-04129 | MEDIUM | MEDIUM | 1.25.8, 1.26.1 |
 | zlib1g | CVE-2026-27171 | — | MEDIUM | UNKNOWN | — |
 | bsdutils | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
 | libblkid1 | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
@@ -4358,10 +3780,6 @@
 | util-linux | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
 | python-pip-whl | CVE-2026-3219 | — | MEDIUM | UNKNOWN | — |
 | python3-pip | CVE-2026-3219 | — | MEDIUM | UNKNOWN | — |
-| pip | CVE-2026-3219 | — | MEDIUM | UNKNOWN | 26.1 |
-| stdlib | CVE-2026-32282 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32288 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32289 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
 | libpython3.9-minimal | CVE-2026-3276 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-3276 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-3276 | — | MEDIUM | UNKNOWN | — |
@@ -4369,41 +3787,14 @@
 | libexpat1 | CVE-2026-32776 | — | MEDIUM | UNKNOWN | — |
 | libexpat1 | CVE-2026-32777 | — | MEDIUM | UNKNOWN | — |
 | libexpat1 | CVE-2026-32778 | — | MEDIUM | UNKNOWN | — |
-| libssl1.1 | CVE-2026-34180 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
-| openssl | CVE-2026-34180 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
 | libpython3.9-minimal | CVE-2026-3446 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-3446 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-3446 | — | MEDIUM | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-3446 | — | MEDIUM | UNKNOWN | — |
-| liblzma5 | CVE-2026-34743 | — | MEDIUM | UNKNOWN | 5.2.5-2.1~deb11u2 |
-| xz-utils | CVE-2026-34743 | — | MEDIUM | UNKNOWN | 5.2.5-2.1~deb11u2 |
-| stdlib | CVE-2026-39823 | — | MEDIUM | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-39825 | — | MEDIUM | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-39826 | — | MEDIUM | UNKNOWN | 1.25.10, 1.26.3 |
-| libsystemd0 | CVE-2026-40225 | — | MEDIUM | UNKNOWN | 247.3-7+deb11u8 |
-| libudev1 | CVE-2026-40225 | — | MEDIUM | UNKNOWN | 247.3-7+deb11u8 |
-| libsystemd0 | CVE-2026-40226 | — | MEDIUM | UNKNOWN | 247.3-7+deb11u8 |
-| libudev1 | CVE-2026-40226 | — | MEDIUM | UNKNOWN | 247.3-7+deb11u8 |
-| libc-bin | CVE-2026-4046 | — | MEDIUM | UNKNOWN | 2.31-13+deb11u14 |
-| libc-l10n | CVE-2026-4046 | — | MEDIUM | UNKNOWN | 2.31-13+deb11u14 |
-| libc6 | CVE-2026-4046 | — | MEDIUM | UNKNOWN | 2.31-13+deb11u14 |
-| locales | CVE-2026-4046 | — | MEDIUM | UNKNOWN | 2.31-13+deb11u14 |
-| libsystemd0 | CVE-2026-4105 | — | MEDIUM | UNKNOWN | 247.3-7+deb11u8 |
-| libudev1 | CVE-2026-4105 | — | MEDIUM | UNKNOWN | 247.3-7+deb11u8 |
 | gzip | CVE-2026-41991 | — | MEDIUM | UNKNOWN | — |
-| libgnutls30 | CVE-2026-42014 | — | MEDIUM | UNKNOWN | 3.7.1-5+deb11u10 |
-| libgnutls30 | CVE-2026-42015 | — | MEDIUM | UNKNOWN | 3.7.1-5+deb11u10 |
 | libbz2-1.0 | CVE-2026-42250 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-42505 | — | MEDIUM | UNKNOWN | 1.25.12, 1.26.5, 1.27.0-rc.2 |
-| stdlib | CVE-2026-42507 | — | MEDIUM | UNKNOWN | 1.25.11, 1.26.4 |
-| libssl1.1 | CVE-2026-42766 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
-| openssl | CVE-2026-42766 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
 | libssl1.1 | CVE-2026-42772 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-42772 | — | MEDIUM | UNKNOWN | — |
-| idna | CVE-2026-45409 | — | MEDIUM | UNKNOWN | 3.15 |
-| PyJWT | CVE-2026-48522 | — | MEDIUM | UNKNOWN | 2.13.0 |
-| PyJWT | CVE-2026-48523 | — | MEDIUM | UNKNOWN | 2.13.0 |
-| PyJWT | CVE-2026-48525 | — | MEDIUM | UNKNOWN | 2.13.0 |
 | libperl5.32 | CVE-2026-48959 | — | MEDIUM | UNKNOWN | — |
 | perl | CVE-2026-48959 | — | MEDIUM | UNKNOWN | — |
 | perl-base | CVE-2026-48959 | — | MEDIUM | UNKNOWN | — |
@@ -4419,6 +3810,7 @@
 | libc-l10n | CVE-2026-5435 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-5435 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-5435 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-5435 | — | MEDIUM | UNKNOWN | — |
 | libacl1 | CVE-2026-54370 | — | MEDIUM | UNKNOWN | — |
 | libattr1 | CVE-2026-54371 | — | MEDIUM | UNKNOWN | — |
 | libpam-modules | CVE-2026-54411 | — | MEDIUM | UNKNOWN | — |
@@ -4429,6 +3821,7 @@
 | libc-l10n | CVE-2026-5450 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-5450 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-5450 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-5450 | — | MEDIUM | UNKNOWN | — |
 | libssl1.1 | CVE-2026-54872 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-54872 | — | MEDIUM | UNKNOWN | — |
 | libssl1.1 | CVE-2026-54873 | — | MEDIUM | UNKNOWN | — |
@@ -4447,33 +3840,34 @@
 | libexpat1 | CVE-2026-56410 | — | MEDIUM | UNKNOWN | — |
 | libexpat1 | CVE-2026-56411 | — | MEDIUM | UNKNOWN | — |
 | libexpat1 | CVE-2026-56412 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-56866 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | tar | CVE-2026-5704 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
 | sed | CVE-2026-5958 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-6019 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-6019 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-6019 | — | MEDIUM | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-6019 | — | MEDIUM | UNKNOWN | — |
-| github.com/moby/sys/user | CVE-2026-61801 | — | MEDIUM | UNKNOWN | 0.4.1 |
 | libc-bin | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | python-pip-whl | CVE-2026-6357 | — | MEDIUM | UNKNOWN | — |
 | python3-pip | CVE-2026-6357 | — | MEDIUM | UNKNOWN | — |
-| pip | CVE-2026-6357 | — | MEDIUM | UNKNOWN | 26.1 |
 | libc-bin | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | libperl5.32 | CVE-2026-7010 | — | MEDIUM | UNKNOWN | — |
 | perl | CVE-2026-7010 | — | MEDIUM | UNKNOWN | — |
 | perl-base | CVE-2026-7010 | — | MEDIUM | UNKNOWN | — |
@@ -4485,8 +3879,6 @@
 | libexpat1 | CVE-2026-72522 | — | MEDIUM | UNKNOWN | — |
 | libssl1.1 | CVE-2026-72897 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-72897 | — | MEDIUM | UNKNOWN | — |
-| libssl1.1 | CVE-2026-7383 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
-| openssl | CVE-2026-7383 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
 | libssl1.1 | CVE-2026-75804 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-75804 | — | MEDIUM | UNKNOWN | — |
 | libssl1.1 | CVE-2026-75805 | — | MEDIUM | UNKNOWN | — |
@@ -4498,15 +3890,14 @@
 | libc-l10n | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | libssl1.1 | CVE-2026-77696 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-77696 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-78659 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-78660 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-78663 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | libc-bin | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-8328 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-8328 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-8328 | — | MEDIUM | UNKNOWN | — |
@@ -4521,29 +3912,23 @@
 | libxml2 | CVE-2026-86137 | — | MEDIUM | UNKNOWN | — |
 | python-pip-whl | CVE-2026-8643 | — | MEDIUM | UNKNOWN | — |
 | python3-pip | CVE-2026-8643 | — | MEDIUM | UNKNOWN | — |
-| pip | CVE-2026-8643 | — | MEDIUM | UNKNOWN | 26.1.2 |
 | libc-bin | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | libc-l10n | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
+| locales-all | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | libpcre2-8-0 | CVE-2026-89156 | — | MEDIUM | UNKNOWN | — |
 | libpcre2-8-0 | CVE-2026-89158 | — | MEDIUM | UNKNOWN | — |
 | libpcre2-8-0 | CVE-2026-89160 | — | MEDIUM | UNKNOWN | — |
-| libssl1.1 | CVE-2026-9076 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
-| openssl | CVE-2026-9076 | — | MEDIUM | UNKNOWN | 1.1.1w-0+deb11u8 |
-| stdlib | CVE-2026-94439 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-94440 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-94448 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | libpython3.9-minimal | CVE-2026-9669 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-9669 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-9669 | — | MEDIUM | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-9669 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-97030 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | tar | CVE-2005-2541 | — | LOW | UNKNOWN | — |
 | login | CVE-2007-5686 | — | LOW | UNKNOWN | — |
 | passwd | CVE-2007-5686 | — | LOW | UNKNOWN | — |
@@ -4551,17 +3936,21 @@
 | libc-l10n | CVE-2010-4756 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2010-4756 | — | LOW | UNKNOWN | — |
 | locales | CVE-2010-4756 | — | LOW | UNKNOWN | — |
+| locales-all | CVE-2010-4756 | — | LOW | UNKNOWN | — |
 | apt | CVE-2011-3374 | — | LOW | UNKNOWN | — |
 | libapt-pkg6.0 | CVE-2011-3374 | — | LOW | UNKNOWN | — |
 | libsystemd0 | CVE-2013-4392 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2013-4392 | — | LOW | UNKNOWN | — |
 | libldap-2.4-2 | CVE-2015-3276 | — | LOW | UNKNOWN | — |
+| libldap-common | CVE-2015-3276 | — | LOW | UNKNOWN | — |
 | libxslt1.1 | CVE-2015-9019 | — | LOW | UNKNOWN | — |
 | coreutils | CVE-2016-2781 | — | LOW | UNKNOWN | — |
 | libpcre3 | CVE-2017-11164 | — | LOW | UNKNOWN | — |
 | libldap-2.4-2 | CVE-2017-14159 | — | LOW | UNKNOWN | — |
+| libldap-common | CVE-2017-14159 | — | LOW | UNKNOWN | — |
 | libpcre3 | CVE-2017-16231 | — | LOW | UNKNOWN | — |
 | libldap-2.4-2 | CVE-2017-17740 | — | LOW | UNKNOWN | — |
+| libldap-common | CVE-2017-17740 | — | LOW | UNKNOWN | — |
 | coreutils | CVE-2017-18018 | — | LOW | UNKNOWN | — |
 | libpcre3 | CVE-2017-7245 | — | LOW | UNKNOWN | — |
 | libpcre3 | CVE-2017-7246 | — | LOW | UNKNOWN | — |
@@ -4573,20 +3962,25 @@
 | libc-l10n | CVE-2019-1010022 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2019-1010022 | — | LOW | UNKNOWN | — |
 | locales | CVE-2019-1010022 | — | LOW | UNKNOWN | — |
+| locales-all | CVE-2019-1010022 | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2019-1010024 | — | LOW | UNKNOWN | — |
 | libc-l10n | CVE-2019-1010024 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2019-1010024 | — | LOW | UNKNOWN | — |
 | locales | CVE-2019-1010024 | — | LOW | UNKNOWN | — |
+| locales-all | CVE-2019-1010024 | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2019-1010025 | — | LOW | UNKNOWN | — |
 | libc-l10n | CVE-2019-1010025 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2019-1010025 | — | LOW | UNKNOWN | — |
 | locales | CVE-2019-1010025 | — | LOW | UNKNOWN | — |
+| locales-all | CVE-2019-1010025 | — | LOW | UNKNOWN | — |
 | libpcre3 | CVE-2019-20838 | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2019-9192 | — | LOW | UNKNOWN | — |
 | libc-l10n | CVE-2019-9192 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2019-9192 | — | LOW | UNKNOWN | — |
 | locales | CVE-2019-9192 | — | LOW | UNKNOWN | — |
+| locales-all | CVE-2019-9192 | — | LOW | UNKNOWN | — |
 | libldap-2.4-2 | CVE-2020-15719 | — | LOW | UNKNOWN | — |
+| libldap-common | CVE-2020-15719 | — | LOW | UNKNOWN | — |
 | libsqlite3-0 | CVE-2021-45346 | — | LOW | UNKNOWN | — |
 | bsdutils | CVE-2022-0563 | — | LOW | UNKNOWN | — |
 | libblkid1 | CVE-2022-0563 | — | LOW | UNKNOWN | — |
@@ -4595,7 +3989,6 @@
 | libuuid1 | CVE-2022-0563 | — | LOW | UNKNOWN | — |
 | mount | CVE-2022-0563 | — | LOW | UNKNOWN | — |
 | util-linux | CVE-2022-0563 | — | LOW | UNKNOWN | — |
-| stdlib | CVE-2022-30629 | BDU:2024-02373 | LOW | LOW | 1.17.11, 1.18.3 |
 | dirmngr | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
 | gnupg | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
 | gnupg-l10n | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
@@ -4607,47 +4000,23 @@
 | gpgconf | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
 | gpgsm | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
 | gpgv | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
-| login | CVE-2023-29383 | BDU:2024-06940 | LOW | LOW | 1:4.8.1-1+deb11u1 |
-| passwd | CVE-2023-29383 | BDU:2024-06940 | LOW | LOW | 1:4.8.1-1+deb11u1 |
-| libllvm13 | CVE-2023-29935 | — | LOW | UNKNOWN | — |
-| libllvm13 | CVE-2023-29941 | — | LOW | UNKNOWN | — |
-| libllvm13 | CVE-2023-29942 | — | LOW | UNKNOWN | — |
 | libsystemd0 | CVE-2023-31437 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2023-31437 | — | LOW | UNKNOWN | — |
 | libsystemd0 | CVE-2023-31438 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2023-31438 | — | LOW | UNKNOWN | — |
 | libsystemd0 | CVE-2023-31439 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2023-31439 | — | LOW | UNKNOWN | — |
-| libpython3.9-minimal | CVE-2024-11168 | BDU:2025-12374 | LOW | LOW | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-11168 | BDU:2025-12374 | LOW | LOW | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-11168 | BDU:2025-12374 | LOW | LOW | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-11168 | BDU:2025-12374 | LOW | LOW | 3.9.2-1+deb11u2 |
-| libpython3.9-minimal | CVE-2024-4032 | BDU:2024-05196 | LOW | LOW | 3.9.2-1+deb11u2 |
-| libpython3.9-stdlib | CVE-2024-4032 | BDU:2024-05196 | LOW | LOW | 3.9.2-1+deb11u2 |
-| python3.9 | CVE-2024-4032 | BDU:2024-05196 | LOW | LOW | 3.9.2-1+deb11u2 |
-| python3.9-minimal | CVE-2024-4032 | BDU:2024-05196 | LOW | LOW | 3.9.2-1+deb11u2 |
 | login | CVE-2024-56433 | — | LOW | UNKNOWN | — |
 | passwd | CVE-2024-56433 | — | LOW | UNKNOWN | — |
+| libllvm16 | CVE-2024-7883 | — | LOW | UNKNOWN | — |
 | libxslt1.1 | CVE-2025-11731 | BDU:2026-02739 | LOW | LOW | — |
-| libpython3.9-minimal | CVE-2025-13462 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| libpython3.9-stdlib | CVE-2025-13462 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| python3.9 | CVE-2025-13462 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| python3.9-minimal | CVE-2025-13462 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| libpython3.9-minimal | CVE-2025-1795 | BDU:2025-11593 | LOW | LOW | 3.9.2-1+deb11u3 |
-| libpython3.9-stdlib | CVE-2025-1795 | BDU:2025-11593 | LOW | LOW | 3.9.2-1+deb11u3 |
-| python3.9 | CVE-2025-1795 | BDU:2025-11593 | LOW | LOW | 3.9.2-1+deb11u3 |
-| python3.9-minimal | CVE-2025-1795 | BDU:2025-11593 | LOW | LOW | 3.9.2-1+deb11u3 |
 | libssl1.1 | CVE-2025-27587 | — | LOW | UNKNOWN | — |
 | openssl | CVE-2025-27587 | — | LOW | UNKNOWN | — |
 | libncursesw6 | CVE-2025-6141 | — | LOW | UNKNOWN | — |
 | libtinfo6 | CVE-2025-6141 | — | LOW | UNKNOWN | — |
 | ncurses-base | CVE-2025-6141 | — | LOW | UNKNOWN | — |
 | ncurses-bin | CVE-2025-6141 | — | LOW | UNKNOWN | — |
-| libxml2 | CVE-2025-6170 | BDU:2025-11756 | LOW | LOW | 2.9.10+dfsg-6.7+deb11u8 |
 | libsqlite3-0 | CVE-2025-70873 | — | LOW | UNKNOWN | — |
-| libxml2 | CVE-2025-8732 | — | LOW | UNKNOWN | 2.9.10+dfsg-6.7+deb11u10 |
-| libxml2 | CVE-2026-0989 | BDU:2026-03633 | LOW | LOW | 2.9.10+dfsg-6.7+deb11u10 |
-| libxml2 | CVE-2026-0992 | BDU:2026-03632 | LOW | LOW | 2.9.10+dfsg-6.7+deb11u10 |
 | dash | CVE-2026-102473 | — | LOW | UNKNOWN | — |
 | dash | CVE-2026-102474 | — | LOW | UNKNOWN | — |
 | dirmngr | CVE-2026-105712 | — | LOW | UNKNOWN | — |
@@ -4675,9 +4044,8 @@
 | python3.9 | CVE-2026-18503 | — | LOW | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-18503 | — | LOW | UNKNOWN | — |
 | libldap-2.4-2 | CVE-2026-22185 | BDU:2026-03592 | LOW | LOW | — |
+| libldap-common | CVE-2026-22185 | BDU:2026-03592 | LOW | LOW | — |
 | libexpat1 | CVE-2026-24515 | BDU:2026-03634 | LOW | LOW | — |
-| stdlib | CVE-2026-27139 | BDU:2026-04122 | LOW | LOW | 1.25.8, 1.26.1 |
-| cryptography | CVE-2026-34073 | — | LOW | UNKNOWN | 46.0.6 |
 | libpython3.9-minimal | CVE-2026-3479 | — | LOW | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-3479 | — | LOW | UNKNOWN | — |
 | python3.9 | CVE-2026-3479 | — | LOW | UNKNOWN | — |
@@ -4689,15 +4057,9 @@
 | libsystemd0 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | libexpat1 | CVE-2026-41080 | — | LOW | UNKNOWN | — |
-| libpython3.9-minimal | CVE-2026-4519 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| libpython3.9-stdlib | CVE-2026-4519 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| python3.9 | CVE-2026-4519 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| python3.9-minimal | CVE-2026-4519 | — | LOW | UNKNOWN | 3.9.2-1+deb11u7 |
-| PyJWT | CVE-2026-48524 | — | LOW | UNKNOWN | 2.13.0 |
 | diffutils | CVE-2026-53910 | — | LOW | UNKNOWN | — |
 | coreutils | CVE-2026-56391 | — | LOW | UNKNOWN | — |
 | coreutils | CVE-2026-56392 | — | LOW | UNKNOWN | — |
-| stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | libgnutls30 | CVE-2026-67693 | — | LOW | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-6879 | — | LOW | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-6879 | — | LOW | UNKNOWN | — |
@@ -4716,6 +4078,7 @@
 | libc-l10n | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | locales | CVE-2026-97399 | — | LOW | UNKNOWN | — |
+| locales-all | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | tar | TEMP-0290435-0B57B5 | — | LOW | UNKNOWN | — |
 | sysvinit-utils | TEMP-0517018-A83CE6 | — | LOW | UNKNOWN | — |
 | login | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
@@ -4725,18 +4088,9 @@
 | perl | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
 | perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
 | perl-modules-5.32 | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
-| tzdata | DLA-3972-1 | — | UNKNOWN | UNKNOWN | 2024b-0+deb11u1 |
-| ucf | DLA-4016-1 | — | UNKNOWN | UNKNOWN | 3.0043+deb11u2 |
-| tzdata | DLA-4085-1 | — | UNKNOWN | UNKNOWN | 2025a-0+deb11u1 |
-| tzdata | DLA-4105-1 | — | UNKNOWN | UNKNOWN | 2025b-0+deb11u1 |
-| tzdata | DLA-4403-1 | — | UNKNOWN | UNKNOWN | 2025b-0+deb11u2 |
-| ca-certificates | DLA-4485-1 | — | UNKNOWN | UNKNOWN | 20230311+deb12u1~deb11u1 |
-| tzdata | DLA-4569-1 | — | UNKNOWN | UNKNOWN | 2026b-0+deb11u1 |
-| ca-certificates | DLA-4726-1 | — | UNKNOWN | UNKNOWN | 20250419~deb12u1~deb11u1 |
 | liblzma5 | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | — |
-| xz-utils | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | — |
 
-## proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -4823,7 +4177,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -4981,25 +4335,12 @@
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
 
-## rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
-| stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
-| stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
-| golang.org/x/oauth2 | CVE-2025-22868 | BDU:2025-03638 | HIGH | HIGH | 0.27.0 |
-| stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
-| stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58183 | BDU:2025-14528 | HIGH | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58188 | BDU:2025-14525 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61723 | BDU:2025-13937 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61725 | BDU:2025-13936 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61726 | BDU:2026-03409 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61728 | BDU:2026-03410 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61729 | BDU:2025-16242 | HIGH | HIGH | 1.24.11, 1.25.5 |
-| stdlib | CVE-2026-25679 | BDU:2026-04127 | HIGH | HIGH | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-27145 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
 | stdlib | CVE-2026-32280 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
 | stdlib | CVE-2026-32281 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
@@ -5019,30 +4360,11 @@
 | stdlib | CVE-2026-56859 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | stdlib | CVE-2026-56860 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
 | stdlib | CVE-2026-56862 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| github.com/klauspost/compress | CVE-2026-63209 | — | HIGH | UNKNOWN | 1.18.7 |
 | stdlib | CVE-2026-78667 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78669 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97031 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2024-45336 | BDU:2025-02667 | MEDIUM | MEDIUM | 1.22.11, 1.23.5, 1.24.0-rc.2 |
-| stdlib | CVE-2024-45341 | BDU:2025-03335 | MEDIUM | MEDIUM | 1.22.11, 1.23.5, 1.24.0-rc.2 |
-| stdlib | CVE-2025-0913 | BDU:2025-08600 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| stdlib | CVE-2025-22866 | BDU:2025-03456 | MEDIUM | MEDIUM | 1.22.12, 1.23.6, 1.24.0-rc.3 |
-| golang.org/x/net | CVE-2025-22870 | BDU:2025-02476 | MEDIUM | MEDIUM | 0.36.0 |
-| stdlib | CVE-2025-22870 | BDU:2025-02476 | MEDIUM | MEDIUM | 1.23.7, 1.24.1 |
-| golang.org/x/net | CVE-2025-22872 | BDU:2025-08473 | MEDIUM | MEDIUM | 0.38.0 |
-| stdlib | CVE-2025-22873 | BDU:2025-07316 | MEDIUM | MEDIUM | 1.23.9, 1.24.3 |
-| stdlib | CVE-2025-4673 | BDU:2025-08599 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| stdlib | CVE-2025-47906 | BDU:2025-11595 | MEDIUM | MEDIUM | 1.23.12, 1.24.6 |
-| stdlib | CVE-2025-58185 | BDU:2025-14530 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58186 | BDU:2025-14529 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58187 | BDU:2025-13562 | MEDIUM | MEDIUM | 1.24.9, 1.25.3 |
-| stdlib | CVE-2025-58189 | BDU:2025-14526 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61724 | BDU:2025-13938 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61727 | BDU:2026-00268 | MEDIUM | MEDIUM | 1.24.11, 1.25.5 |
-| stdlib | CVE-2025-61730 | BDU:2026-03603 | MEDIUM | MEDIUM | 1.24.12, 1.25.6 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | golang.org/x/net | CVE-2026-25680 | — | MEDIUM | UNKNOWN | 0.55.0 |
-| stdlib | CVE-2026-27142 | BDU:2026-04129 | MEDIUM | MEDIUM | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-32282 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
 | stdlib | CVE-2026-32288 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
 | stdlib | CVE-2026-32289 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
@@ -5060,10 +4382,9 @@
 | stdlib | CVE-2026-94448 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97030 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-27139 | BDU:2026-04122 | LOW | LOW | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -5437,7 +4758,7 @@
 | libssl3t64 | CVE-2026-9076 | — | LOW | UNKNOWN | 3.0.13-0ubuntu3.11 |
 | openssl | CVE-2026-9076 | — | LOW | UNKNOWN | 3.0.13-0ubuntu3.11 |
 
-## redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -5466,7 +4787,7 @@
 | go.opentelemetry.io/otel/sdk | CVE-2026-81870 | — | LOW | UNKNOWN | 1.45.0 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## redis (ghcr.io/shturval-tech/community-marketplace/redis:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## redis (ghcr.io/shturval-tech/community-marketplace/redis:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -5474,148 +4795,26 @@
 | --- | --- | --- | --- | --- | --- |
 | libc-bin | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc6 | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
-| stdlib | CVE-2022-27664 | BDU:2022-05544 | HIGH | CRITICAL | 1.18.6, 1.19.1 |
-| stdlib | CVE-2023-24538 | BDU:2024-01979 | CRITICAL | CRITICAL | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24540 | BDU:2023-03471 | CRITICAL | CRITICAL | 1.19.9, 1.20.4 |
 | zlib1g | CVE-2023-45853 | BDU:2023-07116 | CRITICAL | CRITICAL | — |
-| stdlib | CVE-2024-24790 | BDU:2024-04486 | CRITICAL | MEDIUM | 1.21.11, 1.22.4 |
-| libssl3 | CVE-2024-5535 | BDU:2024-06988 | MEDIUM | CRITICAL | 3.0.15-1~deb12u1 |
-| libssl3 | CVE-2025-15467 | BDU:2026-00890 | CRITICAL | CRITICAL | 3.0.18-1~deb12u2 |
-| stdlib | CVE-2025-22871 | BDU:2025-04014 | MEDIUM | CRITICAL | 1.23.8, 1.24.2 |
-| stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
-| gpgv | CVE-2025-68973 | BDU:2025-16426 | HIGH | CRITICAL | 2.2.40-1.1+deb12u2 |
-| perl-base | CVE-2026-13221 | — | CRITICAL | UNKNOWN | 5.36.0-7+deb12u4 |
-| libssl3 | CVE-2026-31789 | — | CRITICAL | UNKNOWN | 3.0.19-1~deb12u2 |
-| libgnutls30 | CVE-2026-33845 | — | CRITICAL | UNKNOWN | 3.7.9-2+deb12u7 |
-| libgnutls30 | CVE-2026-42010 | — | CRITICAL | UNKNOWN | 3.7.9-2+deb12u7 |
-| perl-base | CVE-2026-42496 | — | CRITICAL | UNKNOWN | 5.36.0-7+deb12u4 |
-| libssl3 | CVE-2026-45445 | — | CRITICAL | UNKNOWN | 3.0.20-1~deb12u2 |
-| perl-base | CVE-2026-8376 | — | CRITICAL | UNKNOWN | 5.36.0-7+deb12u4 |
 | libgnutls30 | CVE-2011-3389 | BDU:2015-09428 | LOW | HIGH | — |
 | perl-base | CVE-2011-4116 | BDU:2023-01642 | LOW | HIGH | — |
 | libc-bin | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
 | libc6 | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
 | libgcrypt20 | CVE-2018-6829 | BDU:2020-01023 | LOW | HIGH | — |
-| stdlib | CVE-2022-28131 | BDU:2022-06492 | HIGH | HIGH | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-2879 | — | HIGH | UNKNOWN | 1.18.7, 1.19.2 |
-| stdlib | CVE-2022-2880 | — | HIGH | UNKNOWN | 1.18.7, 1.19.2 |
-| stdlib | CVE-2022-29804 | — | HIGH | UNKNOWN | 1.17.11, 1.18.3 |
-| stdlib | CVE-2022-30580 | — | HIGH | UNKNOWN | 1.17.11, 1.18.3 |
-| stdlib | CVE-2022-30630 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30631 | BDU:2022-05522 | HIGH | HIGH | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30632 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30633 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-30634 | — | HIGH | UNKNOWN | 1.17.11, 1.18.3 |
-| stdlib | CVE-2022-30635 | — | HIGH | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-32189 | — | HIGH | UNKNOWN | 1.17.13, 1.18.5 |
-| stdlib | CVE-2022-41715 | — | HIGH | UNKNOWN | 1.18.7, 1.19.2 |
-| stdlib | CVE-2022-41716 | BDU:2023-00266 | HIGH | HIGH | 1.18.8, 1.19.3 |
-| stdlib | CVE-2022-41720 | — | HIGH | UNKNOWN | 1.18.9, 1.19.4 |
-| stdlib | CVE-2022-41722 | — | HIGH | UNKNOWN | 1.19.6, 1.20.1 |
-| stdlib | CVE-2022-41723 | BDU:2023-07322 | HIGH | HIGH | 1.19.6, 1.20.1 |
-| stdlib | CVE-2022-41724 | BDU:2024-03152 | HIGH | HIGH | 1.19.6, 1.20.1 |
-| stdlib | CVE-2022-41725 | BDU:2023-01943 | HIGH | HIGH | 1.19.6, 1.20.1 |
-| stdlib | CVE-2023-24534 | BDU:2024-03154 | HIGH | HIGH | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24536 | BDU:2024-03153 | HIGH | HIGH | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24537 | BDU:2024-10794 | HIGH | HIGH | 1.19.8, 1.20.3 |
-| stdlib | CVE-2023-24539 | BDU:2023-03470 | HIGH | HIGH | 1.19.9, 1.20.4 |
-| stdlib | CVE-2023-29400 | BDU:2023-03472 | HIGH | HIGH | 1.19.9, 1.20.4 |
-| stdlib | CVE-2023-29403 | BDU:2023-03200 | HIGH | MEDIUM | 1.19.10, 1.20.5 |
-| stdlib | CVE-2023-29406 | BDU:2024-03155 | MEDIUM | HIGH | 1.19.11, 1.20.6 |
-| perl-base | CVE-2023-31484 | BDU:2023-03871 | HIGH | HIGH | 5.36.0-7+deb12u3 |
 | perl-base | CVE-2023-31486 | BDU:2023-03872 | LOW | HIGH | — |
-| stdlib | CVE-2023-39325 | BDU:2023-07013 | HIGH | HIGH | 1.20.10, 1.21.3 |
-| stdlib | CVE-2023-45283 | BDU:2023-09013 | HIGH | HIGH | 1.20.11, 1.21.4, 1.20.12, 1.21.5 |
-| stdlib | CVE-2023-45287 | — | HIGH | UNKNOWN | 1.20.0 |
-| stdlib | CVE-2023-45288 | BDU:2024-02688 | HIGH | MEDIUM | 1.21.9, 1.22.2 |
-| stdlib | CVE-2023-45290 | BDU:2024-02047 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
 | libtinfo6 | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
 | ncurses-base | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
 | ncurses-bin | CVE-2023-50495 | BDU:2024-07256 | MEDIUM | HIGH | — |
-| stdlib | CVE-2024-24783 | BDU:2024-02048 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| stdlib | CVE-2024-24784 | BDU:2024-04962 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| stdlib | CVE-2024-24785 | BDU:2024-03248 | MEDIUM | HIGH | 1.21.8, 1.22.1 |
-| stdlib | CVE-2024-34155 | BDU:2024-07020 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34156 | BDU:2024-07025 | HIGH | HIGH | 1.22.7, 1.23.1 |
-| stdlib | CVE-2024-34158 | BDU:2024-07026 | MEDIUM | HIGH | 1.22.7, 1.23.1 |
-| perl-base | CVE-2024-56406 | BDU:2025-04857 | HIGH | HIGH | 5.36.0-7+deb12u2 |
-| libssl3 | CVE-2024-9143 | BDU:2024-08755 | LOW | HIGH | 3.0.15-1~deb12u1 |
-| libc-bin | CVE-2025-0395 | BDU:2025-01120 | MEDIUM | HIGH | 2.36-9+deb12u10 |
-| libc6 | CVE-2025-0395 | BDU:2025-01120 | MEDIUM | HIGH | 2.36-9+deb12u10 |
 | libtasn1-6 | CVE-2025-13151 | BDU:2026-05140 | MEDIUM | HIGH | — |
-| libc-bin | CVE-2025-15281 | BDU:2026-05135 | MEDIUM | HIGH | 2.36-9+deb12u14 |
-| libc6 | CVE-2025-15281 | BDU:2026-05135 | MEDIUM | HIGH | 2.36-9+deb12u14 |
-| liblzma5 | CVE-2025-31115 | BDU:2025-03866 | HIGH | HIGH | 5.4.1-1 |
-| libgnutls30 | CVE-2025-32988 | BDU:2025-11076 | HIGH | HIGH | 3.7.9-2+deb12u5 |
-| libgnutls30 | CVE-2025-32990 | BDU:2025-11074 | HIGH | HIGH | 3.7.9-2+deb12u5 |
-| stdlib | CVE-2025-47907 | BDU:2025-10834 | HIGH | HIGH | 1.23.12, 1.24.6 |
-| stdlib | CVE-2025-47912 | BDU:2025-14527 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| libc-bin | CVE-2025-4802 | BDU:2025-05682 | HIGH | HIGH | 2.36-9+deb12u11 |
-| libc6 | CVE-2025-4802 | BDU:2025-05682 | HIGH | HIGH | 2.36-9+deb12u11 |
-| stdlib | CVE-2025-58183 | BDU:2025-14528 | HIGH | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58188 | BDU:2025-14525 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| libpam-modules | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.5.2-6+deb12u2 |
-| libpam-modules-bin | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.5.2-6+deb12u2 |
-| libpam-runtime | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.5.2-6+deb12u2 |
-| libpam0g | CVE-2025-6020 | BDU:2025-07273 | HIGH | HIGH | 1.5.2-6+deb12u2 |
-| stdlib | CVE-2025-61723 | BDU:2025-13937 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61725 | BDU:2025-13936 | MEDIUM | HIGH | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61726 | BDU:2026-03409 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61728 | BDU:2026-03410 | HIGH | HIGH | 1.24.12, 1.25.6 |
-| stdlib | CVE-2025-61729 | BDU:2025-16242 | HIGH | HIGH | 1.24.11, 1.25.5 |
-| dpkg | CVE-2025-6297 | BDU:2025-11256 | LOW | HIGH | 1.21.23 |
-| libssl3 | CVE-2025-69419 | BDU:2026-01217 | HIGH | HIGH | 3.0.18-1~deb12u2 |
-| libssl3 | CVE-2025-69420 | BDU:2026-01219 | MEDIUM | HIGH | 3.0.18-1~deb12u2 |
-| libssl3 | CVE-2025-69421 | BDU:2026-01218 | HIGH | HIGH | 3.0.18-1~deb12u2 |
 | libtinfo6 | CVE-2025-69720 | — | HIGH | UNKNOWN | — |
 | ncurses-base | CVE-2025-69720 | — | HIGH | UNKNOWN | — |
 | ncurses-bin | CVE-2025-69720 | — | HIGH | UNKNOWN | — |
-| libssl3 | CVE-2025-9230 | BDU:2025-12885 | MEDIUM | HIGH | 3.0.17-1~deb12u3 |
-| libgnutls30 | CVE-2025-9820 | BDU:2025-15388 | MEDIUM | HIGH | 3.7.9-2+deb12u6 |
-| libc-bin | CVE-2026-0861 | BDU:2026-00915 | HIGH | HIGH | 2.36-9+deb12u14 |
-| libc6 | CVE-2026-0861 | BDU:2026-00915 | HIGH | HIGH | 2.36-9+deb12u14 |
-| libc-bin | CVE-2026-0915 | BDU:2026-02104 | MEDIUM | HIGH | 2.36-9+deb12u14 |
-| libc6 | CVE-2026-0915 | BDU:2026-02104 | MEDIUM | HIGH | 2.36-9+deb12u14 |
 | gcc-12-base | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libgcc-s1 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libstdc++6 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-103111 | — | HIGH | UNKNOWN | 10.42-1+deb12u2 |
 | libsystemd0 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | libudev1 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-25679 | BDU:2026-04127 | HIGH | HIGH | 1.25.8, 1.26.1 |
-| stdlib | CVE-2026-27145 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
-| libssl3 | CVE-2026-28387 | — | HIGH | UNKNOWN | 3.0.19-1~deb12u2 |
-| libssl3 | CVE-2026-28388 | — | HIGH | UNKNOWN | 3.0.19-1~deb12u2 |
-| libssl3 | CVE-2026-28389 | — | HIGH | UNKNOWN | 3.0.19-1~deb12u2 |
-| libssl3 | CVE-2026-28390 | — | HIGH | UNKNOWN | 3.0.19-1~deb12u2 |
-| libsystemd0 | CVE-2026-29111 | — | HIGH | UNKNOWN | 252.39-1~deb12u2 |
-| libudev1 | CVE-2026-29111 | — | HIGH | UNKNOWN | 252.39-1~deb12u2 |
-| stdlib | CVE-2026-32280 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32281 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32283 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-33811 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-33814 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-33818 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| libgnutls30 | CVE-2026-33846 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
-| libssl3 | CVE-2026-34182 | — | HIGH | UNKNOWN | 3.0.20-1~deb12u2 |
-| libgnutls30 | CVE-2026-3833 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
-| stdlib | CVE-2026-39820 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-39821 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-39822 | — | HIGH | UNKNOWN | 1.25.12, 1.26.5, 1.27.0-rc.2 |
-| stdlib | CVE-2026-39836 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| libgcrypt20 | CVE-2026-41989 | — | HIGH | UNKNOWN | 1.10.1-3+deb12u1 |
 | gzip | CVE-2026-41992 | — | HIGH | UNKNOWN | — |
-| libgnutls30 | CVE-2026-42009 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
-| libgnutls30 | CVE-2026-42011 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
-| libgnutls30 | CVE-2026-42012 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
-| libgnutls30 | CVE-2026-42013 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
-| perl-base | CVE-2026-42497 | — | HIGH | UNKNOWN | 5.36.0-7+deb12u4 |
-| stdlib | CVE-2026-42499 | — | HIGH | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-42504 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
-| libssl3 | CVE-2026-45447 | — | HIGH | UNKNOWN | 3.0.20-1~deb12u2 |
-| libcap2 | CVE-2026-4878 | — | HIGH | UNKNOWN | 1:2.66-4+deb12u3 |
-| perl-base | CVE-2026-48962 | — | HIGH | UNKNOWN | 5.36.0-7+deb12u4 |
-| libgnutls30 | CVE-2026-5260 | — | HIGH | UNKNOWN | 3.7.9-2+deb12u7 |
 | bsdutils | CVE-2026-53613 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-53613 | — | HIGH | UNKNOWN | — |
 | libmount1 | CVE-2026-53613 | — | HIGH | UNKNOWN | — |
@@ -5633,17 +4832,6 @@
 | util-linux | CVE-2026-53615 | — | HIGH | UNKNOWN | — |
 | util-linux-extra | CVE-2026-53615 | — | HIGH | UNKNOWN | — |
 | libacl1 | CVE-2026-54369 | — | HIGH | UNKNOWN | — |
-| libssl3 | CVE-2026-54874 | — | HIGH | UNKNOWN | 3.0.22-1~deb12u1 |
-| stdlib | CVE-2026-56853 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56858 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56859 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56860 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| stdlib | CVE-2026-56862 | — | HIGH | UNKNOWN | 1.25.13, 1.26.6, 1.27.0-rc.3 |
-| perl-base | CVE-2026-57432 | — | HIGH | UNKNOWN | 5.36.0-7+deb12u4 |
-| perl-base | CVE-2026-57433 | — | HIGH | UNKNOWN | 5.36.0-7+deb12u4 |
-| libssl3 | CVE-2026-63072 | — | HIGH | UNKNOWN | 3.0.22-1~deb12u1 |
-| libssl3 | CVE-2026-63074 | — | HIGH | UNKNOWN | 3.0.22-1~deb12u1 |
-| libssl3 | CVE-2026-63076 | — | HIGH | UNKNOWN | 3.0.22-1~deb12u1 |
 | bsdutils | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
 | libmount1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
@@ -5676,58 +4864,23 @@
 | mount | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux-extra | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-78667 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-78669 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | libssl3 | CVE-2026-84782 | — | HIGH | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-86145 | — | HIGH | UNKNOWN | 10.42-1+deb12u1 |
 | libc-bin | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89157 | — | HIGH | UNKNOWN | 10.42-1+deb12u1 |
-| libpcre2-8-0 | CVE-2026-89161 | — | HIGH | UNKNOWN | 10.42-1+deb12u1 |
 | perl-base | CVE-2026-9538 | — | HIGH | UNKNOWN | — |
 | gcc-12-base | CVE-2026-95619 | — | HIGH | UNKNOWN | — |
 | libgcc-s1 | CVE-2026-95619 | — | HIGH | UNKNOWN | — |
 | libstdc++6 | CVE-2026-95619 | — | HIGH | UNKNOWN | — |
 | libc-bin | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
-| stdlib | CVE-2026-97031 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2022-1705 | — | MEDIUM | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-1962 | — | MEDIUM | UNKNOWN | 1.17.12, 1.18.4 |
 | gcc-12-base | CVE-2022-27943 | BDU:2025-12274 | LOW | MEDIUM | — |
 | libgcc-s1 | CVE-2022-27943 | BDU:2025-12274 | LOW | MEDIUM | — |
 | libstdc++6 | CVE-2022-27943 | BDU:2025-12274 | LOW | MEDIUM | — |
-| stdlib | CVE-2022-32148 | — | MEDIUM | UNKNOWN | 1.17.12, 1.18.4 |
-| stdlib | CVE-2022-41717 | BDU:2024-02376 | MEDIUM | MEDIUM | 1.18.9, 1.19.4 |
-| stdlib | CVE-2023-24532 | BDU:2023-02657 | MEDIUM | MEDIUM | 1.19.7, 1.20.2 |
-| stdlib | CVE-2023-29409 | BDU:2023-06242 | MEDIUM | MEDIUM | 1.19.12, 1.20.7, 1.21.0-rc.4 |
-| stdlib | CVE-2023-39318 | BDU:2024-07762 | MEDIUM | MEDIUM | 1.20.8, 1.21.1 |
-| stdlib | CVE-2023-39319 | BDU:2024-07763 | MEDIUM | MEDIUM | 1.20.8, 1.21.1 |
-| stdlib | CVE-2023-39326 | BDU:2024-00175 | MEDIUM | MEDIUM | 1.20.12, 1.21.5 |
-| gcc-12-base | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | 12.2.0-14+deb12u1 |
-| libgcc-s1 | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | 12.2.0-14+deb12u1 |
-| libstdc++6 | CVE-2023-4039 | BDU:2023-05920 | LOW | MEDIUM | 12.2.0-14+deb12u1 |
-| stdlib | CVE-2023-45284 | BDU:2023-09012 | MEDIUM | MEDIUM | 1.20.11, 1.21.4 |
-| stdlib | CVE-2023-45289 | BDU:2024-02034 | MEDIUM | LOW | 1.21.8, 1.22.1 |
-| login | CVE-2023-4641 | BDU:2024-02776 | MEDIUM | MEDIUM | 1:4.13+dfsg1-1+deb12u1 |
-| passwd | CVE-2023-4641 | BDU:2024-02776 | MEDIUM | MEDIUM | 1:4.13+dfsg1-1+deb12u1 |
 | libpam-modules | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
 | libpam-modules-bin | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
 | libpam-runtime | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
 | libpam0g | CVE-2024-10041 | BDU:2025-05059 | MEDIUM | MEDIUM | — |
-| libtasn1-6 | CVE-2024-12133 | BDU:2025-12052 | MEDIUM | MEDIUM | 4.19.0-2+deb12u1 |
-| libgnutls30 | CVE-2024-12243 | BDU:2025-12051 | MEDIUM | MEDIUM | 3.7.9-2+deb12u4 |
-| libssl3 | CVE-2024-13176 | BDU:2025-03280 | MEDIUM | MEDIUM | 3.0.16-1~deb12u1 |
 | libgcrypt20 | CVE-2024-2236 | BDU:2024-02088 | LOW | MEDIUM | — |
-| libpam-modules | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.5.2-6+deb12u2 |
-| libpam-modules-bin | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.5.2-6+deb12u2 |
-| libpam-runtime | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.5.2-6+deb12u2 |
-| libpam0g | CVE-2024-22365 | BDU:2024-00829 | MEDIUM | LOW | 1.5.2-6+deb12u2 |
-| stdlib | CVE-2024-24789 | BDU:2024-04485 | MEDIUM | MEDIUM | 1.21.11, 1.22.4 |
-| stdlib | CVE-2024-24791 | BDU:2024-06680 | MEDIUM | MEDIUM | 1.21.12, 1.22.5 |
-| stdlib | CVE-2024-45336 | BDU:2025-02667 | MEDIUM | MEDIUM | 1.22.11, 1.23.5, 1.24.0-rc.2 |
-| stdlib | CVE-2024-45341 | BDU:2025-03335 | MEDIUM | MEDIUM | 1.22.11, 1.23.5, 1.24.0-rc.2 |
-| stdlib | CVE-2025-0913 | BDU:2025-08600 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| libcap2 | CVE-2025-1390 | BDU:2025-02012 | MEDIUM | MEDIUM | 1:2.66-4+deb12u1 |
 | bsdutils | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | libblkid1 | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | libmount1 | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
@@ -5736,35 +4889,9 @@
 | mount | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | util-linux | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
 | util-linux-extra | CVE-2025-14104 | BDU:2026-02747 | LOW | MEDIUM | — |
-| libgnutls30 | CVE-2025-14831 | BDU:2026-05048 | MEDIUM | MEDIUM | 3.7.9-2+deb12u6 |
-| perl-base | CVE-2025-15649 | — | MEDIUM | UNKNOWN | 5.36.0-7+deb12u4 |
-| stdlib | CVE-2025-22866 | BDU:2025-03456 | MEDIUM | MEDIUM | 1.22.12, 1.23.6, 1.24.0-rc.3 |
-| stdlib | CVE-2025-22870 | BDU:2025-02476 | MEDIUM | MEDIUM | 1.23.7, 1.24.1 |
-| stdlib | CVE-2025-22873 | BDU:2025-07316 | MEDIUM | MEDIUM | 1.23.9, 1.24.3 |
 | gpgv | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
-| libgnutls30 | CVE-2025-32989 | BDU:2025-11075 | MEDIUM | MEDIUM | 3.7.9-2+deb12u5 |
-| perl-base | CVE-2025-40909 | BDU:2025-10307 | MEDIUM | MEDIUM | 5.36.0-7+deb12u3 |
-| libsystemd0 | CVE-2025-4598 | BDU:2025-06694 | MEDIUM | MEDIUM | 252.38-1~deb12u1 |
-| libudev1 | CVE-2025-4598 | BDU:2025-06694 | MEDIUM | MEDIUM | 252.38-1~deb12u1 |
-| stdlib | CVE-2025-4673 | BDU:2025-08599 | MEDIUM | MEDIUM | 1.23.10, 1.24.4 |
-| stdlib | CVE-2025-47906 | BDU:2025-11595 | MEDIUM | MEDIUM | 1.23.12, 1.24.6 |
 | coreutils | CVE-2025-5278 | BDU:2025-10950 | LOW | MEDIUM | — |
-| stdlib | CVE-2025-58185 | BDU:2025-14530 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58186 | BDU:2025-14529 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-58187 | BDU:2025-13562 | MEDIUM | MEDIUM | 1.24.9, 1.25.3 |
-| stdlib | CVE-2025-58189 | BDU:2025-14526 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61724 | BDU:2025-13938 | MEDIUM | MEDIUM | 1.24.8, 1.25.2 |
-| stdlib | CVE-2025-61727 | BDU:2026-00268 | MEDIUM | MEDIUM | 1.24.11, 1.25.5 |
-| stdlib | CVE-2025-61730 | BDU:2026-03603 | MEDIUM | MEDIUM | 1.24.12, 1.25.6 |
-| libgnutls30 | CVE-2025-6395 | BDU:2025-08694 | MEDIUM | MEDIUM | 3.7.9-2+deb12u5 |
-| libssl3 | CVE-2025-68160 | BDU:2026-01216 | MEDIUM | MEDIUM | 3.0.18-1~deb12u2 |
 | gpgv | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
-| libssl3 | CVE-2025-69418 | BDU:2026-02935 | MEDIUM | MEDIUM | 3.0.18-1~deb12u2 |
-| libc-bin | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.36-9+deb12u13 |
-| libc6 | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.36-9+deb12u13 |
-| libssl3 | CVE-2025-9232 | BDU:2025-12887 | LOW | MEDIUM | 3.0.17-1~deb12u3 |
-| stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
-| perl-base | CVE-2026-12087 | — | MEDIUM | UNKNOWN | 5.36.0-7+deb12u4 |
 | bsdutils | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
 | libblkid1 | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
 | libmount1 | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
@@ -5782,15 +4909,10 @@
 | tar | CVE-2026-18477 | — | MEDIUM | UNKNOWN | — |
 | tar | CVE-2026-18508 | — | MEDIUM | UNKNOWN | — |
 | libp11-kit0 | CVE-2026-18938 | — | MEDIUM | UNKNOWN | — |
-| perl-base | CVE-2026-19487 | — | MEDIUM | UNKNOWN | 5.36.0-7+deb12u4 |
 | libc-bin | CVE-2026-19499 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-19499 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-19542 | — | MEDIUM | UNKNOWN | — |
-| dpkg | CVE-2026-2219 | — | MEDIUM | UNKNOWN | 1.21.23 |
-| libssl3 | CVE-2026-22795 | BDU:2026-01214 | MEDIUM | MEDIUM | 3.0.18-1~deb12u2 |
-| libssl3 | CVE-2026-22796 | BDU:2026-01220 | MEDIUM | MEDIUM | 3.0.18-1~deb12u2 |
-| stdlib | CVE-2026-27142 | BDU:2026-04129 | MEDIUM | MEDIUM | 1.25.8, 1.26.1 |
 | zlib1g | CVE-2026-27171 | — | MEDIUM | UNKNOWN | — |
 | bsdutils | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
 | libblkid1 | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
@@ -5800,7 +4922,6 @@
 | mount | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
 | util-linux | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
 | util-linux-extra | CVE-2026-27456 | — | MEDIUM | UNKNOWN | — |
-| libssl3 | CVE-2026-31790 | — | MEDIUM | UNKNOWN | 3.0.19-1~deb12u2 |
 | bsdutils | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
 | libblkid1 | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
 | libmount1 | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
@@ -5809,36 +4930,8 @@
 | mount | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
 | util-linux | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
 | util-linux-extra | CVE-2026-3184 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-32282 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32288 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
-| stdlib | CVE-2026-32289 | — | MEDIUM | UNKNOWN | 1.25.9, 1.26.2 |
-| libssl3 | CVE-2026-34180 | — | MEDIUM | UNKNOWN | 3.0.20-1~deb12u2 |
-| liblzma5 | CVE-2026-34743 | — | MEDIUM | UNKNOWN | 5.4.1-1+deb12u1 |
-| stdlib | CVE-2026-39823 | — | MEDIUM | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-39825 | — | MEDIUM | UNKNOWN | 1.25.10, 1.26.3 |
-| stdlib | CVE-2026-39826 | — | MEDIUM | UNKNOWN | 1.25.10, 1.26.3 |
-| libsystemd0 | CVE-2026-40225 | — | MEDIUM | UNKNOWN | 252.39-1~deb12u2 |
-| libudev1 | CVE-2026-40225 | — | MEDIUM | UNKNOWN | 252.39-1~deb12u2 |
-| libsystemd0 | CVE-2026-40226 | — | MEDIUM | UNKNOWN | 252.39-1~deb12u2 |
-| libudev1 | CVE-2026-40226 | — | MEDIUM | UNKNOWN | 252.39-1~deb12u2 |
-| libc-bin | CVE-2026-4046 | — | MEDIUM | UNKNOWN | 2.36-9+deb12u14 |
-| libc6 | CVE-2026-4046 | — | MEDIUM | UNKNOWN | 2.36-9+deb12u14 |
-| libsystemd0 | CVE-2026-4105 | — | MEDIUM | UNKNOWN | 252.39-1~deb12u2 |
-| libudev1 | CVE-2026-4105 | — | MEDIUM | UNKNOWN | 252.39-1~deb12u2 |
 | gzip | CVE-2026-41991 | — | MEDIUM | UNKNOWN | — |
-| libgnutls30 | CVE-2026-42014 | — | MEDIUM | UNKNOWN | 3.7.9-2+deb12u7 |
-| libgnutls30 | CVE-2026-42015 | — | MEDIUM | UNKNOWN | 3.7.9-2+deb12u7 |
 | libbz2-1.0 | CVE-2026-42250 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-42505 | — | MEDIUM | UNKNOWN | 1.25.12, 1.26.5, 1.27.0-rc.2 |
-| stdlib | CVE-2026-42507 | — | MEDIUM | UNKNOWN | 1.25.11, 1.26.4 |
-| libssl3 | CVE-2026-42766 | — | MEDIUM | UNKNOWN | 3.0.20-1~deb12u2 |
-| libssl3 | CVE-2026-42767 | — | MEDIUM | UNKNOWN | 3.0.22-1~deb12u1 |
-| libssl3 | CVE-2026-42770 | — | MEDIUM | UNKNOWN | 3.0.20-1~deb12u2 |
-| libc-bin | CVE-2026-4437 | — | MEDIUM | UNKNOWN | 2.36-9+deb12u14 |
-| libc6 | CVE-2026-4437 | — | MEDIUM | UNKNOWN | 2.36-9+deb12u14 |
-| libc-bin | CVE-2026-4438 | — | MEDIUM | UNKNOWN | 2.36-9+deb12u14 |
-| libc6 | CVE-2026-4438 | — | MEDIUM | UNKNOWN | 2.36-9+deb12u14 |
-| perl-base | CVE-2026-48959 | — | MEDIUM | UNKNOWN | 5.36.0-7+deb12u4 |
 | libc-bin | CVE-2026-5435 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-5435 | — | MEDIUM | UNKNOWN | — |
 | libacl1 | CVE-2026-54370 | — | MEDIUM | UNKNOWN | — |
@@ -5850,29 +4943,20 @@
 | libc-bin | CVE-2026-5450 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-5450 | — | MEDIUM | UNKNOWN | — |
 | libssl3 | CVE-2026-54872 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-56866 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | tar | CVE-2026-5704 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-5928 | — | MEDIUM | UNKNOWN | — |
-| sed | CVE-2026-5958 | — | MEDIUM | UNKNOWN | 4.9-1+deb12u1 |
-| github.com/moby/sys/user | CVE-2026-61801 | — | MEDIUM | UNKNOWN | 0.4.1 |
 | libc-bin | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6238 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6368 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-6791 | — | MEDIUM | UNKNOWN | — |
-| perl-base | CVE-2026-7010 | — | MEDIUM | UNKNOWN | 5.36.0-7+deb12u4 |
-| perl-base | CVE-2026-7017 | — | MEDIUM | UNKNOWN | 5.36.0-7+deb12u4 |
-| libssl3 | CVE-2026-7383 | — | MEDIUM | UNKNOWN | 3.0.20-1~deb12u2 |
 | libssl3 | CVE-2026-75805 | — | MEDIUM | UNKNOWN | — |
 | libssl3 | CVE-2026-75806 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-77117 | — | MEDIUM | UNKNOWN | — |
 | libssl3 | CVE-2026-77696 | — | MEDIUM | UNKNOWN | — |
-| stdlib | CVE-2026-78659 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-78660 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-78663 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | libc-bin | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | zlib1g | CVE-2026-85091 | — | MEDIUM | UNKNOWN | — |
@@ -5880,15 +4964,6 @@
 | libc6 | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89156 | — | MEDIUM | UNKNOWN | 10.42-1+deb12u1 |
-| libpcre2-8-0 | CVE-2026-89158 | — | MEDIUM | UNKNOWN | 10.42-1+deb12u1 |
-| libpcre2-8-0 | CVE-2026-89160 | — | MEDIUM | UNKNOWN | 10.42-1+deb12u1 |
-| libssl3 | CVE-2026-9076 | — | MEDIUM | UNKNOWN | 3.0.20-1~deb12u2 |
-| stdlib | CVE-2026-94439 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-94440 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-94448 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-97030 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | tar | CVE-2005-2541 | — | LOW | UNKNOWN | — |
 | login | CVE-2007-5686 | — | LOW | UNKNOWN | — |
 | passwd | CVE-2007-5686 | — | LOW | UNKNOWN | — |
@@ -5916,10 +4991,7 @@
 | mount | CVE-2022-0563 | — | LOW | UNKNOWN | — |
 | util-linux | CVE-2022-0563 | — | LOW | UNKNOWN | — |
 | util-linux-extra | CVE-2022-0563 | — | LOW | UNKNOWN | — |
-| stdlib | CVE-2022-30629 | BDU:2024-02373 | LOW | LOW | 1.17.11, 1.18.3 |
 | gpgv | CVE-2022-3219 | BDU:2026-01798 | LOW | LOW | — |
-| login | CVE-2023-29383 | BDU:2024-06940 | LOW | LOW | 1:4.13+dfsg1-1+deb12u1 |
-| passwd | CVE-2023-29383 | BDU:2024-06940 | LOW | LOW | 1:4.13+dfsg1-1+deb12u1 |
 | libsystemd0 | CVE-2023-31437 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2023-31437 | — | LOW | UNKNOWN | — |
 | libsystemd0 | CVE-2023-31438 | — | LOW | UNKNOWN | — |
@@ -5935,19 +5007,14 @@
 | dash | CVE-2026-102473 | — | LOW | UNKNOWN | — |
 | dash | CVE-2026-102474 | — | LOW | UNKNOWN | — |
 | gpgv | CVE-2026-105712 | — | LOW | UNKNOWN | — |
-| stdlib | CVE-2026-27139 | BDU:2026-04122 | LOW | LOW | 1.25.8, 1.26.1 |
 | libssl3 | CVE-2026-35189 | — | LOW | UNKNOWN | — |
 | libsystemd0 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
-| libssl3 | CVE-2026-45446 | — | LOW | UNKNOWN | 3.0.20-1~deb12u2 |
 | diffutils | CVE-2026-53910 | — | LOW | UNKNOWN | — |
-| libgnutls30 | CVE-2026-5419 | — | LOW | UNKNOWN | 3.7.9-2+deb12u7 |
 | coreutils | CVE-2026-56391 | — | LOW | UNKNOWN | — |
 | coreutils | CVE-2026-56392 | — | LOW | UNKNOWN | — |
-| stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | gpgv | CVE-2026-57062 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-67693 | — | LOW | UNKNOWN | — |
-| libssl3 | CVE-2026-75803 | — | LOW | UNKNOWN | 3.0.22-1~deb12u1 |
 | libgnutls30 | CVE-2026-88647 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-88648 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-95184 | — | LOW | UNKNOWN | — |
@@ -5961,11 +5028,8 @@
 | passwd | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
-| liblzma5 | DLA-4783-1 | — | UNKNOWN | UNKNOWN | 5.4.1-1+deb12u2 |
-| tzdata | DLA-4792-1 | — | UNKNOWN | UNKNOWN | 2026c-0+deb12u1 |
-| liblzma5 | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | 5.4.1-1+deb12u2 |
 
-## strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
@@ -7024,7 +6088,7 @@
 | glibc-common | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:ce881b8ef93a1408c03445f24a6921de010d4a73)
+## strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:40ca9d6baddb941d9ef06058a721f79c24fd17e1)
 
 Снимок БДУ: **2026-04-17**
 
