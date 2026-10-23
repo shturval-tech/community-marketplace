@@ -12,7 +12,7 @@
 | redis | 7.2.16 |
 | rabbitmq | 3.13.7-management |
 | rabbitmq-operator | 2.19.2 (актуальный тег на Docker Hub; 2.23.x в registry пока недоступен) |
-| minio-tenant | MinIO RELEASE.2025-10-15T17-29-55Z, base Alpine 3.21 |
+| minio-tenant | MinIO RELEASE.2025-10-15T17-29-55Z (сборка `go install`, т.к. upstream без бинарников), base Alpine 3.21 |
 | proxmox-csi | CSI sidecars v4.8.1 / v5.2.0 / v1.13.2 / v2.15.0 / v2.13.0 |
 | зеркало alpine | 3.21 |
 

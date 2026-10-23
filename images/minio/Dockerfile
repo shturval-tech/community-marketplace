@@ -1,18 +1,15 @@
+# MinIO CE: upstream releases after 2025-10 ship source-only (no GitHub/dl.min.io binaries).
 ARG VERSION=RELEASE.2025-10-15T17-29-55Z
-FROM alpine:3.21
+FROM golang:1.24-alpine AS build
 ARG VERSION
 ARG TARGETARCH
-RUN apk add --no-cache ca-certificates curl \
-  && case "${TARGETARCH}" in \
-       amd64) MINIO_ARCH=amd64 ;; \
-       arm64) MINIO_ARCH=arm64 ;; \
-       *) echo "unsupported TARGETARCH=${TARGETARCH}" >&2; exit 1 ;; \
-     esac \
-  && curl -fsSL \
-       "https://github.com/minio/minio/releases/download/${VERSION}/minio.linux-${MINIO_ARCH}.${VERSION}" \
-       -o /usr/local/bin/minio \
-  && chmod +x /usr/local/bin/minio \
-  && apk del curl \
+RUN apk add --no-cache git ca-certificates \
+  && CGO_ENABLED=0 GOOS=linux GOARCH="${TARGETARCH}" \
+     go install -ldflags="-s -w" "github.com/minio/minio@${VERSION}"
+
+FROM alpine:3.21
+RUN apk add --no-cache ca-certificates \
   && adduser -D -u 1000 minio-user
+COPY --from=build /go/bin/minio /usr/local/bin/minio
 USER 1000
 ENTRYPOINT ["/usr/local/bin/minio"]
