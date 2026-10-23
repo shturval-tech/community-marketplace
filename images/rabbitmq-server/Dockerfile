@@ -1,2 +1,2 @@
-ARG VERSION=3.13.7-management
+ARG VERSION=4.4.0-management
 FROM docker.io/library/rabbitmq:${VERSION}

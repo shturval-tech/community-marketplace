@@ -7,7 +7,7 @@ replicas: 1
 
 image:
   repository: rabbitmq-server
-  tag: 3.13.7-management
+  tag: 4.4.0-management
   pullPolicy: IfNotPresent
 
 resources:

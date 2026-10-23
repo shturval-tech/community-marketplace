@@ -1,6 +1,6 @@
 # MinIO CE: upstream releases after 2025-10 ship source-only (no GitHub/dl.min.io binaries).
 ARG VERSION=RELEASE.2025-10-15T17-29-55Z
-FROM golang:1.24-alpine AS build
+FROM golang:1.25-alpine AS build
 ARG VERSION
 ARG TARGETARCH
 RUN apk add --no-cache git ca-certificates \

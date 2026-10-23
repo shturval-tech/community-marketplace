@@ -1,2 +1,2 @@
-ARG VERSION=v8.3.0
+ARG VERSION=v8.7.0
 FROM registry.k8s.io/sig-storage/csi-snapshotter:${VERSION}
