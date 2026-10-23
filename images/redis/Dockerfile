@@ -1,2 +1,2 @@
-ARG VERSION=7.2.5
+ARG VERSION=7.2.16
 FROM docker.io/redis:${VERSION}

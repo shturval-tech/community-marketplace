@@ -2,8 +2,8 @@ apiVersion: v2
 name: rabbitmq-operator
 description: Оператор RabbitMQ — брокер сообщений AMQP в Kubernetes
 type: application
-version: 0.1.5
-appVersion: "2.12.0"
+version: 0.1.6
+appVersion: "2.19.2"
 annotations:
   shturval.tech/category: messaging
   shturval.tech/serviceclass: rabbitmq-operator

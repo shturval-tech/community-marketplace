@@ -2,8 +2,8 @@ apiVersion: v2
 name: redis
 description: Экземпляр Redis — кэш и быстрое key-value хранилище (требует redis-operator)
 type: application
-version: 0.1.5
-appVersion: "7.2"
+version: 0.1.6
+appVersion: "7.2.16"
 annotations:
   shturval.tech/category: database
   shturval.tech/description: Redis — in-memory СУБД для кэширования, сессий и очередей; развёртывание через CR оператора.

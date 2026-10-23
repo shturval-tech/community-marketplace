@@ -1,2 +1,2 @@
-ARG VERSION=2.12.0
+ARG VERSION=2.19.2
 FROM docker.io/rabbitmqoperator/cluster-operator:${VERSION}

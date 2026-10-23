@@ -13,7 +13,7 @@ keycloakx:
   commonLabels: {}
   image:
     repository: ghcr.io/shturval-tech/community-marketplace/keycloak
-    tag: 26.7.4
+    tag: 26.8.1
     digest: ''
     pullPolicy: IfNotPresent
   imagePullSecrets: []

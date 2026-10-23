@@ -10,7 +10,7 @@ tenant:
     name: myminio
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/minio
-      tag: RELEASE.2025-04-08T15-41-24Z
+      tag: RELEASE.2025-10-15T17-29-55Z
       pullPolicy: IfNotPresent
     imagePullSecret: {}
     initContainers: []

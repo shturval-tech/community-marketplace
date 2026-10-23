@@ -2,31 +2,31 @@
 registry: ghcr.io/shturval-tech/community-marketplace
 images:
   - name: alpine
-    tag: "3.17"
+    tag: "3.21"
   - name: authentik
-    tag: "2026.8.3"
+    tag: "2026.8.5"
   - name: busybox
     tag: "1.36"
   - name: cloudnative-pg
     tag: "1.30.1"
   - name: csi-attacher
-    tag: "v4.7.0"
+    tag: "v4.8.1"
   - name: csi-livenessprobe
-    tag: "v2.14.0"
+    tag: "v2.15.0"
   - name: csi-node-driver-registrar
-    tag: "v2.12.0"
+    tag: "v2.13.0"
   - name: csi-provisioner
-    tag: "v5.1.0"
+    tag: "v5.2.0"
   - name: csi-resizer
-    tag: "v1.12.0"
+    tag: "v1.13.2"
   - name: keycloak
-    tag: "26.7.4"
+    tag: "26.8.1"
   - name: mariadb
     tag: "11.4"
   - name: mariadb-operator
     tag: "26.10.1"
   - name: minio
-    tag: "RELEASE.2025-04-08T15-41-24Z"
+    tag: "RELEASE.2025-10-15T17-29-55Z"
   - name: minio-console
     tag: "v0.12.3"
   - name: minio-operator
@@ -34,17 +34,17 @@ images:
   - name: nextcloud-aio
     tag: "latest"
   - name: postgres
-    tag: "16.4"
+    tag: "16.15"
   - name: proxmox-csi-controller
     tag: "v0.10.0"
   - name: proxmox-csi-node
     tag: "v0.10.0"
   - name: rabbitmq-operator
-    tag: "2.12.0"
+    tag: "2.19.2"
   - name: rabbitmq-server
-    tag: "3.13-management"
+    tag: "3.13.7-management"
   - name: redis
-    tag: "7.2.5"
+    tag: "7.2.16"
   - name: redis-operator
     tag: "v0.27.0"
   - name: strimzi-kafka

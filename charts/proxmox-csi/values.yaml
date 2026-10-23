@@ -41,7 +41,7 @@ proxmox-csi-plugin:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-attacher
         pullPolicy: IfNotPresent
-        tag: v4.7.0
+        tag: v4.8.1
       resources:
         requests:
           cpu: 10m
@@ -50,7 +50,7 @@ proxmox-csi-plugin:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-provisioner
         pullPolicy: IfNotPresent
-        tag: v5.1.0
+        tag: v5.2.0
       resources:
         requests:
           cpu: 10m
@@ -59,7 +59,7 @@ proxmox-csi-plugin:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-resizer
         pullPolicy: IfNotPresent
-        tag: v1.12.0
+        tag: v1.13.2
       resources:
         requests:
           cpu: 10m
@@ -75,7 +75,7 @@ proxmox-csi-plugin:
       image:
         repository: ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar
         pullPolicy: IfNotPresent
-        tag: v2.12.0
+        tag: v2.13.0
       resources:
         requests:
           cpu: 10m
@@ -93,7 +93,7 @@ proxmox-csi-plugin:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe
       pullPolicy: IfNotPresent
-      tag: v2.14.0
+      tag: v2.15.0
     failureThreshold: 5
     initialDelaySeconds: 10
     timeoutSeconds: 10
