@@ -183,7 +183,7 @@ keycloakx:
     enabled: false
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/busybox
-      tag: '1.36'
+      tag: '1.38.0'
       pullPolicy: IfNotPresent
     securityContext:
       allowPrivilegeEscalation: false

@@ -82,6 +82,19 @@ make scan-all
 
 Подробнее: [airgap.md](airgap.md).
 
+## Регулярное обслуживание
+
+| Действие | Периодичность | Как |
+| --- | --- | --- |
+| **Security Scan** | Ежедневно 03:00 UTC | Workflow **Security Scan** (cron) |
+| Пересмотр `.trivyignore` | Ежемесячно или после major bump upstream | [security-update-residual.md](security-update-residual.md) |
+| Сверка с baseline | После волн обновлений | [security-post-update-snapshot.md](security-post-update-snapshot.md) |
+| Pages «N без отч.» | По событию | **Actions → Security Scan → Run workflow**; проверить job scan для образа |
+| **Nightly Rebuild** | По расписанию репозитория | Пересборка `:latest` без scan-gate |
+| Air-gap bundle | После успешного Mirror Images | Workflow **Air-gap Bundle Release** (chain) или вручную |
+
+Порог блокировки merge в main для образов: **scan-gate** в **Mirror Images** (не путать с nightly).
+
 ## Ограничения
 
 - Зеркало БДУ отстаёт от `bdu.fstec.ru`; в отчёте — дата снимка.

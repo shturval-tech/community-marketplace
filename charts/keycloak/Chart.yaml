@@ -2,7 +2,7 @@ apiVersion: v2
 name: keycloak
 description: Keycloak — единый вход (SSO), OIDC и SAML для приложений
 type: application
-version: 0.1.6
+version: 0.1.7
 appVersion: "26.8.1"
 annotations:
   shturval.tech/category: identity

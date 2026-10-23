@@ -2,6 +2,8 @@
 
 Nextcloud — частное облако для файлов, календаря, контактов и офисных документов (All-in-One).
 
+**Статус:** placeholder-чарт (`placeholder.enabled: true`). Зеркало AIO pin **`v14.4.1`** (`ghcr.io/nextcloud-releases/all-in-one`); полная интеграция — после `scripts/sync-upstream.sh`.
+
 **Требует:** нет.
 
 **Установка:**

@@ -8,7 +8,7 @@ placeholder:
   enabled: true
   image:
     repository: nextcloud-aio
-    tag: latest
+    tag: v14.4.1
     pullPolicy: IfNotPresent
 
 # Future AIO settings (used after upstream sync).
