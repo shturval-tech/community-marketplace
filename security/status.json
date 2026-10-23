@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-23 10:20 UTC",
+  "updated_at": "2026-10-23 11:49 UTC",
   "source": "Mirror Images",
   "pages_url": "https://shturval-tech.github.io/community-marketplace/security/",
-  "workflow_url": "https://github.com/shturval-tech/community-marketplace/actions/runs/39934993978",
-  "total_vulnerabilities": 3957,
-  "gate_failures": 38,
+  "workflow_url": "https://github.com/shturval-tech/community-marketplace/actions/runs/39941014310",
+  "total_vulnerabilities": 2444,
+  "gate_failures": 0,
   "fail_on": "CRITICAL",
   "fixed_only": true,
-  "has_blocking_vulnerabilities": true,
-  "scan_job_failures": 0
+  "has_blocking_vulnerabilities": false,
+  "scan_job_failures": 1
 }
