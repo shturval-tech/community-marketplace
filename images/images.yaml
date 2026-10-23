@@ -34,7 +34,7 @@ images:
   - name: minio-operator
     tag: "v7.1.1"
   - name: nextcloud-aio
-    tag: "v14.4.1"
+    tag: "14.4.1"
   - name: postgres
     tag: "16.15"
   - name: proxmox-csi-controller
