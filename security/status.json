@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-30 09:41 UTC",
-  "source": "Security Scan",
+  "updated_at": "2026-10-30 10:09 UTC",
+  "source": "Mirror Images",
   "pages_url": "https://shturval-tech.github.io/community-marketplace/security/",
-  "workflow_url": "https://github.com/shturval-tech/community-marketplace/actions/runs/41034329766",
+  "workflow_url": "https://github.com/shturval-tech/community-marketplace/actions/runs/41035306525",
   "total_vulnerabilities": 3087,
   "gate_failures": 2,
   "fail_on": "CRITICAL",
