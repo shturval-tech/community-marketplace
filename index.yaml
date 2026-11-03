@@ -8,13 +8,13 @@ entries:
         прокси-аутентификация и политики доступа.'
     apiVersion: v2
     appVersion: 2026.8.5
-    created: "2026-10-23T14:02:08.398435692Z"
+    created: "2026-11-03T11:40:37.066294877Z"
     dependencies:
     - name: authentik
       repository: https://charts.goauthentik.io
       version: 2026.8.5
     description: authentik — open-source провайдер идентичности и SSO
-    digest: e294d3f02bef5da20188004760201201283d7568e899ef08fa887b54498a52af
+    digest: eb3d89d99ce1f3dbd7562e6440e5499409f65152ffd4f7cdde729f424976b32f
     name: authentik
     type: application
     urls:
@@ -27,7 +27,7 @@ entries:
         прокси-аутентификация и политики доступа.'
     apiVersion: v2
     appVersion: 2026.8.3
-    created: "2026-10-23T14:02:08.392801817Z"
+    created: "2026-11-03T11:40:37.059250697Z"
     dependencies:
     - name: authentik
       repository: https://charts.goauthentik.io
@@ -103,14 +103,14 @@ entries:
       shturval.tech/serviceclass: postgres
     apiVersion: v2
     appVersion: 0.9.0
-    created: "2026-10-23T14:02:08.405278781Z"
+    created: "2026-11-03T11:40:37.074465315Z"
     dependencies:
     - name: cluster
       repository: https://cloudnative-pg.github.io/charts
       version: 0.9.0
     description: Кластер PostgreSQL под CloudNativePG — база данных с HA и постоянными
       томами
-    digest: 70023c7f14f858270287ed2a2dd9d64159e0051408cba58c81f50ab4ff5231a4
+    digest: 0dd9c8d81ba9b311a644c6835cec536344b292ed5f464705945ce21565ef58c6
     name: cnpg-cluster
     type: application
     urls:
@@ -124,7 +124,7 @@ entries:
       shturval.tech/serviceclass: postgres
     apiVersion: v2
     appVersion: 0.9.0
-    created: "2026-10-23T14:02:08.40217249Z"
+    created: "2026-11-03T11:40:37.070678427Z"
     dependencies:
     - name: cluster
       repository: https://cloudnative-pg.github.io/charts
@@ -205,14 +205,14 @@ entries:
         PostgreSQL в кластере Kubernetes.
     apiVersion: v2
     appVersion: 1.30.1
-    created: "2026-10-23T14:02:08.410976526Z"
+    created: "2026-11-03T11:40:37.082602114Z"
     dependencies:
     - name: cloudnative-pg
       repository: https://cloudnative-pg.github.io/charts
       version: 0.29.1
     description: Оператор CloudNativePG — управление PostgreSQL в Kubernetes (репликация,
       failover, бэкапы)
-    digest: fe00525d7e206902c3395cb9d5911e171d67543e4fdec5ca2e8cfd7333791b9e
+    digest: 2a37f3b10d2613639dd9092c8c5297729187ac30204f563954f800a870e7dbaa
     name: cnpg-operator
     type: application
     urls:
@@ -283,9 +283,9 @@ entries:
         и микросервисной шины (Strimzi, KRaft).
     apiVersion: v2
     appVersion: 4.2.2
-    created: "2026-10-23T14:02:08.411254339Z"
+    created: "2026-11-03T11:40:37.082947484Z"
     description: Кластер Apache Kafka — распределённый журнал событий и стриминг данных
-    digest: a12c414c0a81073e98d2865db2b4aa0d1b412d72b85717437b849503020c6473
+    digest: 17908d4f2756aa66096b626abe69cee8e6ba5247b7f0dddaf062ec923792c4ba
     name: kafka
     type: application
     urls:
@@ -298,7 +298,7 @@ entries:
         и микросервисной шины (Strimzi, KRaft).
     apiVersion: v2
     appVersion: 3.8.0
-    created: "2026-10-23T14:02:08.411127901Z"
+    created: "2026-11-03T11:40:37.082785355Z"
     description: Кластер Apache Kafka — распределённый журнал событий и стриминг данных
     digest: a5421237092fa0658d947664574bcdfee9acb3b860b188eaa918e212b1bcfc88
     name: kafka
@@ -357,13 +357,13 @@ entries:
         федерация, OAuth2/OpenID Connect для сервисов.'
     apiVersion: v2
     appVersion: 26.8.1
-    created: "2026-10-23T14:02:08.416827375Z"
+    created: "2026-11-03T11:40:37.08892144Z"
     dependencies:
     - name: keycloakx
       repository: https://codecentric.github.io/helm-charts
       version: 7.3.2
     description: Keycloak — единый вход (SSO), OIDC и SAML для приложений
-    digest: ad042f5928e1cd2cc8e6685291c4a03c2c477fb7e7d8dc3f6734b0726fa72adc
+    digest: b9a457a2b0502f0e689f0b445438354416c48ca2ac9bab9f6f7fb524ddf16043
     name: keycloak
     type: application
     urls:
@@ -376,7 +376,7 @@ entries:
         федерация, OAuth2/OpenID Connect для сервисов.'
     apiVersion: v2
     appVersion: 26.8.1
-    created: "2026-10-23T14:02:08.414393349Z"
+    created: "2026-11-03T11:40:37.086910783Z"
     dependencies:
     - name: keycloakx
       repository: https://codecentric.github.io/helm-charts
@@ -395,7 +395,7 @@ entries:
         федерация, OAuth2/OpenID Connect для сервисов.'
     apiVersion: v2
     appVersion: 26.7.4
-    created: "2026-10-23T14:02:08.412810354Z"
+    created: "2026-11-03T11:40:37.084924371Z"
     dependencies:
     - name: keycloakx
       repository: https://codecentric.github.io/helm-charts
@@ -470,9 +470,9 @@ entries:
         инстанс через CR оператора MariaDB.
     apiVersion: v2
     appVersion: "11.4"
-    created: "2026-10-23T14:02:08.416984438Z"
+    created: "2026-11-03T11:40:37.089085492Z"
     description: Экземпляр MariaDB — реляционная СУБД для приложений (требует mariadb-operator)
-    digest: e238731b34156a9798b805d82f8a0498e71d06b0ec37d22b37e01e9c99ccea15
+    digest: 53c83d58feb285125015124e426f2530d5e29d71cc587871eb5920694aa7bcb5
     name: mariadb
     type: application
     urls:
@@ -529,8 +529,27 @@ entries:
       shturval.tech/description: Kubernetes-оператор MariaDB для автоматизации развёртывания,
         масштабирования и резервного копирования СУБД.
     apiVersion: v2
+    appVersion: 26.10.2
+    created: "2026-11-03T11:40:37.100232147Z"
+    dependencies:
+    - name: mariadb-operator
+      repository: https://helm.mariadb.com/mariadb-operator
+      version: 26.10.2
+    description: Оператор MariaDB — жизненный цикл MariaDB/MySQL в Kubernetes
+    digest: 6f6ac766f675d1aa2c3998d51d18d870454240abe4c4cf299c8420a64541cec9
+    name: mariadb-operator
+    type: application
+    urls:
+    - mariadb-operator-0.1.8.tgz
+    version: 0.1.8
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      shturval.tech/category: database
+      shturval.tech/description: Kubernetes-оператор MariaDB для автоматизации развёртывания,
+        масштабирования и резервного копирования СУБД.
+    apiVersion: v2
     appVersion: 26.10.1
-    created: "2026-10-23T14:02:08.422873172Z"
+    created: "2026-11-03T11:40:37.095979516Z"
     dependencies:
     - name: mariadb-operator
       repository: https://helm.mariadb.com/mariadb-operator
@@ -549,7 +568,7 @@ entries:
         масштабирования и резервного копирования СУБД.
     apiVersion: v2
     appVersion: 26.10.1
-    created: "2026-10-23T14:02:08.419500561Z"
+    created: "2026-11-03T11:40:37.092680062Z"
     dependencies:
     - name: mariadb-operator
       repository: https://helm.mariadb.com/mariadb-operator
@@ -624,13 +643,13 @@ entries:
         и политик хранения в кластере.
     apiVersion: v2
     appVersion: 7.1.1
-    created: "2026-10-23T14:02:08.425672316Z"
+    created: "2026-11-03T11:40:37.10308001Z"
     dependencies:
     - name: operator
       repository: file://./charts/operator
       version: 7.1.1
     description: MinIO Operator — S3-совместимое объектное хранилище в Kubernetes
-    digest: 30fe19de952508cb8bd3b6a31b025b5f9944b5545cb61132b3fa2bbeab7b82f3
+    digest: 0cb70bbd3ec0542e71fd60e6c622d1f71d30b2572e925211ccd32b5712c09f18
     name: minio-operator
     type: application
     urls:
@@ -643,7 +662,7 @@ entries:
         и политик хранения в кластере.
     apiVersion: v2
     appVersion: 4.3.7
-    created: "2026-10-23T14:02:08.423832669Z"
+    created: "2026-11-03T11:40:37.101464967Z"
     dependencies:
     - name: minio-operator
       repository: https://operator.min.io/
@@ -718,13 +737,13 @@ entries:
         артефакты, резервные копии) с API Amazon S3.
     apiVersion: v2
     appVersion: 7.1.1
-    created: "2026-10-23T14:02:08.427067191Z"
+    created: "2026-11-03T11:40:37.105214891Z"
     dependencies:
     - name: tenant
       repository: https://operator.min.io/
       version: 7.1.1
     description: Tenant MinIO — изолированное S3-хранилище для приложений и бэкапов
-    digest: 9f06a6a39a54d42faac8da60052834bc9f2fbd3b001c19b0a9694cab98e8e163
+    digest: ea34e9ce895cf0fa3b7ddf7bb04e8de6b07209ecacba51275d8cb4bc2ac3b4f2
     name: minio-tenant
     type: application
     urls:
@@ -737,7 +756,7 @@ entries:
         артефакты, резервные копии) с API Amazon S3.
     apiVersion: v2
     appVersion: 7.1.1
-    created: "2026-10-23T14:02:08.426386849Z"
+    created: "2026-11-03T11:40:37.10411667Z"
     dependencies:
     - name: tenant
       repository: https://operator.min.io/
@@ -813,9 +832,9 @@ entries:
       shturval.tech/upstream: https://github.com/nextcloud/all-in-one
     apiVersion: v2
     appVersion: 14.4.1
-    created: "2026-10-23T14:02:08.427300949Z"
+    created: "2026-11-03T11:40:37.106187767Z"
     description: Nextcloud All-in-One — файловое облако и совместная работа
-    digest: 9402022f4e9e2359657d69094c3c7d9097b828e917cff37d3d7330bf3d0029a8
+    digest: 4c424ecea82986c0aaba3ab45cac602974f287ead4842d3b30bad13ce0b4c89e
     name: nextcloud-aio
     type: application
     urls:
@@ -829,7 +848,7 @@ entries:
       shturval.tech/upstream: https://github.com/nextcloud/all-in-one
     apiVersion: v2
     appVersion: latest
-    created: "2026-10-23T14:02:08.427186809Z"
+    created: "2026-11-03T11:40:37.105821246Z"
     description: Nextcloud All-in-One — файловое облако и совместная работа
     digest: 04b554dfad9aa2280eaf01286af0807abf216956349a085b80eb69024df1d0bc
     name: nextcloud-aio
@@ -891,13 +910,13 @@ entries:
         из дисков/хранилищ гипервизора.
     apiVersion: v2
     appVersion: v0.21.0
-    created: "2026-10-23T14:02:08.433155217Z"
+    created: "2026-11-03T11:40:37.113332717Z"
     dependencies:
     - name: proxmox-csi-plugin
       repository: oci://ghcr.io/sergelogvinov/charts
       version: 0.5.1
     description: Proxmox CSI — динамические тома из хранилища Proxmox VE
-    digest: 3eb936ebfdce1da022d8604b14dd53aed086e21af32e049023ee437efbff276e
+    digest: 3dfee117b62cd31f3609d1781603e262791e94387c08f136fd56481cc92f97d5
     name: proxmox-csi
     type: application
     urls:
@@ -910,7 +929,7 @@ entries:
         из дисков/хранилищ гипервизора.
     apiVersion: v2
     appVersion: 0.5.0
-    created: "2026-10-23T14:02:08.431936995Z"
+    created: "2026-11-03T11:40:37.111744548Z"
     dependencies:
     - name: proxmox-csi-plugin
       repository: oci://ghcr.io/sergelogvinov/charts
@@ -929,7 +948,7 @@ entries:
         из дисков/хранилищ гипервизора.
     apiVersion: v2
     appVersion: 0.5.0
-    created: "2026-10-23T14:02:08.430868746Z"
+    created: "2026-11-03T11:40:37.109958281Z"
     dependencies:
     - name: proxmox-csi-plugin
       repository: oci://ghcr.io/sergelogvinov/charts
@@ -948,7 +967,7 @@ entries:
         из дисков/хранилищ гипервизора.
     apiVersion: v2
     appVersion: 0.3.3
-    created: "2026-10-23T14:02:08.429126344Z"
+    created: "2026-11-03T11:40:37.108658784Z"
     dependencies:
     - name: proxmox-csi-plugin
       repository: oci://ghcr.io/sergelogvinov/charts
@@ -967,7 +986,7 @@ entries:
         из дисков/хранилищ гипервизора.
     apiVersion: v2
     appVersion: 0.3.3
-    created: "2026-10-23T14:02:08.428226766Z"
+    created: "2026-11-03T11:40:37.107479834Z"
     dependencies:
     - name: proxmox-csi-plugin
       repository: oci://ghcr.io/sergelogvinov/charts
@@ -1042,9 +1061,9 @@ entries:
         кластер для асинхронного взаимодействия приложений.
     apiVersion: v2
     appVersion: 4.4.0
-    created: "2026-10-23T14:02:08.433499439Z"
+    created: "2026-11-03T11:40:37.113787518Z"
     description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
-    digest: 507948d00a3bdae79c98222c44e1d674faa2e3f9bd0561c8bcda287575192278
+    digest: 0c6c7144e93f4f505015325019b39af02ce45b0a57b8e4f1ccc2d06b8b95dbcb
     name: rabbitmq
     type: application
     urls:
@@ -1057,7 +1076,7 @@ entries:
         кластер для асинхронного взаимодействия приложений.
     apiVersion: v2
     appVersion: 3.13.7
-    created: "2026-10-23T14:02:08.433390527Z"
+    created: "2026-11-03T11:40:37.113649394Z"
     description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
     digest: 4196f8ee7dd783a8b9e996e9796ecaba689e695e98bd05b00c70295c4b0fe376
     name: rabbitmq
@@ -1072,7 +1091,7 @@ entries:
         кластер для асинхронного взаимодействия приложений.
     apiVersion: v2
     appVersion: "4.0"
-    created: "2026-10-23T14:02:08.433280012Z"
+    created: "2026-11-03T11:40:37.113504911Z"
     description: Кластер RabbitMQ — надёжная доставка сообщений между микросервисами
     digest: ae47759937145b87d268d989a84b09098fabc8c5d6279367f89620a8174dbb1c
     name: rabbitmq
@@ -1132,9 +1151,9 @@ entries:
       shturval.tech/serviceclass: rabbitmq-operator
     apiVersion: v2
     appVersion: 2.19.2
-    created: "2026-10-23T14:02:08.43372188Z"
+    created: "2026-11-03T11:40:37.114070986Z"
     description: Оператор RabbitMQ — брокер сообщений AMQP в Kubernetes
-    digest: c36567c081db2cbe7abf8de2c96391d41be9d2d27bc68792b72a130da412b56c
+    digest: 683d9a5a1355caf89c8b9e0c9aadf434fb50a27bf19af8fb9eb14a80719f9ba5
     name: rabbitmq-operator
     type: application
     urls:
@@ -1148,7 +1167,7 @@ entries:
       shturval.tech/serviceclass: rabbitmq-operator
     apiVersion: v2
     appVersion: 2.12.0
-    created: "2026-10-23T14:02:08.433613669Z"
+    created: "2026-11-03T11:40:37.113930328Z"
     description: Оператор RabbitMQ — брокер сообщений AMQP в Kubernetes
     digest: e883154ad506cf0d8b613a5808c887bcde20845043cd149c03caec2e6bf2d5f3
     name: rabbitmq-operator
@@ -1210,9 +1229,9 @@ entries:
         очередей; развёртывание через CR оператора.
     apiVersion: v2
     appVersion: 7.2.16
-    created: "2026-10-23T14:02:08.433947956Z"
+    created: "2026-11-03T11:40:37.114371259Z"
     description: Экземпляр Redis — кэш и быстрое key-value хранилище (требует redis-operator)
-    digest: 67727a7a10d10f0067c063851dfc02372e71163b8e55eb2eb46dc4afd8752ade
+    digest: 45e4bfa013761d37235572834b8be91d7a19fd98c9fd484ddbbb0ab24582abb5
     name: redis
     type: application
     urls:
@@ -1225,7 +1244,7 @@ entries:
         очередей; развёртывание через CR оператора.
     apiVersion: v2
     appVersion: "7.2"
-    created: "2026-10-23T14:02:08.433829139Z"
+    created: "2026-11-03T11:40:37.114232414Z"
     description: Экземпляр Redis — кэш и быстрое key-value хранилище (требует redis-operator)
     digest: 3dba72880564f9f09a05a1cd21032426ac9473f99836226cb2c640ea83bdf27f
     name: redis
@@ -1284,13 +1303,13 @@ entries:
         replication и Sentinel в Kubernetes.
     apiVersion: v2
     appVersion: 0.27.0
-    created: "2026-10-23T14:02:08.439012479Z"
+    created: "2026-11-03T11:40:37.12131062Z"
     dependencies:
     - name: redis-operator
       repository: https://ot-container-kit.github.io/helm-charts/
       version: 0.27.0
     description: Оператор Redis — in-memory хранилище и кэш в Kubernetes
-    digest: 64de42bc5363faed6f7154e5bdf219e81a605d0b51913513c21b161d006e214f
+    digest: 4f97c9cb6dc4a7a04cb2a1773fc59e7d55348a5a7c01e4f1bf227a22b95e4168
     name: redis-operator
     type: application
     urls:
@@ -1360,14 +1379,14 @@ entries:
       shturval.tech/serviceclass: kafka-operator
     apiVersion: v2
     appVersion: 1.3.0
-    created: "2026-10-23T14:02:08.447664669Z"
+    created: "2026-11-03T11:40:37.130004095Z"
     dependencies:
     - name: strimzi-kafka-operator
       repository: file://./charts/strimzi-kafka-operator
       version: 0.1.1
     description: Оператор Strimzi — Apache Kafka и экосистема потоковой обработки
       в Kubernetes
-    digest: e698956d5a20771a1d09429bbff0699289673935610f17434d1ff043868e3086
+    digest: 1b3d56946485cca7efb7362edb95f07728618e0a13394611a1e97c2033351ed8
     name: strimzi-operator
     type: application
     urls:
@@ -1381,7 +1400,7 @@ entries:
       shturval.tech/serviceclass: kafka-operator
     apiVersion: v2
     appVersion: 0.45.0
-    created: "2026-10-23T14:02:08.443435328Z"
+    created: "2026-11-03T11:40:37.1259047Z"
     dependencies:
     - name: strimzi-kafka-operator
       repository: file://./charts/strimzi-kafka-operator
@@ -1442,4 +1461,4 @@ entries:
     urls:
     - https://github.com/shturval-tech/community-marketplace/releases/download/strimzi-operator-0.1.0/strimzi-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-23T14:02:08.386511705Z"
+generated: "2026-11-03T11:40:37.051836314Z"
