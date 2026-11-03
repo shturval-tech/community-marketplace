@@ -12,21 +12,21 @@
 | --- | --- |
 | **0.1.6** | authentik, keycloak (до 0.1.7 busybox), cnpg-cluster, redis, rabbitmq-operator, minio-tenant, первая волна CSI |
 | **0.1.7** | strimzi-operator, kafka, minio-operator, mariadb-operator; rabbitmq **4.4** |
+| **0.1.8** | mariadb-operator (**26.10.2**) |
 | **0.1.8–0.1.9** | proxmox-csi (образы **v0.21**, sidecars новее upstream chart); chart dep **0.5.1** |
 | **0.1.6 nextcloud** | pin **v14.4.1** (placeholder-чарт) |
-| **CI `e81ed9c`** | CSI v4.13+/v6.4+/v8.7, operator rebuild, `.trivyignore`, scan-gate OK |
+| **security wave (образы)** | Strimzi UBI9 overlay; csi-resizer rebuild **v1.14.0**; MinIO CE/operator Go **1.26.9** + `go get` транзитивов |
 
 ## Принятые риски (`.trivyignore`)
 
 | Группа | Причина | Когда снять |
 | --- | --- | --- |
-| mariadb-operator x/crypto | upstream **26.10.1** | новый релиз operator |
-| CVE-2026-33186, CVE-2025-68121 (global) | в т.ч. **csi-resizer v1.14.0** — нет нового тега sig-storage | новый csi-resizer / пересмотр ignore |
-| minio-console | quay **v0.30.0**, нет исходников | новый тег или отказ от зеркала |
-| minio CE amqp/grpc/crypto | архив minio/minio | AIStor / fork / ignore пересмотр |
-| strimzi-kafka netty | operand **1.3.0-kafka-4.2.2** | patch Strimzi/Kafka image |
-| postgres PyJWT/certifi | CNPG **16.15** | bump operand + убрать ignore |
-| proxmox openssl (BDU) | база **ghcr.io/sergelogvinov** | vendor **v0.21+** debian/openssl |
+| golang.org/x/crypto (серия CVE-2026-3983*) | **minio-console** quay **v0.30.0**; operator **26.10.2** закрывает только mariadb-operator | новый тег console или отказ от зеркала; minio/minio-operator после пересборки — перескан |
+| CVE-2026-33186, CVE-2025-68121 (global) | **minio-console**, **mariadb** (stdlib); csi-resizer/minio пересобраны локально | исчезновение CVE из всех образов каталога |
+| minio-console (legacy Go) | quay **v0.30.0**, нет исходников | новый тег или отказ от зеркала |
+| strimzi-kafka netty/lz4 | operand **1.3.0-kafka-4.2.2** | patch Strimzi/Kafka image |
+| postgres PyJWT/certifi | CNPG **16.15** (нет **16.16** в каталоге CNPG) | bump operand, когда upstream выпустит патч-сборку |
+| minio/minio in-tree CVE без fix | **CVE-2026-33322**, **CVE-2026-33419** | вне ignore; архив minio/minio, FixedVersion пустой |
 
 Пересмотр списка: **ежемесячно** или при каждом **Security Scan** (см. ниже).
 

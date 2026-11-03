@@ -1,15 +1,21 @@
 # MinIO CE: upstream releases after 2025-10 ship source-only (no GitHub/dl.min.io binaries).
 ARG VERSION=RELEASE.2025-10-15T17-29-55Z
-FROM golang:1.25-alpine AS build
+FROM golang:1.26.9-alpine AS build
 ARG VERSION
 ARG TARGETARCH
 RUN apk add --no-cache git ca-certificates \
+  && git clone --depth 1 --branch "${VERSION}" https://github.com/minio/minio.git /src \
+  && cd /src \
+  && go get github.com/rabbitmq/amqp091-go@v1.13.0 \
+  && go get golang.org/x/crypto@v0.52.0 \
+  && go get google.golang.org/grpc@v1.79.3 \
+  && go mod tidy \
   && CGO_ENABLED=0 GOOS=linux GOARCH="${TARGETARCH}" \
-     go install -ldflags="-s -w" "github.com/minio/minio@${VERSION}"
+     go build -trimpath -ldflags "-s -w" -o /minio .
 
 FROM alpine:3.21
 RUN apk add --no-cache ca-certificates \
   && adduser -D -u 1000 minio-user
-COPY --from=build /go/bin/minio /usr/local/bin/minio
+COPY --from=build /minio /usr/local/bin/minio
 USER 1000
 ENTRYPOINT ["/usr/local/bin/minio"]

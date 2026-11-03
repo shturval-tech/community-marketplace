@@ -1,11 +1,14 @@
 # Rebuild operator with current Go toolchain (quay.io tag ships older stdlib/x/crypto).
 ARG VERSION=v7.1.1
-FROM golang:1.25-alpine AS build
+FROM golang:1.26.9-alpine AS build
 ARG VERSION
 ARG TARGETARCH
 RUN apk add --no-cache git ca-certificates \
   && git clone --depth 1 --branch "${VERSION}" https://github.com/minio/operator.git /src \
   && cd /src \
+  && go get golang.org/x/crypto@v0.52.0 \
+  && go get google.golang.org/grpc@v1.79.3 \
+  && go mod tidy \
   && CGO_ENABLED=0 GOOS=linux GOARCH="${TARGETARCH}" \
      go build -trimpath -ldflags "-s -w" -o /minio-operator ./cmd/operator
 

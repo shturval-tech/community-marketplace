@@ -13,7 +13,7 @@ mariadb-operator:
   image:
     repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
     pullPolicy: IfNotPresent
-    tag: 26.10.1
+    tag: 26.10.2
   imagePullSecrets: []
   logLevel: INFO
   clusterName: cluster.local
@@ -67,7 +67,7 @@ mariadb-operator:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
       pullPolicy: IfNotPresent
-      tag: 26.10.1
+      tag: 26.10.2
     imagePullSecrets: []
     ha:
       enabled: false
@@ -123,7 +123,7 @@ mariadb-operator:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/mariadb-operator
       pullPolicy: IfNotPresent
-      tag: 26.10.1
+      tag: 26.10.2
     imagePullSecrets: []
     ha:
       enabled: false

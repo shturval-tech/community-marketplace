@@ -108,6 +108,7 @@ proxmox-csi-plugin:
     - key: node.kubernetes.io/disk-pressure
       operator: Exists
       effect: NoSchedule
+    affinity: {}
   livenessprobe:
     image:
       repository: ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe
