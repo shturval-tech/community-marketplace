@@ -55,7 +55,7 @@ Settings → Actions → General → **Workflow permissions** должны по�
 
 Симптом закрытых пакетов: `failed to fetch anonymous token` / HTTP 401 на `https://ghcr.io/token?scope=repository:shturval-tech/community-marketplace/...` — обычно для **всего** каталога, не одного тега.
 
-Workflow **Mirror Images** после push выставляет `visibility=public` для публикуемого пакета. Если шаг падает с `Resource not accessible by integration`, добавьте repo secret с PAT (`write:packages`) и используйте его вместо `GITHUB_TOKEN` в этом шаге.
+Workflow **Mirror Images** пытается выставить `visibility=public` после push (шаг некритичный). Обычно `GITHUB_TOKEN` **не может** менять visibility org-пакетов (HTTP 404 без прав org admin) — тогда обязателен `./scripts/ghcr-set-public.sh`. Опционально: repo secret **`GHCR_PACKAGES_TOKEN`** (PAT org admin + `write:packages`) для автоматизации в CI.
 
 - Actions: разрешить push packages из этого репозитория
 
