@@ -33,6 +33,7 @@ make bundle            # charts + images/*.tar + push-offline.sh + airgap-bundle
 make push-offline      # из dist/ без интернета (после распаковки бандла)
 make push HELM_REPO_URL=... REGISTRY=...  # legacy: crane copy с ghcr.io
 make verify-images     # все образы в render -> ghcr.io/.../community-marketplace
+make verify-ghcr-anonymous  # анонимный pull token для всех зеркал в images/images.yaml
 make test              # ct lint + ct install (kind)
 make vendor-deps       # helm dependency update во всех charts/
 make sync-values       # merge subchart values.yaml → wrapper (для UI Штурвала)

@@ -11,11 +11,11 @@ SCAN_FAIL_SEVERITY ?= CRITICAL
 IMAGE ?=
 CHART ?=
 
-.PHONY: lint lint-chart package index vendor-deps sync-values test bundle push push-offline images-list verify-images bdu-fetch scan scan-all scan-test help
+.PHONY: lint lint-chart package index vendor-deps sync-values test bundle push push-offline images-list verify-images verify-ghcr-anonymous bdu-fetch scan scan-all scan-test help
 
 help:
 	@echo "Targets: lint, lint-chart CHART=x, package, index, vendor-deps, sync-values, test, bundle, push, push-offline"
-	@echo "         verify-images, bdu-fetch, scan IMAGE=ref, scan-all, scan-test"
+	@echo "         verify-images, verify-ghcr-anonymous, bdu-fetch, scan IMAGE=ref, scan-all, scan-test"
 
 vendor-deps:
 	@./scripts/vendor-chart-deps.sh
@@ -42,6 +42,10 @@ package:
 verify-images:
 	@chmod +x scripts/verify-images.sh
 	@./scripts/verify-images.sh
+
+verify-ghcr-anonymous:
+	@chmod +x scripts/verify-ghcr-anonymous.sh
+	@./scripts/verify-ghcr-anonymous.sh
 
 index: package
 	@helm repo index "$(PACKAGES_DIR)"

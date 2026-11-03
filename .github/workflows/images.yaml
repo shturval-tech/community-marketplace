@@ -73,6 +73,18 @@ jobs:
             ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ steps.tag.outputs.tag }}
             ghcr.io/shturval-tech/community-marketplace/${{ matrix.name }}:${{ github.sha }}
 
+      - name: Set GHCR package visibility to public
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pkg="community-marketplace%2F${{ matrix.name }}"
+          curl -fsSL -X PUT \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/orgs/shturval-tech/packages/container/${pkg}/visibility" \
+            -d '{"visibility":"public"}'
+
   scan:
     runs-on: ubuntu-24.04
     needs: [mirror, prepare]

@@ -34,10 +34,30 @@ Settings → Actions → General → **Workflow permissions** должны по�
 
 ## 4. GitHub Container Registry
 
-Packages → Package settings для `community-marketplace`:
+Каждый зеркальный образ — **отдельный** container package в org: `community-marketplace/<image>` (например `community-marketplace/cloudnative-pg`, `community-marketplace/postgres`). Публичный git-репозиторий **не** делает эти пакеты публичными автоматически.
 
-- Visibility: public (для community pull без auth)
-- Actions: разрешить push из этого репозитория
+Предусловие: org **Settings → Packages** разрешает публичные пакеты.
+
+После первого **Mirror Images** (или если в кластере `401 Unauthorized` на анонимный pull):
+
+1. В org: **Packages** → для каждого `community-marketplace/*` → **Package settings** → **Change visibility** → Public, **или** один раз из CLI (PAT с `write:packages`):
+
+   ```bash
+   export GH_TOKEN=<PAT with write:packages>
+   ./scripts/ghcr-set-public.sh
+   ```
+
+2. Проверка (ожидается 200 на все образы из `images/images.yaml`):
+
+   ```bash
+   make verify-ghcr-anonymous
+   ```
+
+Симптом закрытых пакетов: `failed to fetch anonymous token` / HTTP 401 на `https://ghcr.io/token?scope=repository:shturval-tech/community-marketplace/...` — обычно для **всего** каталога, не одного тега.
+
+Workflow **Mirror Images** после push выставляет `visibility=public` для публикуемого пакета. Если шаг падает с `Resource not accessible by integration`, добавьте repo secret с PAT (`write:packages`) и используйте его вместо `GITHUB_TOKEN` в этом шаге.
+
+- Actions: разрешить push packages из этого репозитория
 
 ## 5. ShturvalRepoConfig URL
 
@@ -70,6 +90,7 @@ spec:
 ```bash
 curl -sS "https://shturval-tech.github.io/community-marketplace/index.yaml" | head
 curl -sS "https://shturval-tech.github.io/community-marketplace/security/badge.json"
+make verify-ghcr-anonymous
 ```
 
 Подключение репозитория в кластере — [README.md](../README.md#быстрый-старт). Автоматизация CI — [ci.md](ci.md).
