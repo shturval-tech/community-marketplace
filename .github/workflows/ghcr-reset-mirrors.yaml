@@ -1,0 +1,35 @@
+name: Reset GHCR Mirrors
+
+# Delete all marketplace container packages and rebuild (public per org package policy).
+on:
+  workflow_dispatch:
+    inputs:
+      skip_scan_gate:
+        description: Skip scan-gate after mirror (faster reset)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  packages: write
+  actions: write
+
+jobs:
+  delete-packages:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Delete mirrored container packages
+        env:
+          GH_TOKEN: ${{ secrets.GHCR_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x scripts/ghcr-delete-mirrors.sh
+          CONFIRM=1 ./scripts/ghcr-delete-mirrors.sh --yes
+
+  mirror:
+    needs: delete-packages
+    uses: ./.github/workflows/images.yaml
+    with:
+      skip_scan_gate: ${{ inputs.skip_scan_gate }}
+    secrets: inherit

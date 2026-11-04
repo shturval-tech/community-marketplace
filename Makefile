@@ -11,7 +11,7 @@ SCAN_FAIL_SEVERITY ?= CRITICAL
 IMAGE ?=
 CHART ?=
 
-.PHONY: lint lint-chart package index vendor-deps sync-values test bundle push push-offline images-list verify-images verify-ghcr-anonymous bdu-fetch scan scan-all scan-test help
+.PHONY: lint lint-chart package index vendor-deps sync-values test bundle push push-offline images-list verify-images verify-ghcr-anonymous ghcr-delete-mirrors bdu-fetch scan scan-all scan-test help
 
 help:
 	@echo "Targets: lint, lint-chart CHART=x, package, index, vendor-deps, sync-values, test, bundle, push, push-offline"
@@ -46,6 +46,11 @@ verify-images:
 verify-ghcr-anonymous:
 	@chmod +x scripts/verify-ghcr-anonymous.sh
 	@./scripts/verify-ghcr-anonymous.sh
+
+ghcr-delete-mirrors:
+	@test "$(CONFIRM)" = "1" || { echo "usage: CONFIRM=1 make ghcr-delete-mirrors"; exit 1; }
+	@chmod +x scripts/ghcr-delete-mirrors.sh
+	@CONFIRM=1 ./scripts/ghcr-delete-mirrors.sh --yes
 
 index: package
 	@helm repo index "$(PACKAGES_DIR)"

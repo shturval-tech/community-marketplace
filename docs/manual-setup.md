@@ -40,12 +40,18 @@ Settings → Actions → General → **Workflow permissions** должны по�
 
 После первого **Mirror Images** (или если в кластере `401 Unauthorized` на анонимный pull):
 
-1. В org: **Packages** → для каждого `community-marketplace/*` → **Package settings** → **Change visibility** → Public, **или** один раз из CLI (PAT с `write:packages`):
+1. **Открыть существующие private-пакеты** — org policy «public для новых» не меняет старые. Варианты:
+
+   - PAT с `write:packages`: `./scripts/ghcr-set-public.sh`
+   - **Снести и пересобрать** (если образы нигде не используются): Actions → **Reset GHCR Mirrors** (нужен `GHCR_PACKAGES_TOKEN` с `delete:packages`, иначе `GITHUB_TOKEN` org admin), или локально:
 
    ```bash
-   export GH_TOKEN=<PAT with write:packages>
-   ./scripts/ghcr-set-public.sh
+   export GH_TOKEN=<PAT with read:packages, delete:packages>
+   CONFIRM=1 make ghcr-delete-mirrors
+   gh workflow run "Mirror Images" -R shturval-tech/community-marketplace
    ```
+
+   Либо в org UI: **Packages** → каждый `community-marketplace/*` → **Delete package**, затем Mirror Images.
 
 2. Проверка (ожидается 200 на все образы из `images/images.yaml`):
 
