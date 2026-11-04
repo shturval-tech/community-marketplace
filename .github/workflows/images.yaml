@@ -11,6 +11,11 @@ on:
       - 'security/**'
       - '.github/workflows/images.yaml'
   workflow_dispatch:
+    inputs:
+      reset_packages:
+        description: Delete all mirrored GHCR packages before build (one-time public reset)
+        type: boolean
+        default: false
   workflow_call:
     inputs:
       skip_scan_gate:
@@ -19,7 +24,24 @@ on:
         default: false
 
 jobs:
+  delete-packages:
+    if: github.event_name == 'workflow_dispatch' && inputs.reset_packages == true
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Delete mirrored container packages
+        env:
+          GH_TOKEN: ${{ secrets.GHCR_PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x scripts/ghcr-delete-mirrors.sh
+          CONFIRM=1 ./scripts/ghcr-delete-mirrors.sh --yes
+
   prepare:
+    needs: delete-packages
+    if: always() && (needs.delete-packages.result == 'success' || needs.delete-packages.result == 'skipped')
     runs-on: ubuntu-24.04
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}

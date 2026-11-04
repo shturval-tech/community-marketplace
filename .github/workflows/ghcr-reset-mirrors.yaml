@@ -1,13 +1,8 @@
 name: Reset GHCR Mirrors
 
-# Delete all marketplace container packages and rebuild (public per org package policy).
+# Delete all marketplace container packages, then run Mirror Images (fresh public packages).
 on:
   workflow_dispatch:
-    inputs:
-      skip_scan_gate:
-        description: Skip scan-gate after mirror (faster reset)
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -27,9 +22,13 @@ jobs:
           chmod +x scripts/ghcr-delete-mirrors.sh
           CONFIRM=1 ./scripts/ghcr-delete-mirrors.sh --yes
 
-  mirror:
+  trigger-mirror:
     needs: delete-packages
-    uses: ./.github/workflows/images.yaml
-    with:
-      skip_scan_gate: ${{ inputs.skip_scan_gate }}
-    secrets: inherit
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Start Mirror Images workflow
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run "Mirror Images" -R "${{ github.repository }}"
+          echo "Triggered Mirror Images; track: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/images.yaml"
