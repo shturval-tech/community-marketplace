@@ -1,8 +1,8 @@
 # Сводный отчёт сканирования
 
-Дата сборки отчёта: 2026-11-04 21:43 UTC
+Дата сборки отчёта: 2026-11-05 10:23 UTC
 
-## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
 
-## authentik (ghcr.io/shturval-tech/community-marketplace/authentik:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## authentik (ghcr.io/shturval-tech/community-marketplace/authentik:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -18,6 +18,7 @@
 | --- | --- | --- | --- | --- | --- |
 | libc-bin | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc6 | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
+| libbrotli1 | CVE-2026-111497 | — | CRITICAL | UNKNOWN | 1.1.0-2+deb13u1 |
 | libxml2 | CVE-2026-6653 | — | CRITICAL | UNKNOWN | — |
 | libgnutls30t64 | CVE-2011-3389 | BDU:2015-09428 | LOW | HIGH | — |
 | perl-base | CVE-2011-4116 | BDU:2023-01642 | LOW | HIGH | — |
@@ -46,15 +47,22 @@
 | libstdc++6 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libsasl2-2 | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | libsasl2-modules-db | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
+| apt | CVE-2026-109518 | — | HIGH | UNKNOWN | 3.0.4 |
+| libapt-pkg7.0 | CVE-2026-109518 | — | HIGH | UNKNOWN | 3.0.4 |
 | aiohttp | CVE-2026-111064 | — | HIGH | UNKNOWN | 3.14.4 |
 | aiohttp | CVE-2026-111066 | — | HIGH | UNKNOWN | 3.14.4 |
-| libbrotli1 | CVE-2026-111497 | — | HIGH | UNKNOWN | 1.1.0-2+deb13u1 |
 | djangorestframework | CVE-2026-114136 | — | HIGH | UNKNOWN | 3.18.2 |
 | djangorestframework | CVE-2026-114137 | — | HIGH | UNKNOWN | 3.18.2 |
 | djangorestframework | CVE-2026-114138 | — | HIGH | UNKNOWN | 3.18.2 |
 | dnspython | CVE-2026-114605 | — | HIGH | UNKNOWN | 2.9.0 |
 | msgpack | CVE-2026-114613 | — | HIGH | UNKNOWN | 1.2.3 |
 | msgpack | CVE-2026-114613 | — | HIGH | UNKNOWN | 1.2.3 |
+| oauthlib | CVE-2026-118669 | — | HIGH | UNKNOWN | 4.0.0 |
+| pyasn1 | CVE-2026-119194 | — | HIGH | UNKNOWN | 0.6.5 |
+| pyasn1 | CVE-2026-119195 | — | HIGH | UNKNOWN | 0.6.5 |
+| pyasn1 | CVE-2026-119196 | — | HIGH | UNKNOWN | 0.6.5 |
+| pyasn1 | CVE-2026-119197 | — | HIGH | UNKNOWN | 0.6.5 |
+| libsqlite3-0 | CVE-2026-119373 | — | HIGH | UNKNOWN | — |
 | libsystemd0 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | libudev1 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | oauthlib | CVE-2026-49272 | — | HIGH | UNKNOWN | 4.0.0 |
@@ -96,6 +104,8 @@
 | login | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | mount | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
+| libc-bin | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
+| libc6 | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
 | libssl-dev | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.5.7-1~deb13u3 |
@@ -140,6 +150,17 @@
 | aiohttp | CVE-2026-111748 | — | MEDIUM | UNKNOWN | 3.14.4 |
 | aiohttp | CVE-2026-111750 | — | MEDIUM | UNKNOWN | 3.14.4 |
 | opentelemetry-api | CVE-2026-114603 | — | MEDIUM | UNKNOWN | 1.45.1 |
+| gcc-14-base | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| gcc-14-base | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| gcc-14-base | CVE-2026-115455 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-115455 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-115455 | — | MEDIUM | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119378 | — | MEDIUM | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119591 | — | MEDIUM | UNKNOWN | — |
 | libp11-kit0 | CVE-2026-13757 | — | MEDIUM | UNKNOWN | — |
 | libsystemd0 | CVE-2026-15059 | — | MEDIUM | UNKNOWN | — |
 | libudev1 | CVE-2026-15059 | — | MEDIUM | UNKNOWN | — |
@@ -219,6 +240,7 @@
 | openssl | CVE-2026-77696 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libc-bin | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
+| perl-base | CVE-2026-82560 | — | MEDIUM | UNKNOWN | — |
 | libssl-dev | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | libssl3t64 | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
 | openssl | CVE-2026-84784 | — | MEDIUM | UNKNOWN | 3.5.7-1~deb13u3 |
@@ -294,6 +316,7 @@
 | libkadm5clnt-mit12 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
 | libkrb5-3 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
 | libkrb5support0 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119377 | — | LOW | UNKNOWN | — |
 | libxml2 | CVE-2026-11979 | — | LOW | UNKNOWN | — |
 | libldap2 | CVE-2026-22185 | BDU:2026-03592 | LOW | LOW | — |
 | libssl-dev | CVE-2026-35189 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
@@ -312,7 +335,6 @@
 | libgnutls30t64 | CVE-2026-88647 | — | LOW | UNKNOWN | — |
 | libgnutls30t64 | CVE-2026-88648 | — | LOW | UNKNOWN | — |
 | libgnutls30t64 | CVE-2026-95184 | — | LOW | UNKNOWN | — |
-| libgnutls30t64 | CVE-2026-95209 | — | LOW | UNKNOWN | — |
 | libgnutls30t64 | CVE-2026-95210 | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
@@ -329,9 +351,14 @@
 | login.defs | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | passwd | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
-| perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119371 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119372 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119374 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119375 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119376 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119379 | — | UNKNOWN | UNKNOWN | — |
 
-## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -339,7 +366,7 @@
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
 
-## cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## cloudnative-pg (ghcr.io/shturval-tech/community-marketplace/cloudnative-pg:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -375,7 +402,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## csi-attacher (ghcr.io/shturval-tech/community-marketplace/csi-attacher:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -397,7 +424,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## csi-livenessprobe (ghcr.io/shturval-tech/community-marketplace/csi-livenessprobe:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -419,7 +446,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## csi-node-driver-registrar (ghcr.io/shturval-tech/community-marketplace/csi-node-driver-registrar:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -441,7 +468,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## csi-provisioner (ghcr.io/shturval-tech/community-marketplace/csi-provisioner:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -463,7 +490,7 @@
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## csi-resizer (ghcr.io/shturval-tech/community-marketplace/csi-resizer:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -519,7 +546,7 @@
 | stdlib | CVE-2026-27139 | BDU:2026-04122 | LOW | LOW | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## csi-snapshotter (ghcr.io/shturval-tech/community-marketplace/csi-snapshotter:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## csi-snapshotter (ghcr.io/shturval-tech/community-marketplace/csi-snapshotter:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -528,7 +555,7 @@
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## keycloak (ghcr.io/shturval-tech/community-marketplace/keycloak:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -546,13 +573,16 @@
 | nss-util | CVE-2024-7531 | BDU:2024-06469 | LOW | HIGH | — |
 | com.google.guava:guava | CVE-2026-102554 | — | HIGH | UNKNOWN | 33.7.2 |
 | java-21-openjdk-headless | CVE-2026-91403 | — | HIGH | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91415 | — | HIGH | UNKNOWN | — |
 | libgcc | CVE-2022-27943 | BDU:2025-12274 | LOW | MEDIUM | — |
 | java-21-openjdk-headless | CVE-2025-28164 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2025-64505 | BDU:2026-02923 | MEDIUM | MEDIUM | — |
 | java-21-openjdk-headless | CVE-2025-64506 | BDU:2026-02924 | MEDIUM | MEDIUM | — |
-| java-21-openjdk-headless | CVE-2026-101516 | — | MEDIUM | UNKNOWN | — |
 | libgcc | CVE-2026-102010 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| org.mariadb.jdbc:mariadb-java-client | CVE-2026-119210 | — | MEDIUM | UNKNOWN | 3.3.7, 3.4.5, 3.5.11 |
+| org.mariadb.jdbc:mariadb-java-client | CVE-2026-119276 | — | MEDIUM | UNKNOWN | 3.3.7, 3.4.5, 3.5.11 |
+| org.mariadb.jdbc:mariadb-java-client | CVE-2026-119281 | — | MEDIUM | UNKNOWN | 3.3.7, 3.4.5, 3.5.11 |
 | java-21-openjdk-headless | CVE-2026-22693 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-34757 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-40930 | — | MEDIUM | UNKNOWN | — |
@@ -561,43 +591,19 @@
 | sqlite-libs | CVE-2026-50812 | — | MEDIUM | UNKNOWN | — |
 | coreutils-single | CVE-2026-56391 | — | MEDIUM | UNKNOWN | — |
 | sed | CVE-2026-5958 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83374 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83378 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83380 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83381 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83387 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83395 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83400 | — | MEDIUM | UNKNOWN | — |
+| glibc | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-common | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-langpack-en | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
 | glibc | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | glibc-common | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | glibc | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
 | glibc-common | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87290 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87291 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87294 | — | MEDIUM | UNKNOWN | — |
 | glibc | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-common | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91332 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91373 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91374 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91375 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91379 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91380 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-91382 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91394 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91398 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91410 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91418 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91451 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91452 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91453 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91462 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91463 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91464 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91487 | — | MEDIUM | UNKNOWN | — |
 | java-21-openjdk-headless | CVE-2026-95512 | — | MEDIUM | UNKNOWN | — |
 | libgcc | CVE-2026-95619 | — | MEDIUM | UNKNOWN | — |
 | glibc | CVE-2026-95818 | — | MEDIUM | UNKNOWN | — |
@@ -611,30 +617,25 @@
 | nss-util | CVE-2020-12413 | — | LOW | UNKNOWN | — |
 | libgcc | CVE-2021-46195 | — | LOW | UNKNOWN | — |
 | sqlite-libs | CVE-2024-0232 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83376 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87292 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87367 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91333 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91334 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91335 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91397 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91400 | — | LOW | UNKNOWN | — |
+| libgcc | CVE-2026-115456 | — | LOW | UNKNOWN | — |
+| org.mariadb.jdbc:mariadb-java-client | CVE-2026-119280 | — | LOW | UNKNOWN | 3.3.7, 3.4.5, 3.5.11 |
 | java-21-openjdk-headless | CVE-2026-91409 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91461 | — | LOW | UNKNOWN | — |
 | glibc | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-common | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## mariadb-operator (ghcr.io/shturval-tech/community-marketplace/mariadb-operator:latest)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
+| github.com/cert-manager/cert-manager | CVE-2026-62290 | — | HIGH | UNKNOWN | 1.19.6, 1.20.3 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | github.com/go-chi/chi/v5 | CVE-2026-114437 | — | MEDIUM | UNKNOWN | 5.4.0 |
+| github.com/go-chi/chi/v5 | GHSA-3FXJ-6JH8-HVHX | — | MEDIUM | UNKNOWN | 5.3.0 |
 
-## mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## mariadb (ghcr.io/shturval-tech/community-marketplace/mariadb:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -649,6 +650,8 @@
 | stdlib | CVE-2025-61726 | BDU:2026-03409 | HIGH | HIGH | 1.24.12, 1.25.6 |
 | stdlib | CVE-2025-61728 | BDU:2026-03410 | HIGH | HIGH | 1.24.12, 1.25.6 |
 | stdlib | CVE-2025-61729 | BDU:2025-16242 | HIGH | HIGH | 1.24.11, 1.25.5 |
+| apt | CVE-2026-109518 | — | HIGH | UNKNOWN | — |
+| libapt-pkg6.0t64 | CVE-2026-109518 | — | HIGH | UNKNOWN | — |
 | stdlib | CVE-2026-25679 | BDU:2026-04127 | HIGH | HIGH | 1.25.8, 1.26.1 |
 | stdlib | CVE-2026-27145 | — | HIGH | UNKNOWN | 1.25.11, 1.26.4 |
 | stdlib | CVE-2026-32280 | — | HIGH | UNKNOWN | 1.25.9, 1.26.2 |
@@ -683,7 +686,7 @@
 | stdlib | CVE-2025-61730 | BDU:2026-03603 | MEDIUM | MEDIUM | 1.24.12, 1.25.6 |
 | dash | CVE-2026-102473 | — | MEDIUM | UNKNOWN | — |
 | dash | CVE-2026-102474 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-103111 | — | MEDIUM | UNKNOWN | — |
+| libpcre2-8-0 | CVE-2026-103111 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | libc-bin | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-18374 | — | MEDIUM | UNKNOWN | — |
@@ -702,20 +705,19 @@
 | github.com/moby/sys/user | CVE-2026-61801 | — | MEDIUM | UNKNOWN | 0.4.1 |
 | libgnutls30t64 | CVE-2026-67693 | — | MEDIUM | UNKNOWN | — |
 | stdlib | CVE-2026-78663 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
-| libpcre2-8-0 | CVE-2026-86145 | — | MEDIUM | UNKNOWN | — |
+| libpcre2-8-0 | CVE-2026-86145 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
 | libgnutls30t64 | CVE-2026-88647 | — | MEDIUM | UNKNOWN | — |
 | libgnutls30t64 | CVE-2026-88648 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89156 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89157 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89158 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89160 | — | MEDIUM | UNKNOWN | — |
-| libpcre2-8-0 | CVE-2026-89161 | — | MEDIUM | UNKNOWN | — |
+| libpcre2-8-0 | CVE-2026-89156 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
+| libpcre2-8-0 | CVE-2026-89157 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
+| libpcre2-8-0 | CVE-2026-89158 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
+| libpcre2-8-0 | CVE-2026-89160 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
+| libpcre2-8-0 | CVE-2026-89161 | — | MEDIUM | UNKNOWN | 10.42-4ubuntu2.2 |
 | stdlib | CVE-2026-94439 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-94448 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | libgnutls30t64 | CVE-2026-95184 | — | MEDIUM | UNKNOWN | — |
-| libgnutls30t64 | CVE-2026-95209 | — | MEDIUM | UNKNOWN | — |
 | libgnutls30t64 | CVE-2026-95210 | — | MEDIUM | UNKNOWN | — |
 | stdlib | CVE-2026-97030 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
@@ -729,7 +731,7 @@
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## minio-console (ghcr.io/shturval-tech/community-marketplace/minio-console:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -903,6 +905,8 @@
 | glibc-minimal-langpack | CVE-2025-8058 | BDU:2025-16181 | MEDIUM | MEDIUM | 2.28-251.el8_10.25 |
 | libgcc | CVE-2026-102010 | — | MEDIUM | UNKNOWN | 8.5.0-30.el8_10 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
+| libgcc | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
 | glibc | CVE-2026-18374 | — | MEDIUM | UNKNOWN | 2.28-251.el8_10.48 |
 | glibc-common | CVE-2026-18374 | — | MEDIUM | UNKNOWN | 2.28-251.el8_10.48 |
 | glibc-minimal-langpack | CVE-2026-18374 | — | MEDIUM | UNKNOWN | 2.28-251.el8_10.48 |
@@ -960,6 +964,9 @@
 | glibc | CVE-2026-80489 | — | MEDIUM | UNKNOWN | 2.28-251.el8_10.48 |
 | glibc-common | CVE-2026-80489 | — | MEDIUM | UNKNOWN | 2.28-251.el8_10.48 |
 | glibc-minimal-langpack | CVE-2026-80489 | — | MEDIUM | UNKNOWN | 2.28-251.el8_10.48 |
+| glibc | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-common | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-minimal-langpack | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
 | google.golang.org/grpc | CVE-2026-84303 | — | MEDIUM | UNKNOWN | 1.83.1 |
 | glibc | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | glibc-common | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
@@ -1002,7 +1009,7 @@
 | glibc-common | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## minio-operator (ghcr.io/shturval-tech/community-marketplace/minio-operator:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1034,7 +1041,7 @@
 | golang.org/x/crypto | CVE-2026-46598 | — | MEDIUM | UNKNOWN | 0.52.0 |
 | github.com/docker/distribution | CVE-2026-85747 | — | MEDIUM | UNKNOWN | — |
 
-## minio (ghcr.io/shturval-tech/community-marketplace/minio:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## minio (ghcr.io/shturval-tech/community-marketplace/minio:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1063,6 +1070,8 @@
 | github.com/eclipse/paho.mqtt.golang | CVE-2025-10543 | — | MEDIUM | UNKNOWN | 1.5.1 |
 | github.com/rabbitmq/amqp091-go | CVE-2026-107386 | — | MEDIUM | UNKNOWN | 1.14.0 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
+| github.com/go-jose/go-jose/v4 | CVE-2026-116585 | — | MEDIUM | UNKNOWN | 4.1.5 |
+| github.com/go-jose/go-jose/v4 | CVE-2026-116586 | — | MEDIUM | UNKNOWN | 4.1.5 |
 | go.mongodb.org/mongo-driver | CVE-2026-2303 | BDU:2026-01861 | MEDIUM | MEDIUM | 1.17.7 |
 | golang.org/x/net | CVE-2026-25680 | — | MEDIUM | UNKNOWN | 0.55.0 |
 | github.com/Azure/go-ntlmssp | CVE-2026-32952 | — | MEDIUM | UNKNOWN | 0.1.1 |
@@ -1072,14 +1081,17 @@
 | filippo.io/edwards25519 | CVE-2026-26958 | — | LOW | UNKNOWN | 1.1.1 |
 | go.opentelemetry.io/otel/sdk | CVE-2026-81870 | — | LOW | UNKNOWN | 1.45.0 |
 
-## nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## nextcloud-aio (ghcr.io/shturval-tech/community-marketplace/nextcloud-aio:latest)
 
 Снимок БДУ: **2026-04-17**
 
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
+| libexpat | CVE-2026-113351 | — | HIGH | UNKNOWN | 2.10.0-r0 |
 | github.com/go-jose/go-jose/v3 | CVE-2026-116587 | — | HIGH | UNKNOWN | — |
 | github.com/go-jose/go-jose/v4 | CVE-2026-116587 | — | HIGH | UNKNOWN | 4.1.6 |
+| libexpat | CVE-2026-117610 | — | HIGH | UNKNOWN | 2.10.0-r0 |
+| libexpat | CVE-2026-118370 | — | HIGH | UNKNOWN | 2.10.0-r0 |
 | stdlib | CVE-2026-78659 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78660 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78667 | — | HIGH | UNKNOWN | 1.26.9, 1.27.2 |
@@ -1089,6 +1101,8 @@
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | github.com/go-chi/chi/v5 | CVE-2026-114437 | — | MEDIUM | UNKNOWN | 5.4.0 |
+| github.com/go-jose/go-jose/v3 | CVE-2026-116585 | — | MEDIUM | UNKNOWN | — |
+| github.com/go-jose/go-jose/v3 | CVE-2026-116586 | — | MEDIUM | UNKNOWN | — |
 | stdlib | CVE-2026-56866 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78663 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-94439 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
@@ -1096,8 +1110,9 @@
 | stdlib | CVE-2026-97030 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
+| libexpat | CVE-2026-115506 | — | UNKNOWN | UNKNOWN | 2.10.0-r0 |
 
-## postgres (ghcr.io/shturval-tech/community-marketplace/postgres:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## postgres (ghcr.io/shturval-tech/community-marketplace/postgres:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1198,8 +1213,18 @@
 | libsasl2-2 | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | libsasl2-modules | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
 | libsasl2-modules-db | CVE-2026-107161 | — | HIGH | UNKNOWN | — |
+| apt | CVE-2026-109518 | — | HIGH | UNKNOWN | — |
+| libapt-pkg6.0 | CVE-2026-109518 | — | HIGH | UNKNOWN | — |
+| libexpat1 | CVE-2026-113351 | — | HIGH | UNKNOWN | — |
+| libexpat1 | CVE-2026-117610 | — | HIGH | UNKNOWN | — |
 | libsqlite3-0 | CVE-2026-11822 | — | HIGH | UNKNOWN | — |
 | libsqlite3-0 | CVE-2026-11824 | — | HIGH | UNKNOWN | — |
+| libexpat1 | CVE-2026-118370 | — | HIGH | UNKNOWN | — |
+| pyasn1 | CVE-2026-119194 | — | HIGH | UNKNOWN | 0.6.5 |
+| pyasn1 | CVE-2026-119195 | — | HIGH | UNKNOWN | 0.6.5 |
+| pyasn1 | CVE-2026-119196 | — | HIGH | UNKNOWN | 0.6.5 |
+| pyasn1 | CVE-2026-119197 | — | HIGH | UNKNOWN | 0.6.5 |
+| libsqlite3-0 | CVE-2026-119373 | — | HIGH | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-11940 | — | HIGH | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-11940 | — | HIGH | UNKNOWN | — |
 | python3.9 | CVE-2026-11940 | — | HIGH | UNKNOWN | — |
@@ -1290,6 +1315,11 @@
 | libuuid1 | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | mount | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
+| libc-bin | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
+| libc-l10n | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
+| libc6 | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
+| locales | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
+| locales-all | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
 | libssl1.1 | CVE-2026-84782 | — | HIGH | UNKNOWN | — |
 | openssl | CVE-2026-84782 | — | HIGH | UNKNOWN | — |
 | libxml2 | CVE-2026-86138 | — | HIGH | UNKNOWN | — |
@@ -1406,7 +1436,8 @@
 | libk5crypto3 | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
 | libkrb5-3 | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
 | libkrb5support0 | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
-| libexpat1 | CVE-2026-113351 | — | MEDIUM | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119378 | — | MEDIUM | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119591 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
@@ -1606,6 +1637,10 @@
 | libc6 | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | locales | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | locales-all | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
+| libperl5.32 | CVE-2026-82560 | — | MEDIUM | UNKNOWN | — |
+| perl | CVE-2026-82560 | — | MEDIUM | UNKNOWN | — |
+| perl-base | CVE-2026-82560 | — | MEDIUM | UNKNOWN | — |
+| perl-modules-5.32 | CVE-2026-82560 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-8328 | — | MEDIUM | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-8328 | — | MEDIUM | UNKNOWN | — |
 | python3.9 | CVE-2026-8328 | — | MEDIUM | UNKNOWN | — |
@@ -1742,6 +1777,7 @@
 | libk5crypto3 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
 | libkrb5-3 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
 | libkrb5support0 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119377 | — | LOW | UNKNOWN | — |
 | libxml2 | CVE-2026-11979 | — | LOW | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-12003 | — | LOW | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-12003 | — | LOW | UNKNOWN | — |
@@ -1780,7 +1816,6 @@
 | libgnutls30 | CVE-2026-88648 | — | LOW | UNKNOWN | — |
 | libpcre2-8-0 | CVE-2026-89162 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-95184 | — | LOW | UNKNOWN | — |
-| libgnutls30 | CVE-2026-95209 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-95210 | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | libc-l10n | CVE-2026-97399 | — | LOW | UNKNOWN | — |
@@ -1793,13 +1828,15 @@
 | passwd | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | libexpat1 | CVE-2026-115506 | — | UNKNOWN | UNKNOWN | — |
-| libperl5.32 | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
-| perl | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
-| perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
-| perl-modules-5.32 | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119371 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119372 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119374 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119375 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119376 | — | UNKNOWN | UNKNOWN | — |
+| libsqlite3-0 | CVE-2026-119379 | — | UNKNOWN | UNKNOWN | — |
 | liblzma5 | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | — |
 
-## proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## proxmox-csi-controller (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-controller:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1808,7 +1845,7 @@
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## proxmox-csi-node (ghcr.io/shturval-tech/community-marketplace/proxmox-csi-node:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1816,6 +1853,7 @@
 | --- | --- | --- | --- | --- | --- |
 | libc6 | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc6 | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
+| libc6 | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-95818 | — | HIGH | UNKNOWN | — |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
@@ -1840,7 +1878,7 @@
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## rabbitmq-operator (ghcr.io/shturval-tech/community-marketplace/rabbitmq-operator:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1889,7 +1927,7 @@
 | stdlib | CVE-2026-97032 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-56857 | — | LOW | UNKNOWN | 1.26.9, 1.27.2 |
 
-## rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## rabbitmq-server (ghcr.io/shturval-tech/community-marketplace/rabbitmq-server:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1897,7 +1935,7 @@
 | --- | --- | --- | --- | --- | --- |
 | — | — | — | — | — | — |
 
-## redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## redis-operator (ghcr.io/shturval-tech/community-marketplace/redis-operator:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1926,7 +1964,7 @@
 | go.opentelemetry.io/otel/sdk | CVE-2026-81870 | — | LOW | UNKNOWN | 1.45.0 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
-## redis (ghcr.io/shturval-tech/community-marketplace/redis:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## redis (ghcr.io/shturval-tech/community-marketplace/redis:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -1951,6 +1989,8 @@
 | gcc-12-base | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libgcc-s1 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
 | libstdc++6 | CVE-2026-102010 | — | HIGH | UNKNOWN | — |
+| apt | CVE-2026-109518 | — | HIGH | UNKNOWN | 2.6.2 |
+| libapt-pkg6.0 | CVE-2026-109518 | — | HIGH | UNKNOWN | 2.6.2 |
 | libsystemd0 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | libudev1 | CVE-2026-16742 | — | HIGH | UNKNOWN | — |
 | gzip | CVE-2026-41992 | — | HIGH | UNKNOWN | — |
@@ -1971,30 +2011,6 @@
 | util-linux | CVE-2026-53615 | — | HIGH | UNKNOWN | — |
 | util-linux-extra | CVE-2026-53615 | — | HIGH | UNKNOWN | — |
 | libacl1 | CVE-2026-54369 | — | HIGH | UNKNOWN | — |
-| bsdutils | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| libblkid1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| libmount1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| libsmartcols1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| libuuid1 | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| mount | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| util-linux | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| util-linux-extra | CVE-2026-76642 | — | HIGH | UNKNOWN | — |
-| bsdutils | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| libblkid1 | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| libmount1 | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| libsmartcols1 | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| libuuid1 | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| mount | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| util-linux | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| util-linux-extra | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
-| bsdutils | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| libblkid1 | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| libmount1 | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| libsmartcols1 | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| libuuid1 | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| mount | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| util-linux | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
-| util-linux-extra | CVE-2026-78409 | — | HIGH | UNKNOWN | — |
 | bsdutils | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | libmount1 | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
@@ -2003,6 +2019,8 @@
 | mount | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | util-linux-extra | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
+| libc-bin | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
+| libc6 | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
 | libssl3 | CVE-2026-84782 | — | HIGH | UNKNOWN | 3.0.22-1~deb12u2 |
 | libc-bin | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
 | libc6 | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
@@ -2031,6 +2049,15 @@
 | gpgv | CVE-2025-30258 | BDU:2025-11080 | MEDIUM | LOW | — |
 | coreutils | CVE-2025-5278 | BDU:2025-10950 | LOW | MEDIUM | — |
 | gpgv | CVE-2025-68972 | BDU:2026-05146 | MEDIUM | MEDIUM | — |
+| gcc-12-base | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| gcc-12-base | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| gcc-12-base | CVE-2026-115455 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-115455 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-115455 | — | MEDIUM | UNKNOWN | — |
 | bsdutils | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
 | libblkid1 | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
 | libmount1 | CVE-2026-13595 | — | MEDIUM | UNKNOWN | — |
@@ -2098,6 +2125,7 @@
 | libssl3 | CVE-2026-77696 | — | MEDIUM | UNKNOWN | 3.0.22-1~deb12u2 |
 | libc-bin | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-80489 | — | MEDIUM | UNKNOWN | — |
+| perl-base | CVE-2026-82560 | — | MEDIUM | UNKNOWN | — |
 | zlib1g | CVE-2026-85091 | — | MEDIUM | UNKNOWN | — |
 | libc-bin | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
 | libc6 | CVE-2026-8674 | — | MEDIUM | UNKNOWN | — |
@@ -2157,7 +2185,6 @@
 | libgnutls30 | CVE-2026-88647 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-88648 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-95184 | — | LOW | UNKNOWN | — |
-| libgnutls30 | CVE-2026-95209 | — | LOW | UNKNOWN | — |
 | libgnutls30 | CVE-2026-95210 | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
@@ -2166,10 +2193,10 @@
 | login | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | passwd | TEMP-0628843-DBAD28 | — | LOW | UNKNOWN | — |
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
-| perl-base | CVE-2026-82560 | — | UNKNOWN | UNKNOWN | — |
 | tzdata | DLA-4854-1 | — | UNKNOWN | UNKNOWN | 2026e-0+deb12u1 |
+| tzdata | DLA-4867-1 | — | UNKNOWN | UNKNOWN | 2026f-0+deb12u1 |
 
-## strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## strimzi-kafka (ghcr.io/shturval-tech/community-marketplace/strimzi-kafka:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -2218,7 +2245,7 @@
 | org.lz4:lz4-java | CVE-2026-106451 | — | HIGH | UNKNOWN | — |
 | org.xerial.snappy:snappy-java | CVE-2026-108106 | — | HIGH | UNKNOWN | 1.1.10.9 |
 | org.xerial.snappy:snappy-java | CVE-2026-108106 | — | HIGH | UNKNOWN | 1.1.10.9 |
-| python3-pip-wheel | CVE-2026-114613 | — | HIGH | UNKNOWN | — |
+| json-glib | CVE-2026-120194 | — | HIGH | UNKNOWN | — |
 | org.eclipse.jetty:jetty-http | CVE-2026-2332 | — | HIGH | UNKNOWN | 12.1.7, 12.0.33, 11.0.29, 10.0.28, 9.4.60 |
 | avahi-libs | CVE-2026-24401 | BDU:2026-05066 | MEDIUM | HIGH | — |
 | io.netty:netty-codec-http | CVE-2026-33870 | — | HIGH | UNKNOWN | 4.1.132.Final, 4.2.10.Final |
@@ -2271,7 +2298,7 @@
 | com.fasterxml.jackson.core:jackson-core | CVE-2026-89425 | — | HIGH | UNKNOWN | 2.21.7, 2.22.3, 2.18.11 |
 | com.fasterxml.jackson.core:jackson-core | CVE-2026-89425 | — | HIGH | UNKNOWN | 2.21.7, 2.22.3, 2.18.11 |
 | java-21-openjdk-headless | CVE-2026-91403 | — | HIGH | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91415 | — | HIGH | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91415 | — | HIGH | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | com.fasterxml.jackson.core:jackson-databind | CVE-2026-91776 | — | HIGH | UNKNOWN | 2.18.11, 2.21.7, 2.22.3 |
 | com.fasterxml.jackson.core:jackson-databind | CVE-2026-91776 | — | HIGH | UNKNOWN | 2.18.11, 2.21.7, 2.22.3 |
 | com.fasterxml.jackson.core:jackson-databind | CVE-2026-91777 | — | HIGH | UNKNOWN | 2.21.7, 2.18.11, 2.22.3 |
@@ -2337,7 +2364,7 @@
 | python3-libs | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
 | libxml2 | CVE-2026-0990 | BDU:2026-03631 | MEDIUM | MEDIUM | — |
 | io.vertx:vertx-core | CVE-2026-1002 | — | MEDIUM | UNKNOWN | 4.5.24, 5.0.7 |
-| java-21-openjdk-headless | CVE-2026-101516 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-101516 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | libgcc | CVE-2026-102010 | — | MEDIUM | UNKNOWN | — |
 | libstdc++ | CVE-2026-102010 | — | MEDIUM | UNKNOWN | — |
 | rpm | CVE-2026-103242 | — | MEDIUM | UNKNOWN | — |
@@ -2353,6 +2380,10 @@
 | cups-libs | CVE-2026-107888 | — | MEDIUM | UNKNOWN | — |
 | stdlib | CVE-2026-111943 | — | MEDIUM | UNKNOWN | 1.26.10, 1.27.3 |
 | expat | CVE-2026-113351 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libstdc++ | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| libstdc++ | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
 | org.xerial.snappy:snappy-java | CVE-2026-116590 | — | MEDIUM | UNKNOWN | 1.1.10.9 |
 | org.xerial.snappy:snappy-java | CVE-2026-116590 | — | MEDIUM | UNKNOWN | 1.1.10.9 |
 | krb5-libs | CVE-2026-11850 | — | MEDIUM | UNKNOWN | — |
@@ -2459,6 +2490,7 @@
 | openssl-libs | CVE-2026-54875 | — | MEDIUM | UNKNOWN | — |
 | curl-minimal | CVE-2026-5545 | — | MEDIUM | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-5545 | — | MEDIUM | UNKNOWN | — |
+| cups-libs | CVE-2026-55480 | — | MEDIUM | UNKNOWN | — |
 | alsa-lib | CVE-2026-56109 | — | MEDIUM | UNKNOWN | — |
 | expat | CVE-2026-56131 | — | MEDIUM | UNKNOWN | — |
 | coreutils-single | CVE-2026-56391 | — | MEDIUM | UNKNOWN | — |
@@ -2517,14 +2549,18 @@
 | rpm-libs | CVE-2026-78367 | — | MEDIUM | UNKNOWN | — |
 | stdlib | CVE-2026-78663 | — | MEDIUM | UNKNOWN | 1.26.9, 1.27.2 |
 | libsolv | CVE-2026-82327 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83374 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83378 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83380 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83381 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83387 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83395 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83400 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-83374 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83378 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83380 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83381 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83387 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83395 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83400 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | com.fasterxml.jackson.core:jackson-databind | CVE-2026-83557 | — | MEDIUM | UNKNOWN | 2.18.10, 2.21.6, 2.22.2 |
+| glibc | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-common | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-langpack-en | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-minimal-langpack | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-84784 | — | MEDIUM | UNKNOWN | — |
 | openssl-libs | CVE-2026-84784 | — | MEDIUM | UNKNOWN | — |
 | rpm | CVE-2026-84837 | — | MEDIUM | UNKNOWN | — |
@@ -2538,9 +2574,9 @@
 | glibc-common | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87290 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87291 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87294 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-87290 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-87291 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-87294 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | cups-libs | CVE-2026-87875 | — | MEDIUM | UNKNOWN | — |
 | gnutls | CVE-2026-88647 | — | MEDIUM | UNKNOWN | — |
 | gnutls | CVE-2026-88648 | — | MEDIUM | UNKNOWN | — |
@@ -2548,29 +2584,27 @@
 | glibc-common | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
-| curl-minimal | CVE-2026-8932 | — | MEDIUM | UNKNOWN | — |
-| libcurl-minimal | CVE-2026-8932 | — | MEDIUM | UNKNOWN | — |
 | alsa-lib | CVE-2026-90781 | — | MEDIUM | UNKNOWN | — |
 | curl-minimal | CVE-2026-9080 | — | MEDIUM | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-9080 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91332 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91373 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91374 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91375 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91379 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91380 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91332 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91373 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91374 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91375 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91379 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91380 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | java-21-openjdk-headless | CVE-2026-91382 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91394 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91398 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91410 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91418 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91451 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91452 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91453 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91462 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91463 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91464 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91487 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91394 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91398 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91410 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91418 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91451 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91452 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91453 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91462 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91463 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91464 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91487 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | libsolv | CVE-2026-9149 | — | MEDIUM | UNKNOWN | — |
 | libsolv | CVE-2026-9150 | — | MEDIUM | UNKNOWN | — |
 | curl-minimal | CVE-2026-92388 | — | MEDIUM | UNKNOWN | — |
@@ -2636,6 +2670,8 @@
 | cups-libs | CVE-2026-107885 | — | LOW | UNKNOWN | — |
 | cups-libs | CVE-2026-107886 | — | LOW | UNKNOWN | — |
 | cups-libs | CVE-2026-107890 | — | LOW | UNKNOWN | — |
+| libgcc | CVE-2026-115456 | — | LOW | UNKNOWN | — |
+| libstdc++ | CVE-2026-115456 | — | LOW | UNKNOWN | — |
 | glib2 | CVE-2026-1485 | BDU:2026-05070 | LOW | LOW | — |
 | libarchive | CVE-2026-17591 | — | LOW | UNKNOWN | — |
 | python3 | CVE-2026-18503 | — | LOW | UNKNOWN | — |
@@ -2677,23 +2713,23 @@
 | libcurl-minimal | CVE-2026-80230 | — | LOW | UNKNOWN | — |
 | curl-minimal | CVE-2026-82209 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-82209 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83376 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-83376 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | curl-minimal | CVE-2026-86409 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-86409 | — | LOW | UNKNOWN | — |
 | curl-minimal | CVE-2026-86414 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-86414 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87292 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87367 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-87292 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-87367 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | curl-minimal | CVE-2026-87864 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-87864 | — | LOW | UNKNOWN | — |
 | cups-libs | CVE-2026-87876 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91333 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91334 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91335 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91397 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91400 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91333 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91334 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91335 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91397 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91400 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | java-21-openjdk-headless | CVE-2026-91409 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91461 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91461 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | curl-minimal | CVE-2026-92389 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-92389 | — | LOW | UNKNOWN | — |
 | curl-minimal | CVE-2026-92390 | — | LOW | UNKNOWN | — |
@@ -2707,7 +2743,7 @@
 | glibc-langpack-en | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 
-## strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:3f2d4c08a4c1625c82ef260cba5d59f1eb5d68ef)
+## strimzi-operator (ghcr.io/shturval-tech/community-marketplace/strimzi-operator:latest)
 
 Снимок БДУ: **2026-04-17**
 
@@ -2740,7 +2776,7 @@
 | python3-libs | CVE-2026-0672 | BDU:2026-05125 | MEDIUM | HIGH | — |
 | at.yawk.lz4:lz4-java | CVE-2026-106451 | — | HIGH | UNKNOWN | 1.11.4 |
 | org.xerial.snappy:snappy-java | CVE-2026-108106 | — | HIGH | UNKNOWN | 1.1.10.9 |
-| python3-pip-wheel | CVE-2026-114613 | — | HIGH | UNKNOWN | — |
+| json-glib | CVE-2026-120194 | — | HIGH | UNKNOWN | — |
 | avahi-libs | CVE-2026-24401 | BDU:2026-05066 | MEDIUM | HIGH | — |
 | cups-libs | CVE-2026-34990 | BDU:2026-04786 | MEDIUM | HIGH | — |
 | python3 | CVE-2026-3644 | BDU:2026-04601 | MEDIUM | HIGH | — |
@@ -2758,7 +2794,7 @@
 | tools.jackson.core:jackson-core | CVE-2026-89407 | — | HIGH | UNKNOWN | 3.1.7, 3.2.2 |
 | tools.jackson.core:jackson-core | CVE-2026-89425 | — | HIGH | UNKNOWN | 3.1.7, 3.2.3 |
 | java-21-openjdk-headless | CVE-2026-91403 | — | HIGH | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91415 | — | HIGH | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91415 | — | HIGH | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | tools.jackson.core:jackson-databind | CVE-2026-91776 | — | HIGH | UNKNOWN | 3.1.7, 3.2.3 |
 | tools.jackson.core:jackson-databind | CVE-2026-91777 | — | HIGH | UNKNOWN | 3.1.7, 3.2.3 |
 | org.xerial.snappy:snappy-java | CVE-2026-93451 | — | HIGH | UNKNOWN | 1.1.10.9 |
@@ -2810,7 +2846,7 @@
 | python3 | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
 | python3-libs | CVE-2026-0864 | — | MEDIUM | UNKNOWN | — |
 | libxml2 | CVE-2026-0990 | BDU:2026-03631 | MEDIUM | MEDIUM | — |
-| java-21-openjdk-headless | CVE-2026-101516 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-101516 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | libgcc | CVE-2026-102010 | — | MEDIUM | UNKNOWN | — |
 | libstdc++ | CVE-2026-102010 | — | MEDIUM | UNKNOWN | — |
 | rpm | CVE-2026-103242 | — | MEDIUM | UNKNOWN | — |
@@ -2824,6 +2860,10 @@
 | krb5-libs | CVE-2026-107778 | — | MEDIUM | UNKNOWN | — |
 | cups-libs | CVE-2026-107888 | — | MEDIUM | UNKNOWN | — |
 | expat | CVE-2026-113351 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libstdc++ | CVE-2026-114690 | — | MEDIUM | UNKNOWN | — |
+| libgcc | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| libstdc++ | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
 | org.xerial.snappy:snappy-java | CVE-2026-116590 | — | MEDIUM | UNKNOWN | 1.1.10.9 |
 | krb5-libs | CVE-2026-11850 | — | MEDIUM | UNKNOWN | — |
 | python3 | CVE-2026-11972 | — | MEDIUM | UNKNOWN | — |
@@ -2896,6 +2936,7 @@
 | openssl-libs | CVE-2026-54875 | — | MEDIUM | UNKNOWN | — |
 | curl-minimal | CVE-2026-5545 | — | MEDIUM | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-5545 | — | MEDIUM | UNKNOWN | — |
+| cups-libs | CVE-2026-55480 | — | MEDIUM | UNKNOWN | — |
 | alsa-lib | CVE-2026-56109 | — | MEDIUM | UNKNOWN | — |
 | expat | CVE-2026-56131 | — | MEDIUM | UNKNOWN | — |
 | coreutils-single | CVE-2026-56391 | — | MEDIUM | UNKNOWN | — |
@@ -2939,13 +2980,17 @@
 | rpm | CVE-2026-78367 | — | MEDIUM | UNKNOWN | — |
 | rpm-libs | CVE-2026-78367 | — | MEDIUM | UNKNOWN | — |
 | libsolv | CVE-2026-82327 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83374 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83378 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83380 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83381 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83387 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83395 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83400 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-83374 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83378 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83380 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83381 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83387 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83395 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-83400 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| glibc | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-common | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-langpack-en | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
+| glibc-minimal-langpack | CVE-2026-84243 | — | MEDIUM | UNKNOWN | — |
 | openssl | CVE-2026-84784 | — | MEDIUM | UNKNOWN | — |
 | openssl-libs | CVE-2026-84784 | — | MEDIUM | UNKNOWN | — |
 | rpm | CVE-2026-84837 | — | MEDIUM | UNKNOWN | — |
@@ -2959,9 +3004,9 @@
 | glibc-common | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-86805 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87290 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87291 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87294 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-87290 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-87291 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-87294 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | cups-libs | CVE-2026-87875 | — | MEDIUM | UNKNOWN | — |
 | gnutls | CVE-2026-88647 | — | MEDIUM | UNKNOWN | — |
 | gnutls | CVE-2026-88648 | — | MEDIUM | UNKNOWN | — |
@@ -2969,29 +3014,27 @@
 | glibc-common | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-langpack-en | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
 | glibc-minimal-langpack | CVE-2026-89092 | — | MEDIUM | UNKNOWN | — |
-| curl-minimal | CVE-2026-8932 | — | MEDIUM | UNKNOWN | — |
-| libcurl-minimal | CVE-2026-8932 | — | MEDIUM | UNKNOWN | — |
 | alsa-lib | CVE-2026-90781 | — | MEDIUM | UNKNOWN | — |
 | curl-minimal | CVE-2026-9080 | — | MEDIUM | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-9080 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91332 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91373 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91374 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91375 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91379 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91380 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91332 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91373 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91374 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91375 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91379 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91380 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | java-21-openjdk-headless | CVE-2026-91382 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91394 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91398 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91410 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91418 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91451 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91452 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91453 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91462 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91463 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91464 | — | MEDIUM | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91487 | — | MEDIUM | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91394 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91398 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91410 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91418 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91451 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91452 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91453 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91462 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91463 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91464 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91487 | — | MEDIUM | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | libsolv | CVE-2026-9149 | — | MEDIUM | UNKNOWN | — |
 | libsolv | CVE-2026-9150 | — | MEDIUM | UNKNOWN | — |
 | curl-minimal | CVE-2026-92388 | — | MEDIUM | UNKNOWN | — |
@@ -3048,6 +3091,8 @@
 | cups-libs | CVE-2026-107885 | — | LOW | UNKNOWN | — |
 | cups-libs | CVE-2026-107886 | — | LOW | UNKNOWN | — |
 | cups-libs | CVE-2026-107890 | — | LOW | UNKNOWN | — |
+| libgcc | CVE-2026-115456 | — | LOW | UNKNOWN | — |
+| libstdc++ | CVE-2026-115456 | — | LOW | UNKNOWN | — |
 | glib2 | CVE-2026-1485 | BDU:2026-05070 | LOW | LOW | — |
 | libarchive | CVE-2026-17591 | — | LOW | UNKNOWN | — |
 | python3 | CVE-2026-18503 | — | LOW | UNKNOWN | — |
@@ -3087,23 +3132,23 @@
 | libcurl-minimal | CVE-2026-80230 | — | LOW | UNKNOWN | — |
 | curl-minimal | CVE-2026-82209 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-82209 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-83376 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-83376 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | curl-minimal | CVE-2026-86409 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-86409 | — | LOW | UNKNOWN | — |
 | curl-minimal | CVE-2026-86414 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-86414 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87292 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-87367 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-87292 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-87367 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | curl-minimal | CVE-2026-87864 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-87864 | — | LOW | UNKNOWN | — |
 | cups-libs | CVE-2026-87876 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91333 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91334 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91335 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91397 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91400 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91333 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91334 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91335 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91397 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
+| java-21-openjdk-headless | CVE-2026-91400 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | java-21-openjdk-headless | CVE-2026-91409 | — | LOW | UNKNOWN | — |
-| java-21-openjdk-headless | CVE-2026-91461 | — | LOW | UNKNOWN | — |
+| java-21-openjdk-headless | CVE-2026-91461 | — | LOW | UNKNOWN | 1:21.0.13.0.9-1.2.el9 |
 | curl-minimal | CVE-2026-92389 | — | LOW | UNKNOWN | — |
 | libcurl-minimal | CVE-2026-92389 | — | LOW | UNKNOWN | — |
 | curl-minimal | CVE-2026-92390 | — | LOW | UNKNOWN | — |
