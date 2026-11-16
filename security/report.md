@@ -1,6 +1,6 @@
 # Сводный отчёт сканирования
 
-Дата сборки отчёта: 2026-11-15 10:30 UTC
+Дата сборки отчёта: 2026-11-16 10:44 UTC
 
 ## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:latest)
 
