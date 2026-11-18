@@ -1,6 +1,6 @@
 # Сводный отчёт сканирования
 
-Дата сборки отчёта: 2026-11-17 11:35 UTC
+Дата сборки отчёта: 2026-11-18 11:09 UTC
 
 ## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:latest)
 
@@ -147,6 +147,14 @@
 | libpq5 | CVE-2026-120153 | — | HIGH | UNKNOWN | 17.12-0+deb13u1 |
 | aiohttp | CVE-2026-123817 | — | HIGH | UNKNOWN | 3.14.4 |
 | dnspython | CVE-2026-128089 | — | HIGH | UNKNOWN | 2.9.2 |
+| aiohttp | CVE-2026-128124 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128126 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128127 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128128 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128129 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128130 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128131 | — | HIGH | UNKNOWN | 3.14.4 |
+| aiohttp | CVE-2026-128132 | — | HIGH | UNKNOWN | 3.14.4 |
 | libpq5 | CVE-2026-14661 | — | HIGH | UNKNOWN | 17.12-0+deb13u1 |
 | libsystemd0 | CVE-2026-16742 | BDU:2026-11397 | HIGH | MEDIUM | — |
 | libudev1 | CVE-2026-16742 | BDU:2026-11397 | HIGH | MEDIUM | — |
@@ -179,7 +187,6 @@
 | login | CVE-2026-76642 | BDU:2026-14159 | HIGH | HIGH | — |
 | mount | CVE-2026-76642 | BDU:2026-14159 | HIGH | HIGH | — |
 | util-linux | CVE-2026-76642 | BDU:2026-14159 | HIGH | HIGH | — |
-| zlib1g | CVE-2026-76844 | — | HIGH | UNKNOWN | 1:1.3.dfsg+really1.3.1-1+deb13u1 |
 | bsdutils | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
 | liblastlog2-2 | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
@@ -324,7 +331,11 @@
 | libpq5 | CVE-2026-120146 | — | MEDIUM | UNKNOWN | 17.12-0+deb13u1 |
 | libpq5 | CVE-2026-120152 | — | MEDIUM | UNKNOWN | 17.12-0+deb13u1 |
 | libpq5 | CVE-2026-120154 | — | MEDIUM | UNKNOWN | 17.12-0+deb13u1 |
+| gcc-14-base | CVE-2026-125709 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-125709 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-125709 | — | MEDIUM | UNKNOWN | — |
 | opentelemetry-api | CVE-2026-126360 | — | MEDIUM | UNKNOWN | 1.45.2 |
+| aiohttp | CVE-2026-128125 | — | MEDIUM | UNKNOWN | 3.14.4 |
 | libp11-kit0 | CVE-2026-13757 | — | MEDIUM | UNKNOWN | — |
 | libsystemd0 | CVE-2026-15059 | — | MEDIUM | UNKNOWN | — |
 | libudev1 | CVE-2026-15059 | — | MEDIUM | UNKNOWN | — |
@@ -499,6 +510,8 @@
 | libkrb5support0 | CVE-2026-11850 | — | LOW | UNKNOWN | — |
 | libsqlite3-0 | CVE-2026-119377 | — | LOW | UNKNOWN | — |
 | libxml2 | CVE-2026-11979 | — | LOW | UNKNOWN | — |
+| libsasl2-2 | CVE-2026-129483 | — | LOW | UNKNOWN | — |
+| libsasl2-modules-db | CVE-2026-129483 | — | LOW | UNKNOWN | — |
 | libpq5 | CVE-2026-16240 | — | LOW | UNKNOWN | 17.12-0+deb13u1 |
 | libldap2 | CVE-2026-22185 | BDU:2026-03592 | LOW | LOW | — |
 | libssl-dev | CVE-2026-35189 | — | LOW | UNKNOWN | 3.5.7-1~deb13u3 |
@@ -534,8 +547,20 @@
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
 | libc6 | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
+| libssl-dev | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
+| libssl3t64 | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
+| openssl | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
+| openssl-provider-legacy | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
 | libc-bin | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | libc6 | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
+| libssl-dev | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| libssl3t64 | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| openssl | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| openssl-provider-legacy | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| libssl-dev | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
+| libssl3t64 | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
+| openssl | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
+| openssl-provider-legacy | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
 | dpkg | CVE-2026-91094 | — | UNKNOWN | UNKNOWN | — |
 
 ## busybox (ghcr.io/shturval-tech/community-marketplace/busybox:latest)
@@ -839,6 +864,7 @@
 | Пакет | CVE | BDU | Trivy | ФСТЭК | Fixed |
 | --- | --- | --- | --- | --- | --- |
 | stdlib | CVE-2025-68121 | BDU:2026-03408 | CRITICAL | CRITICAL | 1.24.13, 1.25.7, 1.26.0-rc.3 |
+| libdbi-perl | CVE-2026-14739 | BDU:2026-15260 | MEDIUM | CRITICAL | — |
 | stdlib | CVE-2026-56857 | BDU:2026-18197 | LOW | CRITICAL | 1.26.9, 1.27.2 |
 | stdlib | CVE-2026-78663 | BDU:2026-18193 | MEDIUM | CRITICAL | 1.26.9, 1.27.2 |
 | libgnutls30t64 | CVE-2026-95210 | BDU:2026-16177 | MEDIUM | CRITICAL | — |
@@ -949,6 +975,9 @@
 | libelf1t64 | CVE-2025-1352 | — | LOW | UNKNOWN | — |
 | libelf1t64 | CVE-2025-1376 | — | LOW | UNKNOWN | — |
 | libbpf1 | CVE-2025-29481 | — | LOW | UNKNOWN | — |
+| gpg | CVE-2026-105712 | — | LOW | UNKNOWN | — |
+| gpgconf | CVE-2026-105712 | — | LOW | UNKNOWN | — |
+| gpgv | CVE-2026-105712 | — | LOW | UNKNOWN | — |
 | stdlib | CVE-2026-27139 | BDU:2026-04122 | LOW | LOW | 1.25.8, 1.26.1 |
 | libsystemd0 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
 | libudev1 | CVE-2026-40228 | — | LOW | UNKNOWN | — |
@@ -1594,7 +1623,6 @@
 | libuuid1 | CVE-2026-76642 | BDU:2026-14159 | HIGH | HIGH | — |
 | mount | CVE-2026-76642 | BDU:2026-14159 | HIGH | HIGH | — |
 | util-linux | CVE-2026-76642 | BDU:2026-14159 | HIGH | HIGH | — |
-| zlib1g | CVE-2026-76844 | — | HIGH | UNKNOWN | — |
 | libexpat1 | CVE-2026-76957 | — | HIGH | UNKNOWN | — |
 | libexpat1 | CVE-2026-77214 | — | HIGH | UNKNOWN | — |
 | bsdutils | CVE-2026-78408 | — | HIGH | UNKNOWN | — |
@@ -2127,6 +2155,9 @@
 | libpython3.9-stdlib | CVE-2026-12003 | — | LOW | UNKNOWN | — |
 | python3.9 | CVE-2026-12003 | — | LOW | UNKNOWN | — |
 | python3.9-minimal | CVE-2026-12003 | — | LOW | UNKNOWN | — |
+| libsasl2-2 | CVE-2026-129483 | — | LOW | UNKNOWN | — |
+| libsasl2-modules | CVE-2026-129483 | — | LOW | UNKNOWN | — |
+| libsasl2-modules-db | CVE-2026-129483 | — | LOW | UNKNOWN | — |
 | libpython3.9-minimal | CVE-2026-18503 | — | LOW | UNKNOWN | — |
 | libpython3.9-stdlib | CVE-2026-18503 | — | LOW | UNKNOWN | — |
 | python3.9 | CVE-2026-18503 | — | LOW | UNKNOWN | — |
@@ -2175,13 +2206,19 @@
 | libc6 | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
 | locales | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
 | locales-all | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
+| libssl1.1 | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
+| openssl | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
 | libc-bin | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | libc-l10n | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | libc6 | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | locales | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | locales-all | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | libexpat1 | CVE-2026-124317 | — | UNKNOWN | UNKNOWN | — |
+| libssl1.1 | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| openssl | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
 | libexpat1 | CVE-2026-128241 | — | UNKNOWN | UNKNOWN | — |
+| libssl1.1 | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
+| openssl | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
 | dpkg | CVE-2026-91094 | — | UNKNOWN | UNKNOWN | — |
 | liblzma5 | TEMP-1147318-639065 | — | UNKNOWN | UNKNOWN | — |
 
@@ -2204,7 +2241,6 @@
 | libc6 | CVE-2019-1010023 | BDU:2020-00072 | LOW | CRITICAL | — |
 | libc6 | CVE-2018-20796 | BDU:2020-04530 | LOW | HIGH | — |
 | libc6 | CVE-2026-5435 | BDU:2026-10479 | MEDIUM | HIGH | — |
-| zlib1g | CVE-2026-76844 | — | HIGH | UNKNOWN | 1:1.3.dfsg+really1.3.1-1+deb13u1 |
 | libc6 | CVE-2026-84243 | — | HIGH | UNKNOWN | — |
 | zlib1g | CVE-2026-85091 | — | HIGH | UNKNOWN | 1:1.3.dfsg+really1.3.1-1+deb13u1 |
 | libc6 | CVE-2026-86805 | — | HIGH | UNKNOWN | — |
@@ -2233,7 +2269,10 @@
 | libc6 | CVE-2019-9192 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2026-97399 | — | LOW | UNKNOWN | — |
 | libc6 | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
+| libssl3t64 | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
 | libc6 | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
+| libssl3t64 | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| libssl3t64 | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
 | stdlib | CVE-2026-97054 | — | UNKNOWN | UNKNOWN | 1.26.11, 1.27.4 |
 | ca-certificates | DSA-6572-1 | — | UNKNOWN | UNKNOWN | 20250419+deb13u1 |
 
@@ -2381,7 +2420,6 @@
 | libc-bin | CVE-2026-5435 | BDU:2026-10479 | MEDIUM | HIGH | — |
 | libc6 | CVE-2026-5435 | BDU:2026-10479 | MEDIUM | HIGH | — |
 | libacl1 | CVE-2026-54369 | — | HIGH | UNKNOWN | — |
-| zlib1g | CVE-2026-76844 | — | HIGH | UNKNOWN | — |
 | bsdutils | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | libblkid1 | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
 | libmount1 | CVE-2026-78410 | — | HIGH | UNKNOWN | — |
@@ -2428,6 +2466,9 @@
 | gcc-12-base | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
 | libgcc-s1 | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
 | libstdc++6 | CVE-2026-114691 | — | MEDIUM | UNKNOWN | — |
+| gcc-12-base | CVE-2026-125709 | — | MEDIUM | UNKNOWN | — |
+| libgcc-s1 | CVE-2026-125709 | — | MEDIUM | UNKNOWN | — |
+| libstdc++6 | CVE-2026-125709 | — | MEDIUM | UNKNOWN | — |
 | bsdutils | CVE-2026-13595 | BDU:2026-12829 | MEDIUM | MEDIUM | — |
 | libblkid1 | CVE-2026-13595 | BDU:2026-12829 | MEDIUM | MEDIUM | — |
 | libmount1 | CVE-2026-13595 | BDU:2026-12829 | MEDIUM | MEDIUM | — |
@@ -2568,8 +2609,11 @@
 | bash | TEMP-0841856-B18BAF | — | LOW | UNKNOWN | — |
 | libc-bin | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
 | libc6 | CVE-2026-100290 | — | UNKNOWN | UNKNOWN | — |
+| libssl3 | CVE-2026-107493 | — | UNKNOWN | UNKNOWN | — |
 | libc-bin | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
 | libc6 | CVE-2026-115819 | — | UNKNOWN | UNKNOWN | — |
+| libssl3 | CVE-2026-124709 | — | UNKNOWN | UNKNOWN | — |
+| libssl3 | CVE-2026-35190 | — | UNKNOWN | UNKNOWN | — |
 | dpkg | CVE-2026-91094 | — | UNKNOWN | UNKNOWN | — |
 | tzdata | DLA-4854-1 | — | UNKNOWN | UNKNOWN | 2026e-0+deb12u1 |
 | tzdata | DLA-4867-1 | — | UNKNOWN | UNKNOWN | 2026f-0+deb12u1 |
