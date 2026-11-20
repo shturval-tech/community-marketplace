@@ -54,8 +54,9 @@ jobs:
           echo "matrix=$(./scripts/ci-images-matrix.sh)" >> "$GITHUB_OUTPUT"
 
   mirror:
-    runs-on: ubuntu-24.04
     needs: prepare
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       packages: write
@@ -119,8 +120,9 @@ jobs:
           exit 1
 
   scan:
-    runs-on: ubuntu-24.04
     needs: [mirror, prepare]
+    if: always() && needs.prepare.result == 'success' && needs.mirror.result == 'success'
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       packages: read

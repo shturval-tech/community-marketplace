@@ -117,7 +117,18 @@ jobs:
             dist/airgap-bundle.sha256
             dist/airgap-bundle.parts.txt
             dist/build-fingerprint.txt
+          make_latest: false
           overwrite_files: true
+
+      - name: Remove existing airgap-latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view airgap-latest -R "${GITHUB_REPOSITORY}" >/dev/null 2>&1; then
+            gh release delete airgap-latest -R "${GITHUB_REPOSITORY}" --yes --cleanup-tag
+          else
+            echo "No existing airgap-latest release to remove"
+          fi
 
       - name: Publish GitHub Release (airgap-latest)
         uses: softprops/action-gh-release@v2
@@ -150,11 +161,12 @@ jobs:
             dist/airgap-bundle.sha256
             dist/airgap-bundle.parts.txt
             dist/build-fingerprint.txt
-          overwrite_files: true
+          make_latest: true
 
       - name: Prune old versioned air-gap releases
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           chmod +x scripts/prune-airgap-releases.sh
           ./scripts/prune-airgap-releases.sh 3

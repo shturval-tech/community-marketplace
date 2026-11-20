@@ -11,12 +11,17 @@ if [[ -z "${REPO}" ]]; then
 fi
 command -v gh >/dev/null || { echo "prune-airgap-releases: gh not found" >&2; exit 1; }
 
-mapfile -t tags < <(
-  gh release list -R "${REPO}" --limit 200 --json tagName,createdAt \
-    --jq '.[] | select(.tagName | test("^airgap-")) | select(.tagName != "airgap-latest") | [.createdAt, .tagName] | @tsv' \
-    | sort -r \
-    | cut -f2
-)
+list_out="$(mktemp)"
+trap 'rm -f "${list_out}"' EXIT
+if ! gh release list -R "${REPO}" --limit 200 --json tagName,createdAt \
+  --jq '.[] | select(.tagName | test("^airgap-")) | select(.tagName != "airgap-latest") | [.createdAt, .tagName] | @tsv' \
+  | sort -r \
+  | cut -f2 >"${list_out}"; then
+  echo "prune-airgap-releases: gh release list failed" >&2
+  exit 1
+fi
+
+mapfile -t tags <"${list_out}"
 
 if ((${#tags[@]} <= KEEP)); then
   echo "prune-airgap-releases: ${#tags[@]} versioned release(s), nothing to prune (keep ${KEEP})"
