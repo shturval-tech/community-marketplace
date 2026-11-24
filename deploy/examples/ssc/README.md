@@ -27,7 +27,7 @@
    - `minio-tenant.yaml` → `minio-operator`
 
 3. **Самостоятельные чарты** (оператор не требуется):
-   - `keycloak.yaml`, `authentik.yaml`, `proxmox-csi.yaml`, `nextcloud-aio.yaml`
+   - `keycloak.yaml`, `authentik.yaml`, `n8n.yaml`, `proxmox-csi.yaml`, `nextcloud-aio.yaml`
 
 ```bash
 kubectl apply -f deploy/examples/ssc/cnpg-operator.yaml

@@ -116,6 +116,12 @@ Argo CD: `kubectl apply -f deploy/argocd/application.yaml`. Порядок ус�
 | [keycloak](charts/keycloak/README.md) | Keycloak (SSO, OIDC) | — |
 | [authentik](charts/authentik/README.md) | authentik (IdP) | — |
 
+### Автоматизация
+
+| Чарт | Назначение | Зависимость SSC |
+|------|------------|-----------------|
+| [n8n](charts/n8n/README.md) | n8n — сценарии и интеграции | — |
+
 ### Инфраструктура
 
 | Чарт | Назначение | Зависимость SSC |

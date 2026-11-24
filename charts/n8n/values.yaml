@@ -1,0 +1,415 @@
+# Synced from vendored subchart defaults + community-marketplace overrides.
+# Regenerate: make sync-values (after scripts/vendor-chart-deps.sh)
+global:
+  imageRegistry: ghcr.io/shturval-tech/community-marketplace
+  storageClass: ''
+  ingress:
+    className: ''
+n8n:
+  image:
+    repository: ghcr.io/shturval-tech/community-marketplace/n8n
+    tag: 2.48.5
+    digest: ''
+    pullPolicy: IfNotPresent
+  nameOverride: ''
+  fullnameOverride: n8n
+  commonLabels: {}
+  commonAnnotations: {}
+  queueMode:
+    enabled: false
+    workerReplicaCount: 2
+    workerConcurrency: 10
+    workerExtraEnv: []
+  webhookProcessor:
+    enabled: false
+    replicaCount: 2
+    disableProductionWebhooksOnMainProcess: true
+    extraEnv: []
+  multiMain:
+    enabled: false
+    replicas: 2
+    antiAffinity:
+      type: preferred
+    topologySpreadConstraints:
+      enabled: false
+      maxSkew: 1
+      whenUnsatisfiable: ScheduleAnyway
+    setup:
+      keyTtl: 10
+      checkInterval: 3
+  taskRunners:
+    enabled: false
+    image:
+      repository: ghcr.io/shturval-tech/community-marketplace/n8n-runners
+      tag: 2.48.5
+      digest: ''
+      pullPolicy: IfNotPresent
+    mode: external
+    authToken:
+      existingSecret: ''
+      existingSecretKey: ''
+      value: ''
+    broker:
+      listenAddress: 0.0.0.0
+      port: 5679
+    launcher:
+      logLevel: info
+      autoShutdownTimeout: 15
+    nativePythonRunner: true
+    customConfig:
+      enabled: false
+      configMapName: ''
+      configMapKey: n8n-task-runners.json
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+    probes:
+      liveness:
+        enabled: true
+        path: /healthz
+        initialDelaySeconds: 5
+        periodSeconds: 10
+        timeoutSeconds: 30
+        failureThreshold: 6
+    extraEnv: []
+  strategy: {}
+  podLabels: {}
+  replicaCount: 1
+  service:
+    type: ClusterIP
+    port: 5678
+    annotations: {}
+    main:
+      annotations: {}
+    webhookProcessor:
+      annotations: {}
+    sessionAffinity:
+      enabled: false
+      timeoutSeconds: 10800
+  ingress:
+    enabled: false
+    className: ''
+    annotations: {}
+    tls: []
+    sticky:
+      enabled: false
+      cookieName: n8n_affinity
+      cookieExpires: '172800'
+      cookieMaxAge: '172800'
+    hosts:
+    - host: n8n.example.com
+      paths:
+      - path: /
+        pathType: Prefix
+    webhookProcessor:
+      enabled: false
+      className: ''
+      annotations: {}
+      tls: []
+  persistence:
+    enabled: true
+    accessModes:
+    - ReadWriteOnce
+    size: 10Gi
+    storageClassName: ''
+    annotations: {}
+  extraObjects: []
+  extraVolumes: []
+  extraVolumeMounts: []
+  extraContainers: []
+  extraInitContainers: []
+  dnsPolicy: ''
+  dnsConfig: {}
+  hostAliases: []
+  resources:
+    main:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+      limits:
+        cpu: '1'
+        memory: 1Gi
+    worker:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+      limits:
+        cpu: '1'
+        memory: 1Gi
+    webhookProcessor:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  nodePlacement: {}
+  securityContext:
+    enabled: true
+    fsGroup: 1000
+    runAsUser: 1000
+    runAsGroup: 1000
+  podSecurityContext:
+    main: {}
+    worker: {}
+    webhookProcessor: {}
+  containerSecurityContext:
+    main:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    worker:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    webhookProcessor:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+    taskRunner:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+  rbac:
+    create: true
+  serviceAccount:
+    create: true
+    name: n8n
+    awsRoleArn: ''
+    annotations: {}
+  networkPolicy:
+    enabled: false
+  probes:
+    liveness:
+      enabled: true
+      path: /healthz
+      initialDelaySeconds: 30
+      periodSeconds: 20
+      timeoutSeconds: 5
+      failureThreshold: 6
+    readiness:
+      enabled: true
+      path: /healthz/readiness
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      timeoutSeconds: 3
+      failureThreshold: 6
+    worker:
+      startup:
+        enabled: true
+        path: /healthz
+        periodSeconds: 10
+        failureThreshold: 30
+      readiness:
+        enabled: true
+        type: ''
+        path: /healthz/readiness
+        command: []
+        initialDelaySeconds: 30
+        periodSeconds: 10
+        timeoutSeconds: 3
+        failureThreshold: 6
+      liveness:
+        enabled: true
+        type: ''
+        path: /healthz
+        command: []
+        initialDelaySeconds: 60
+        periodSeconds: 30
+        timeoutSeconds: 5
+        failureThreshold: 3
+  lifecycle:
+    main:
+      terminationGracePeriodSeconds: 60
+      preStop:
+        enabled: true
+        command:
+        - /bin/sh
+        - -c
+        - sleep 10
+    worker:
+      terminationGracePeriodSeconds: 60
+      preStop:
+        enabled: true
+        command:
+        - /bin/sh
+        - -c
+        - sleep 10
+    webhookProcessor:
+      terminationGracePeriodSeconds: 60
+      preStop:
+        enabled: true
+        command:
+        - /bin/sh
+        - -c
+        - sleep 10
+  hpa:
+    main:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 5
+      targetCPUUtilizationPercentage: 80
+    worker:
+      enabled: false
+      minReplicas: 2
+      maxReplicas: 20
+      targetCPUUtilizationPercentage: 70
+    webhookProcessor:
+      enabled: false
+      minReplicas: 2
+      maxReplicas: 50
+      targetCPUUtilizationPercentage: 60
+  keda:
+    enabled: false
+    worker:
+      pause: false
+      pausedReplicaCount: null
+      pollingInterval: 15
+      cooldownPeriod: 300
+      minReplicaCount: 2
+      maxReplicaCount: 20
+      advanced: {}
+      triggers:
+      - type: redis
+        metadata:
+          address: ''
+          listName: bull:jobs:wait
+          listLength: '5'
+        authenticationRef:
+          name: ''
+    webhookProcessor:
+      enabled: false
+      pause: false
+      pausedReplicaCount: null
+      pollingInterval: 15
+      cooldownPeriod: 120
+      minReplicaCount: 2
+      maxReplicaCount: 50
+      advanced: {}
+      triggers: []
+  pdb:
+    enabled: true
+    minAvailable: 1
+  webhook:
+    enabled: true
+    url: ''
+    timeout: 120000
+    extraEnv: []
+  editor:
+    url: ''
+  executions:
+    timeout: -1
+    timeoutMax: 3600
+    data:
+      saveOnError: all
+      saveOnSuccess: all
+      saveOnProgress: false
+      saveManualExecutions: true
+    pruning:
+      enabled: true
+      maxAge: 336
+      maxCount: 10000
+      hardDeleteBuffer: 1
+      hardDeleteInterval: 15
+      softDeleteInterval: 60
+    concurrency:
+      productionLimit: -1
+    extraEnv: []
+  config:
+    timezone: UTC
+    deploymentArtifact: community-marketplace/n8n-0.1.0
+    extraEnv: []
+    extraEnvFrom: []
+  license:
+    enabled: false
+    activationKey: ''
+    existingSecret:
+      name: ''
+      key: license-key
+  secretRefs:
+    existingSecret: n8n-encryption
+    env:
+      N8N_ENCRYPTION_KEY: change-me-to-a-long-random-key
+      N8N_ENCRYPTION_KEY_FILE: ''
+      N8N_HOST: n8n.example.com
+      N8N_PORT: '5678'
+      N8N_PROTOCOL: http
+  database:
+    type: sqlite
+    useExternal: false
+    host: your-postgres-hostname
+    port: 5432
+    database: n8n
+    schema: public
+    user: n8n
+    passwordSecret:
+      name: n8n-db-password
+      key: password
+    ssl:
+      enabled: false
+      ca: ''
+      cert: ''
+      key: ''
+      rejectUnauthorized: true
+      existingSecret:
+        name: ''
+        caKey: ''
+        certKey: ''
+        keyKey: ''
+  redis:
+    enabled: true
+    useExternal: true
+    host: your-redis-hostname
+    port: 6379
+    username: ''
+    passwordSecret: null
+    database: 0
+    timeout: 10000
+    prefix: ''
+    tls: false
+    dualstack: false
+    clusterNodes: ''
+    worker:
+      timeout: 30
+      lockDuration: 60000
+      lockRenewTime: 10000
+      stalledInterval: 30000
+      maxStalledCount: 1
+    healthCheck:
+      enabled: true
+      port: 5678
+    extraEnv: []
+  s3:
+    enabled: false
+    bucket:
+      name: ''
+      region: ''
+      host: ''
+    auth:
+      autoDetect: false
+      accessKeyId: ''
+      secretAccessKeySecret:
+        name: ''
+        key: ''
+    storage:
+      mode: filesystem
+      forcePathStyle: false
+      extraEnv: []
+httpRoute:
+  enabled: false
+  parentRefs: []
+  hostnames: []
+  webhook:
+    parentRefs: []
+    hostnames: []

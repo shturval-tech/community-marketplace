@@ -31,6 +31,7 @@ WRAPPERS: dict[str, tuple[str, str]] = {
     "mariadb-operator": ("mariadb-operator", "tgz"),
     "minio-operator": ("operator", "tgz"),
     "minio-tenant": ("tenant", "tgz"),
+    "n8n": ("n8n", "tgz"),
     "proxmox-csi": ("proxmox-csi-plugin", "tgz"),
     "redis-operator": ("redis-operator", "tgz"),
     "strimzi-operator": ("strimzi-kafka-operator", "dir"),

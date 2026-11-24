@@ -1,0 +1,2 @@
+ARG VERSION=2.48.5
+FROM n8nio/runners:${VERSION}

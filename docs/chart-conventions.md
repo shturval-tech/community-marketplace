@@ -28,7 +28,7 @@
 
 ```yaml
 annotations:
-  shturval.tech/category: database          # database | messaging | storage | identity | infra
+  shturval.tech/category: database          # database | messaging | storage | identity | automation | infra
   shturval.tech/description: Краткое описание продукта на русском
   shturval.tech/serviceclass: postgres      # необязательно; для dependencyclass других SSC
   shturval.tech/dependencyclass: ""         # если чарт реализует класс

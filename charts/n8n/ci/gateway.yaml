@@ -1,0 +1,8 @@
+httpRoute:
+  enabled: true
+  parentRefs:
+    - name: shturval-gateway
+      namespace: gateway-system
+      sectionName: https
+  hostnames:
+    - n8n.example.com

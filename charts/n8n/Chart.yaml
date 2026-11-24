@@ -1,0 +1,19 @@
+apiVersion: v2
+name: n8n
+description: n8n — автоматизация сценариев и интеграций с веб-интерфейсом
+type: application
+version: 0.1.0
+appVersion: "2.48.5"
+annotations:
+  shturval.tech/category: automation
+  shturval.tech/description: "n8n — конструктор сценариев: вебхуки, интеграции и расписания. Публикация через Gateway API (HTTPRoute)."
+  artifacthub.io/license: Sustainable Use License
+  artifacthub.io/links: |
+    - name: Upstream
+      url: https://github.com/n8n-io/n8n-hosting
+    - name: Документация
+      url: https://docs.n8n.io/hosting/
+dependencies:
+  - name: n8n
+    version: 1.20.0
+    repository: oci://ghcr.io/n8n-io/n8n-helm-chart

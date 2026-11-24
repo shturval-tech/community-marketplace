@@ -1,0 +1,9 @@
+httpRoute:
+  enabled: false
+n8n:
+  secretRefs:
+    existingSecret: ""
+    env:
+      N8N_ENCRYPTION_KEY: ci-test-key-not-for-production
+  persistence:
+    size: 1Gi

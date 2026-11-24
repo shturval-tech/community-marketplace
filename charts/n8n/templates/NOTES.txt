@@ -1,0 +1,5 @@
+n8n установлен.
+
+Ключ шифрования — Secret n8n-encryption, ключ N8N_ENCRYPTION_KEY. Без него pod не стартует.
+Публичный URL задаётся HTTPRoute (httpRoute.enabled) на Gateway платформы. Сам Gateway этот чарт не создаёт.
+Данные standalone лежат в SQLite на PVC. Queue mode включает внешние PostgreSQL и Redis.

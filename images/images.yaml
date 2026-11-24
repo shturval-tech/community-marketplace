@@ -33,6 +33,10 @@ images:
     tag: "v0.30.0"
   - name: minio-operator
     tag: "v7.1.1"
+  - name: n8n
+    tag: "2.48.5"
+  - name: n8n-runners
+    tag: "2.48.5"
   - name: nextcloud-aio
     tag: "14.4.1"
   - name: postgres

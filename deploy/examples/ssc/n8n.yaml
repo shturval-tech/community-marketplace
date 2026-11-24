@@ -1,0 +1,30 @@
+apiVersion: ops.shturval.tech/v1beta2
+kind: ShturvalServiceConfig
+metadata:
+  name: n8n
+  labels:
+    app.kubernetes.io/part-of: shturval-community-marketplace
+spec:
+  mode: auto
+  chart: n8n
+  version: "0.1.0"
+  namespace: n8n
+  reponame: community
+  customvalues:
+    httpRoute:
+      enabled: true
+      parentRefs:
+        - name: shturval-gateway
+          namespace: gateway-system
+          sectionName: https
+      hostnames:
+        - n8n.example.com
+    n8n:
+      editor:
+        url: https://n8n.example.com
+      webhook:
+        url: https://n8n.example.com
+      config:
+        extraEnv:
+          - name: N8N_PROXY_HOPS
+            value: "1"

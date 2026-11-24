@@ -1,0 +1,103 @@
+{{- if .Values.httpRoute.enabled }}
+{{- $route := .Values.httpRoute }}
+{{- if not $route.parentRefs }}
+{{- fail "httpRoute.parentRefs is required when httpRoute.enabled=true" }}
+{{- end }}
+{{- if not $route.hostnames }}
+{{- fail "httpRoute.hostnames is required when httpRoute.enabled=true" }}
+{{- end }}
+{{- $n8n := .Values.n8n }}
+{{- $fullname := $n8n.fullnameOverride }}
+{{- if not $fullname }}
+{{- $name := default "n8n" $n8n.nameOverride }}
+{{- if or (contains "n8n" .Release.Name) (eq .Release.Name "n8n") }}
+{{- $fullname = .Release.Name }}
+{{- else }}
+{{- $fullname = printf "%s-%s" .Release.Name $name }}
+{{- end }}
+{{- end }}
+{{- $fullname = $fullname | trunc 63 | trimSuffix "-" }}
+{{- $port := $n8n.service.port }}
+{{- $main := printf "%s-main" $fullname }}
+{{- $hook := printf "%s-webhook-processor" $fullname }}
+{{- $processors := and $n8n.webhookProcessor.enabled $n8n.queueMode.enabled }}
+{{- $prodPaths := list "/webhook/" "/webhook-waiting/" "/form/" "/form-waiting/" "/mcp/" }}
+{{- $testPaths := list "/webhook-test/" "/form-test/" "/mcp-test/" }}
+{{- $webhook := $route.webhook | default dict }}
+{{- $webhookHosts := $webhook.hostnames | default list }}
+{{- $webhookParents := $webhook.parentRefs | default list }}
+{{- if not $webhookParents }}
+{{- $webhookParents = $route.parentRefs }}
+{{- end }}
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: {{ $fullname }}
+  labels:
+    app.kubernetes.io/name: n8n
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: main
+spec:
+  parentRefs:
+    {{- toYaml $route.parentRefs | nindent 4 }}
+  hostnames:
+    {{- toYaml $route.hostnames | nindent 4 }}
+  rules:
+    {{- if and $processors (not $webhookHosts) }}
+    {{- range $prodPaths }}
+    - matches:
+        - path:
+            type: PathPrefix
+            value: {{ . | quote }}
+      backendRefs:
+        - name: {{ $hook }}
+          port: {{ $port }}
+    {{- end }}
+    {{- end }}
+    - matches:
+        - path:
+            type: PathPrefix
+            value: /
+      backendRefs:
+        - name: {{ $main }}
+          port: {{ $port }}
+{{- if $webhookHosts }}
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: {{ printf "%s-webhook" $fullname | trunc 63 | trimSuffix "-" }}
+  labels:
+    app.kubernetes.io/name: n8n
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/component: webhook
+spec:
+  parentRefs:
+    {{- toYaml $webhookParents | nindent 4 }}
+  hostnames:
+    {{- toYaml $webhookHosts | nindent 4 }}
+  rules:
+    {{- $backend := $main }}
+    {{- if $processors }}
+    {{- $backend = $hook }}
+    {{- end }}
+    {{- range $prodPaths }}
+    - matches:
+        - path:
+            type: PathPrefix
+            value: {{ . | quote }}
+      backendRefs:
+        - name: {{ $backend }}
+          port: {{ $port }}
+    {{- end }}
+    {{- range $testPaths }}
+    - matches:
+        - path:
+            type: PathPrefix
+            value: {{ . | quote }}
+      backendRefs:
+        - name: {{ $main }}
+          port: {{ $port }}
+    {{- end }}
+{{- end }}
+{{- end }}

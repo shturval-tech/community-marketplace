@@ -115,6 +115,7 @@ jobs:
           - authentik
           - proxmox-csi
           - nextcloud-aio
+          - n8n
     steps:
       - name: Checkout
         uses: actions/checkout@v4
