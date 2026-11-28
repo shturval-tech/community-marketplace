@@ -1,6 +1,6 @@
 # Сводный отчёт сканирования
 
-Дата сборки отчёта: 2026-11-27 11:52 UTC
+Дата сборки отчёта: 2026-11-28 11:24 UTC
 
 ## alpine (ghcr.io/shturval-tech/community-marketplace/alpine:latest)
 
@@ -3901,4 +3901,4 @@
 
 | Образ | Исход | CI job |
 | --- | --- | --- |
-| n8n | failure | [job](https://github.com/shturval-tech/community-marketplace/actions/runs/45992687459) |
+| n8n | failure | [job](https://github.com/shturval-tech/community-marketplace/actions/runs/46139246313) |
